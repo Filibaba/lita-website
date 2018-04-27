@@ -1,0 +1,160 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+html {
+  /* One rem is 16px */
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(250, 250, 250);
+}
+
+header {
+  background: #000000;
+  background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
+}
+
+section {
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+section > .content {
+  max-width: 22rem;
+  margin: auto;
+  margin-right: 14rem;
+  margin-left: 0;
+  z-index: 5;
+}
+
+section > .screenshot {
+  width: 357px;
+  height: 670px;
+  position: relative;
+  z-index: 2;
+}
+
+section > .screenshot img {
+  z-index: 6;
+  position: relative;
+}
+
+section > .screenshot::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 200%;
+  width: 350%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+section:nth-child(even) > .content {
+  order: 2;
+  margin-left: 14rem;
+  margin-right: 0;
+}
+
+#problem-intro {
+  background: #1d2e39; 
+  background: linear-gradient(135deg, #1d2e39 0%,#ffa801 100%);
+  color: rgb(255, 255, 255);
+  padding: 13rem 0 18.75rem;
+}
+
+#problem-intro .content {
+  margin: auto;
+  max-width: 42rem;
+}
+
+#problem-intro h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+#plan-intro, #exclusive-content-intro {
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 0, 0);
+}
+
+#shop-intro {
+  background-color: rgb(213, 213, 222);
+  color: rgb(0, 0, 0);
+}
+
+#shop-intro .screenshot::before {
+  background: radial-gradient(ellipse at center, #ffffff 0%,#d5d5de 59%,#d5d5de 59%);
+}
+
+#cook-intro {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+#cook-intro .screenshot::before {
+  background: radial-gradient(ellipse at center, rgb(90, 141, 176) 0%, #000 59%, #000 59%);
+}
+
+#premium-intro {
+  background-color: rgb(255, 168, 1);
+  color: rgb(0, 0, 0);
+}
+
+#premium-intro .screenshot::before {
+  background: radial-gradient(ellipse at center, rgb(255, 234, 0) 0%, rgb(255, 168, 1) 59%, rgb(255, 168, 1) 59%);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 1rem;
+}
+
+footer p, a {
+  color: #000;
+  opacity: 0.5;
+  font: normal 0.8rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+/* Typography */
+
+h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font: normal 2.5rem "Avenir-Black", Helvetica, sans-serif;
+}
+
+p {
+  font: normal 1.2rem "AvenirNext-Medium", Helvetica, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.vignette {
+  font: normal 1.5rem "Avenir-Roman", Helvetica, sans-serif;
+  opacity: 0.7;
+}
+
+.app-store-download {
+  display: block;
+  width: 173px;
+  height: 52px;
+  background: url('gfx/app_store.png') no-repeat;
+  background-size: cover;
+  text-indent: -999px;
+  overflow: hidden;
+  opacity: 1;
+  margin-bottom: 2rem;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) { .app-store-download { background-image: url('gfx/app_store@2x.png'); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3) { .app-store-download { background-image: url('gfx/app_store@3x.png'); } }

@@ -16,7 +16,26 @@ body {
 header {
   background: #000000;
   background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
+  height: 100vh;
 }
+
+header img {
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+}
+
+header .app-store-download {
+	position: absolute;
+	top: 60vh;
+	left: 80vw;
+	width: 255px;
+	height: 75px;
+}
+		
+
 
 section {
   padding: 4rem 1rem;
@@ -31,6 +50,10 @@ section > .content {
   margin-right: 14rem;
   margin-left: 0;
   z-index: 5;
+}
+
+section > .content img {
+  margin-bottom: 1rem;
 }
 
 section > .screenshot {
@@ -67,6 +90,7 @@ section:nth-child(even) > .content {
   background: linear-gradient(135deg, #1d2e39 0%,#ffa801 100%);
   color: rgb(255, 255, 255);
   padding: 13rem 0 18.75rem;
+  height: 100vh;
 }
 
 #problem-intro .content {
@@ -114,13 +138,17 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 1rem;
+  padding: 6rem 1rem 1rem 1rem;
 }
 
 footer p, a {
   color: #000;
   opacity: 0.5;
-  font: normal 0.8rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+.copyright, .apple-notice {
+	margin-bottom: 0;
 }
 
 /* Typography */
@@ -148,15 +176,12 @@ p {
 
 .app-store-download {
   display: block;
-  width: 173px;
-  height: 52px;
-  background: url('gfx/app_store.png') no-repeat;
+  width: 170px;
+  height: 50px;
+  background: url('gfx/app_store.svg') no-repeat;
   background-size: cover;
   text-indent: -999px;
   overflow: hidden;
   opacity: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
-
-@media screen and (-webkit-min-device-pixel-ratio: 2) { .app-store-download { background-image: url('gfx/app_store@2x.png'); } }
-@media screen and (-webkit-min-device-pixel-ratio: 3) { .app-store-download { background-image: url('gfx/app_store@3x.png'); } }

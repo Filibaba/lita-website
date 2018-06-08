@@ -16,26 +16,26 @@ body {
 header {
   background: #000000;
   background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
-  height: 100vh;
+  height: auto;
+  min-height: auto;
+  max-height: auto;
 }
 
 header img {
-	height: 100vh;
-	margin-left: auto;
-	margin-right: auto;
+	height: auto;
+	width: 100%;
+/*	max-width: 1330px;*/
+	margin: auto;
 	display: block;
-
 }
 
 header .app-store-download {
-	position: absolute;
-	top: 60vh;
-	left: 80vw;
-	width: 255px;
-	height: 75px;
+  position: absolute;
+  top: 63vw;
+  left: 65vw;
+  width: 20vw;
+  height: auto;
 }
-		
-
 
 section {
   padding: 4rem 1rem;
@@ -62,6 +62,23 @@ section > .screenshot {
   position: relative;
   z-index: 2;
 }
+section > .plan {
+	background: url(gfx/iphonePlan@2x.png);
+  background-size: 357px 670px;
+	background-repeat: no-repeat;
+	}
+	
+	section > .recipes {
+	background: url(gfx/iphoneExclusive@2x.png);
+  background-size: 357px 670px;
+	background-repeat: no-repeat;
+	}
+	
+.video {
+	margin: auto;
+	margin-top: 31px;
+	display: block;
+	}
 
 section > .screenshot img {
   z-index: 6;
@@ -79,6 +96,21 @@ section > .screenshot::before {
   z-index: 0;
 }
 
+/* CSS from filibaba.com
+.screenshot {
+	position: relative;
+	overflow: hidden;
+	width: 310px;
+	height: 550px;
+}
+
+.screenshotVeryveggie {
+	background: url(../images/screenshot_veryveggie@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+*/
+
 section:nth-child(even) > .content {
   order: 2;
   margin-left: 14rem;
@@ -87,10 +119,10 @@ section:nth-child(even) > .content {
 
 #problem-intro {
   background: #1d2e39; 
-  background: linear-gradient(135deg, #1d2e39 0%,#ffa801 100%);
+  background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
   color: rgb(255, 255, 255);
   padding: 13rem 0 18.75rem;
-  height: 100vh;
+  height: 95vh;
 }
 
 #problem-intro .content {
@@ -151,6 +183,59 @@ footer p, a {
 	margin-bottom: 0;
 }
 
+.app-store-download {
+  display: block;
+  width: 170px;
+  height: 50px;
+  background: url('gfx/app_store.svg') no-repeat;
+  background-size: cover;
+  text-indent: -999px;
+  overflow: hidden;
+  opacity: 1;
+  margin-bottom: 5rem;
+}
+
+.splash1 {
+  display: block;
+  width: 479px;
+  height: 354px;
+  background: url('gfx/splash1@3x.png') no-repeat;
+  background-size: cover;
+  text-indent: -999px;
+  overflow: hidden;
+  opacity: 1;
+  position: absolute;
+  left: 80vw;
+  top: 63vw;
+}
+
+.splash2 {
+  display: block;
+  width: 511px;
+  height: 558px;
+  background: url('gfx/splash2@3x.png') no-repeat;
+  background-size: cover;
+  text-indent: -999px;
+  overflow: hidden;
+  opacity: 1;
+  position: absolute;
+  left: -25vw;
+}
+
+.splash3 {
+  display: block;
+  width: 394px;
+  height: 292px;
+  background: url('gfx/splash3@3x.png') no-repeat;
+  background-size: cover;
+  text-indent: -999px;
+  overflow: hidden;
+  opacity: 1;
+  position: absolute;
+  left: 80vw;
+  margin-top: -400px;
+}
+
 /* Typography */
 
 h2, p {
@@ -174,14 +259,4 @@ p {
   opacity: 0.7;
 }
 
-.app-store-download {
-  display: block;
-  width: 170px;
-  height: 50px;
-  background: url('gfx/app_store.svg') no-repeat;
-  background-size: cover;
-  text-indent: -999px;
-  overflow: hidden;
-  opacity: 1;
-  margin-bottom: 5rem;
-}
+

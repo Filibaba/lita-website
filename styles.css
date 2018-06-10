@@ -123,6 +123,7 @@ section:nth-child(even) > .content {
   color: rgb(255, 255, 255);
   padding: 13rem 0 18.75rem;
   height: 95vh;
+  overflow: hidden;
 }
 
 #problem-intro .content {
@@ -193,6 +194,8 @@ footer p, a {
   overflow: hidden;
   opacity: 1;
   margin-bottom: 5rem;
+  
+  margin-top: 5rem;
 }
 
 .splash1 {
@@ -205,8 +208,8 @@ footer p, a {
   overflow: hidden;
   opacity: 1;
   position: absolute;
-  left: 80vw;
-  top: 63vw;
+  left: 83vw;
+  top: 80vw;
 }
 
 .splash2 {
@@ -220,6 +223,7 @@ footer p, a {
   opacity: 1;
   position: absolute;
   left: -25vw;
+  top: 110vw;
 }
 
 .splash3 {
@@ -234,6 +238,34 @@ footer p, a {
   position: absolute;
   left: 80vw;
   margin-top: -400px;
+}
+
+.review-grid {
+  max-width: 1090px;
+margin-bottom: 70px;
+}
+
+.review {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 100px;
+	margin-bottom: 90px;
+	margin: 35px;
+	width: 290px;
+
+}
+
+.review p {
+  margin-top: 30px;
+	font-size: 16px;
+	opacity: 1.0;
+  line-height: 1.7;
+}
+
+.review h2 {
+  font: normal 1.125rem "AvenirNext-Regular", Helvetica, sans-serif;
+  opacity: 0.5;
 }
 
 /* Typography */

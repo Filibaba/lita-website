@@ -24,16 +24,16 @@ header {
 header img {
 	height: auto;
 	width: 100%;
-/*	max-width: 1330px;*/
+	max-width: 1330px;
 	margin: auto;
 	display: block;
 }
 
 header .app-store-download {
   position: absolute;
-  top: 63vw;
+  top: 45rem;
   left: 65vw;
-  width: 20vw;
+  width: 18rem;
   height: auto;
 }
 
@@ -122,7 +122,7 @@ section:nth-child(even) > .content {
   background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
   color: rgb(255, 255, 255);
   padding: 13rem 0 18.75rem;
-  height: 95vh;
+
   overflow: hidden;
 }
 
@@ -209,7 +209,6 @@ footer p, a {
   opacity: 1;
   position: absolute;
   left: 83vw;
-  top: 80vw;
 }
 
 .splash2 {
@@ -222,22 +221,7 @@ footer p, a {
   overflow: hidden;
   opacity: 1;
   position: absolute;
-  left: -25vw;
-  top: 110vw;
-}
-
-.splash3 {
-  display: block;
-  width: 394px;
-  height: 292px;
-  background: url('gfx/splash3@3x.png') no-repeat;
-  background-size: cover;
-  text-indent: -999px;
-  overflow: hidden;
-  opacity: 1;
-  position: absolute;
-  left: 80vw;
-  margin-top: -400px;
+  left: -250px;
 }
 
 .review-grid {

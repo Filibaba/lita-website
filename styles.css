@@ -168,8 +168,6 @@ footer p, a {
   color: #000;
   opacity: 0.5;
   font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
 }
 
 footer h2 {
@@ -462,7 +460,7 @@ p {
   }
   
   .gradientbg {
-    min-height: 80vh;
+    min-height: 83.5vh;
     max-height: auto;
   	background: url(gfx/heroimage-mobile@2x.jpg);
     background-size: 100% auto;
@@ -483,7 +481,7 @@ p {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 72vh;
+    top: 74.5vh;
     left: 58vw;
     width: 35vw;
     height: 10.294vw;

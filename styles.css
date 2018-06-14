@@ -461,7 +461,7 @@ p {
   
   .gradientbg {
     height: 83vh;
-    max-height: 100vh;
+    max-height: 1000px;
   	background: url(gfx/heroimage-mobile@2x.jpg);
     background-size: 100% auto;
   	background-repeat: no-repeat;
@@ -470,7 +470,7 @@ p {
 
   header {
     height: 83vh;
-    max-height: 100vh;
+    max-height: 1000px;
     background: #000000;
     background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
   	margin-bottom: -1px;

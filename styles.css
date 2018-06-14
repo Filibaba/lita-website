@@ -168,10 +168,14 @@ footer p, a {
   color: #000;
   opacity: 0.5;
   font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 footer h2 {
   text-align: center;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 .copyright, .apple-notice {
@@ -458,7 +462,7 @@ p {
   }
   
   .gradientbg {
-    min-height: 87vh;
+    min-height: 80vh;
     max-height: auto;
   	background: url(gfx/heroimage-mobile@2x.jpg);
     background-size: 100% auto;
@@ -479,7 +483,7 @@ p {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 77.5vh;
+    top: 72vh;
     left: 58vw;
     width: 35vw;
     height: 10.294vw;

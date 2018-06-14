@@ -200,7 +200,6 @@ footer h2 {
   opacity: 1;
   position: absolute;
   left: 75%;
-  border: 1px solid blue;
 }
 
 .splash2 {
@@ -317,7 +316,7 @@ p {
 
 /* Tablet & Mobile layout */
 
-@media (max-width: 1000px){
+@media (min-width: 568px) and (max-width: 1000px){
   section {
     padding: 4rem 1rem;
     display: flex;
@@ -348,7 +347,7 @@ p {
     height: 670px;
     position: relative;
     z-index: 2;
-    margin-left: -0;
+    margin-left: 0;
     margin-right: -27px;
   }
   
@@ -369,17 +368,16 @@ p {
   }
 }
 
-/* Mobil layout */
+/* Mobile layout — below iPhone SE landscape size */
 
-@media (max-width: 600px){
+@media (max-width: 567px){
   
-
-  /* WIP */
   section {
     padding: 3rem 0;
     display: inline-block;
     justify-content: center;
     overflow: hidden;
+    width: 100%;
   }
   
   section > .content {
@@ -403,17 +401,15 @@ p {
   section > .screenshot {
     width: 100%;
     height: auto;
-    max-width: 357px;
-    max-height: 670px;
+    margin-left: -7px;
+    margin-right: -7px;
     position: relative;
     z-index: auto;
-    border: 1px solid orange;
   }
   
   section > .screenshot img {
     z-index: auto;
     position: relative;
-    border: 1px solid orange;
     width: 100%;
     height: auto;
   }
@@ -433,7 +429,12 @@ p {
     background-size: 100% auto;
   	background-repeat: no-repeat;
   }
-  	
+  
+  section > .plan img {
+  	display: block;
+  	z-index: 2;
+  }
+
   section > .recipes {
   	background: url(gfx/iphoneExclusive@2x.png);
     background-size: 100% auto;
@@ -441,45 +442,48 @@ p {
   }
   	
   .video {
+    z-index: 3;
     width: 75.36%;
     height: 86.56%; 
   	display: block;
+  	padding-top: 8.65%;
+  	padding-bottom: 15%;
   	margin-top: 8.65%;
   	margin-left: 12.32%;
   	margin-right: 12.32%;
   	margin-bottom: 4.79%;
   }
-  /* End WIP */
-
-
-
-
-
-
   
+  .gradientbg {
+    min-height: 87vh;
+    max-height: auto;
+  	background: url(gfx/heroimage-mobile@2x.jpg);
+    background-size: 100% auto;
+  	background-repeat: no-repeat;
+    height: 86vw;
+  }
+
   header {
     background: #000000;
     background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
-    height: auto;
-    min-height: 60vh;
-    max-height: auto;
   }
   
   header img {
-  	height: auto;
-  	width: 100%;  	display: block;
+  	display: none;
   }
   
   header .app-store-download {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 50vh;
-    left: 30vw;
-    width: 40vw;
-    height: auto;
+    top: 77.5vh;
+    left: 58vw;
+    width: 35vw;
+    height: 10.294vw;
+    background: url('gfx/app_store.svg') no-repeat;
+    background-size: cover;
   }
-  
+
   .splash2 {
     display: none;
   }
@@ -531,7 +535,7 @@ p {
     background: #1d2e39; 
     background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
     color: rgb(255, 255, 255);
-    padding: 4rem 0 5rem 0;
+    padding: 3.5rem 0 4rem 0;
   }
 
   #problem-intro .content {

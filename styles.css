@@ -96,7 +96,7 @@ section > .plan {
 }
 	
 section > .recipes {
-	background: url(gfx/iphoneExclusive@2x.png);
+	background: url(gfx/iphonePlan@2x.png);
   background-size: 357px 670px;
 	background-repeat: no-repeat;
 }
@@ -441,7 +441,7 @@ p {
   }
 
   section > .recipes {
-  	background: url(gfx/iphoneExclusive@2x.png);
+  	background: url(gfx/iphonePlan@2x.png);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   }

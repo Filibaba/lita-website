@@ -17,7 +17,7 @@ header {
   background: #000000;
   background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
   height: auto;
-  min-height: auto;
+  min-height: 1022px;
   max-height: auto;
 }
 
@@ -32,7 +32,7 @@ header img {
 header .app-store-download {
   position: absolute;
   top: 45rem;
-  left: 65vw;
+  left: 65%;
   width: 18rem;
   height: auto;
 }
@@ -47,7 +47,7 @@ section {
 section > .content {
   max-width: 24rem;
   margin: auto;
-  margin-right: 14rem;
+  margin-right: 15vw;
   margin-left: 0;
   z-index: 5;
 }
@@ -61,24 +61,9 @@ section > .screenshot {
   height: 670px;
   position: relative;
   z-index: 2;
+  margin-left: -27px;
+  margin-right: -27px;
 }
-section > .plan {
-	background: url(gfx/iphonePlan@2x.png);
-  background-size: 357px 670px;
-	background-repeat: no-repeat;
-	}
-	
-	section > .recipes {
-	background: url(gfx/iphoneExclusive@2x.png);
-  background-size: 357px 670px;
-	background-repeat: no-repeat;
-	}
-	
-.video {
-	margin: auto;
-	margin-top: 31px;
-	display: block;
-	}
 
 section > .screenshot img {
   z-index: 6;
@@ -96,25 +81,30 @@ section > .screenshot::before {
   z-index: 0;
 }
 
-/* CSS from filibaba.com
-.screenshot {
-	position: relative;
-	overflow: hidden;
-	width: 310px;
-	height: 550px;
-}
-
-.screenshotVeryveggie {
-	background: url(../images/screenshot_veryveggie@2x.jpg);
-	background-size: 310px 550px;
-	background-repeat: no-repeat;
-}
-*/
-
 section:nth-child(even) > .content {
   order: 2;
-  margin-left: 14rem;
+  margin-left: 15vw;
   margin-right: 0;
+}
+
+section > .plan {
+	background: url(gfx/iphonePlan@2x.png);
+  background-size: 357px 670px;
+	background-repeat: no-repeat;
+}
+	
+section > .recipes {
+	background: url(gfx/iphoneExclusive@2x.png);
+  background-size: 357px 670px;
+	background-repeat: no-repeat;
+}
+	
+.video {
+	display: block;
+	margin-top: 31px;
+	margin-left: 44px;
+	margin-right: 44px;
+	margin-bottom: 59px;
 }
 
 #problem-intro {
@@ -122,8 +112,6 @@ section:nth-child(even) > .content {
   background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
   color: rgb(255, 255, 255);
   padding: 13rem 0 18.75rem;
-
-  overflow: hidden;
 }
 
 #problem-intro .content {
@@ -180,6 +168,10 @@ footer p, a {
   font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
 }
 
+footer h2 {
+  text-align: center;
+}
+
 .copyright, .apple-notice {
 	margin-bottom: 0;
 }
@@ -194,21 +186,21 @@ footer p, a {
   overflow: hidden;
   opacity: 1;
   margin-bottom: 5rem;
-  
   margin-top: 5rem;
 }
 
 .splash1 {
   display: block;
-  width: 479px;
-  height: 354px;
-  background: url('gfx/splash1@3x.png') no-repeat;
-  background-size: cover;
+  width: 25%;
+  height: auto;
+/*  background: url('gfx/splash1@3x.png') no-repeat;
+  background-size: cover;*/
   text-indent: -999px;
-  overflow: hidden;
+  overflow: visible;
   opacity: 1;
   position: absolute;
-  left: 83vw;
+  left: 75%;
+  border: 1px solid blue;
 }
 
 .splash2 {
@@ -226,17 +218,17 @@ footer p, a {
 
 .review-grid {
   max-width: 1090px;
-margin-bottom: 70px;
+  margin-bottom: 70px;
+  text-align: center;
 }
 
 .review {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 100px;
-	margin-bottom: 90px;
 	margin: 35px;
 	width: 290px;
+  text-align: left;
 
 }
 
@@ -250,6 +242,7 @@ margin-bottom: 70px;
 .review h2 {
   font: normal 1.125rem "AvenirNext-Regular", Helvetica, sans-serif;
   opacity: 0.5;
+  text-align: left;
 }
 
 /* Typography */
@@ -275,4 +268,304 @@ p {
   opacity: 0.7;
 }
 
+/* Responsive header */
+
+@media (max-width: 1330px){
+  header {
+    background: #000000;
+    background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
+    height: auto;
+    min-height: auto;
+    max-height: auto;
+  }
+    	
+  header .app-store-download {
+    position: absolute;
+    top: 54vw;
+    left: 65vw;
+    width: 21vw;
+    height: auto;
+  }
+  
+  .splash2 {
+    display: block;
+    width: 45vw;
+    height: 50vw;
+    background: url('gfx/splash2@3x.png') no-repeat;
+    background-size: cover;
+    text-indent: -999px;
+    overflow: hidden;
+    opacity: 1;
+    position: absolute;
+    left: -25vw;
+  }
+  
+  #problem-intro {
+    background: #1d2e39; 
+    background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
+    color: rgb(255, 255, 255);
+    padding: 16vw 0 24vw 0;
+  }
+
+  #problem-intro .content {
+    margin: auto;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    max-width: 42rem;
+  }
+}
+
+/* Tablet & Mobile layout */
+
+@media (max-width: 1000px){
+  section {
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  section > .content {
+    max-width: 24rem;
+    margin: auto;
+    margin-right: 5vw;
+    margin-left: 0;
+    z-index: 5;
+  }
+  
+  section:nth-child(even) > .content {
+    order: inherit;
+    margin-right: 5vw;
+    margin-left: 0;
+  }
+  
+  section > .content img {
+    margin-bottom: 1rem;
+  }
+  
+  section > .screenshot {
+    width: 357px;
+    height: 670px;
+    position: relative;
+    z-index: 2;
+    margin-left: -0;
+    margin-right: -27px;
+  }
+  
+  section > .screenshot img {
+    z-index: 6;
+    position: relative;
+  }
+  
+  section > .screenshot::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200%;
+    width: 350%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
+
+/* Mobil layout */
+
+@media (max-width: 600px){
+  
+
+  /* WIP */
+  section {
+    padding: 3rem 0;
+    display: inline-block;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  section > .content {
+    max-width: 24rem;
+    margin: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+    z-index: auto;
+  }
+  
+  section:nth-child(even) > .content {
+    order: inherit;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  section > .content img {
+    margin-bottom: 1rem;
+  }
+  
+  section > .screenshot {
+    width: 100%;
+    height: auto;
+    max-width: 357px;
+    max-height: 670px;
+    position: relative;
+    z-index: auto;
+    border: 1px solid orange;
+  }
+  
+  section > .screenshot img {
+    z-index: auto;
+    position: relative;
+    border: 1px solid orange;
+    width: 100%;
+    height: auto;
+  }
+  
+  section > .screenshot::before {
+    content: " ";
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 200%;
+    width: 350%;
+    transform: translate(-50%, -50%);
+    z-index: auto;
+  }
+  section > .plan {
+  	background: url(gfx/iphonePlan@2x.png);
+    background-size: 100% auto;
+  	background-repeat: no-repeat;
+  }
+  	
+  section > .recipes {
+  	background: url(gfx/iphoneExclusive@2x.png);
+    background-size: 100% auto;
+  	background-repeat: no-repeat;
+  }
+  	
+  .video {
+    width: 75.36%;
+    height: 86.56%; 
+  	display: block;
+  	margin-top: 8.65%;
+  	margin-left: 12.32%;
+  	margin-right: 12.32%;
+  	margin-bottom: 4.79%;
+  }
+  /* End WIP */
+
+
+
+
+
+
+  
+  header {
+    background: #000000;
+    background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
+    height: auto;
+    min-height: 60vh;
+    max-height: auto;
+  }
+  
+  header img {
+  	height: auto;
+  	width: 100%;  	display: block;
+  }
+  
+  header .app-store-download {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50vh;
+    left: 30vw;
+    width: 40vw;
+    height: auto;
+  }
+  
+  .splash2 {
+    display: none;
+  }
+  
+  .review-grid {
+    max-width: 1090px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .review {
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 0;
+  	margin-bottom: 50px;
+  	width: auto;
+    text-align: left;
+  
+  }
+  
+  .review p {
+    margin-top: 20px;
+  	font-size: 15px;
+  	opacity: 1.0;
+    line-height: 1.7;
+  }
+  
+  .review h2 {
+    font: normal 0.9375rem "AvenirNext-Regular", Helvetica, sans-serif;
+    opacity: 0.5;
+    text-align: left;
+  }
+  
+  .app-store-download {
+    display: block;
+    width: 170px;
+    height: 50px;
+    background: url('gfx/app_store.svg') no-repeat;
+    background-size: cover;
+    text-indent: -999px;
+    overflow: hidden;
+    opacity: 1;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+  
+  #problem-intro {
+    background: #1d2e39; 
+    background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
+    color: rgb(255, 255, 255);
+    padding: 4rem 0 5rem 0;
+  }
+
+  #problem-intro .content {
+    margin: auto;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    max-width: 42rem;
+  } 
+  
+  footer h2 {
+    text-align: center;
+    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
+  }
+  
+  h2, p {
+    margin: 0;
+    padding: 0 0 1.2rem 0;
+  }
+  
+  h2 {
+    font: normal 2rem "Avenir-Black", Helvetica, sans-serif;
+  }
+  
+  p {
+    font: normal 0.9375rem "AvenirNext-Regular", Helvetica, sans-serif;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  .vignette {
+    font: normal 0.9375rem "Avenir-Roman", Helvetica, sans-serif;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+}
 

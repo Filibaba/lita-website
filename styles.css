@@ -460,12 +460,11 @@ p {
   }
   
   .gradientbg {
-    min-height: 83.5vh;
-    max-height: auto;
+    height: 83vh;
   	background: url(gfx/heroimage-mobile@2x.jpg);
     background-size: 100% auto;
   	background-repeat: no-repeat;
-    height: 86vw;
+  	margin-bottom: -1px;
   }
 
   header {
@@ -481,7 +480,7 @@ p {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 74.5vh;
+    top: 74vh;
     left: 58vw;
     width: 35vw;
     height: 10.294vw;
@@ -492,6 +491,29 @@ p {
   .splash2 {
     display: none;
   }
+  
+  
+  #shop-intro {
+    background: radial-gradient(ellipse at center, #ffffff 0%,#d5d5de 59%,#d5d5de 59%);
+    background-size: 250%;
+    background-position-x: -125%;
+    background-position-y: -125%;
+  }
+  
+  #cook-intro {
+    background: radial-gradient(ellipse at center, rgb(90, 141, 176) 0%, #000 59%, #000 59%);
+    background-size: 250%;
+    background-position-x: -125%;
+    background-position-y: -125%;
+  }
+  
+  #premium-intro  {
+    background: radial-gradient(ellipse at center, rgb(255, 234, 0) 0%, rgb(255, 168, 1) 59%, rgb(255, 168, 1) 59%);
+    background-size: 250%;
+    background-position-x: -125%;
+    background-position-y: -125%;
+  }
+
   
   .review-grid {
     max-width: 1090px;

@@ -263,6 +263,7 @@ h2, p {
 
 h2 {
   font: normal 2.5rem "Avenir-Black", Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 p {
@@ -581,6 +582,7 @@ p {
   footer h2 {
     text-align: center;
     font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
+    font-weight: bold;
   }
   
   h2, p {
@@ -590,6 +592,7 @@ p {
   
   h2 {
     font: normal 2rem "Avenir-Black", Helvetica, sans-serif;
+    font-weight: bold;
   }
   
   p {

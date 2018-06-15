@@ -90,13 +90,13 @@ section:nth-child(even) > .content {
 }
 
 section > .plan {
-	background: url(gfx/iphonePlan@2x.png);
+	background: url(../gfx/iphonePlan@2x.png);
   background-size: 357px 670px;
 	background-repeat: no-repeat;
 }
 	
 section > .recipes {
-	background: url(gfx/iphonePlan@2x.png);
+	background: url(../gfx/iphonePlan@2x.png);
   background-size: 357px 670px;
 	background-repeat: no-repeat;
 }
@@ -190,7 +190,7 @@ footer h2 {
   display: block;
   width: 154px;
   height: 50px;
-  background: url('gfx/app_store.svg') no-repeat;
+  background: url('../gfx/app_store_se.svg') no-repeat;
   background-size: cover;
   text-indent: -999px;
   overflow: hidden;
@@ -203,7 +203,7 @@ footer h2 {
   display: block;
   width: 25%;
   height: auto;
-/*  background: url('gfx/splash1@3x.png') no-repeat;
+/*  background: url('../gfx/splash1@3x.png') no-repeat;
   background-size: cover;*/
   text-indent: -999px;
   overflow: visible;
@@ -216,7 +216,7 @@ footer h2 {
   display: block;
   width: 511px;
   height: 558px;
-  background: url('gfx/splash2@3x.png') no-repeat;
+  background: url('../gfx/splash2@3x.png') no-repeat;
   background-size: cover;
   text-indent: -999px;
   overflow: hidden;
@@ -300,7 +300,7 @@ p {
     display: block;
     width: 45vw;
     height: 50vw;
-    background: url('gfx/splash2@3x.png') no-repeat;
+    background: url('../gfx/splash2@3x.png') no-repeat;
     background-size: cover;
     text-indent: -999px;
     overflow: hidden;
@@ -435,7 +435,7 @@ p {
     z-index: auto;
   }
   section > .plan {
-  	background: url(gfx/iphonePlan@2x.png);
+  	background: url(../gfx/iphonePlan@2x.png);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   }
@@ -446,7 +446,7 @@ p {
   }
 
   section > .recipes {
-  	background: url(gfx/iphonePlan@2x.png);
+  	background: url(../gfx/iphonePlan@2x.png);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   }
@@ -466,7 +466,7 @@ p {
   
   .gradientbg {
     height: 83vh;
-  	background: url(gfx/heroimage-mobile@2x.jpg);
+  	background: url(../gfx/heroimage-mobile-se@2x.jpg);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   	margin-bottom: -1px;
@@ -490,7 +490,7 @@ p {
     left: 58vw;
     width: 35vw;
     height: 11.3vw;
-    background: url('gfx/app_store.svg') no-repeat;
+    background: url('../gfx/app_store_se.svg') no-repeat;
     background-size: cover;
   }
 
@@ -535,6 +535,7 @@ p {
   	margin-bottom: 50px;
     text-align: left;
     width: 100%;
+  
   }
   
   .review p {
@@ -554,7 +555,7 @@ p {
     display: block;
     width: 154px;
     height: 50px;
-    background: url('gfx/app_store.svg') no-repeat;
+    background: url('../gfx/app_store_se.svg') no-repeat;
     background-size: cover;
     text-indent: -999px;
     overflow: hidden;

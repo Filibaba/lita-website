@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   padding:0;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(255, 255, 255);
 }
 
 header {
@@ -224,6 +224,39 @@ footer h2 {
   position: absolute;
   left: -250px;
 }
+
+.award-grid {
+  max-width: 1090px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.award {
+	background: url(../gfx/award@2x.png);
+  background-size: 290px 142px;
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 35px;
+	width: 290px;
+	height: 143px;
+}
+
+.award p {
+  margin-top: 65px;
+  font: bold 1.125rem "AvenirNext-Regular", Helvetica, sans-serif;
+	opacity: 1.0;
+	height: 20px;
+}
+
+.award h2 {
+  font: normal 0.8125rem "AvenirNext-Regular", Helvetica, sans-serif;
+  opacity: 0.5;
+	height: 20px;
+	margin-top: 33px;
+}
+
 
 .review-grid {
   max-width: 1090px;

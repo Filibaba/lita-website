@@ -161,7 +161,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 footer p {
@@ -235,16 +235,18 @@ footer h2 {
 	background: url(gfx/award@2x.png);
   background-size: 290px 142px;
 	background-repeat: no-repeat;
+	background-position-y: 35px;
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
 	margin: 35px;
 	width: 290px;
-	height: 143px;
+	height: 178px;
 }
 
+
 .award p {
-  margin-top: 65px;
+  margin-top: 100px;
   font: bold 1.125rem "AvenirNext-Regular", Helvetica, sans-serif;
 	opacity: 1.0;
 	height: 20px;
@@ -255,6 +257,22 @@ footer h2 {
   opacity: 0.5;
 	height: 20px;
 	margin-top: 33px;
+}
+
+.articlequote {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 35px;
+	width: 290px;
+  text-align: left;
+}
+
+.articlequote p {
+  margin-top: 30px;
+	font-size: 16px;
+	opacity: 1.0;
+  line-height: 1.7;
 }
 
 .review-grid {
@@ -270,7 +288,6 @@ footer h2 {
 	margin: 35px;
 	width: 290px;
   text-align: left;
-
 }
 
 .review p {
@@ -553,13 +570,29 @@ p {
     background-position-y: -125%;
   }
 
+  .articlequote {
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 0;
+  	margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .articlequote p {
+    margin-top: 50px;
+  	font-size: 15px;
+  	opacity: 1.0;
+    line-height: 1.7;
+  }
   
   .review-grid {
     max-width: 1090px;
     margin-bottom: 0;
     text-align: center;
   }
-  
+
   .review {
   	position: relative;
   	display: inline-block;

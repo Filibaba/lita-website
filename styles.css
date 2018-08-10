@@ -569,6 +569,10 @@ p {
     background-position-x: -125%;
     background-position-y: -125%;
   }
+  
+  .award {
+  	margin: 20px 0px 20px 0px;
+  }
 
   .articlequote {
   	position: relative;

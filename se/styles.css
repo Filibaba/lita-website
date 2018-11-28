@@ -14,10 +14,10 @@ body {
 }
 
 header {
-  background: #000000;
-  background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
+  background: #fff;
+  background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 83%, #ffc800 83%, #ffc800 100%);
   height: auto;
-  min-height: 1022px;
+  min-height: 800px;
   max-height: auto;
 }
 
@@ -31,9 +31,9 @@ header img {
 
 header .app-store-download {
   position: absolute;
-  top: 45rem;
-  left: 65%;
-  width: 18rem;
+  top: 14rem;
+  left: 6vw;
+  width: 12rem;
   height: auto;
 }
 
@@ -110,10 +110,9 @@ section > .recipes {
 }
 
 #problem-intro {
-  background: #1d2e39; 
-  background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
-  color: rgb(255, 255, 255);
-  padding: 13rem 0 18.75rem;
+  background: #FFC800; 
+  color: rgb(0, 0, 0);
+  padding: 0 0 10rem;
 }
 
 #problem-intro .content {
@@ -125,36 +124,10 @@ section > .recipes {
   margin: 1rem 0 0 0;
 }
 
-#plan-intro, #exclusive-content-intro {
-  background-color: rgb(250, 250, 250);
+#plan-intro, #exclusive-content-intro, #shop-intro, #cook-intro, #premium-intro {
+  background: #fff;
+  background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 100%);
   color: rgb(0, 0, 0);
-}
-
-#shop-intro {
-  background-color: rgb(213, 213, 222);
-  color: rgb(0, 0, 0);
-}
-
-#shop-intro .screenshot::before {
-  background: radial-gradient(ellipse at center, #ffffff 0%,#d5d5de 59%,#d5d5de 59%);
-}
-
-#cook-intro {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-}
-
-#cook-intro .screenshot::before {
-  background: radial-gradient(ellipse at center, rgb(90, 141, 176) 0%, #000 59%, #000 59%);
-}
-
-#premium-intro {
-  background-color: rgb(255, 168, 1);
-  color: rgb(0, 0, 0);
-}
-
-#premium-intro .screenshot::before {
-  background: radial-gradient(ellipse at center, rgb(255, 234, 0) 0%, rgb(255, 168, 1) 59%, rgb(255, 168, 1) 59%);
 }
 
 footer {
@@ -199,32 +172,6 @@ footer h2 {
   margin-top: 5rem;
 }
 
-.splash1 {
-  display: block;
-  width: 25%;
-  height: auto;
-/*  background: url('../gfx/splash1@3x.png') no-repeat;
-  background-size: cover;*/
-  text-indent: -999px;
-  overflow: visible;
-  opacity: 1;
-  position: absolute;
-  left: 75%;
-}
-
-.splash2 {
-  display: block;
-  width: 511px;
-  height: 558px;
-  background: url('../gfx/splash2@3x.png') no-repeat;
-  background-size: cover;
-  text-indent: -999px;
-  overflow: hidden;
-  opacity: 1;
-  position: absolute;
-  left: -250px;
-}
-
 .award-grid {
   max-width: 1090px;
   margin-bottom: 60px;
@@ -243,6 +190,7 @@ footer h2 {
 	width: 290px;
 	height: 178px;
 }
+
 
 .award p {
   margin-top: 100px;
@@ -330,8 +278,8 @@ p {
 
 @media (max-width: 1330px){
   header {
-    background: #000000;
-    background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
+    background: #fff;
+    background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 83%, #ffc800 83%, #ffc800 100%);
     height: auto;
     min-height: auto;
     max-height: auto;
@@ -339,30 +287,16 @@ p {
     	
   header .app-store-download {
     position: absolute;
-    top: 54vw;
-    left: 65vw;
-    width: 21vw;
-    height: auto;
-  }
-  
-  .splash2 {
-    display: block;
-    width: 45vw;
-    height: 50vw;
-    background: url('../gfx/splash2@3x.png') no-repeat;
-    background-size: cover;
-    text-indent: -999px;
-    overflow: hidden;
-    opacity: 1;
-    position: absolute;
-    left: -25vw;
+    top: 17vw;
+    left: 6vw;
+    width: 14vw;
+    height: 4.5vw;
   }
   
   #problem-intro {
-    background: #1d2e39; 
-    background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
-    color: rgb(255, 255, 255);
-    padding: 16vw 0 24vw 0;
+    background: #FFC800; 
+    color: rgb(0, 0, 0);
+    padding: 0 0 10vw 0;
   }
 
   #problem-intro .content {
@@ -515,15 +449,15 @@ p {
   
   .gradientbg {
     height: 83vh;
-  	background: url(../gfx/heroimage-mobile-se@2x.jpg);
+  	background: url(../gfx/heroimage-mobile@2x.jpg);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   	margin-bottom: -1px;
   }
 
   header {
-    background: #000000;
-    background: linear-gradient(to right, #000000 0%,#000000 45%,#000000 50%,#ffa801 50%,#ffa801 100%);
+    background: #fff;
+    background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 83%, #ffc800 83%, #ffc800 100%);
   	margin-bottom: -1px;
   }
   
@@ -535,40 +469,14 @@ p {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 74vh;
-    left: 58vw;
-    width: 35vw;
-    height: 11.3vw;
+    top: 80vh;
+    left: 33vw;
+    width: 34vw;
+    height: 11vw;
     background: url('../gfx/app_store_se.svg') no-repeat;
     background-size: cover;
-  }
+  }  
 
-  .splash2 {
-    display: none;
-  }
-  
-  
-  #shop-intro {
-    background: radial-gradient(ellipse at center, #ffffff 0%,#d5d5de 59%,#d5d5de 59%);
-    background-size: 250%;
-    background-position-x: -125%;
-    background-position-y: -125%;
-  }
-  
-  #cook-intro {
-    background: radial-gradient(ellipse at center, rgb(90, 141, 176) 0%, #000 59%, #000 59%);
-    background-size: 250%;
-    background-position-x: -125%;
-    background-position-y: -125%;
-  }
-  
-  #premium-intro  {
-    background: radial-gradient(ellipse at center, rgb(255, 234, 0) 0%, rgb(255, 168, 1) 59%, rgb(255, 168, 1) 59%);
-    background-size: 250%;
-    background-position-x: -125%;
-    background-position-y: -125%;
-  }
-  
   .award {
   	margin: 20px 0px 20px 0px;
   }
@@ -595,7 +503,7 @@ p {
     margin-bottom: 0;
     text-align: center;
   }
-  
+
   .review {
   	position: relative;
   	display: inline-block;
@@ -603,7 +511,7 @@ p {
   	margin: 0;
   	margin-bottom: 50px;
     text-align: left;
-    width: 100%;  
+    width: 100%;
   }
   
   .review p {
@@ -623,7 +531,7 @@ p {
     display: block;
     width: 154px;
     height: 50px;
-    background: url('../gfx/app_store_se.svg') no-repeat;
+    background: url('../gfx/app_store.svg') no-repeat;
     background-size: cover;
     text-indent: -999px;
     overflow: hidden;
@@ -633,9 +541,8 @@ p {
   }
   
   #problem-intro {
-    background: #1d2e39; 
-    background: linear-gradient(110deg, #102533 5%,#ffa801 90%);
-    color: rgb(255, 255, 255);
+    background: #FFC800; 
+    color: rgb(0, 0, 0);
     padding: 3.5rem 0 4rem 0;
   }
 
@@ -651,6 +558,8 @@ p {
     font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
     font-weight: bold;
   }
+  
+  .plants {width: 100%;}
   
   h2, p {
     margin: 0;

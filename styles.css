@@ -38,7 +38,7 @@ header .app-store-download {
 }
 
 section {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem 0rem 1rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -174,7 +174,7 @@ footer h2 {
 
 .award-grid {
   max-width: 1090px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -224,7 +224,7 @@ footer h2 {
 
 .review-grid {
   max-width: 1090px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -311,7 +311,7 @@ p {
 
 @media (min-width: 568px) and (max-width: 1000px){
   section {
-    padding: 4rem 1rem;
+  padding: 2rem 1rem 0rem 1rem;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -492,7 +492,7 @@ p {
   }
   
   .articlequote p {
-    margin-top: 50px;
+    margin-top: 20px;
   	font-size: 15px;
   	opacity: 1.0;
     line-height: 1.7;
@@ -509,7 +509,7 @@ p {
   	display: inline-block;
   	vertical-align: top;
   	margin: 0;
-  	margin-bottom: 50px;
+  	margin-bottom: 20px;
     text-align: left;
     width: 100%;
   }

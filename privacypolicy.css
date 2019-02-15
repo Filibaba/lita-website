@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+	background-color: #fff;
+	margin: 0;
+	color: #4d4d4d;
+	font-family: "Avenir-Book", "Avenir Book", "Avenir", "museo-sans", sans-serif;
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+
+#privacypolicy {
+    margin: 15px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #85b340;
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+	color: black;
+}

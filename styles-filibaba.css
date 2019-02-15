@@ -1,0 +1,785 @@
+@charset "UTF-8";
+
+
+/* CSS copied from styles.css (Plantry stylesheet) */
+
+/* Site nav */
+
+.site-nav{
+  position: absolute;
+  width: 100%;
+}
+
+.site-nav-left{
+  float: left;
+}
+
+.site-nav-right{
+  float: right;
+  margin-right: 42px;
+}
+  
+.site-nav-regular{
+  height: 100px;
+  color: #737373;
+  width: 100px;
+  text-align: center;
+	position: relative;
+	display: inline-block;
+  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  text-decoration: none;
+  line-height: 100px;
+}
+
+.site-nav-active{
+  height: 100px;
+  color: black;
+  width: 100px;
+  text-align: center;
+	position: relative;
+	display: inline-block;
+  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  text-decoration: none;
+    
+  line-height: 100px;
+}
+
+.site-nav-regular:hover {
+  color: black;
+}
+
+.site-nav-regular:active {
+  color: #737373;
+}
+
+.plantry-logo{
+  height: 100px;
+	position: relative;
+	display: inline-block;
+}
+
+.plantry-tagline{
+  position: absolute;
+  margin-top: 47px;
+  color: black;
+  font: 0.9rem "Avenir-Book", Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.separator{
+  height: 0.5px;
+  background-color: #CCCCCC;
+  width: -moz-calc(100% - 84px);
+  width: -webkit-calc(100% - 84px);
+  width: calc(100% - 84px);
+  margin-left: 42px;
+  margin-top: 99px;
+  position: absolute;
+}
+
+/* Site nav responsive header */
+
+@media (max-width: 1040px){
+  .plantry-tagline{
+    display: none;
+  }
+}
+
+@media (max-width: 820px){
+  .plantry-logo{
+    width: 100px;
+    height: 100px;
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: middle;
+  	overflow: hidden;
+  }
+}
+
+@media (max-width: 700px){
+  .plantry-logo{
+    display: none;
+  }
+  .separator{
+    display: none;
+  }
+}
+
+/* Site nav mobile layout — below iPhone SE landscape size */
+
+@media (max-width: 640px){
+  
+  .site-nav-regular{
+    height: 50px;
+  }
+  
+  .site-nav-right{
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .site-nav-regular, .site-nav-active{
+    height: 50px;
+    line-height: 50px;
+    width: 18%;
+    font-size: 11px;
+  }
+}
+
+
+/* Copyright */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+footer p {
+  color: #000;
+  opacity: 0.5;
+  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+footer a {
+  color: #000;
+  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+footer h2 {
+  text-align: center;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.copyright, .apple-notice {
+	margin-bottom: 0;
+	margin: 0 1 0vw;
+}
+
+
+
+
+
+
+/* CSS Migrated from Filibaba.com Bellow this line */
+
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+
+body {
+	background-color: #fff;
+	margin: 0;
+}
+
+.headline {
+  font: normal 2rem "Avenir-Black", Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#content {
+	width: 100%;
+  height: 100%;
+  padding-top: 130px;
+  overflow-x: hidden;
+	color: black;
+	font-family: "Avenir", "museo-sans", sans-serif;
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+#privacypolicy {
+    margin: 15px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
+.spacer {
+	width: 100%%;
+	margin: 0;
+	height: auto;
+	vertical-align: middle;
+	overflow-x: hidden;
+}
+
+
+/* All apps grid */
+
+.grid {
+	margin-top: 0px;
+}
+
+.puff {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 37px;
+	margin-bottom: 46px;
+	width: 310px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-opera-border-radius:15px;
+	-khtml-border-radius:15px;
+	border-radius:15px;	
+}
+
+.puffspacer {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 310px;
+	margin: 48px;
+}
+
+
+.valuesBox {
+	width: 29%;
+	min-width: 250px;
+	margin: 30px 2% 30px 2%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.appStore {
+	background: url(gfx/appstore@2x.png);
+	background-size: 199px 118px;
+	width: 199px;
+	height: 59px;
+	background-repeat: no-repeat;
+    overflow: hidden;
+	margin: 55px auto 55px auto;
+	left: 0; bottom: 0; right: 0;
+}
+
+.appStoreBlack {
+	background-position: 0 -59px;
+}
+
+.comingSoon{
+	font-weight: 600;
+	font-size: 19px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 262px;
+	margin-top: 48px;
+	margin-bottom: 24px;
+	text-align: center;
+	margin: 55px auto 55px auto;
+	left: 0; bottom: 0; right: 0;
+}
+
+
+a.download {
+	width: 199px;
+	height: 59px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+.screenshot {
+	position: relative;
+	overflow: hidden;
+	width: 310px;
+	height: 550px;
+}
+
+.playbutton {
+	background: url(gfx/playbutton@2x.png);
+	background-size: 120px 120px;
+	background-repeat: no-repeat;
+	height: 120px;
+	width: 120px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+
+/* All apps puff styling*/
+
+.appText {
+	overflow: hidden;
+	width: 262px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	text-align: left;
+}
+
+.appicon {
+	width: 132px;
+	height: 132px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin-left: -26px;
+	margin-top: -26px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.appName {
+	padding-top: 6px;
+	line-height: 0.7;
+	text-align: left;
+}
+
+.appName h1 {
+	font-size: 24px;
+	font-weight: 600;
+	font-family: "Avenir-Heavy", sans-serif;
+}
+
+.appName h2 {
+	padding-top: 4px;
+	font-size: 20px;
+	font-weight: 600;
+	font-family: "Avenir-Heavy", sans-serif;
+}
+
+.veryveggie {
+	background-color: #fff;
+	color: black;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+}
+
+.veryveggie a {
+	color: #00b58d;
+}
+
+.veryveggie a:hover {
+	color: black;
+}
+
+.appiconVeryveggie {
+	background: url(gfx/appicon_veryveggie@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+		
+.screenshotVeryveggie {
+	background: url(gfx/screenshot_veryveggie@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.kakboken {
+	background-color: #fff;
+	color: black;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+}
+
+.kakboken a {
+	color: #e95c88;
+}
+
+.kakboken a:hover {
+	color: #4d4d4d;
+}
+
+.appiconKakboken {
+	background: url(gfx/appicon_kakboken@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+		
+.screenshotKakboken {
+	background: url(gfx/screenshot_kakboken@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.vegourmet {
+	background-color: #fff;
+	color: #000;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+}
+
+.vegourmet a {
+	color: #2cd5c4;
+}
+
+.vegourmet a:hover {
+	color: black;
+}
+
+.appiconVegourmet {
+	background: url(gfx/appicon_vegourmet@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+		
+.screenshotVegourmet {
+	background: url(gfx/screenshot_vegourmet@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+
+.smoothies {
+	background-color: #ed6471;
+	color: white;
+}
+
+.appiconSmoothies {
+	background: url(gfx/appicon_smoothies@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+
+.screenshotSmoothies {
+	background: url(gfx/screenshot_smoothies@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.meals {
+	background-color: #f97200;
+	color: white;
+}
+
+.appiconMeals {
+	background: url(gfx/appicon_meals@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+
+.screenshotMeals {
+	background: url(gfx/screenshot_meals@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.weekend {
+	background-color: #ffb700;
+	color: white;
+}
+
+.appiconWeekend {
+	background: url(gfx/appicon_weekend@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+
+.screenshotWeekend {
+	background: url(gfx/screenshot_weekend@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+
+
+
+/* Creator page */
+
+#creator {
+	background-size: 100% auto;
+	background-repeat: no-repeat;	
+	font-size: 17px;
+	text-align: left;
+	color: black;
+	line-height: 1.4;
+	padding-left: 25vw;
+	padding-right: 25vw;
+	margin-bottom: 60px;
+}
+
+#creator li {
+  margin: 14px 0px 14px 0px;
+}
+
+#creator h2 {
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#creator a:link,
+#creator a:visited {
+	color: black;
+}
+
+#creator a:hover {
+	color: #737373;
+}
+
+#creator a:active {
+	color: black;
+}
+
+#creator img {
+  padding-top: 40px;
+}
+
+
+
+
+
+/* About Page*/
+
+#about {
+	text-align: center;
+	padding: 0;
+  margin-top: 25px;
+ }
+
+#about h1 {
+	font-weight: 500;
+	font-size: 35px;	
+	padding: 0;
+	margin: 0;
+}
+
+#mission {	
+	font-size: 17px;
+	text-align: left;
+	line-height: 1.4;
+	padding-left: 25vw;
+	padding-right: 25vw;
+}
+
+.separator-fat{
+  height: 5px;
+  background-color: #F2F2F2;
+  width: 520px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+/* Social Buttons */
+
+.social {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sociallink {
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  position: relative;
+	display: inline-block;
+	text-align: left;
+ width: 100%;
+   text-decoration: none;
+}
+
+.sociallink-separator {
+    height: 0.5px;
+  background-color: #CCCCCC;
+  width: -moz-calc(100% - 44px);
+  width: -webkit-calc(100% - 44px);
+  width: calc(100% - 44px);
+  margin-left: 44px;
+  position: relative;
+}
+
+.sociallink img {
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.social a:link, .social a:visited, .social a:active {
+  text-decoration: none;
+	color: black;
+}
+
+.social a:hover {
+  text-decoration: none;
+	color: #737373;
+	opacity: 45%;
+}
+
+
+/* Head shots */
+
+.portrait {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 130px;
+	text-align: center;
+	line-height: 1.6;
+	margin-bottom: 30px;
+}
+
+.portrait h2 {
+	font-variant: small-caps;
+	font-size: 11px;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+.avatar {
+	width: 82px;
+	height: 82px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+
+#jenny {
+	background: url(gfx/portrait_jenny@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
+#viktor {
+	background: url(gfx/portrait_viktor@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
+#robert {
+	background: url(gfx/portrait_robert@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
+#max {
+	background: url(gfx/portrait_max@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
+#simon {
+	background: url(gfx/portrait_simon@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
+#paula {
+	background: url(gfx/portrait_paula@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
+#sara {
+	background: url(gfx/portrait_sara@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
+a.avatarlink {
+	width: 108px;
+	height: 108px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+
+
+/* Responsive Layout */
+
+
+
+@media (max-width:640px) {
+  
+  #content {
+    padding-top: 60px;
+  }
+	
+	.puff {
+		height: auto;
+		margin: 40px 0 40px 0;
+		width: 90%;	
+	}
+	
+	.puffspacer {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 0;
+		margin: 0;
+	}	
+
+	.appicon {
+		width: 132px;
+		height: 132px;
+		position: relative;
+		overflow: hidden;
+		float: left;
+		margin-left: -26px;
+		margin-top: -26px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	}
+	
+	.appText {
+		overflow: hidden;
+		width: 90%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		text-align: left;
+	}
+	
+	.screenshot {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: auto;	
+	}
+	
+	.screenshotVegourmet,
+  .screenshotVeryveggie,
+  .screenshotKakboken,
+	.screenshotSmoothies,
+	.screenshotWeekend,
+	.screenshotMeals {
+		background-size: 100% auto;
+	}
+
+	#creator {
+		padding-top: 0%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 0%;
+	}
+	
+	#mission {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+
+@media (min-width:1636px) {
+
+/* Wider spacer for 4 columns */
+	
+	.puffspacer {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 1128px;
+	}
+	
+	#creator {
+		padding-left: 33%;
+		padding-right: 33%;
+	}
+	
+	#mission {
+		padding-left: 33%;
+		padding-right: 33%;
+	}
+	
+}
+
+

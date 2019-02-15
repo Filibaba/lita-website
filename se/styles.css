@@ -7,34 +7,159 @@ html {
   font-size: 16px;
 }
 
+
+
+/* Site nav */
+
+.site-nav{
+  position: absolute;
+  width: 100%;
+}
+
+.site-nav-left{
+  float: left;
+}
+
+.site-nav-right{
+  float: right;
+  margin-right: 42px;
+}
+  
+.site-nav-regular{
+  height: 100px;
+  color: #737373;
+  width: 100px;
+  text-align: center;
+	position: relative;
+	display: inline-block;
+  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  text-decoration: none;
+  line-height: 100px;
+}
+
+.site-nav-active{
+  height: 100px;
+  color: black;
+  width: 100px;
+  text-align: center;
+	position: relative;
+	display: inline-block;
+  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  text-decoration: none;
+    
+  line-height: 100px;
+}
+
+.site-nav-regular:hover {
+  color: black;
+}
+
+.site-nav-regular:active {
+  color: #737373;
+}
+
+.plantry-logo{
+  height: 100px;
+	position: relative;
+	display: inline-block;
+}
+
+.plantry-tagline{
+  position: absolute;
+  margin-top: 47px;
+  color: black;
+  font: 0.9rem "Avenir-Book", Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.separator{
+  height: 0.5px;
+  background-color: #CCCCCC;
+  width: -moz-calc(100% - 84px);
+  width: -webkit-calc(100% - 84px);
+  width: calc(100% - 84px);
+  margin-left: 42px;
+  margin-top: 99px;
+  position: absolute;
+}
+
+/* Site nav responsive header */
+
+@media (max-width: 1040px){
+  .plantry-tagline{
+    display: none;
+  }
+}
+
+@media (max-width: 820px){
+  .plantry-logo{
+    width: 100px;
+    height: 100px;
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: middle;
+  	overflow: hidden;
+  }
+}
+
+@media (max-width: 700px){
+  .plantry-logo{
+    display: none;
+  }
+  .separator{
+    display: none;
+  }
+}
+
+/* Site nav mobile layout — below iPhone SE landscape size */
+
+@media (max-width: 640px){
+  
+  .site-nav-regular{
+    height: 50px;
+  }
+  
+  .site-nav-right{
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .site-nav-regular, .site-nav-active{
+    height: 50px;
+    line-height: 50px;
+    width: 18%;
+    font-size: 11px;
+  }
+}
+
+
+
+
+
+
+
+
 body {
   margin: 0;
-  padding:0;
   background-color: rgb(255, 255, 255);
 }
 
 header {
   background: #fff;
-  background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 83%, #ffc800 83%, #ffc800 100%);
+    background: linear-gradient(to bottom, #ffffff 13.24%, #f2f2fa 82.39%, #ffc800 82.39%, #ffc800 100%);
   height: auto;
-  min-height: 800px;
+  min-height: 687px;
   max-height: auto;
 }
 
 header img {
+    padding-top: 100px;
 	height: auto;
 	width: 100%;
 	max-width: 1330px;
 	margin: auto;
 	display: block;
-}
-
-header .app-store-download {
-  position: absolute;
-  top: 14rem;
-  left: 8vw;
-  width: 12rem;
-  height: auto;
 }
 
 section {
@@ -112,7 +237,7 @@ section > .recipes {
 #problem-intro {
   background: #FFC800; 
   color: rgb(0, 0, 0);
-  padding: 0 0 10rem;
+  padding: 0 0 7rem;
 }
 
 #problem-intro .content {
@@ -274,7 +399,6 @@ p {
   opacity: 0.7;
 }
 
-/* Responsive header */
 
 @media (max-width: 1330px){
   header {
@@ -473,7 +597,7 @@ p {
     left: 33vw;
     width: 34vw;
     height: 11vw;
-    background: url('../gfx/app_store_se.svg') no-repeat;
+    background: url('../gfx/app_store.svg') no-repeat;
     background-size: cover;
   }  
 
@@ -557,6 +681,7 @@ p {
     text-align: center;
     font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
     font-weight: bold;
+    margin: 0px 35px 0px 34px;
   }
   
   .plants {width: 100%;}
@@ -582,6 +707,4 @@ p {
     text-transform: uppercase;
     opacity: 0.7;
   }
-
 }
-

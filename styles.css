@@ -18,6 +18,7 @@ html {
 
 .site-nav-left{
   float: left;
+  width: 24%;
 }
 
 .site-nav-right{
@@ -102,7 +103,7 @@ html {
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 750px){
   .plantry-logo{
     display: none;
   }
@@ -483,6 +484,7 @@ p {
     z-index: 0;
   }
 }
+  
 
 /* Mobile layout — below iPhone SE landscape size */
 
@@ -571,7 +573,7 @@ p {
   }
   
   .gradientbg {
-    height: 83vh;
+    height: 80vh;
   	background: url(gfx/heroimage-mobile@2x.jpg);
     background-size: 100% auto;
   	background-repeat: no-repeat;
@@ -666,7 +668,7 @@ p {
   #problem-intro {
     background: #FFC800; 
     color: rgb(0, 0, 0);
-    padding: 3.5rem 0 4rem 0;
+    padding: 0 0 4rem 0;
   }
 
   #problem-intro .content {

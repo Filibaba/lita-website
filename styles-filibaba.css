@@ -12,6 +12,7 @@
 
 .site-nav-left{
   float: left;
+  width: 24%;
 }
 
 .site-nav-right{
@@ -96,7 +97,7 @@
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 750px){
   .plantry-logo{
     display: none;
   }

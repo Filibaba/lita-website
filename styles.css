@@ -236,12 +236,12 @@ section > .recipes {
 #problem-intro {
   background: #FFC800; 
   color: rgb(0, 0, 0);
-  padding: 0 0 7rem;
+  padding: 0 0 5rem 0;
 }
 
 #problem-intro .content {
   margin: auto;
-  max-width: 42rem;
+  max-width: 38rem;
 }
 
 #problem-intro h2 {
@@ -420,14 +420,14 @@ p {
   #problem-intro {
     background: #FFC800; 
     color: rgb(0, 0, 0);
-    padding: 0 0 10vw 0;
+    padding: 0 0 5rem 0;
   }
 
   #problem-intro .content {
     margin: auto;
     margin-left: 25vw;
     margin-right: 25vw;
-    max-width: 42rem;
+    max-width: 38rem;
   }
 }
 
@@ -675,7 +675,7 @@ p {
     margin: auto;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
-    max-width: 42rem;
+    max-width: 24rem;
   } 
   
   footer h2 {

@@ -770,3 +770,50 @@ p {
     background: radial-gradient(at bottom, color(display-p3 0.98 0.95 0.93 / 1) 0%, color(display-p3 0.95 0.86 0.77 / 1) 100%);
   }
 }
+
+/* Text and background color for dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(56, 56, 58);
+  }
+  
+  footer p {
+    color: #fff;
+    opacity: 0.7;
+  }
+  
+  footer, footer a {
+    color: #fff;
+  }
+  
+  .invertInDarkMode {
+   -webkit-filter: invert(1);
+   filter: invert(1);    
+  }
+  
+  .award {
+  	background: url(gfx/awardDarkMode@2x.png);
+    background-size: 290px 142px;
+  	background-repeat: no-repeat;
+  	background-position-y: 35px;
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 35px;
+  	width: 290px;
+  	height: 178px;
+  }
+  
+  .plants {
+  	background: url(gfx/bottom-plants-darkmode@2x.jpg);
+    background-size: 520px 392px;
+  	background-repeat: no-repeat;
+  	width: 520px;
+  	height: 392px;
+  }
+  
+  .plants img {
+    display: none;
+  }
+
+}

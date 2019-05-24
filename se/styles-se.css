@@ -28,7 +28,7 @@ html {
   
 .site-nav-regular{
   height: 100px;
-  color: #737373;
+  color: rgba(0, 0, 0, 0.7);
   width: 100px;
   text-align: center;
 	position: relative;
@@ -56,7 +56,7 @@ html {
 }
 
 .site-nav-regular:active {
-  color: #737373;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .plantry-logo{
@@ -154,8 +154,8 @@ header {
   max-height: auto;
 }
 
-header img {
-    padding-top: 100px;
+header .gradientbg img  {
+  padding-top: 100px;
 	height: auto;
 	width: 100%;
 	max-width: 1330px;
@@ -164,10 +164,11 @@ header img {
 }
 
 section {
-  padding: 2rem 1rem 0rem 1rem;
+  padding: 3rem 1rem 1.375rem 1rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 section > .content {
@@ -237,6 +238,7 @@ section > .recipes {
 
 #problem-intro {
   background: #FFC800; 
+  background: radial-gradient(at bottom, #FFD900 0%, #FF9500 100%);
   color: rgb(0, 0, 0);
   padding: 0 0 5rem 0;
 }
@@ -250,11 +252,36 @@ section > .recipes {
   margin: 1rem 0 0 0;
 }
 
-#plan-intro, #exclusive-content-intro, #shop-intro, #cook-intro, #premium-intro, #smart-cooking {
-  background: #fff;
-  background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 100%);
+#plan-intro {
+  background: #D3F5DE;
+  background: radial-gradient(at bottom, #D3F5DE 0%, #9EF0B9 100%);
   color: rgb(0, 0, 0);
 }
+
+#smart-cooking {
+  background: #FE963A;
+  background: radial-gradient(at bottom, #FEAE45 0%, #FE753A 100%);
+  color: rgb(0, 0, 0);
+}
+
+#shop-intro, #premium-intro {
+  background: #EDEBF5;
+  background: radial-gradient(at bottom, #F7F7FF 0%, #E1E1EB 100%);
+  color: rgb(0, 0, 0);
+}
+
+#exclusive-content-intro {
+  background: #E8569A;
+  background: radial-gradient(at bottom, #FF788E 0%, #DE3584 100%);
+  color: rgb(0, 0, 0);
+}
+
+ #cook-intro {
+  background: #fff;
+  background: radial-gradient(at bottom, #FAF3ED 0%, #F2DAC4 100%);
+  color: rgb(0, 0, 0);
+}
+
 
 footer {
   display: flex;
@@ -418,12 +445,6 @@ p {
     height: 4.5vw;
   }
   
-  #problem-intro {
-    background: #FFC800; 
-    color: rgb(0, 0, 0);
-    padding: 0 0 5rem 0;
-  }
-
   #problem-intro .content {
     margin: auto;
     margin-left: 25vw;
@@ -574,7 +595,7 @@ p {
   
   .gradientbg {
     height: 80vh;
-  	background: url(../gfx/heroimage-mobile-se@2x.jpg);
+  	background: url(../gfx/heroimage-mobile-se@2x.png);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   	margin-bottom: -1px;
@@ -586,7 +607,7 @@ p {
   	margin-bottom: -1px;
   }
   
-  header img {
+  header .gradientbg img {
   	display: none;
   }
   
@@ -663,12 +684,6 @@ p {
     opacity: 1;
     margin-bottom: 3rem;
     margin-top: 3rem;
-  }
-  
-  #problem-intro {
-    background: #FFC800; 
-    color: rgb(0, 0, 0);
-    padding: 0 0 4rem 0;
   }
 
   #problem-intro .content {

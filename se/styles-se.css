@@ -741,3 +741,38 @@ p {
     opacity: 0.7;
   }
 }
+
+/* Wide gamut display support */
+
+@supports (color: color(display-p3 0 0 0 / 1)) {
+  
+  #problem-intro {
+    background: color(display-p3 1 0.78 0 / 1);
+    background: radial-gradient(at bottom, color(display-p3 1 0.85 0 / 1) 0%, color(display-p3 1 0.58 0 / 1) 100%);
+  }
+  
+  #plan-intro {
+    background: color(display-p3 0.83 0.96 0.87 / 1);
+    background: radial-gradient(at bottom, color(display-p3 0.83 0.96 0.87 / 1) 0%, color(display-p3 0.62 0.94 0.73 / 1) 100%);
+  }
+  
+  #smart-cooking {
+    background: color(display-p3 1 0.59 0.23 / 1);
+    background: radial-gradient(at bottom, color(display-p3 1 0.68 0.27 / 1) 0%, color(display-p3 1 0.46 0.23 / 1) 100%);
+  }
+  
+  #shop-intro, #premium-intro {
+    background: color(display-p3 0.93 0.92 0.96 / 1);
+    background: radial-gradient(at bottom, color(display-p3 0.97 0.97 1 / 1) 0%, color(display-p3 0.88 0.88 0.92 / 1) 100%);
+  }
+  
+  #exclusive-content-intro {
+    background: color(display-p3 1 0.47 0.56 / 1);
+    background: radial-gradient(at bottom, color(display-p3 1 0.47 0.56 / 1) 0%, color(display-p3 0.87 0.20 0.52 / 1) 100%);
+  }
+  
+   #cook-intro {
+    background: color(display-p3 0.96 0.93 0.90 / 1);
+    background: radial-gradient(at bottom, color(display-p3 0.98 0.95 0.93 / 1) 0%, color(display-p3 0.95 0.86 0.77 / 1) 100%);
+  }
+}

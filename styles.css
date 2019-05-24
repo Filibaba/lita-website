@@ -179,10 +179,6 @@ section > .content {
   padding-right: env(safe-area-inset-right);
 }
 
-section > .content img {
-  margin-bottom: 1rem;
-}
-
 section > .screenshot {
   width: 357px;
   height: 670px;
@@ -234,6 +230,27 @@ section > .recipes {
 	margin-bottom: 59px;
 }
 
+#bubble {
+  background: #fff;
+  -moz-border-radius:44px;
+  -webkit-border-radius:44px;
+  -opera-border-radius:44px;
+  -khtml-border-radius:44px;
+  border-radius:44px;
+
+}
+#bubble-shadow {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  width: 88px;
+  height: 88px;
+  -moz-border-radius:44px;
+  -webkit-border-radius:44px;
+  -opera-border-radius:44px;
+  -khtml-border-radius:44px;
+  border-radius:44px;
+  margin-bottom: 1rem;
+}
+
 #problem-intro {
   background: #FFC800; 
   background: radial-gradient(at bottom, #FFD900 0%, #FF9500 100%);
@@ -271,7 +288,7 @@ section > .recipes {
 #exclusive-content-intro {
   background: #E8569A;
   background: radial-gradient(at bottom, #FF788E 0%, #DE3584 100%);
-  color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 1);
 }
 
  #cook-intro {
@@ -679,10 +696,6 @@ p {
     margin-top: 3rem;
   }
   
-  #problem-intro {
-    padding: 0 0 4rem 0;
-  }
-
   #problem-intro .content {
     margin: auto;
     margin-left: 1.25rem;

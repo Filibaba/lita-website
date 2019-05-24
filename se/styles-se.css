@@ -717,7 +717,9 @@ p {
     margin: 0px 35px 0px 34px;
   }
   
-  .plants {width: 100%;}
+  .plants, .plants img {
+    width: 100%;
+  }
   
   h2, p {
     margin: 0;

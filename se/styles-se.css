@@ -611,9 +611,9 @@ p {
   }
   
   .gradientbg {
-    height: 85vh;
-  	background: url(../gfx/heroimage-mobile-se@2x.png);
-    background-size: 100% auto;
+    height: 634px;
+  	background: url(../gfx/heroimage-mobile-se@2x.png) center center;
+    background-size: 567px auto;
   	background-repeat: no-repeat;
   	margin-bottom: -1px;
   }
@@ -704,12 +704,21 @@ p {
     margin-top: 3rem;
   }
 
+  #problem-intro {
+    padding: 0 0 3rem 0;
+  }
+  
   #problem-intro .content {
     margin: auto;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
     max-width: 24rem;
   } 
+  
+  #problem-intro h2 {
+    margin: 0;
+  }
+  
   
   footer h2 {
     text-align: center;

@@ -681,6 +681,7 @@ p {
     font: normal 0.9375rem "AvenirNext-Regular", Helvetica, sans-serif;
     opacity: 0.5;
     text-align: left;
+    margin: 0;
   }
   
   .app-store-download {

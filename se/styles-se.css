@@ -611,7 +611,7 @@ p {
   }
   
   .gradientbg {
-    height: 80vh;
+    height: 95vh;
   	background: url(../gfx/heroimage-mobile-se@2x.png);
     background-size: 100% auto;
   	background-repeat: no-repeat;

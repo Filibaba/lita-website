@@ -784,3 +784,109 @@ a.avatarlink {
 }
 
 
+/* Text and background color for dark mode */
+@media (prefers-color-scheme: dark) {
+  
+  .invertInDarkMode {
+   -webkit-filter: invert(1);
+   filter: invert(1);    
+  }  
+  
+  .site-nav-active,
+  .site-nav-regular:hover,
+  .plantry-tagline
+  {
+    color: white;
+  }
+
+  .site-nav-regular{
+  color: rgba(255, 255, 255, 0.55);
+  }
+  
+  .site-nav-regular:active {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  body {
+    background-color: rgb(56, 56, 58);
+  }
+
+  .separator,
+  .sociallink-separator{
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  
+ 
+   /* All Apps */ 
+  .veryveggie,
+  .kakboken,
+  .vegourmet {
+  	background-color: rgb(38, 38, 40);
+  	color: white;
+  	border: none;
+  	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.2);
+  }
+  
+  .veryveggie a:hover,
+  .kakboken a:hover,
+  .vegourmet a:hover {
+  	color: white;
+  }
+  
+  .screenshotVeryveggie {
+  	background: url(../gfx/screenshot_veryveggie_dark@2x.jpg);
+  	background-size: 310px 550px;
+  	background-repeat: no-repeat;
+  }
+  .screenshotKakboken {
+  	background: url(../gfx/screenshot_kakboken_dark@2x.jpg);
+  	background-size: 310px 550px;
+  	background-repeat: no-repeat;
+  }
+		
+  .screenshotVegourmet {
+  	background: url(../gfx/screenshot_vegourmet_dark@2x.jpg);
+  	background-size: 310px 550px;
+  	background-repeat: no-repeat;
+  }
+  
+  
+  
+  /* Creator */
+  #creator,
+  #creator a:link,
+  #creator a:visited,
+  #creator a:active, 
+  .headline {
+  	color: white;
+  }
+  
+  #creator a:hover {
+  	color: rgba(255, 255, 255, 0.7);
+  }
+  
+  #illustration {
+    margin-top: 40px;
+  	background: url(../gfx/plantry-illustration-dark@2x.jpg);
+    background-size: 100% auto;
+  	background-repeat: no-repeat;
+  	width: 100%;
+  	height: auto;
+  }
+  
+  
+  
+  /* About Page*/
+  .separator-fat{
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  #about,
+  .portrait,
+  .copyright,
+  .apple-notice {
+    color: white;
+  }
+
+}

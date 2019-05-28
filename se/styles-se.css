@@ -781,7 +781,7 @@ p {
   
   #exclusive-content-intro {
     background: color(display-p3 1 0.47 0.56 / 1);
-    background: radial-gradient(at bottom, color(display-p3 1 0.47 0.56 / 1) 0%, color(display-p3 0.87 0.20 0.52 / 1) 100%);
+    background: radial-gradient(at bottom, color(display-p3 1 0.5 0.58 / 1) 0%, color(display-p3 0.83 0.22 0.51 / 1) 100%);
   }
   
    #cook-intro {

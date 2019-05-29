@@ -269,7 +269,7 @@ section > .recipes {
   margin: 1rem 0 0 0;
 }
 
-#plan-intro {
+#plan-intro, #cook-intro {
   background: #D3F5DE;
   background: radial-gradient(at bottom, #D3F5DE 0%, #9EF0B9 100%);
   color: rgb(0, 0, 0);
@@ -291,12 +291,6 @@ section > .recipes {
   background: #E8569A;
   background: radial-gradient(at bottom, #FF788E 0%, #DE3584 100%);
   color: rgba(255, 255, 255, 1);
-}
-
- #cook-intro {
-  background: #fff;
-  background: radial-gradient(at bottom, #FAF3ED 0%, #F2DAC4 100%);
-  color: rgb(0, 0, 0);
 }
 
 
@@ -764,7 +758,7 @@ p {
     background: radial-gradient(at bottom, color(display-p3 1 0.85 0.2 / 1) 0%, color(display-p3 1 0.62 0.1 / 1) 100%);
   }
   
-  #plan-intro {
+  #plan-intro, #cook-intro {
     background: color(display-p3 0.83 0.96 0.87 / 1);
     background: radial-gradient(at bottom, color(display-p3 0.83 0.96 0.87 / 1) 0%, color(display-p3 0.62 0.94 0.73 / 1) 100%);
   }
@@ -782,11 +776,6 @@ p {
   #exclusive-content-intro {
     background: color(display-p3 1 0.47 0.56 / 1);
     background: radial-gradient(at bottom, color(display-p3 1 0.5 0.58 / 1) 0%, color(display-p3 0.83 0.22 0.51 / 1) 100%);
-  }
-  
-   #cook-intro {
-    background: color(display-p3 0.96 0.93 0.90 / 1);
-    background: radial-gradient(at bottom, color(display-p3 0.98 0.95 0.93 / 1) 0%, color(display-p3 0.95 0.86 0.77 / 1) 100%);
   }
 }
 

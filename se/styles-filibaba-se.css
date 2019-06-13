@@ -813,7 +813,7 @@ a.avatarlink {
 
   .separator,
   .sociallink-separator{
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.3);
   }
   
   
@@ -878,7 +878,7 @@ a.avatarlink {
   
   /* About Page*/
   .separator-fat{
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.15);
   }
   
   #about,

@@ -812,7 +812,7 @@ a.avatarlink {
   }
 
   body {
-    background-color: rgb(56, 56, 58);
+    background-color: rgb(0, 0, 0);
   }
 
   .separator,
@@ -829,7 +829,6 @@ a.avatarlink {
   	background-color: rgb(38, 38, 40);
   	color: white;
   	border: none;
-  	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.2);
   }
   
   .veryveggie a:hover,

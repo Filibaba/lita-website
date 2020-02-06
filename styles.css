@@ -28,7 +28,7 @@ html {
   
 .site-nav-regular{
   height: 100px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 1);
   width: 100px;
   text-align: center;
 	position: relative;
@@ -52,25 +52,21 @@ html {
 }
 
 .site-nav-regular:hover {
-  color: black;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .site-nav-regular:active {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 1);
 }
+
+
 
 .plantry-logo{
   height: 100px;
 	position: relative;
 	display: inline-block;
-}
-
-.plantry-tagline{
-  position: absolute;
-  margin-top: 47px;
-  color: black;
-  font: 0.9rem "Avenir-Book", Helvetica, sans-serif;
-  text-decoration: none;
+	   -webkit-filter: invert(1);
+   filter: invert(1);   
 }
 
 .separator{
@@ -136,13 +132,17 @@ html {
 
 
 
-
-
-
 body {
   margin: 0;
   background-color: rgb(255, 255, 255);
 }
+
+
+
+
+
+
+/* Header */
 
 header {
   background: #fff;
@@ -152,14 +152,76 @@ header {
   max-height: auto;
 }
 
-header .gradientbg img  {
-  padding-top: 100px;
-	height: auto;
-	width: 100%;
-	max-width: 1330px;
-	margin: auto;
-	display: block;
+header h2 {
+  font-size: 72px;
+  background: linear-gradient(to right, #E9D2DA, #B0C7ED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.gradientbg  {
+  padding-top: 200px;
+}
+
+header > .screenshot {
+  width: 357px;
+  height: 670px;
+  position: relative;
+  z-index: 2;
+  margin-left: -27px;
+  margin-right: -27px;
+}
+
+header > .screenshot img {
+  z-index: 6;
+  position: relative;
+}
+
+header > .plan {
+	background: url(gfx/iphonePlan@2x.png);
+  background-size: 357px 670px;
+	background-repeat: no-repeat;
+}
+
+.video {
+	display: block;
+	margin-top: 31px;
+	margin-left: 44px;
+	margin-right: 44px;
+	margin-bottom: 59px;
+}
+
+#problem-intro {
+  background: #02030D; 
+  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
+  background-image: url(gfx/earth-bg.jpg);
+  background-position: center top;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  padding: 0 0 5rem 0;
+}
+
+#bend {
+  width: 100%;
+}
+
+#problem-intro .content {
+  margin: auto;
+  max-width: 38rem;
+}
+
+#problem-intro h2 {
+  margin: 1rem 0 0 0;
+}
+
+
+
+
+
+
+
+/* Feature grid */
+
 
 section {
   padding: 4rem 1rem 2.375rem 1rem;
@@ -179,117 +241,31 @@ section > .content {
   padding-right: env(safe-area-inset-right);
 }
 
-section > .screenshot {
-  width: 357px;
-  height: 670px;
-  position: relative;
-  z-index: 2;
-  margin-left: -27px;
-  margin-right: -27px;
-}
-
-section > .screenshot img {
-  z-index: 6;
-  position: relative;
-}
-
-section > .screenshot::before {
-  content: " ";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 200%;
-  width: 350%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-section:nth-child(even) > .content {
-  order: 2;
-  margin-left: 15vw;
-  margin-right: 0;
-}
-
-section > .plan {
-	background: url(gfx/iphonePlan@2x.png);
-  background-size: 357px 670px;
-	background-repeat: no-repeat;
-}
-	
-section > .recipes {
-	background: url(gfx/iphonePlan@2x.png);
-  background-size: 357px 670px;
-	background-repeat: no-repeat;
-}
-	
-.video {
-	display: block;
-	margin-top: 31px;
-	margin-left: 44px;
-	margin-right: 44px;
-	margin-bottom: 59px;
-}
-
-#bubble {
-  background: #fff;
-  -moz-border-radius:44px;
-  -webkit-border-radius:44px;
-  -opera-border-radius:44px;
-  -khtml-border-radius:44px;
-  border-radius:44px;
-
-}
-#bubble-shadow {
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-  width: 88px;
-  height: 88px;
-  -moz-border-radius:44px;
-  -webkit-border-radius:44px;
-  -opera-border-radius:44px;
-  -khtml-border-radius:44px;
-  border-radius:44px;
-  margin-bottom: 1rem;
-}
-
-#problem-intro {
-  background: #FFC800; 
-  background: radial-gradient(at bottom, #FFD900 0%, #FF9500 100%);
-  color: rgb(0, 0, 0);
-  padding: 0 0 5rem 0;
-}
-
-#problem-intro .content {
-  margin: auto;
-  max-width: 38rem;
-}
-
-#problem-intro h2 {
-  margin: 1rem 0 0 0;
-}
-
 #plan-intro, #cook-intro {
-  background: #D3F5DE;
-  background: radial-gradient(at bottom, #D3F5DE 0%, #9EF0B9 100%);
   color: rgb(0, 0, 0);
 }
 
-#smart-cooking {
-  background: #FE963A;
-  background: radial-gradient(at bottom, #FEAE45 0%, #FE753A 100%);
-  color: rgb(0, 0, 0);
+
+
+
+
+
+.divider {
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-bottom: 70px;
 }
 
-#shop-intro, #premium-intro {
-  background: #EDEBF5;
-  background: radial-gradient(at bottom, #F7F7FF 0%, #E1E1EB 100%);
-  color: rgb(0, 0, 0);
-}
 
-#exclusive-content-intro {
-  background: #E8569A;
-  background: radial-gradient(at bottom, #FF7AA2 0%, #FF5487 100%);
-  color: rgb(0, 0, 0);
-}
+
+
+
+
+
+
+
+/* Awards */
+
 
 footer {
   display: flex;
@@ -322,8 +298,8 @@ footer h2 {
 
 .app-store-download {
   display: block;
-  width: 154px;
-  height: 50px;
+  width: 173px;
+  height: 56px;
   background: url('gfx/app_store.svg') no-repeat;
   background-size: cover;
   text-indent: -999px;
@@ -410,6 +386,12 @@ footer h2 {
   opacity: 0.5;
   text-align: left;
 }
+
+
+
+
+
+
 
 /* Typography */
 
@@ -680,8 +662,8 @@ p {
   
   .app-store-download {
     display: block;
-    width: 154px;
-    height: 50px;
+    width: 173px;
+    height: 56px;
     background: url('gfx/app_store.svg') no-repeat;
     background-size: cover;
     text-indent: -999px;
@@ -713,10 +695,6 @@ p {
     margin: 0px 35px 0px 34px;
   }
   
-  .plants, .plants img {
-    width: 100%;
-  }
-  
   h2, p {
     margin: 0;
     padding: 0 0 1.2rem 0;
@@ -742,34 +720,15 @@ p {
 
 
 /* Wide gamut display support */
-
+/*
 @supports (color: color(display-p3 0 0 0 / 1)) {
   
   #problem-intro {
     background: color(display-p3 1 0.78 0 / 1);
     background: radial-gradient(at bottom, color(display-p3 1 0.85 0.2 / 1) 0%, color(display-p3 1 0.62 0.1 / 1) 100%);
   }
-  
-  #plan-intro, #cook-intro {
-    background: color(display-p3 0.83 0.96 0.87 / 1);
-    background: radial-gradient(at bottom, color(display-p3 0.83 0.96 0.87 / 1) 0%, color(display-p3 0.62 0.94 0.73 / 1) 100%);
-  }
-  
-  #smart-cooking {
-    background: color(display-p3 1 0.59 0.23 / 1);
-    background: radial-gradient(at bottom, color(display-p3 1 0.68 0.27 / 1) 0%, color(display-p3 1 0.46 0.23 / 1) 100%);
-  }
-  
-  #shop-intro, #premium-intro {
-    background: color(display-p3 0.93 0.92 0.96 / 1);
-    background: radial-gradient(at bottom, color(display-p3 0.97 0.97 1 / 1) 0%, color(display-p3 0.88 0.88 0.92 / 1) 100%);
-  }
-  
-  #exclusive-content-intro {
-    background: color(display-p3 1 0.48 0.64 / 1);
-    background: radial-gradient(at bottom, color(display-p3 1 0.48 0.64 / 1) 0%, color(display-p3 1 0.33 0.53 / 1) 100%);
-  }
 }
+*/
 
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {
@@ -804,16 +763,4 @@ p {
   	height: 178px;
   }
   
-  .plants {
-  	background: url(gfx/bottom-plants-darkmode@2x.jpg);
-    background-size: 520px 392px;
-  	background-repeat: no-repeat;
-  	width: 520px;
-  	height: 392px;
-  }
-  
-  .plants img {
-    display: none;
-  }
-
 }

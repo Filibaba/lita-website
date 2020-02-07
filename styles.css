@@ -4,7 +4,7 @@ html { box-sizing: border-box; }
 
 html {
   /* One rem is 16px */
-  font-size: 16px;
+  font-size: 18px;
 }
 
 
@@ -19,44 +19,57 @@ html {
 .site-nav-left{
   float: left;
   width: 24%;
+  
 }
 
 .site-nav-right{
+  
+  color: white;
   float: right;
   margin-right: 42px;
 }
+
+.site-nav-center{
+  float: center;
+  margin-bottom: 42px;
+}
+
+.site-nav-right a {
+  color: white;
+}
+ 
+
   
 .site-nav-regular{
   height: 100px;
-  color: rgba(255, 255, 255, 1);
   width: 100px;
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px "Avenir-Book", Helvetica, sans-serif;
   text-decoration: none;
   line-height: 100px;
+  
+  
 }
 
 .site-nav-active{
   height: 100px;
-  color: black;
   width: 100px;
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px "Avenir-Book", Helvetica, sans-serif;
   text-decoration: none;
-    
   line-height: 100px;
 }
 
 .site-nav-regular:hover {
-  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.5;
 }
 
 .site-nav-regular:active {
-  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
 }
 
 
@@ -134,6 +147,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   background-color: rgb(255, 255, 255);
 }
 
@@ -145,23 +159,60 @@ body {
 /* Header */
 
 header {
-  background: #fff;
-    background: linear-gradient(to bottom, #ffffff 13.24%, #f2f2fa 82.39%, #ffc800 82.39%, #ffc800 100%);
-  height: auto;
-  min-height: 687px;
-  max-height: auto;
+  padding: 0;
+  margin: 0;
 }
 
-header h2 {
+.hero {
+  background: #02030D; 
+  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
+  background-image: url(gfx/earth-bg.jpg);
+  background-position: center top;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  padding: 160px 0 0 0;
+  margin: 0 0 60px 0;
+  text-align: center;
+}
+
+.app-store-download-top {
+  
+  margin-top: 320px;
+  margin-left: 60px;
+	position: absolute;
+	display: inline-block;
+}
+
+.hero img {
+  margin-top: 50px;
+}
+
+.hero h2 {
   font-size: 72px;
-  background: linear-gradient(to right, #E9D2DA, #B0C7ED);
+  background: linear-gradient(to right, #E9D2DA 40%, #B0C7ED 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradientbg  {
-  padding-top: 200px;
-}
+.bend {
+  width: 100%;
+  padding: 0;
+  margin-bottom: -15px;
+  background-image: url(gfx/bend.svg);
+  background-size: contain;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+;}
+
+
+
+
+
+
+
+/*
+
 
 header > .screenshot {
   width: 357px;
@@ -191,29 +242,8 @@ header > .plan {
 	margin-bottom: 59px;
 }
 
-#problem-intro {
-  background: #02030D; 
-  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
-  background-image: url(gfx/earth-bg.jpg);
-  background-position: center top;
-  background-size: cover;
-  color: rgb(0, 0, 0);
-  padding: 0 0 5rem 0;
-}
 
-#bend {
-  width: 100%;
-}
-
-#problem-intro .content {
-  margin: auto;
-  max-width: 38rem;
-}
-
-#problem-intro h2 {
-  margin: 1rem 0 0 0;
-}
-
+*/
 
 
 
@@ -223,27 +253,52 @@ header > .plan {
 /* Feature grid */
 
 
-section {
-  padding: 4rem 1rem 2.375rem 1rem;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  margin-top: 10px;
-}
-
-section > .content {
-  max-width: 24rem;
-  margin: auto;
-  margin-right: 15vw;
-  margin-left: 0;
-  z-index: 5;
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 }
 
-#plan-intro, #cook-intro {
-  color: rgb(0, 0, 0);
+
+section {
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
+
+.feature-grid {
+  max-width: 1100px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.feature {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 35px;
+	width: 290px;
+  text-align: left;
+}
+
+.feature p {
+  margin: 16px 0;
+	font-size: 18px;
+	opacity: 1.0;
+  line-height: 1.7;
+  padding: 0;
+}
+
+.feature img {
+}
+
+
+
+
+
+
 
 
 
@@ -267,46 +322,17 @@ section > .content {
 /* Awards */
 
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1rem 1rem 1rem;
-}
-
-footer p {
-  color: #000;
-  opacity: 0.5;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
-}
-
-footer a {
-  color: #000;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
-}
-
-footer h2 {
-  text-align: center;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-}
-
-.copyright, .apple-notice {
-	margin-bottom: 0;
-	margin: 0 1 0vw;
-}
-
 .app-store-download {
   display: block;
-  width: 173px;
-  height: 56px;
+  width: 185px;
+  height: 62px;
   background: url('gfx/app_store.svg') no-repeat;
   background-size: cover;
   text-indent: -999px;
   overflow: hidden;
   opacity: 1;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .award-grid {
@@ -354,7 +380,7 @@ footer h2 {
 
 .articlequote p {
   margin-top: 30px;
-	font-size: 16px;
+	font-size: 18px;
 	opacity: 1.0;
   line-height: 1.7;
 }
@@ -376,7 +402,7 @@ footer h2 {
 
 .review p {
   margin-top: 30px;
-	font-size: 16px;
+	font-size: 18px;
 	opacity: 1.0;
   line-height: 1.7;
 }
@@ -386,6 +412,55 @@ footer h2 {
   opacity: 0.5;
   text-align: left;
 }
+
+
+
+
+
+
+
+/* Footer */
+
+
+.bend-top {
+  padding: 0;
+  margin: -1px 0 40px 0;
+  width: 100%;
+  
+}
+
+footer {
+  background-color: #FFC800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+footer p {
+  color: #000;
+  opacity: 0.5;
+  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+footer a {
+  color: #000;
+  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+footer img {
+  margin: 24px 0;
+}
+
+
+
+.copyright, .apple-notice {
+	margin-bottom: 0;
+	margin: 0 1 0vw;
+}
+
+
+
 
 
 
@@ -504,72 +579,10 @@ p {
 @media (max-width: 567px){
   
   section {
-    padding: 3rem 0;
     display: inline-block;
     justify-content: center;
     overflow: hidden;
     width: 100%;
-  }
-  
-  section > .content {
-    max-width: 24rem;
-    margin: auto;
-    margin-right: 20px;
-    margin-left: 20px;
-    z-index: auto;
-  }
-  
-  section:nth-child(even) > .content {
-    order: inherit;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  
-  section > .content img {
-    margin-bottom: 1rem;
-  }
-  
-  section > .screenshot {
-    width: 100%;
-    height: auto;
-    margin-left: -7px;
-    margin-right: -7px;
-    position: relative;
-    z-index: auto;
-  }
-  
-  section > .screenshot img {
-    z-index: auto;
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  
-  section > .screenshot::before {
-    content: " ";
-    position: relative;
-    top: 50%;
-    left: 50%;
-    height: 200%;
-    width: 350%;
-    transform: translate(-50%, -50%);
-    z-index: auto;
-  }
-  section > .plan {
-  	background: url(gfx/iphonePlan@2x.png);
-    background-size: 100% auto;
-  	background-repeat: no-repeat;
-  }
-  
-  section > .plan img {
-  	display: block;
-  	z-index: 2;
-  }
-
-  section > .recipes {
-  	background: url(gfx/iphonePlan@2x.png);
-    background-size: 100% auto;
-  	background-repeat: no-repeat;
   }
   	
   .video {
@@ -608,6 +621,46 @@ p {
     background: url('gfx/app_store.svg') no-repeat;
     background-size: cover;
   }  
+
+
+
+
+
+section h2 {
+    text-align: center;
+    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0px 16px 0px 16px;
+  }
+
+  .feature-grid {
+    max-width: 1090px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .feature {
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 0;
+  	margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .feature p {
+    margin-top: 20px;
+  	font-size: 15px;
+  	opacity: 1.0;
+    line-height: 1.7;
+  }
+
+
+
+
+
+
 
   .award {
   	margin: 20px 0px 20px 0px;
@@ -688,12 +741,7 @@ p {
     margin: 0;
   }
   
-  footer h2 {
-    text-align: center;
-    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
-    font-weight: bold;
-    margin: 0px 35px 0px 34px;
-  }
+
   
   h2, p {
     margin: 0;
@@ -720,15 +768,15 @@ p {
 
 
 /* Wide gamut display support */
-/*
+
 @supports (color: color(display-p3 0 0 0 / 1)) {
   
-  #problem-intro {
-    background: color(display-p3 1 0.78 0 / 1);
-    background: radial-gradient(at bottom, color(display-p3 1 0.85 0.2 / 1) 0%, color(display-p3 1 0.62 0.1 / 1) 100%);
-  }
+  .hero h2 {
+  background: linear-gradient(to right, color(display-p3 0.91 0.82 0.85 / 1) 40%, color(display-p3 0.69 0.78 0.93 / 1) 60%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-*/
+}
 
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {

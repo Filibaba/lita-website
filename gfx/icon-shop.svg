@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>icon-shop</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M29,22 L39,22 C43.418278,22 47,25.581722 47,30 C47,34.418278 43.418278,38 39,38 L29,38 C24.581722,38 21,34.418278 21,30 C21,25.581722 24.581722,22 29,22 Z" id="path-1"></path>
+        <filter x="-34.6%" y="-43.8%" width="169.2%" height="212.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="25.41" height="12.705"></rect>
+    </defs>
+    <g id="3.7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/shoppingList">
+            <g transform="translate(1.000000, 3.000000)" id="Editable">
+                <g>
+                    <polygon id="Rectangle" stroke="#45B1FF" stroke-width="2.31" fill="#45B1FF" stroke-linecap="round" stroke-linejoin="round" points="2.636 40.5694118 0.48 14.48 32.82 14.48 30.664 40.5694118 32.82 51.44 0.48 51.44"></polygon>
+                    <g id="Rectangle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <path stroke="#FFFFFF" stroke-width="2" d="M45.363961,36.363961 C43.7352814,37.9926407 41.4852814,39 39,39 L29,39 C26.5147186,39 24.2647186,37.9926407 22.636039,36.363961 C21.0073593,34.7352814 20,32.4852814 20,30 C20,27.5147186 21.0073593,25.2647186 22.636039,23.636039 C24.2647186,22.0073593 26.5147186,21 29,21 L39,21 C41.4852814,21 43.7352814,22.0073593 45.363961,23.636039 C46.9926407,25.2647186 48,27.5147186 48,30 C48,32.4852814 46.9926407,34.7352814 45.363961,36.363961 Z" fill="#45B1FF" fill-rule="evenodd"></path>
+                    </g>
+                    <g id="Rectangle-2" transform="translate(3.945000, 0.620000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <path d="M11.996413,4.62 L13.413587,4.62 C15.2626807,4.62 16.3170309,4.88803395 17.258142,5.39134568 C18.1992531,5.89465741 18.9378426,6.63324692 19.4411543,7.57435803 C19.944466,8.51546914 20.2125,9.56981925 20.2125,11.418913 L20.2125,16.17 L20.2125,16.17 L5.1975,16.17 L5.1975,11.418913 C5.1975,9.56981925 5.46553395,8.51546914 5.96884568,7.57435803 C6.47215741,6.63324692 7.21074692,5.89465741 8.15185803,5.39134568 C9.09296914,4.88803395 10.1473193,4.62 11.996413,4.62 Z" stroke="#45B1FF" stroke-width="2.31" mask="url(#mask-4)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

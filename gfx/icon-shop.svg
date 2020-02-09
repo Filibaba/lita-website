@@ -4,26 +4,24 @@
     <title>icon-shop</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M29,22 L39,22 C43.418278,22 47,25.581722 47,30 C47,34.418278 43.418278,38 39,38 L29,38 C24.581722,38 21,34.418278 21,30 C21,25.581722 24.581722,22 29,22 Z" id="path-1"></path>
-        <filter x="-34.6%" y="-43.8%" width="169.2%" height="212.5%" filterUnits="objectBoundingBox" id="filter-2">
-            <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
-            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+        <path d="M30,22 L40,22 C44.418278,22 48,25.581722 48,30 C48,34.418278 44.418278,38 40,38 L30,38 C25.581722,38 22,34.418278 22,30 C22,25.581722 25.581722,22 30,22 Z" id="path-1"></path>
+        <filter x="-26.9%" y="-31.2%" width="153.8%" height="187.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
         <rect id="path-3" x="0" y="0" width="25.41" height="12.705"></rect>
     </defs>
     <g id="3.7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Icons/shoppingList">
-            <g transform="translate(1.000000, 3.000000)" id="Editable">
+            <g transform="translate(0.000000, 3.000000)" id="Editable">
                 <g>
-                    <polygon id="Rectangle" stroke="#45B1FF" stroke-width="2.31" fill="#45B1FF" stroke-linecap="round" stroke-linejoin="round" points="2.636 40.5694118 0.48 14.48 32.82 14.48 30.664 40.5694118 32.82 51.44 0.48 51.44"></polygon>
+                    <path d="M33.82,13.325 C34.4954047,13.325 35.0267013,13.9020134 34.9710762,14.5751237 L34.9710762,14.5751237 L34.5226131,19.999 L30,20 C24.4771525,20 20,24.4771525 20,30 C20,35.5228475 24.4771525,40 30,40 L32.8696131,39.999 L32.828,40.506 L34.9529323,51.2153018 C35.0862482,51.8874825 34.6100137,52.5165367 33.9465003,52.5882172 L33.9465003,52.5882172 L33.82,52.595 L1.48,52.595 C0.75189667,52.595 0.205419567,51.9294938 0.347067656,51.2153018 L0.347067656,51.2153018 L2.471,40.506 L0.328923769,14.5751237 C0.276775254,13.9440828 0.740475852,13.3975021 1.35515849,13.3316445 L1.35515849,13.3316445 L1.48,13.325 Z" id="Combined-Shape" fill="#45B1FF" fill-rule="nonzero"></path>
                     <g id="Rectangle">
                         <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                        <path stroke="#FFFFFF" stroke-width="2" d="M45.363961,36.363961 C43.7352814,37.9926407 41.4852814,39 39,39 L29,39 C26.5147186,39 24.2647186,37.9926407 22.636039,36.363961 C21.0073593,34.7352814 20,32.4852814 20,30 C20,27.5147186 21.0073593,25.2647186 22.636039,23.636039 C24.2647186,22.0073593 26.5147186,21 29,21 L39,21 C41.4852814,21 43.7352814,22.0073593 45.363961,23.636039 C46.9926407,25.2647186 48,27.5147186 48,30 C48,32.4852814 46.9926407,34.7352814 45.363961,36.363961 Z" fill="#45B1FF" fill-rule="evenodd"></path>
+                        <use fill="#45B1FF" fill-rule="evenodd" xlink:href="#path-1"></use>
                     </g>
-                    <g id="Rectangle-2" transform="translate(3.945000, 0.620000)">
+                    <g id="Rectangle-2" transform="translate(4.945000, 0.620000)">
                         <mask id="mask-4" fill="white">
                             <use xlink:href="#path-3"></use>
                         </mask>

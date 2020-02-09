@@ -205,6 +205,10 @@ header {
 	display: inline-block;
 }
 
+.app-store-download-top-mobile { 
+  display: none;
+}
+
 .hero h2 {
   font-size: 72px;
   background: linear-gradient(to right, #E9D2DA 40%, #B0C7ED 60%);
@@ -220,7 +224,6 @@ header {
   background-size: contain;
   background-position: center center;
   width: 100%;
-  height: 100%;
 ;}
 
 
@@ -344,7 +347,7 @@ section {
   overflow: hidden;
   opacity: 1;
   margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .award-grid {
@@ -506,34 +509,95 @@ p {
 
 
 
-@media (max-width: 1330px){
-  header {
-    background: #fff;
-    background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 83%, #ffc800 83%, #ffc800 100%);
-    height: auto;
-    min-height: auto;
-    max-height: auto;
-  }
-    	
-  header .app-store-download {
-    position: absolute;
-    top: 17vw;
-    left: 6vw;
-    width: 14vw;
-    height: 4.5vw;
-  }
 
-  #problem-intro .content {
-    margin: auto;
-    margin-left: 25vw;
-    margin-right: 25vw;
-    max-width: 38rem;
+/* Laptop layout */
+
+@media (min-width: 1001px) and (max-width: 1792px){
+  .hero {
+    padding: 106px 0 0 0;
+    margin: 0 0 60px 0;
+  }
+  
+  .hero-iphone {
+    margin-top: 20px;
+    margin-bottom: 0;
+    height: 595px;
+    width 232px;
+    background-size: 232px 595px;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  }
+  
+  .video {
+    height: 561px;
+    width 200px;
+    margin-top: 13px;
+    margin-right: 21px;
+    border-radius: 120px 0 0 120px/70px 0 0 70px;
+  }
+  
+  .app-store-download-top { 
+    margin-top: 272px;
+    margin-left: 64px;
+  	position: absolute;
+  	display: inline-block;
+  }
+  
+  .hero h2 {
+    font-size: 56px; 
   }
 }
+  
+  
+
 
 /* Tablet & Mobile layout */
 
 @media (min-width: 568px) and (max-width: 1000px){
+
+  .hero {
+    padding: 106px 0 0 0;
+    margin: 0 0 60px 0;
+    
+  }
+  
+  .hero-iphone {
+    margin-top: 20px;
+    margin-bottom: 0;
+    height: 595px;
+    width 232px;
+    background-size: 232px 595px;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  }
+  
+  .video {
+    height: 561px;
+    width 200px;
+    margin-top: 13px;
+    margin-right: 21px;
+    border-radius: 120px 0 0 120px/70px 0 0 70px;
+  }
+  
+  .app-store-download-top { 
+    display: none;
+  }
+  
+  .app-store-download-top-mobile { 
+    display: inherit;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+
+  .hero h2 {
+    font-size: 48px; 
+  }
+  
+  .bend {
+    margin-bottom: -8px;
+  ;}
+
+/*Old responsive code */
   section {
   padding: 2rem 1rem 0rem 1rem;
     display: flex;
@@ -547,12 +611,6 @@ p {
     margin-right: 5vw;
     margin-left: 0;
     z-index: 5;
-  }
-  
-  section:nth-child(even) > .content {
-    order: inherit;
-    margin-right: 5vw;
-    margin-left: 0;
   }
   
   section > .content img {
@@ -590,37 +648,54 @@ p {
 
 @media (max-width: 567px){
   
-  section {
-    display: inline-block;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-  }
-  	
-  .video {
-    z-index: 3;
-    width: 75.36%;
-    height: 86.56%; 
-  	display: block;
-  	padding-top: 8.65%;
-  	padding-bottom: 15%;
-  	margin-top: 8.65%;
-  	margin-left: 12.32%;
-  	margin-right: 12.32%;
-  	margin-bottom: 4.79%;
+
+  .hero {
+    padding: 64px 0 0 0;
+    margin: 0 0 60px 0;
   }
   
-  .gradientbg {
-    height: 634px;
-  	background: url(gfx/heroimage-mobile@2x.png) center center;
-    background-size: 567px auto;
+  .hero-iphone {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 595px;
+    width 232px;
+    background-size: 232px 595px;
   	background-repeat: no-repeat;
-  	margin-bottom: -1px;
+  	background-position: center center;
+  }
+
+  .video {
+    height: 561px;
+    width 200px;
+    margin-top: 13px;
+    margin-right: 21px;
+    border-radius: 120px 0 0 120px/70px 0 0 70px;
+    margin-bottom: 100px;
   }
   
-  header .gradientbg img {
-  	display: none;
+  .app-store-download-top { 
+    display: none;
   }
+  
+  .app-store-download-top-mobile { 
+    display: inherit;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+  
+  .hero h2 {
+    font-size: 26px; 
+  }
+  
+  .bend {
+    margin-bottom: -8px;
+  ;}
+  
+
+  
+  
+  /*old responsive code*/
+
   
   header .app-store-download {
     padding: 0;
@@ -728,7 +803,7 @@ section h2 {
   .app-store-download {
     display: block;
     width: 173px;
-    height: 56px;
+    height: 58px;
     background: url('gfx/app_store.svg') no-repeat;
     background-size: cover;
     text-indent: -999px;
@@ -737,22 +812,7 @@ section h2 {
     margin-bottom: 3rem;
     margin-top: 3rem;
   }
-  
-  #problem-intro {
-    padding: 0 0 3rem 0;
-  }
-  
-  #problem-intro .content {
-    margin: auto;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    max-width: 24rem;
-  } 
-  
-  #problem-intro h2 {
-    margin: 0;
-  }
-  
+
 
   
   h2, p {
@@ -796,12 +856,11 @@ section h2 {
     background-color: rgb(0, 0, 0);
   }
   
-  footer p {
-    color: #fff;
-    opacity: 0.7;
+  .divider {
+    background-color: rgba(255, 255, 255, 0.15);
   }
   
-  footer, footer a {
+  section p, h2 {
     color: #fff;
   }
   

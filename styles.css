@@ -65,11 +65,11 @@ html {
 }
 
 .site-nav-regular:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .site-nav-regular:active {
-  font-weight: bold;
+  opacity: 1.0;
 }
 
 
@@ -159,13 +159,13 @@ body {
 /* Header */
 
 header {
+  background-color: #02030D; 
+  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
   padding: 0;
   margin: 0;
 }
 
 .hero {
-  background: #02030D; 
-  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
   background-image: url(gfx/earth-bg.jpg);
   background-position: center top;
   background-size: cover;

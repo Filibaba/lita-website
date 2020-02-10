@@ -4,7 +4,7 @@ html { box-sizing: border-box; }
 
 html {
   /* One rem is 16px */
-  font-size: 16px;
+  font-size: 18px;
 }
 
 
@@ -19,58 +19,67 @@ html {
 .site-nav-left{
   float: left;
   width: 24%;
+  
 }
 
 .site-nav-right{
+  
+  color: white;
   float: right;
   margin-right: 42px;
 }
+
+.site-nav-center{
+  float: center;
+  margin-bottom: 42px;
+}
+
+.site-nav-right a {
+  color: white;
+}
+ 
+
   
 .site-nav-regular{
   height: 100px;
-  color: rgba(0, 0, 0, 0.7);
   width: 100px;
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px "Avenir-Book", Helvetica, sans-serif;
   text-decoration: none;
   line-height: 100px;
+  
+  
 }
 
 .site-nav-active{
   height: 100px;
-  color: black;
   width: 100px;
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 17px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px "Avenir-Book", Helvetica, sans-serif;
   text-decoration: none;
-    
   line-height: 100px;
 }
 
 .site-nav-regular:hover {
-  color: black;
+  opacity: 0.8;
 }
 
 .site-nav-regular:active {
-  color: rgba(0, 0, 0, 0.7);
+  opacity: 1.0;
 }
+
+
 
 .plantry-logo{
   height: 100px;
 	position: relative;
 	display: inline-block;
-}
-
-.plantry-tagline{
-  position: absolute;
-  margin-top: 47px;
-  color: black;
-  font: 0.9rem "Avenir-Book", Helvetica, sans-serif;
-  text-decoration: none;
+	   -webkit-filter: invert(1);
+   filter: invert(1);   
 }
 
 .separator{
@@ -136,52 +145,98 @@ html {
 
 
 
-
-
-
-
-
 body {
   margin: 0;
+  padding: 0;
   background-color: rgb(255, 255, 255);
 }
 
+
+
+
+
+
+/* Header */
+
 header {
-  background: #fff;
-    background: linear-gradient(to bottom, #ffffff 13.24%, #f2f2fa 82.39%, #ffc800 82.39%, #ffc800 100%);
-  height: auto;
-  min-height: 687px;
-  max-height: auto;
+  background-color: #02030D; 
+  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
+  padding: 0;
+  margin: 0;
 }
 
-header .gradientbg img  {
-  padding-top: 100px;
-	height: auto;
-	width: 100%;
-	max-width: 1330px;
-	margin: auto;
-	display: block;
-}
-
-section {
-  padding: 4rem 1rem 2.375rem 1rem;
-  display: flex;
-  justify-content: center;
+.hero {
+  background-image: url(../gfx/earth-bg.jpg);
+  background-position: center top;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  padding: 160px 0 0 0;
+  margin: 0 0 60px 0;
+  text-align: center;
+  background-attachment: fixed;
   overflow: hidden;
-  margin-top: 10px;
 }
 
-section > .content {
-  max-width: 24rem;
-  margin: auto;
-  margin-right: 15vw;
-  margin-left: 0;
-  z-index: 5;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
+.hero-iphone {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 744px;
+  width 290px;
+	background: url(../gfx/hero-iphone@2x.png);
+  background-size: 290px 744px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+
 }
 
-section > .screenshot {
+.video {
+  height: 701px;
+  width 250px;
+  margin-top: 16px;
+  margin-right: 26px;
+  border-radius: 100px 0 0 100px/50px 0 0 50px;
+  
+}
+
+.app-store-download-top { 
+  margin-top: 340px;
+  margin-left: 80px;
+	position: absolute;
+	display: inline-block;
+}
+
+.app-store-download-top-mobile { 
+  display: none;
+}
+
+.hero h2 {
+  font-size: 72px;
+  background: linear-gradient(to right, #E9D2DA 40%, #B0C7ED 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bend {
+  width: 100%;
+  padding: 0;
+  margin-bottom: -15px;
+  background-image: url(../gfx/bend.svg);
+  background-size: contain;
+  background-position: center center;
+  width: 100%;
+;}
+
+
+
+
+
+
+
+/*
+
+
+.screenshot {
   width: 357px;
   height: 670px;
   position: relative;
@@ -190,149 +245,110 @@ section > .screenshot {
   margin-right: -27px;
 }
 
-section > .screenshot img {
+header > .screenshot img {
   z-index: 6;
   position: relative;
 }
 
-section > .screenshot::before {
-  content: " ";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 200%;
-  width: 350%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-section:nth-child(even) > .content {
-  order: 2;
-  margin-left: 15vw;
-  margin-right: 0;
-}
-
-section > .plan {
+header > .plan {
 	background: url(../gfx/iphonePlan@2x.png);
   background-size: 357px 670px;
 	background-repeat: no-repeat;
 }
-	
-section > .recipes {
-	background: url(../gfx/iphonePlan@2x.png);
-  background-size: 357px 670px;
-	background-repeat: no-repeat;
-}
-	
-.video {
-	display: block;
-	margin-top: 31px;
-	margin-left: 44px;
-	margin-right: 44px;
-	margin-bottom: 59px;
-}
 
-#bubble {
-  background: #fff;
-  -moz-border-radius:44px;
-  -webkit-border-radius:44px;
-  -opera-border-radius:44px;
-  -khtml-border-radius:44px;
-  border-radius:44px;
 
-}
-#bubble-shadow {
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-  width: 88px;
-  height: 88px;
-  -moz-border-radius:44px;
-  -webkit-border-radius:44px;
-  -opera-border-radius:44px;
-  -khtml-border-radius:44px;
-  border-radius:44px;
-  margin-bottom: 1rem;
-}  
 
-#problem-intro {
-  background: #FFC800; 
-  background: radial-gradient(at bottom, #FFD900 0%, #FF9500 100%);
-  color: rgb(0, 0, 0);
-  padding: 0 0 5rem 0;
-}
 
-#problem-intro .content {
-  margin: auto;
-  max-width: 38rem;
-}
+*/
 
-#problem-intro h2 {
-  margin: 1rem 0 0 0;
-}
 
-#plan-intro, #cook-intro {
-  background: #D3F5DE;
-  background: radial-gradient(at bottom, #D3F5DE 0%, #9EF0B9 100%);
-  color: rgb(0, 0, 0);
-}
 
-#smart-cooking {
-  background: #FE963A;
-  background: radial-gradient(at bottom, #FEAE45 0%, #FE753A 100%);
-  color: rgb(0, 0, 0);
-}
 
-#shop-intro, #premium-intro {
-  background: #EDEBF5;
-  background: radial-gradient(at bottom, #F7F7FF 0%, #E1E1EB 100%);
-  color: rgb(0, 0, 0);
-}
 
-#exclusive-content-intro {
-  background: #E8569A;
-  background: radial-gradient(at bottom, #FF7AA2 0%, #FF5487 100%);
-  color: rgb(0, 0, 0);
-}
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1rem 1rem 1rem;
-}
+/* Feature grid */
 
-footer p {
-  color: #000;
-  opacity: 0.5;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
-}
 
-footer a {
-  color: #000;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
-}
-
-footer h2 {
+section h2 {
   text-align: center;
+  margin-bottom: 20px;
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 }
 
-.copyright, .apple-notice {
-	margin-bottom: 0;
-	margin: 0 1 0vw;
+
+section {
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
+
+.feature-grid {
+  max-width: 1100px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.feature {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 35px;
+	width: 290px;
+  text-align: left;
+}
+
+.feature p {
+  margin: 16px 0;
+	font-size: 18px;
+	opacity: 1.0;
+  line-height: 1.7;
+  padding: 0;
+}
+
+.feature img {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.divider {
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-bottom: 70px;
+}
+
+
+
+
+
+
+
+
+
+/* Awards */
+
 
 .app-store-download {
   display: block;
-  width: 154px;
-  height: 50px;
+  width: 185px;
+  height: 62px;
   background: url('../gfx/app_store_se.svg') no-repeat;
   background-size: cover;
   text-indent: -999px;
   overflow: hidden;
   opacity: 1;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
 }
 
 .award-grid {
@@ -380,7 +396,7 @@ footer h2 {
 
 .articlequote p {
   margin-top: 30px;
-	font-size: 16px;
+	font-size: 18px;
 	opacity: 1.0;
   line-height: 1.7;
 }
@@ -402,7 +418,7 @@ footer h2 {
 
 .review p {
   margin-top: 30px;
-	font-size: 16px;
+	font-size: 18px;
 	opacity: 1.0;
   line-height: 1.7;
 }
@@ -412,6 +428,61 @@ footer h2 {
   opacity: 0.5;
   text-align: left;
 }
+
+
+
+
+
+
+
+/* Footer */
+
+
+.bend-top {
+  padding: 0;
+  margin: -1px 0 40px 0;
+  width: 100%;
+  
+}
+
+footer {
+  background-color: #FFC800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+footer p {
+  color: #000;
+  opacity: 0.5;
+  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+footer a {
+  color: #000;
+  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+}
+
+footer img {
+  margin: 24px 0;
+}
+
+
+
+.copyright, .apple-notice {
+	margin-bottom: 0;
+	margin: 0 1 0vw;
+}
+
+
+
+
+
+
+
+
+
 
 /* Typography */
 
@@ -438,34 +509,96 @@ p {
 }
 
 
-@media (max-width: 1330px){
-  header {
-    background: #fff;
-    background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 83%, #ffc800 83%, #ffc800 100%);
-    height: auto;
-    min-height: auto;
-    max-height: auto;
-  }
-    	
-  header .app-store-download {
-    position: absolute;
-    top: 17vw;
-    left: 6vw;
-    width: 14vw;
-    height: 4.5vw;
+
+
+/* Laptop layout */
+
+@media (min-width: 1001px) and (max-width: 1792px){
+  .hero {
+    padding: 106px 0 0 0;
+    margin: 0 0 60px 0;
   }
   
-  #problem-intro .content {
-    margin: auto;
-    margin-left: 25vw;
-    margin-right: 25vw;
-    max-width: 38rem;
+  .hero-iphone {
+    margin-top: 20px;
+    margin-bottom: 0;
+    height: 595px;
+    width 232px;
+    background-size: 232px 595px;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  }
+  
+  .video {
+    height: 561px;
+    width 200px;
+    margin-top: 13px;
+    margin-right: 21px;
+    border-radius: 120px 0 0 120px/70px 0 0 70px;
+  }
+  
+  .app-store-download-top { 
+    margin-top: 272px;
+    margin-left: 64px;
+  	position: absolute;
+  	display: inline-block;
+  }
+  
+  .hero h2 {
+    font-size: 56px; 
   }
 }
+  
+  
+
 
 /* Tablet & Mobile layout */
 
 @media (min-width: 568px) and (max-width: 1000px){
+
+  .hero {
+    padding: 106px 0 0 0;
+    margin: 0 0 60px 0;
+    
+  }
+  
+  .hero-iphone {
+    margin-top: 20px;
+    margin-bottom: 0;
+    height: 595px;
+    width 232px;
+    background-size: 232px 595px;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  }
+  
+  .video {
+    height: 561px;
+    width 200px;
+    margin-top: 13px;
+    margin-right: 21px;
+    border-radius: 120px 0 0 120px/70px 0 0 70px;
+  }
+  
+  .app-store-download-top { 
+    display: none;
+  }
+  
+  .app-store-download-top-mobile { 
+    display: inherit;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+
+  .hero h2 {
+    font-size: 48px; 
+  }
+  
+  .bend {
+    margin-bottom: -8px;
+  ;}
+
+/*Old responsive code */
   section {
   padding: 2rem 1rem 0rem 1rem;
     display: flex;
@@ -479,12 +612,6 @@ p {
     margin-right: 5vw;
     margin-left: 0;
     z-index: 5;
-  }
-  
-  section:nth-child(even) > .content {
-    order: inherit;
-    margin-right: 5vw;
-    margin-left: 0;
   }
   
   section > .content img {
@@ -516,110 +643,60 @@ p {
     z-index: 0;
   }
 }
+  
 
 /* Mobile layout — below iPhone SE landscape size */
 
 @media (max-width: 567px){
   
-  section {
-    padding: 3rem 0;
-    display: inline-block;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
+
+  .hero {
+    padding: 64px 0 0 0;
+    margin: 0 0 60px 0;
   }
   
-  section > .content {
-    max-width: 24rem;
-    margin: auto;
-    margin-right: 20px;
-    margin-left: 20px;
-    z-index: auto;
-  }
-  
-  section:nth-child(even) > .content {
-    order: inherit;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  
-  section > .content img {
-    margin-bottom: 1rem;
-  }
-  
-  section > .screenshot {
-    width: 100%;
-    height: auto;
-    margin-left: -7px;
-    margin-right: -7px;
-    position: relative;
-    z-index: auto;
-  }
-  
-  section > .screenshot img {
-    z-index: auto;
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  
-  section > .screenshot::before {
-    content: " ";
-    position: relative;
-    top: 50%;
-    left: 50%;
-    height: 200%;
-    width: 350%;
-    transform: translate(-50%, -50%);
-    z-index: auto;
-  }
-  section > .plan {
-  	background: url(../gfx/iphonePlan@2x.png);
-    background-size: 100% auto;
+  .hero-iphone {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 595px;
+    width 232px;
+    background-size: 232px 595px;
   	background-repeat: no-repeat;
-  }
-  
-  section > .plan img {
-  	display: block;
-  	z-index: 2;
+  	background-position: center center;
   }
 
-  section > .recipes {
-  	background: url(../gfx/iphonePlan@2x.png);
-    background-size: 100% auto;
-  	background-repeat: no-repeat;
-  }
-  	
   .video {
-    z-index: 3;
-    width: 75.36%;
-    height: 86.56%; 
-  	display: block;
-  	padding-top: 8.65%;
-  	padding-bottom: 15%;
-  	margin-top: 8.65%;
-  	margin-left: 12.32%;
-  	margin-right: 12.32%;
-  	margin-bottom: 4.79%;
+    height: 561px;
+    width 200px;
+    margin-top: 13px;
+    margin-right: 21px;
+    border-radius: 120px 0 0 120px/70px 0 0 70px;
+    margin-bottom: 100px;
   }
   
-  .gradientbg {
-    height: 634px;
-  	background: url(../gfx/heroimage-mobile-se@2x.png) center center;
-    background-size: 567px auto;
-  	background-repeat: no-repeat;
-  	margin-bottom: -1px;
+  .app-store-download-top { 
+    display: none;
   }
+  
+  .app-store-download-top-mobile { 
+    display: inherit;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+  
+  .hero h2 {
+    font-size: 26px; 
+  }
+  
+  .bend {
+    margin-bottom: -8px;
+  ;}
+  
 
-  header {
-    background: #fff;
-    background: linear-gradient(to bottom, #ffffff 0%, #f2f2fa 83%, #ffc800 83%, #ffc800 100%);
-  	margin-bottom: -1px;
-  }
   
-  header .gradientbg img {
-  	display: none;
-  }
+  
+  /*old responsive code*/
+
   
   header .app-store-download {
     padding: 0;
@@ -629,9 +706,49 @@ p {
     left: 33vw;
     width: 34vw;
     height: 11vw;
-    background: url('../gfx/app_store.svg') no-repeat;
+    background: url('../gfx/app_store_se.svg') no-repeat;
     background-size: cover;
   }  
+
+
+
+
+
+section h2 {
+    text-align: center;
+    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0px 16px 0px 16px;
+  }
+
+  .feature-grid {
+    max-width: 1090px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .feature {
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 0;
+  	margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .feature p {
+    margin-top: 20px;
+  	font-size: 15px;
+  	opacity: 1.0;
+    line-height: 1.7;
+  }
+
+
+
+
+
+
 
   .award {
   	margin: 20px 0px 20px 0px;
@@ -686,9 +803,9 @@ p {
   
   .app-store-download {
     display: block;
-    width: 154px;
-    height: 50px;
-    background: url('../gfx/app_store.svg') no-repeat;
+    width: 173px;
+    height: 58px;
+    background: url('../gfx/app_store_se.svg') no-repeat;
     background-size: cover;
     text-indent: -999px;
     overflow: hidden;
@@ -697,32 +814,7 @@ p {
     margin-top: 3rem;
   }
 
-  #problem-intro {
-    padding: 0 0 3rem 0;
-  }
-  
-  #problem-intro .content {
-    margin: auto;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    max-width: 24rem;
-  } 
-  
-  #problem-intro h2 {
-    margin: 0;
-  }
-  
-  
-  footer h2 {
-    text-align: center;
-    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
-    font-weight: bold;
-    margin: 0px 35px 0px 34px;
-  }
-  
-  .plants, .plants img {
-    width: 100%;
-  }
+
   
   h2, p {
     margin: 0;
@@ -752,30 +844,11 @@ p {
 
 @supports (color: color(display-p3 0 0 0 / 1)) {
   
-  #problem-intro {
-    background: color(display-p3 1 0.78 0 / 1);
-    background: radial-gradient(at bottom, color(display-p3 1 0.85 0.2 / 1) 0%, color(display-p3 1 0.62 0.1 / 1) 100%);
-  }
-  
-  #plan-intro, #cook-intro {
-    background: color(display-p3 0.83 0.96 0.87 / 1);
-    background: radial-gradient(at bottom, color(display-p3 0.83 0.96 0.87 / 1) 0%, color(display-p3 0.62 0.94 0.73 / 1) 100%);
-  }
-  
-  #smart-cooking {
-    background: color(display-p3 1 0.59 0.23 / 1);
-    background: radial-gradient(at bottom, color(display-p3 1 0.68 0.27 / 1) 0%, color(display-p3 1 0.46 0.23 / 1) 100%);
-  }
-  
-  #shop-intro, #premium-intro {
-    background: color(display-p3 0.93 0.92 0.96 / 1);
-    background: radial-gradient(at bottom, color(display-p3 0.97 0.97 1 / 1) 0%, color(display-p3 0.88 0.88 0.92 / 1) 100%);
-  }
-  
-  #exclusive-content-intro {
-    background: color(display-p3 1 0.48 0.64 / 1);
-    background: radial-gradient(at bottom, color(display-p3 1 0.48 0.64 / 1) 0%, color(display-p3 1 0.33 0.53 / 1) 100%);
-  }
+  .hero h2 {
+  background: linear-gradient(to right, color(display-p3 0.91 0.82 0.85 / 1) 40%, color(display-p3 0.69 0.78 0.93 / 1) 60%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 }
 
 /* Text and background color for dark mode */
@@ -784,12 +857,11 @@ p {
     background-color: rgb(0, 0, 0);
   }
   
-  footer p {
-    color: #fff;
-    opacity: 0.7;
+  .divider {
+    background-color: rgba(255, 255, 255, 0.15);
   }
   
-  footer, footer a {
+  section p, h2 {
     color: #fff;
   }
   
@@ -811,15 +883,4 @@ p {
   	height: 178px;
   }
   
-  .plants {
-  	background: url(../gfx/bottom-plants-darkmode@2x.jpg);
-    background-size: 520px 392px;
-  	background-repeat: no-repeat;
-  	width: 520px;
-  	height: 392px;
-  }
-  
-  .plants img {
-    display: none;
-  }
 }

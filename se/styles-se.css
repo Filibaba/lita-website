@@ -134,6 +134,11 @@ html {
     text-align: center;
     margin-right: 0;
   }
+  
+  .site-nav-center{
+    width: 100%;
+    text-align: center;
+  }
 
   .site-nav-regular, .site-nav-active{
     height: 50px;
@@ -233,34 +238,6 @@ header {
 
 
 
-/*
-
-
-.screenshot {
-  width: 357px;
-  height: 670px;
-  position: relative;
-  z-index: 2;
-  margin-left: -27px;
-  margin-right: -27px;
-}
-
-header > .screenshot img {
-  z-index: 6;
-  position: relative;
-}
-
-header > .plan {
-	background: url(../gfx/iphonePlan@2x.png);
-  background-size: 357px 670px;
-	background-repeat: no-repeat;
-}
-
-
-
-
-*/
-
 
 
 
@@ -278,7 +255,7 @@ section h2 {
 
 
 section {
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;  
@@ -306,10 +283,6 @@ section {
   line-height: 1.7;
   padding: 0;
 }
-
-.feature img {
-}
-
 
 
 
@@ -468,11 +441,8 @@ footer img {
   margin: 24px 0;
 }
 
-
-
 .copyright, .apple-notice {
-	margin-bottom: 0;
-	margin: 0 1 0vw;
+	padding: 0 16px;
 }
 
 
@@ -557,9 +527,12 @@ p {
 @media (min-width: 568px) and (max-width: 1000px){
 
   .hero {
+    background-image: url(../gfx/earth-bg-mobile.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 106px 0 0 0;
     margin: 0 0 60px 0;
-    
   }
   
   .hero-iphone {
@@ -649,8 +622,15 @@ p {
 
 @media (max-width: 567px){
   
+  section {
+    padding: 16px;
+  }
 
   .hero {
+    background-image: url(../gfx/earth-bg-mobile.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 64px 0 0 0;
     margin: 0 0 60px 0;
   }

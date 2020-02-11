@@ -530,7 +530,7 @@ p {
     background-image: url(../gfx/earth-bg-mobile.jpg);
     background-position: center top;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     padding: 106px 0 0 0;
     margin: 0 0 60px 0;
   }

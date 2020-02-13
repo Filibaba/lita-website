@@ -817,8 +817,6 @@ section h2 {
     background-size: cover;
     background-attachment: scroll;
   }
-  
-  { .rellax { transform: translate3d(0,0,0) !important; } }
 }
 
 /* Wide gamut display support */

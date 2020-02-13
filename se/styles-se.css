@@ -816,7 +816,7 @@ section h2 {
 @supports (-webkit-overflow-scrolling: touch) {
   /* CSS specific to iOS devices */ 
   .hero {
-    background-image: url(gfx/earth-bg-mobile.jpg);
+    background-image: url(../gfx/earth-bg-mobile.jpg);
     background-position: center top;
     background-size: cover;
     background-attachment: scroll;

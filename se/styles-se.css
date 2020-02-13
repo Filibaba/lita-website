@@ -527,10 +527,6 @@ p {
 @media (min-width: 568px) and (max-width: 1000px){
 
   .hero {
-    background-image: url(../gfx/earth-bg-mobile.jpg);
-    background-position: center top;
-    background-size: cover;
-    background-attachment: scroll;
     padding: 106px 0 0 0;
     margin: 0 0 60px 0;
   }
@@ -627,10 +623,6 @@ p {
   }
 
   .hero {
-    background-image: url(../gfx/earth-bg-mobile.jpg);
-    background-position: center top;
-    background-size: cover;
-    background-attachment: fixed;
     padding: 64px 0 0 0;
     margin: 0 0 60px 0;
   }
@@ -819,6 +811,17 @@ section h2 {
   }
 }
 
+/* Work around iOS limitation of fixed scrolling */
+
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */ 
+  .hero {
+    background-image: url(gfx/earth-bg-mobile.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
 
 /* Wide gamut display support */
 

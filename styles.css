@@ -522,10 +522,6 @@ p {
 @media (min-width: 568px) and (max-width: 1000px){
 
   .hero {
-    background-image: url(gfx/earth-bg-mobile.jpg);
-    background-position: center top;
-    background-size: cover;
-    background-attachment: scroll;
     padding: 106px 0 0 0;
     margin: 0 0 60px 0;
   }
@@ -621,11 +617,7 @@ p {
     padding: 16px;
   }
   
-  .hero {
-    background-image: url(gfx/earth-bg-mobile.jpg);
-    background-position: center top;
-    background-size: cover;
-    background-attachment: fixed;
+  .hero { 
     padding: 64px 0 0 0;
     margin: 0 0 60px 0;
   }
@@ -815,15 +807,27 @@ section h2 {
 }
 
 
+/* Work around iOS limitation of fixed scrolling */
+
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */ 
+  .hero {
+    background-image: url(gfx/earth-bg-mobile.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+
 /* Wide gamut display support */
 
 @supports (color: color(display-p3 0 0 0 / 1)) {
   
   .hero h2 {
-  background: linear-gradient(to right, color(display-p3 0.91 0.82 0.85 / 1) 40%, color(display-p3 0.69 0.78 0.93 / 1) 60%);
-    -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    background: linear-gradient(to right, color(display-p3 0.91 0.82 0.85 / 1) 40%, color(display-p3 0.69 0.78 0.93 / 1) 60%);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /* Text and background color for dark mode */

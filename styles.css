@@ -519,9 +519,21 @@ p {
 
 /* Tablet & Mobile layout */
 
-@media (min-width: 568px) and (max-width: 1000px){
 
+@media (min-width: 568px) and (max-width: 1366px){
+  
+  header {
+    background-color: #02030D; 
+    background: radial-gradient(at bottom, #02030D 0%, #02030D 100%);
+    padding: 0;
+    margin: 0;
+  }
+  
   .hero {
+    background-image: url(gfx/earth-bg-tablet.jpg);
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     padding: 106px 0 0 0;
     margin: 0 0 60px 0;
   }
@@ -612,6 +624,12 @@ p {
 /* Mobile layout — below iPhone SE landscape size */
 
 @media (max-width: 567px){
+  
+  .hero {
+    background-image: url(gfx/earth-bg-mobile.jpg);
+    background-position: center top;
+    background-size: cover;
+  }
   
   section {
     padding: 16px;
@@ -812,9 +830,6 @@ section h2 {
 @supports (-webkit-overflow-scrolling: touch) {
   /* CSS specific to iOS devices */ 
   .hero {
-    background-image: url(gfx/earth-bg-mobile.jpg);
-    background-position: center top;
-    background-size: cover;
     background-attachment: scroll;
   }
 }

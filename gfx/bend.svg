@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1440px" height="64px" viewBox="0 0 1440 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
     <title>bend</title>
     <desc>Created with Sketch.</desc>
     <g id="bend" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M1440,0 L1440,81 L0,81 L0,0 L7.19014876,0.9751 C244.468342,32.9917 482.071625,49 720,49 C960.331692,49 1200.33169,32.6666667 1440,0 L1440,0 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M1440,0 L1440,64 L0,64 L0,0 L7.19014876,0.9751 C244.468342,32.9917 482.071625,49 720,49 C957.928375,49 1195.53166,32.9917 1432.80985,0.9751 L1440,0 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
     </g>
 </svg>

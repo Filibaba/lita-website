@@ -220,10 +220,10 @@ header {
 .bend {
   width: 100%;
   padding: 0;
-  margin-bottom: -15px;
+  margin-bottom: -16px;
   background-image: url(gfx/bend.svg);
   background-size: contain;
-  background-position: center center;
+  background-position: center top;
   width: 100%;
 ;}
 

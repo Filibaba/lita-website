@@ -534,7 +534,7 @@ p {
   }
   
   .hero {
-    background-image: url(gfx/earth-bg-tablet.jpg);
+    background-image: url(../gfx/earth-bg-tablet.jpg);
     background-position: center top;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -630,7 +630,7 @@ p {
 @media (max-width: 567px){
   
   .hero {
-    background-image: url(gfx/earth-bg-mobile.jpg);
+    background-image: url(../gfx/earth-bg-mobile.jpg);
     background-position: center top;
     background-size: cover;
   }

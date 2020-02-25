@@ -235,7 +235,9 @@ header {
 
 
 
-
+.veggies {
+  margin-bottom: 60px;
+}
 
 
 
@@ -680,6 +682,10 @@ p {
   .bend {
     margin-bottom: -8px;
   ;}
+  
+  .veggies {
+    margin-bottom: 0;
+  }
   
 
   

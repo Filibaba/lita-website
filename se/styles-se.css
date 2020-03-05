@@ -882,7 +882,7 @@ section h2 {
     background-color: rgba(255, 255, 255, 0.15);
   }
   
-  section p, h2 {
+  section p, h2, h3 {
     color: #fff;
   }
   

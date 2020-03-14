@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
     <title>icon-shop</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M30,22 L40,22 C44.418278,22 48,25.581722 48,30 C48,34.418278 44.418278,38 40,38 L30,38 C25.581722,38 22,34.418278 22,30 C22,25.581722 25.581722,22 30,22 Z" id="path-1"></path>
-        <filter x="-26.9%" y="-31.2%" width="153.8%" height="187.5%" filterUnits="objectBoundingBox" id="filter-2">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
-        </filter>
-        <rect id="path-3" x="0" y="0" width="25.41" height="12.705"></rect>
+        <rect id="path-1" x="0" y="0" width="25.41" height="12.705"></rect>
     </defs>
     <g id="3.7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Icons/shoppingList">
             <g transform="translate(0.000000, 3.000000)" id="Editable">
                 <g>
                     <path d="M33.82,13.325 C34.4954047,13.325 35.0267013,13.9020134 34.9710762,14.5751237 L34.9710762,14.5751237 L34.5226131,19.999 L30,20 C24.4771525,20 20,24.4771525 20,30 C20,35.5228475 24.4771525,40 30,40 L32.8696131,39.999 L32.828,40.506 L34.9529323,51.2153018 C35.0862482,51.8874825 34.6100137,52.5165367 33.9465003,52.5882172 L33.9465003,52.5882172 L33.82,52.595 L1.48,52.595 C0.75189667,52.595 0.205419567,51.9294938 0.347067656,51.2153018 L0.347067656,51.2153018 L2.471,40.506 L0.328923769,14.5751237 C0.276775254,13.9440828 0.740475852,13.3975021 1.35515849,13.3316445 L1.35515849,13.3316445 L1.48,13.325 Z" id="Combined-Shape" fill="#45B1FF" fill-rule="nonzero"></path>
-                    <g id="Rectangle">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                        <use fill="#45B1FF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    </g>
+                    <path d="M30,22 L40,22 C44.418278,22 48,25.581722 48,30 C48,34.418278 44.418278,38 40,38 L30,38 C25.581722,38 22,34.418278 22,30 C22,25.581722 25.581722,22 30,22 Z" id="Rectangle" fill="#45B1FF"></path>
                     <g id="Rectangle-2" transform="translate(4.945000, 0.620000)">
-                        <mask id="mask-4" fill="white">
-                            <use xlink:href="#path-3"></use>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
                         </mask>
                         <g id="Mask"></g>
-                        <path d="M11.996413,4.62 L13.413587,4.62 C15.2626807,4.62 16.3170309,4.88803395 17.258142,5.39134568 C18.1992531,5.89465741 18.9378426,6.63324692 19.4411543,7.57435803 C19.944466,8.51546914 20.2125,9.56981925 20.2125,11.418913 L20.2125,16.17 L20.2125,16.17 L5.1975,16.17 L5.1975,11.418913 C5.1975,9.56981925 5.46553395,8.51546914 5.96884568,7.57435803 C6.47215741,6.63324692 7.21074692,5.89465741 8.15185803,5.39134568 C9.09296914,4.88803395 10.1473193,4.62 11.996413,4.62 Z" stroke="#45B1FF" stroke-width="2.31" mask="url(#mask-4)"></path>
+                        <path d="M11.996413,4.62 L13.413587,4.62 C15.2626807,4.62 16.3170309,4.88803395 17.258142,5.39134568 C18.1992531,5.89465741 18.9378426,6.63324692 19.4411543,7.57435803 C19.944466,8.51546914 20.2125,9.56981925 20.2125,11.418913 L20.2125,16.17 L20.2125,16.17 L5.1975,16.17 L5.1975,11.418913 C5.1975,9.56981925 5.46553395,8.51546914 5.96884568,7.57435803 C6.47215741,6.63324692 7.21074692,5.89465741 8.15185803,5.39134568 C9.09296914,4.88803395 10.1473193,4.62 11.996413,4.62 Z" stroke="#45B1FF" stroke-width="2.31" mask="url(#mask-2)"></path>
                     </g>
                 </g>
             </g>

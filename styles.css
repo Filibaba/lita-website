@@ -28,11 +28,6 @@ html {
   margin-right: 42px;
 }
 
-.site-nav-center{
-  float: center;
-  margin-bottom: 42px;
-}
-
 .site-nav-right a {
   color: white;
 }
@@ -438,11 +433,26 @@ footer img {
   margin: 24px 0;
 }
 
+.site-nav-center{
+  float: center;
+  margin-bottom: 16px;
+}
+
 .copyright, .apple-notice {
 	padding: 0 16px;
 }
 
+.social-footer {
+  padding: 0;
+  margin: 0;
+}
 
+.social-footer img {
+  padding: 22px;
+  margin-top: 0;
+  margin-bottom: 48px;
+  
+}
 
 
 

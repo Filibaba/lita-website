@@ -231,6 +231,11 @@ header {
   margin-bottom: 60px;
 }
 
+.ipad-hero {
+  margin-bottom: 78px;
+  width: 100%;
+}
+
 
 
 
@@ -694,7 +699,7 @@ p {
     margin-bottom: -8px;
   ;}
   
-  .veggies {
+  .veggies, .ipad-hero {
     margin-bottom: 20px;
     width: 100%;
   }

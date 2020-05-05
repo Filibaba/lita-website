@@ -250,10 +250,7 @@ header {
 section h2 {
   text-align: center;
   margin-bottom: 20px;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
 }
-
 
 section {
   padding: 0;
@@ -547,6 +544,11 @@ p {
 
 @media (min-width: 568px) and (max-width: 1366px){
 
+  .header-padding {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
   header {
     background-color: #02030D; 
     background: radial-gradient(at bottom, #02030D 0%, #02030D 100%);
@@ -774,9 +776,11 @@ p {
 
 section h2 {
     text-align: center;
-    font: normal 1.75rem "Avenir-Black", Helvetica, sans-serif;
+    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
     font-weight: bold;
     margin: 0px 16px 0px 16px;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   .feature-grid {

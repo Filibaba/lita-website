@@ -222,12 +222,10 @@ header {
   width: 100%;
 ;}
 
-
-
-
-
 .veggies {
   margin-bottom: 60px;
+  width: 100%;
+  max-width: 887px;
 }
 
 .ipad-hero {
@@ -258,7 +256,7 @@ section {
 .feature-grid {
   max-width: 1100px;
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left;
 }
 
 .feature {
@@ -323,7 +321,7 @@ section {
 .award-grid {
   max-width: 1090px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .award {
@@ -337,6 +335,7 @@ section {
 	margin: 35px;
 	width: 290px;
 	height: 178px;
+  text-align: center;
 }
 
 
@@ -373,7 +372,7 @@ section {
 .review-grid {
   max-width: 1090px;
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left;
 }
 
 .review {
@@ -493,6 +492,8 @@ p {
   text-transform: uppercase;
   opacity: 0.7;
 }
+
+
 
 
 
@@ -640,6 +641,30 @@ p {
     z-index: 0;
   }
 }
+
+
+
+
+/* Adjust grid for two columns */
+
+@media (min-width: 760px) and (max-width: 1124px){
+  
+  .feature-grid, .review-grid, .award-grid {
+    max-width: 728px;
+  }
+  
+}
+
+/* Adjust grid for one column */
+
+@media (min-width: 568px) and (max-width: 759px){
+  
+  .feature-grid, .review-grid, .award-grid {
+    max-width: 364px;
+  }
+  
+}
+
   
 
 /* Mobile layout — below iPhone SE landscape size */
@@ -700,7 +725,6 @@ p {
   
   .veggies, .ipad-hero {
     margin-bottom: 20px;
-    width: 100%;
   }
   
   h3 {
@@ -708,6 +732,10 @@ p {
     font-weight: bold;
     margin-top: 12px;
     margin-bottom: 12px;
+  }
+  
+  .award-grid {
+    text-align: center;
   }
   
   .feature p {

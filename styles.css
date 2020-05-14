@@ -229,7 +229,7 @@ header {
 }
 
 .ipad-hero {
-  margin-bottom: 78px;
+  margin-bottom: 80px;
   width: 100%;
 }
 
@@ -288,7 +288,7 @@ section {
 
 .divider {
   height: 16px;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #f4f6fc;
   margin-bottom: 70px;
 }
 
@@ -597,6 +597,13 @@ p {
   .bend {
     margin-bottom: -8px;
   ;}
+  
+.ipad-hero {
+    margin-bottom: 80px;
+    width: 150%;
+    margin-left: -25%;
+  }
+  
 
 /*Old responsive code */
   section {
@@ -727,6 +734,8 @@ p {
   
   .veggies, .ipad-hero {
     margin-bottom: 20px;
+    width: 170%;
+    margin-left: -35%;
   }
   
   h3 {

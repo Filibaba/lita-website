@@ -155,7 +155,7 @@ body {
 
 header {
   background-color: #02030D; 
-  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
+  background: radial-gradient(at bottom, #2D3363 0%, #000105 100%);
   padding: 0;
   margin: 0;
 }
@@ -544,7 +544,7 @@ p {
   
   header {
     background-color: #02030D; 
-    background: radial-gradient(at bottom, #02030D 0%, #02030D 100%);
+    background: radial-gradient(at bottom, #2D3363 0%, #000105 100%);
     padding: 0;
     margin: 0;
   }

@@ -157,7 +157,7 @@ body {
 
 header {
   background-color: #02030D; 
-  background: radial-gradient(at bottom, #454775 0%, #02030D 100%);
+  background: radial-gradient(at bottom, #2D3363 0%, #000105 100%);
   padding: 0;
   margin: 0;
 }
@@ -209,7 +209,7 @@ header {
 
 .hero h2 {
   font-size: 72px;
-  background: linear-gradient(to right, #FFBFD5 40%, #A3C6FF 60%);
+  background: linear-gradient(to right, #FFBFD5 30%, #A3C6FF 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -551,7 +551,7 @@ p {
 
   header {
     background-color: #02030D; 
-    background: radial-gradient(at bottom, #02030D 0%, #02030D 100%);
+    background: radial-gradient(at bottom, #2D3363 0%, #000105 100%);
     padding: 0;
     margin: 0;
   }
@@ -909,7 +909,7 @@ section h2 {
 @supports (color: color(display-p3 0 0 0 / 1)) {
   
   .hero h2 {
-    background: linear-gradient(to right, color(display-p3 1 0.74 0.83 / 1) 40%, color(display-p3 0.64 0.78 1 / 1) 60%);
+    background: linear-gradient(to right, color(display-p3 1 0.74 0.83 / 1) 30%, color(display-p3 0.64 0.78 1 / 1) 70%);
     -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

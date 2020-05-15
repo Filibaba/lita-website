@@ -177,22 +177,19 @@ header {
   margin-top: 50px;
   margin-bottom: 50px;
   height: 744px;
-  width 290px;
+  width 309px;
 	background: url(../gfx/hero-iphone@2x.png);
-  background-size: 290px 744px;
+  background-size: 309px 744px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	
-
 }
 
 .video {
-  height: 701px;
-  width 250px;
-  margin-top: 16px;
-  margin-right: 26px;
-  border-radius: 100px 0 0 100px/50px 0 0 50px;
-  
+  height: 719px;
+  width 272px;
+  margin-top: 13px;
+  margin-right: 21px;
+  border-radius: 240px 0 0 240px/45px 0 0 45px;
 }
 
 .app-store-download-top { 
@@ -510,18 +507,18 @@ p {
     margin-top: 20px;
     margin-bottom: 0;
     height: 595px;
-    width 232px;
-    background-size: 232px 595px;
+    width 247px;
+    background-size: 247px 595px;
   	background-repeat: no-repeat;
   	background-position: center center;
   }
   
   .video {
-    height: 561px;
-    width 200px;
-    margin-top: 13px;
-    margin-right: 21px;
-    border-radius: 120px 0 0 120px/70px 0 0 70px;
+    height: 575px;
+    width 218px;
+    margin-top: 10.5px;
+    margin-right: 17px;
+    border-radius: 200px 0 0 200px/35px 0 0 35px;
   }
   
   .app-store-download-top { 
@@ -561,18 +558,18 @@ p {
     margin-top: 20px;
     margin-bottom: 0;
     height: 595px;
-    width 232px;
-    background-size: 232px 595px;
+    width 247px;
+    background-size: 247px 595px;
   	background-repeat: no-repeat;
   	background-position: center center;
   }
   
   .video {
-    height: 561px;
-    width 200px;
-    margin-top: 13px;
-    margin-right: 21px;
-    border-radius: 120px 0 0 120px/70px 0 0 70px;
+    height: 575px;
+    width 218px;
+    margin-top: 10.5px;
+    margin-right: 17px;
+    border-radius: 200px 0 0 200px/35px 0 0 35px;
   }
   
   .app-store-download-top { 
@@ -691,18 +688,18 @@ p {
     margin-top: 0;
     margin-bottom: 0;
     height: 595px;
-    width 232px;
-    background-size: 232px 595px;
+    width 247px;
+    background-size: 247px 595px;
   	background-repeat: no-repeat;
   	background-position: center center;
   }
-
+  
   .video {
-    height: 561px;
-    width 200px;
-    margin-top: 13px;
-    margin-right: 21px;
-    border-radius: 120px 0 0 120px/70px 0 0 70px;
+    height: 575px;
+    width 218px;
+    margin-top: 10.5px;
+    margin-right: 17px;
+    border-radius: 200px 0 0 200px/35px 0 0 35px;
     margin-bottom: 100px;
   }
   

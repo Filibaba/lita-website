@@ -156,8 +156,7 @@ body {
 /* Header */
 
 header {
-  background-color: #02030D; 
-  background: radial-gradient(at bottom, #2D3363 0%, #000105 100%);
+  background-color: black;
   padding: 0;
   margin: 0;
 }
@@ -547,13 +546,6 @@ p {
   .header-padding {
     padding-left: 128px;
     padding-right: 128px;
-  }
-
-  header {
-    background-color: #02030D; 
-    background: radial-gradient(at bottom, #2D3363 0%, #000105 100%);
-    padding: 0;
-    margin: 0;
   }
   
   .hero {

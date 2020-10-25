@@ -290,7 +290,7 @@ section {
 
 .divider {
   height: 16px;
-  background-color: #f4f6fc;
+  background-color: rgba(0, 0, 0, 0.03);
   margin-bottom: 70px;
 }
 

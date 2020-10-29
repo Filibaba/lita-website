@@ -28,7 +28,7 @@
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   text-decoration: none;
   line-height: 100px;
 }
@@ -40,7 +40,7 @@
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   text-decoration: none;
   line-height: 100px;
     opacity: 0.54;
@@ -64,7 +64,7 @@
   position: absolute;
   margin-top: 47px;
   color: black;
-  font: 0.9rem "Avenir-Book", Helvetica, sans-serif;
+  font: 0.9rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   text-decoration: none;
 }
 
@@ -142,12 +142,12 @@ footer {
 footer p {
   color: #000;
   opacity: 0.5;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 0.6rem -apple-system, BlinkMacSystemFont,, Helvetica, sans-serif;
 }
 
 footer a {
   color: #000;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 0.6rem -apple-system, BlinkMacSystemFont,, Helvetica, sans-serif;
 }
 
 footer h2 {

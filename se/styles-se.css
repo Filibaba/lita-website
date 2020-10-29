@@ -40,7 +40,7 @@ html {
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   text-decoration: none;
   line-height: 100px;
 }
@@ -51,7 +51,7 @@ html {
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px "Avenir-Book", Helvetica, sans-serif;
+  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   text-decoration: none;
   line-height: 100px;
 }
@@ -341,13 +341,13 @@ section {
 
 .award p {
   margin-top: 98px;
-  font: bold 1.125rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: bold 1.125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
 	opacity: 1.0;
 	height: 20px;
 }
 
 .award h2 {
-  font: normal 0.8125rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 0.8125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   opacity: 1;
 	height: 20px;
 	margin-top: 33px;
@@ -392,7 +392,7 @@ section {
 }
 
 .review h2 {
-  font: normal 1.125rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 1.125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   opacity: 0.5;
   text-align: left;
 }
@@ -424,12 +424,12 @@ footer {
 footer p {
   color: #000;
   opacity: 0.5;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 0.6rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
 }
 
 footer a {
   color: #000;
-  font: normal 0.6rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 0.6rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
 }
 
 footer img {
@@ -481,7 +481,7 @@ h3 {
 }
 
 p {
-  font: normal 1.125rem "AvenirNext-Regular", Helvetica, sans-serif;
+  font: normal 1.125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   margin-bottom: 1rem;
   line-height: 1.7rem;
 }
@@ -848,7 +848,7 @@ section h2 {
   }
   
   .review h2 {
-    font: normal 0.9375rem "AvenirNext-Regular", Helvetica, sans-serif;
+    font: normal 0.9375rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
     opacity: 0.5;
     text-align: left;
     margin: 0;
@@ -880,7 +880,7 @@ section h2 {
   }
   
   p {
-    font: normal 0.9375rem "AvenirNext-Regular", Helvetica, sans-serif;
+    font: normal 0.9375rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
     margin-bottom: 1rem;
     line-height: 1.5rem;
   }

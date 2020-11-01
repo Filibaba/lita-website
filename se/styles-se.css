@@ -5,6 +5,7 @@ html { box-sizing: border-box; }
 html {
   /* One rem is 16px */
   font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
 }
 
 
@@ -23,7 +24,6 @@ html {
 }
 
 .site-nav-right{
-  
   color: white;
   float: right;
   margin-right: 42px;
@@ -33,16 +33,15 @@ html {
   color: white;
 }
  
-  
 .site-nav-regular{
   height: 100px;
   width: 100px;
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-size: 20px;
   text-decoration: none;
-  line-height: 100px;
+  line-height: 100px; 
 }
 
 .site-nav-active{
@@ -51,7 +50,7 @@ html {
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-size: 20px;
   text-decoration: none;
   line-height: 100px;
 }
@@ -156,7 +155,7 @@ body {
 /* Header */
 
 header {
-  background-color: black;
+  background-color: black; 
   padding: 0;
   margin: 0;
 }
@@ -220,9 +219,6 @@ header {
   width: 100%;
 ;}
 
-
-
-
 .veggies {
   margin-bottom: 60px;
   width: 100%;
@@ -233,10 +229,6 @@ header {
   margin-bottom: 80px;
   width: 100%;
 }
-
-
-
-
 
 
 
@@ -273,10 +265,12 @@ section {
 .feature p {
   margin: 16px 0;
 	font-size: 18px;
-	opacity: 1.0;
+	opacity: 0.7;
   line-height: 1.7;
   padding: 0;
 }
+
+
 
 
 
@@ -341,14 +335,15 @@ section {
 
 .award p {
   margin-top: 98px;
-  font: bold 1.125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-	opacity: 1.0;
+  font-weight: bold;
+  font-size: 1.125rem;
 	height: 20px;
 }
 
 .award h2 {
-  font: normal 0.8125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-  opacity: 1;
+  font-weight: normal;
+  font-size: 0.8125rem;
+	opacity: 0.7;
 	height: 20px;
 	margin-top: 33px;
 }
@@ -365,8 +360,12 @@ section {
 .articlequote p {
   margin-top: 30px;
 	font-size: 18px;
-	opacity: 1.0;
+	color: #4D4D4D;
   line-height: 1.7;
+}
+
+.articlequote b {
+  color: black;
 }
 
 .review-grid {
@@ -387,12 +386,17 @@ section {
 .review p {
   margin-top: 30px;
 	font-size: 18px;
-	opacity: 1.0;
+	color: #4D4D4D;
   line-height: 1.7;
 }
 
+.review b {
+  color: black;
+}
+
 .review h2 {
-  font: normal 1.125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1.125rem;
   opacity: 0.5;
   text-align: left;
 }
@@ -424,12 +428,14 @@ footer {
 footer p {
   color: #000;
   opacity: 0.5;
-  font: normal 0.6rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.6rem;
 }
 
 footer a {
   color: #000;
-  font: normal 0.6rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.6rem;
 }
 
 footer img {
@@ -463,6 +469,7 @@ footer img {
 
 
 
+
 /* Typography */
 
 h2, p {
@@ -471,26 +478,30 @@ h2, p {
 }
 
 h2 {
-  font: normal 2.5rem "Avenir-Black", Helvetica, sans-serif;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 h3 {
-  font: normal 1.24rem "Avenir-Black", Helvetica, sans-serif;
+  font-size: 1.24rem;
   font-weight: bold;
 }
 
 p {
-  font: normal 1.125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: normal;
   margin-bottom: 1rem;
   line-height: 1.7rem;
 }
 
 .vignette {
-  font: normal 1rem "Avenir-Roman", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
   text-transform: uppercase;
   opacity: 0.7;
 }
+
+
 
 
 
@@ -538,11 +549,11 @@ p {
 
 /* Tablet & Mobile layout */
 
-@media (min-width: 568px) and (max-width: 1366px){
 
+@media (min-width: 568px) and (max-width: 1366px){
   .header-padding {
-    padding-left: 128px;
-    padding-right: 128px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
   
   .hero {
@@ -586,15 +597,16 @@ p {
     font-size: 48px; 
   }
   
-  .ipad-hero {
-    margin-bottom: 80px;
-    width: 150%;
-    margin-left: -25%;
-  }  
-
   .bend {
     margin-bottom: -8px;
   ;}
+  
+.ipad-hero {
+    margin-bottom: 80px;
+    width: 150%;
+    margin-left: -25%;
+  }
+  
 
 /*Old responsive code */
   section {
@@ -644,6 +656,7 @@ p {
 
 
 
+
 /* Adjust grid for two columns */
 
 @media (min-width: 760px) and (max-width: 1124px){
@@ -663,6 +676,7 @@ p {
   }
   
 }
+
   
 
 /* Mobile layout — below iPhone SE landscape size */
@@ -678,8 +692,8 @@ p {
   section {
     padding: 16px;
   }
-
-  .hero {
+  
+  .hero { 
     padding: 64px 0 0 0;
     margin: 0 0 60px 0;
   }
@@ -728,7 +742,7 @@ p {
   }
   
   h3 {
-    font: normal 1.24rem "Avenir-Black", Helvetica, sans-serif;
+    font-size: 1.24rem;
     font-weight: bold;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -741,16 +755,14 @@ p {
   .feature p {
     margin-top: 0;
   	font-size: 15px;
-  	opacity: 1.0;
+  	opacity: 0.7;
     line-height: 1.7;
   }
   
   .divider {
     margin-bottom: 35px;
   }
-  
 
-  
   
   /*old responsive code*/
 
@@ -771,9 +783,9 @@ p {
 
 
 
-section h2 {
+  section h2 {
     text-align: center;
-    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0px 16px 0px 16px;
     padding-left: env(safe-area-inset-left);
@@ -848,7 +860,8 @@ section h2 {
   }
   
   .review h2 {
-    font: normal 0.9375rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: normal;
     opacity: 0.5;
     text-align: left;
     margin: 0;
@@ -875,22 +888,25 @@ section h2 {
   }
   
   h2 {
-    font: normal 2rem "Avenir-Black", Helvetica, sans-serif;
+    font-size: 2rem;
     font-weight: bold;
   }
   
   p {
-    font: normal 0.9375rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.9375rem;
     margin-bottom: 1rem;
     line-height: 1.5rem;
   }
   
   .vignette {
-    font: normal 0.9375rem "Avenir-Roman", Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.9375rem;
     text-transform: uppercase;
     opacity: 0.7;
   }
 }
+
 
 /* Work around iOS limitation of fixed scrolling */
 
@@ -907,9 +923,9 @@ section h2 {
   
   .hero h2 {
     background: linear-gradient(to right, color(display-p3 1 0.74 0.83 / 1) 30%, color(display-p3 0.64 0.78 1 / 1) 70%);
-    -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /* Text and background color for dark mode */
@@ -942,6 +958,30 @@ section h2 {
   	margin: 35px;
   	width: 290px;
   	height: 178px;
+  }
+
+  .articlequote p {
+    color: #B3B3B3;
+  }
+  
+  .articlequote b {
+    color: white;
+  }
+  
+  .review p {
+    color: #B3B3B3;
+  }
+  
+  .review b {
+    color: white;
+  }
+  
+  .award h2 {
+  	opacity: 0.7;
+  }
+
+  .feature p {
+  	opacity: 0.7;
   }
   
 }

@@ -5,6 +5,7 @@ html { box-sizing: border-box; }
 html {
   /* One rem is 16px */
   font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
 }
 
 
@@ -38,7 +39,6 @@ html {
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   font-size: 20px;
   text-decoration: none;
   line-height: 100px; 
@@ -50,7 +50,6 @@ html {
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font-family:  -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
   font-size: 20px;
   text-decoration: none;
   line-height: 100px;
@@ -241,7 +240,6 @@ section h2 {
   margin-bottom: 20px;
 }
 
-
 section {
   padding: 0;
   display: flex;
@@ -267,7 +265,7 @@ section {
 .feature p {
   margin: 16px 0;
 	font-size: 18px;
-	opacity: 1.0;
+	opacity: 0.7;
   line-height: 1.7;
   padding: 0;
 }
@@ -337,16 +335,15 @@ section {
 
 .award p {
   margin-top: 98px;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-  font: bold 1.125rem 
-	opacity: 1.0;
+  font-weight: bold;
+  font-size: 1.125rem;
 	height: 20px;
 }
 
 .award h2 {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-  font: normal 0.8125rem
-  opacity: 1;
+  font-weight: normal;
+  font-size: 0.8125rem;
+	opacity: 0.7;
 	height: 20px;
 	margin-top: 33px;
 }
@@ -363,8 +360,12 @@ section {
 .articlequote p {
   margin-top: 30px;
 	font-size: 18px;
-	opacity: 1.0;
+	color: #4D4D4D;
   line-height: 1.7;
+}
+
+.articlequote b {
+  color: black;
 }
 
 .review-grid {
@@ -385,13 +386,17 @@ section {
 .review p {
   margin-top: 30px;
 	font-size: 18px;
-	opacity: 1.0;
+	color: #4D4D4D;
   line-height: 1.7;
 }
 
+.review b {
+  color: black;
+}
+
 .review h2 {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-  font: normal 1.125rem
+  font-weight: normal;
+  font-size: 1.125rem;
   opacity: 0.5;
   text-align: left;
 }
@@ -423,12 +428,14 @@ footer {
 footer p {
   color: #000;
   opacity: 0.5;
-  font: normal 0.6rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.6rem;
 }
 
 footer a {
   color: #000;
-  font: normal 0.6rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.6rem;
 }
 
 footer img {
@@ -471,23 +478,25 @@ h2, p {
 }
 
 h2 {
-  font: normal 2.5rem "Avenir-Black", Helvetica, sans-serif;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 h3 {
-  font: normal 1.24rem "Avenir-Black", Helvetica, sans-serif;
+  font-size: 1.24rem;
   font-weight: bold;
 }
 
 p {
-  font: normal 1.125rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: normal;
   margin-bottom: 1rem;
   line-height: 1.7rem;
 }
 
 .vignette {
-  font: normal 1rem "Avenir-Roman", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
   text-transform: uppercase;
   opacity: 0.7;
 }
@@ -733,7 +742,7 @@ p {
   }
   
   h3 {
-    font: normal 1.24rem "Avenir-Black", Helvetica, sans-serif;
+    font-size: 1.24rem;
     font-weight: bold;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -746,7 +755,7 @@ p {
   .feature p {
     margin-top: 0;
   	font-size: 15px;
-  	opacity: 1.0;
+  	opacity: 0.7;
     line-height: 1.7;
   }
   
@@ -776,7 +785,7 @@ p {
 
   section h2 {
     text-align: center;
-    font: normal 1.5rem "Avenir-Black", Helvetica, sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0px 16px 0px 16px;
     padding-left: env(safe-area-inset-left);
@@ -851,7 +860,8 @@ p {
   }
   
   .review h2 {
-    font: normal 0.9375rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: normal;
     opacity: 0.5;
     text-align: left;
     margin: 0;
@@ -878,18 +888,20 @@ p {
   }
   
   h2 {
-    font: normal 2rem "Avenir-Black", Helvetica, sans-serif;
+    font-size: 2rem;
     font-weight: bold;
   }
   
   p {
-    font: normal 0.9375rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.9375rem;
     margin-bottom: 1rem;
     line-height: 1.5rem;
   }
   
   .vignette {
-    font: normal 0.9375rem "Avenir-Roman", Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.9375rem;
     text-transform: uppercase;
     opacity: 0.7;
   }
@@ -946,6 +958,22 @@ p {
   	margin: 35px;
   	width: 290px;
   	height: 178px;
+  }
+ 
+  .articlequote p {
+    color: #8C8C8C;
+  }
+  
+  .articlequote b {
+    color: white;
+  }
+  
+  .review p {
+    color: #8C8C8C;
+  }
+  
+  .review b {
+    color: white;
   }
   
 }

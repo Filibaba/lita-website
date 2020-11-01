@@ -3,6 +3,10 @@
 
 /* CSS copied from styles.css (Plantry stylesheet) */
 
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+}
+
 /* Site nav */
 
 .site-nav{
@@ -28,7 +32,7 @@
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-size: 20px;
   text-decoration: none;
   line-height: 100px;
 }
@@ -40,10 +44,10 @@
   text-align: center;
 	position: relative;
 	display: inline-block;
-  font: 20px -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-size: 20px;
   text-decoration: none;
   line-height: 100px;
-    opacity: 0.54;
+  opacity: 0.54;
 }
 
 .site-nav-regular:hover {
@@ -64,7 +68,7 @@
   position: absolute;
   margin-top: 47px;
   color: black;
-  font: 0.9rem -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 
@@ -142,12 +146,14 @@ footer {
 footer p {
   color: #000;
   opacity: 0.5;
-  font: normal 0.6rem -apple-system, BlinkMacSystemFont,, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.6rem;
 }
 
 footer a {
   color: #000;
-  font: normal 0.6rem -apple-system, BlinkMacSystemFont,, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.6rem;
 }
 
 footer h2 {
@@ -166,7 +172,7 @@ footer h2 {
 
 
 
-/* CSS Migrated from Filibaba.com Bellow this line */
+/* CSS Migrated from Filibaba.com Below this line */
 
 html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
@@ -179,7 +185,7 @@ body {
 }
 
 .headline {
-  font: normal 2rem "Avenir-Black", Helvetica, sans-serif;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -188,8 +194,8 @@ body {
   height: 100%;
   padding-top: 90px;
   overflow-x: hidden;
-	color: black;
-	font-family: "Avenir", "museo-sans", sans-serif;
+  color: black;
+  opacity: 1.0;
 	font-size: 15px;
 	line-height: 1.4;
 }
@@ -202,7 +208,7 @@ body {
 
 
 .spacer {
-	width: 100%%;
+	width: 100%;
 	margin: 0;
 	height: auto;
 	vertical-align: middle;
@@ -340,14 +346,12 @@ a.download {
 .appName h1 {
 	font-size: 24px;
 	font-weight: 600;
-	font-family: "Avenir-Heavy", sans-serif;
 }
 
 .appName h2 {
 	padding-top: 4px;
 	font-size: 20px;
 	font-weight: 600;
-	font-family: "Avenir-Heavy", sans-serif;
 }
 
 .bloodygood {

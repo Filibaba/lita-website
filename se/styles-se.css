@@ -737,9 +737,16 @@ p {
   
   .veggies, .ipad-hero {
     margin-bottom: 20px;
-    width: 170%;
-    margin-left: -35%;
+    width: 160%;
+    margin-left: -30%;
   }
+  
+  .image-crop {
+    overflow: hidden;
+    width: calc(100% + 32px);
+    padding: 0;
+    margin: 0;
+  }  
   
   h3 {
     font-size: 1.24rem;

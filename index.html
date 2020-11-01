@@ -71,8 +71,11 @@
           <p>You’ll buy only what you need and use it all while it’s still fresh.</p>
       </div>
     </div>
-    
-    <img class="veggies invertInDarkMode" src="gfx/veggies.jpg" alt="Veggies" srcset="gfx/veggies@2x.jpg 2x">
+    <div class="image-crop"
+      <picture>
+        <img class="veggies invertInDarkMode" src="gfx/veggies.jpg" alt="Veggies" srcset="gfx/veggies@2x.jpg 2x">
+      </picture>
+    </div>
   </section>        
 
 <div class="divider">
@@ -119,11 +122,13 @@
           </div>
         </div>
         
-        <picture>
-          <source srcset="gfx/ipad-hero-dark.jpg, gfx/ipad-hero-dark@2x.jpg 2x" media="(prefers-color-scheme: dark)">
-          <source srcset="gfx/ipad-hero@2x.jpg 2x">
-          <img src="gfx/ipad-hero.jpg" alt="Plantry on iPad" class="ipad-hero">
-        </picture>
+        <div class="image-crop">
+          <picture>
+            <source srcset="gfx/ipad-hero-dark.jpg, gfx/ipad-hero-dark@2x.jpg 2x" media="(prefers-color-scheme: dark)">
+            <source srcset="gfx/ipad-hero@2x.jpg 2x">
+            <img src="gfx/ipad-hero.jpg" alt="Plantry on iPad" class="ipad-hero">
+          </picture>
+        </div>
         
     </section>    
     

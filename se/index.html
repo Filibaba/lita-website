@@ -71,7 +71,11 @@
       </div>
     </div>
     
-    <img class="veggies invertInDarkMode" src="../gfx/veggies.jpg" alt="Grönsaker" srcset="../gfx/veggies@2x.jpg 2x">
+    <div class="image-crop"
+      <picture>
+        <img class="veggies invertInDarkMode" src="../gfx/veggies.jpg" alt="Grönsaker" srcset="../gfx/veggies@2x.jpg 2x">
+      </picture>
+    </div>
   </section>        
 
 <div class="divider">
@@ -118,11 +122,13 @@
           </div>
         </div>
         
-        <picture>
-          <source srcset="../gfx/ipad-hero-se-dark.jpg, ../gfx/ipad-hero-se-dark@2x.jpg 2x" media="(prefers-color-scheme: dark)">
-          <source srcset="../gfx/ipad-hero-se@2x.jpg 2x">
-          <img src="../gfx/ipad-hero-se.jpg" alt="Plantry on iPad" class="ipad-hero">
-        </picture>
+        <div class="image-crop">
+          <picture>
+            <source srcset="../gfx/ipad-hero-dark-se.jpg, ../gfx/ipad-hero-se-dark@2x.jpg 2x" media="(prefers-color-scheme: dark)">
+            <source srcset="../gfx/ipad-hero-se@2x.jpg 2x">
+            <img src="../gfx/ipad-hero-se.jpg" alt="Plantry på iPad" class="ipad-hero">
+          </picture>
+        </div>
         
     </section>
 

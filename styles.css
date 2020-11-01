@@ -460,7 +460,6 @@ footer img {
   padding: 22px;
   margin-top: 0;
   margin-bottom: 48px;
-  
 }
 
 
@@ -913,6 +912,10 @@ p {
     text-transform: uppercase;
     opacity: 0.7;
   }
+  
+  .social-footer img {
+    padding: 16px;
+  }
 }
 
 
@@ -960,12 +963,6 @@ p {
     background-size: 290px 142px;
   	background-repeat: no-repeat;
   	background-position-y: 35px;
-  	position: relative;
-  	display: inline-block;
-  	vertical-align: top;
-  	margin: 35px;
-  	width: 290px;
-  	height: 178px;
   }
  
   .articlequote p {

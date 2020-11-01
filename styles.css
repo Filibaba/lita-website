@@ -217,7 +217,7 @@ header {
   background-size: contain;
   background-position: center top;
   width: 100%;
-;}
+}
 
 .veggies {
   margin-bottom: 60px;
@@ -598,7 +598,7 @@ p {
   
   .bend {
     margin-bottom: -8px;
-  ;}
+  }
   
   .ipad-hero {
     margin-bottom: 80px;
@@ -695,7 +695,7 @@ p {
   
   .hero { 
     padding: 64px 0 0 0;
-    margin: 0 0 60px 0;
+    margin: 0 0 28px 0;
   }
   
   .hero-iphone {
@@ -728,12 +728,12 @@ p {
   }
   
   .hero h2 {
-    font-size: 26px; 
+    font-size: 28px; 
   }
   
   .bend {
     margin-bottom: -8px;
-  ;}
+  }
   
   .veggies, .ipad-hero {
     margin-bottom: 20px;
@@ -794,7 +794,8 @@ p {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0px 16px 0px 16px;
+    margin: 0px 16px 24px 16px;
+    padding-bottom: 0;
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
   }
@@ -825,6 +826,10 @@ p {
   .award {
   	margin: 20px 0px 20px 0px;
   }
+  
+  .award h2 {
+  	margin-top: -32px;
+  }
 
   .articlequote {
   	position: relative;
@@ -841,6 +846,8 @@ p {
   	font-size: 15px;
   	opacity: 1.0;
     line-height: 1.7;
+    margin-bottom: 20px;
+    padding: 0;
   }
   
   .review-grid {
@@ -864,6 +871,8 @@ p {
   	font-size: 15px;
   	opacity: 1.0;
     line-height: 1.7;
+    margin-bottom: 20px;
+    padding: 0;
   }
   
   .review h2 {
@@ -871,7 +880,8 @@ p {
     font-weight: normal;
     opacity: 0.5;
     text-align: left;
-    margin: 0;
+    margin: 0px 0px 32px 0px;
+    padding: 0;
   }
   
   .app-store-download {
@@ -884,7 +894,7 @@ p {
     overflow: hidden;
     opacity: 1;
     margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
 
@@ -915,6 +925,10 @@ p {
   
   .social-footer img {
     padding: 16px;
+  }
+  
+  .apple-notice {
+  	line-height: 1.3;
   }
 }
 

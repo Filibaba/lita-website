@@ -181,19 +181,19 @@ header {
   margin-bottom: 50px;
   height: 744px;
   width 309px;
-	background: url(gfx/hero-iphone@2x.png);
+  background: url(gfx/hero-iphone@2x.png);
   background-size: 309px 744px;
 	background-repeat: no-repeat;
 	background-position: center center;
-}
+	}
 
 .video {
-  height: 719px;
-  width 272px;
-  margin-top: 13px;
-  margin-right: 21px;
-  border-radius: 240px 0 0 240px/45px 0 0 45px;
-}
+  height: 697px;
+  width 265px;
+  margin-top: 22px;
+  margin-right: 20.8px;
+  border-radius: 280px 40px 40px 280px/55px 40px 40px 55px;
+  }
 
 .app-store-download-top { 
   margin-top: 340px;
@@ -533,11 +533,11 @@ p {
   }
   
   .video {
-    height: 575px;
-    width 218px;
-    margin-top: 10.5px;
-    margin-right: 17px;
-    border-radius: 200px 0 0 200px/35px 0 0 35px;
+    height: 559px;
+    width 213px;
+    margin-top: 16.5px;
+    margin-right: 15px;
+    border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
   }
   
   .app-store-download-top { 
@@ -584,11 +584,11 @@ p {
   }
   
   .video {
-    height: 575px;
-    width 218px;
-    margin-top: 10.5px;
-    margin-right: 17px;
-    border-radius: 200px 0 0 200px/35px 0 0 35px;
+    height: 559px;
+    width 213px;
+    margin-top: 16.5px;
+    margin-right: 15px;
+    border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
   }
   
   .app-store-download-top { 
@@ -718,11 +718,11 @@ p {
   }
   
   .video {
-    height: 575px;
-    width 218px;
-    margin-top: 10.5px;
-    margin-right: 17px;
-    border-radius: 200px 0 0 200px/35px 0 0 35px;
+    height: 559px;
+    width 213px;
+    margin-top: 16.5px;
+    margin-right: 15px;
+    border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
     margin-bottom: 100px;
   }
   

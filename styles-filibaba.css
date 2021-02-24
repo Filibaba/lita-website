@@ -704,6 +704,12 @@ a.download {
 	background-repeat: no-repeat;
 }
 
+#rain {
+	background: url(gfx/portrait_rain@2x.png);
+	background-size: 82px 82px;
+	background-repeat: no-repeat;
+}
+
 #paula {
 	background: url(gfx/portrait_paula@2x.png);
 	background-size: 82px 82px;

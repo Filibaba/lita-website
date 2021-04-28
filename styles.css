@@ -180,7 +180,6 @@ header {
   margin-top: 50px;
   margin-bottom: 50px;
   height: 744px;
-  width 309px;
   background: url(gfx/hero-iphone@2x.png);
   background-size: 309px 744px;
 	background-repeat: no-repeat;
@@ -189,7 +188,6 @@ header {
 
 .video {
   height: 697px;
-  width 265px;
   margin-top: 22px;
   margin-right: 20.8px;
   border-radius: 280px 40px 40px 280px/55px 40px 40px 55px;
@@ -526,7 +524,6 @@ p {
     margin-top: 20px;
     margin-bottom: 0;
     height: 595px;
-    width 247px;
     background-size: 247px 595px;
   	background-repeat: no-repeat;
   	background-position: center center;
@@ -534,7 +531,6 @@ p {
   
   .video {
     height: 559px;
-    width 213px;
     margin-top: 16.5px;
     margin-right: 15px;
     border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
@@ -577,7 +573,6 @@ p {
     margin-top: 20px;
     margin-bottom: 0;
     height: 595px;
-    width 247px;
     background-size: 247px 595px;
   	background-repeat: no-repeat;
   	background-position: center center;
@@ -585,7 +580,6 @@ p {
   
   .video {
     height: 559px;
-    width 213px;
     margin-top: 16.5px;
     margin-right: 15px;
     border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
@@ -711,7 +705,6 @@ p {
     margin-top: 0;
     margin-bottom: 0;
     height: 595px;
-    width 247px;
     background-size: 247px 595px;
   	background-repeat: no-repeat;
   	background-position: center center;
@@ -719,7 +712,6 @@ p {
   
   .video {
     height: 559px;
-    width 213px;
     margin-top: 16.5px;
     margin-right: 15px;
     border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 

@@ -47,7 +47,7 @@ html {
   font-size: 20px;
   text-decoration: none;
   line-height: 100px;
-  opacity: 0.54;
+    opacity: 0.54;
 }
 
 .site-nav-regular:hover {
@@ -168,7 +168,6 @@ footer h2 {
 	margin-bottom: 0;
 	margin: 0 1 0vw;
 }
-
 .social-footer {
   padding: 0;
   margin: 0;
@@ -185,7 +184,7 @@ footer h2 {
 
 
 
-/* CSS Migrated from Filibaba.com Below this line */
+/* CSS Migrated from Filibaba.com Bellow this line */
 
 html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
@@ -207,8 +206,7 @@ body {
   height: 100%;
   padding-top: 90px;
   overflow-x: hidden;
-  color: black;
-  opacity: 1.0;
+	color: black;
 	font-size: 15px;
 	line-height: 1.4;
 }
@@ -229,11 +227,311 @@ body {
 }
 
 
+/* All apps grid */
+
+.grid {
+	margin-top: 0px;
+}
+
+.puff {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 37px;
+	margin-bottom: 46px;
+	width: 310px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-opera-border-radius:15px;
+	-khtml-border-radius:15px;
+	border-radius:15px;	
+}
+
+.puffspacer {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 310px;
+	margin: 48px;
+}
+
+
+.valuesBox {
+	width: 29%;
+	min-width: 250px;
+	margin: 30px 2% 30px 2%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.appStore {
+	background: url(../gfx/appstore@2x.png);
+	background-size: 199px 118px;
+	width: 199px;
+	height: 59px;
+	background-repeat: no-repeat;
+    overflow: hidden;
+	margin: 55px auto 55px auto;
+	left: 0; bottom: 0; right: 0;
+}
+
+.appStoreBlack {
+	background-position: 0 -59px;
+}
+
+.comingSoon{
+	font-weight: 600;
+	font-size: 19px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 262px;
+	margin-top: 48px;
+	margin-bottom: 24px;
+	text-align: center;
+	margin: 55px auto 55px auto;
+	left: 0; bottom: 0; right: 0;
+}
+
+
+a.download {
+	width: 199px;
+	height: 59px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+.screenshot {
+	position: relative;
+	overflow: hidden;
+	width: 310px;
+	height: 550px;
+}
+
+.playbutton {
+	background: url(../gfx/playbutton@2x.png);
+	background-size: 120px 120px;
+	background-repeat: no-repeat;
+	height: 120px;
+	width: 120px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+
+/* All apps puff styling*/
+
+.appText {
+	overflow: hidden;
+	width: 262px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	text-align: left;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+.appicon {
+	width: 132px;
+	height: 132px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin-left: -26px;
+	margin-top: -26px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.appName {
+	padding-top: 6px;
+	line-height: 0.7;
+	text-align: left;
+}
+
+.appName h1 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.appName h2 {
+	padding-top: 4px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.bloodygood {
+	background-color: #fff;
+	color: black;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+}
+
+.bloodygood a {
+	color: black;
+}
+
+.bloodygood a:hover {
+	color: black;
+}
+
+.appiconBloodygood {
+	background: url(../gfx/appicon_bloodygood@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+		
+.screenshotBloodygood {
+	background: url(../gfx/screenshot_bloodygood@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.veryveggie {
+	background-color: #fff;
+	color: black;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+}
+
+.veryveggie a {
+	color: #00b58d;
+}
+
+.veryveggie a:hover {
+	color: black;
+}
+
+.appiconVeryveggie {
+	background: url(../gfx/appicon_veryveggie@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+		
+.screenshotVeryveggie {
+	background: url(../gfx/screenshot_veryveggie@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.kakboken {
+	background-color: #fff;
+	color: black;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+}
+
+.kakboken a {
+	color: #e95c88;
+}
+
+.kakboken a:hover {
+	color: #4d4d4d;
+}
+
+.appiconKakboken {
+	background: url(../gfx/appicon_kakboken@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+		
+.screenshotKakboken {
+	background: url(../gfx/screenshot_kakboken@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.vegourmet {
+	background-color: #fff;
+	color: #000;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+}
+
+.vegourmet a {
+	color: #2cd5c4;
+}
+
+.vegourmet a:hover {
+	color: black;
+}
+
+.appiconVegourmet {
+	background: url(../gfx/appicon_vegourmet@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+		
+.screenshotVegourmet {
+	background: url(../gfx/screenshot_vegourmet@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+
+.smoothies {
+	background-color: #ed6471;
+	color: white;
+}
+
+.appiconSmoothies {
+	background: url(../gfx/appicon_smoothies@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+
+.screenshotSmoothies {
+	background: url(../gfx/screenshot_smoothies@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.meals {
+	background-color: #f97200;
+	color: white;
+}
+
+.appiconMeals {
+	background: url(../gfx/appicon_meals@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+
+.screenshotMeals {
+	background: url(../gfx/screenshot_meals@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+.weekend {
+	background-color: #ffb700;
+	color: white;
+}
+
+.appiconWeekend {
+	background: url(../gfx/appicon_weekend@2x.png);
+	background-size: 132px 132px;
+	background-repeat: no-repeat;
+}
+
+.screenshotWeekend {
+	background: url(../gfx/screenshot_weekend@2x.jpg);
+	background-size: 310px 550px;
+	background-repeat: no-repeat;
+}
+
+
+
 
 /* Creator page */
 
 #illustration {
-	background: url(gfx/plantry-illustration@2x.jpg);
+	background: url(../gfx/plantry-illustration@2x.jpg);
   background-size: 100% auto;
 	background-repeat: no-repeat;
 	margin: 0 auto;
@@ -358,8 +656,6 @@ body {
 }
 
 
-
-
 /* Head shots */
 
 .portrait {
@@ -390,49 +686,49 @@ body {
 }
 
 #jenny {
-	background: url(gfx/portrait_jenny@2x.png);
+	background: url(../gfx/portrait_jenny@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #viktor {
-	background: url(gfx/portrait_viktor@2x.png);
+	background: url(../gfx/portrait_viktor@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #robert {
-	background: url(gfx/portrait_robert@2x.png);
+	background: url(../gfx/portrait_robert@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #max {
-	background: url(gfx/portrait_max@2x.png);
+	background: url(../gfx/portrait_max@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #simon {
-	background: url(gfx/portrait_simon@2x.png);
+	background: url(../gfx/portrait_simon@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #rain {
-	background: url(gfx/portrait_rain@2x.png);
+	background: url(../gfx/portrait_rain@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #paula {
-	background: url(gfx/portrait_paula@2x.png);
+	background: url(../gfx/portrait_paula@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #sara {
-	background: url(gfx/portrait_sara@2x.png);
+	background: url(../gfx/portrait_sara@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
@@ -461,6 +757,56 @@ a.avatarlink {
   #content {
     padding-top: 60px;
   }
+	
+	.puff {
+		height: auto;
+		margin: 40px 0 40px 0;
+		width: 90%;	
+	}
+	
+	.puffspacer {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 0;
+		margin: 0;
+	}	
+
+	.appicon {
+		width: 132px;
+		height: 132px;
+		position: relative;
+		overflow: hidden;
+		float: left;
+		margin-left: -26px;
+		margin-top: -26px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	}
+	
+	.appText {
+		overflow: hidden;
+		width: 90%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		text-align: left;
+	}
+	
+	.screenshot {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: auto;	
+	}
+	
+	.screenshotVegourmet,
+  .screenshotVeryveggie,
+  .screenshotKakboken,
+	.screenshotSmoothies,
+	.screenshotWeekend,
+	.screenshotMeals {
+		background-size: 100% auto;
+	}
 
 	#creator {
 		padding-top: 0%;
@@ -526,6 +872,41 @@ a.avatarlink {
   
   
  
+   /* All Apps */ 
+  .bloodygood,
+  .veryveggie,
+  .kakboken,
+  .vegourmet {
+  	background-color: rgb(38, 38, 40);
+  	color: white;
+  	border: none;
+  }
+  
+  .bloodygood a,
+  .bloodygood a:hover,
+  .veryveggie a:hover,
+  .kakboken a:hover,
+  .vegourmet a:hover {
+  	color: white;
+  }
+  
+  .screenshotVeryveggie {
+  	background: url(../gfx/screenshot_veryveggie_dark@2x.jpg);
+  	background-size: 310px 550px;
+  	background-repeat: no-repeat;
+  }
+  .screenshotKakboken {
+  	background: url(../gfx/screenshot_kakboken_dark@2x.jpg);
+  	background-size: 310px 550px;
+  	background-repeat: no-repeat;
+  }
+		
+  .screenshotVegourmet {
+  	background: url(../gfx/screenshot_vegourmet_dark@2x.jpg);
+  	background-size: 310px 550px;
+  	background-repeat: no-repeat;
+  }
+  
   
   
   /* Creator */
@@ -543,7 +924,7 @@ a.avatarlink {
   
   #illustration {
     margin-top: 40px;
-  	background: url(gfx/plantry-illustration-dark@2x.jpg);
+  	background: url(../gfx/plantry-illustration-dark@2x.jpg);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   	width: 100%;

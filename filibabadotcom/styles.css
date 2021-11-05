@@ -33,6 +33,7 @@ body {
 .site-nav-left{
   float: left;
   width: 24%;
+	text-align: left;
 }
 
 .site-nav-right{
@@ -75,14 +76,93 @@ body {
 	display: inline-block;
 }
 
-
-.plantry-tagline{
-  position: absolute;
-  margin-top: 47px;
-  color: black;
-  font-size: 0.9rem;
-  text-decoration: none;
+.header-picture {
+  display: inline-block;  
+  width: 100vw;
+  overflow: hidden; 
 }
+
+.header-picture img {
+  display: block;
+  width: 130vw;
+  margin-left: -15vw;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.filibaba-purpose {
+  max-width: 800px;
+	text-align: left;
+	padding-top: 200px;
+	margin: -400px auto 0px auto;
+	position: relative;
+}
+
+.purpose-gradient img {
+  position: absolute;
+	background-image:  linear-gradient(rgba(255,255,255,0), white 75%);
+}
+
+.filibaba-purpose h1 {
+  font-size: 56px;
+  position: relative;
+}
+
+.filibaba-purpose p {
+  font-size: 22px;
+  opacity: 0.7;
+  max-width: 560px;
+}
+
+
+
+.card-wrapper {
+  margin: 68px auto 0px auto;
+  max-width: 870px;
+}
+
+.card {
+  border-radius: 56px;
+  background-color: #ccc;
+  height: 360px;
+  max-width: 870px;
+  
+}
+
+.card-accessories {
+  height: 60px;
+  margin-top: 16px;
+  align-items: baseline;
+  
+}
+
+.card-accessories p {
+  font-size: 22px;
+  opacity: 0.7;
+  float: left;
+  margin: 16px 0px 16px 56px
+}
+
+.button-learn-more {
+  float: right;
+  background-color: #ccc;
+  border-radius: 100px;
+  text-align: center;
+  padding: 16px 24px 16px 24px;
+  font-size: 22px;
+  font-weight: 600;  
+  margin-right: 48px;
+}
+
+.gradient-plantry {
+  background-image: -webkit-linear-gradient(#FFDA00 0%, #FDC200 100%)
+}
+
+
+
+
+
+
 
 .separator{
   height: 0.5px;
@@ -503,13 +583,16 @@ a.avatarlink {
 
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+  }
   
 	A:link {text-decoration: none; color: white;}
 	A:visited {text-decoration: none; color: white;}
 	A:active {text-decoration: none; color: white;}
 	A:hover {text-decoration: none; color: white;}
 	a:focus {outline: 0;}
-
   
   .invertInDarkMode {
    -webkit-filter: invert(1);
@@ -536,10 +619,12 @@ a.avatarlink {
     background-color: white;
   }
 
-
-  body {
-    background-color: rgb(0, 0, 0);
+  .purpose-gradient img {
+    position: absolute;
+  	background-image:  linear-gradient(rgba(0,0,0,0), black 75%);
   }
+
+
 
   .separator,
   .sociallink-separator{

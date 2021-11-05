@@ -5,13 +5,29 @@
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
+
+body {
+	background-color: #cccccc;
+	margin: 0;
+}
+
+	A:link {text-decoration: none; color: black;}
+	A:visited {text-decoration: none; color: black;}
+	A:active {text-decoration: none; color: black;}
+	A:hover {text-decoration: none; color: black;}
+	a:focus {outline: 0;}
 
 /* Site nav */
 
 .site-nav{
   position: absolute;
   width: 100%;
+  vertical-align: middle;
+  background-color:rgba(255,255,255,.5);
+  backdrop-filter:blur(30px);
+  -webkit-backdrop-filter:blur(30px)
 }
 
 .site-nav-left{
@@ -21,37 +37,31 @@ html {
 
 .site-nav-right{
   float: right;
-  margin-right: 42px;
+  margin-right: 24px;
+  font-size: 20px;
+  text-align: center;
 }
   
 .site-nav-regular{
-  height: 100px;
   color: black;
   opacity: 1.0;
-  width: 100px;
-  text-align: center;
 	position: relative;
 	display: inline-block;
-  font-size: 20px;
-  text-decoration: none;
-  line-height: 100px;
+  border-radius: 100px;
+  padding: 8px 16px;
+  margin: 30px 4px 4px 4px;
 }
 
 .site-nav-active{
-  height: 100px;
-  color: black;
-  width: 100px;
-  text-align: center;
-	position: relative;
-	display: inline-block;
-  font-size: 20px;
-  text-decoration: none;
-  line-height: 100px;
-  opacity: 0.54;
+  background-color: black;
+  color: white;
 }
 
 .site-nav-regular:hover {
-  opacity: 0.7
+  background-color: rgba(120, 120, 128, 0.16);
+  color:black;
+  border-radius: 100px;
+  transition: 0.3s;
 }
 
 .site-nav-regular:active {
@@ -187,15 +197,7 @@ footer h2 {
 
 /* CSS Migrated from Filibaba.com Below this line */
 
-html {
-    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
-}
 
-
-body {
-	background-color: #fff;
-	margin: 0;
-}
 
 .headline {
   font-size: 2rem;

@@ -47,7 +47,7 @@ html {
   font-size: 20px;
   text-decoration: none;
   line-height: 100px;
-  opacity: 0.54;
+    opacity: 0.54;
 }
 
 .site-nav-regular:hover {
@@ -166,13 +166,23 @@ footer h2 {
 	margin-bottom: 0;
 	margin: 0 1 0vw;
 }
+.social-footer {
+  padding: 0;
+  margin: 0;
+}
+
+.social-footer img {
+  padding: 22px;
+  margin-top: 0;
+  margin-bottom: 48px;
+}
 
 
 
 
 
 
-/* CSS Migrated from Filibaba.com Below this line */
+/* CSS Migrated from Filibaba.com Bellow this line */
 
 html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
@@ -194,8 +204,7 @@ body {
   height: 100%;
   padding-top: 90px;
   overflow-x: hidden;
-  color: black;
-  opacity: 1.0;
+	color: black;
 	font-size: 15px;
 	line-height: 1.4;
 }
@@ -256,7 +265,7 @@ body {
 
 
 .appStore {
-	background: url(gfx/appstore@2x.png);
+	background: url(../gfx/appstore@2x.png);
 	background-size: 199px 118px;
 	width: 199px;
 	height: 59px;
@@ -301,7 +310,7 @@ a.download {
 }
 
 .playbutton {
-	background: url(gfx/playbutton@2x.png);
+	background: url(../gfx/playbutton@2x.png);
 	background-size: 120px 120px;
 	background-repeat: no-repeat;
 	height: 120px;
@@ -370,13 +379,13 @@ a.download {
 }
 
 .appiconBloodygood {
-	background: url(gfx/appicon_bloodygood@2x.png);
+	background: url(../gfx/appicon_bloodygood@2x.png);
 	background-size: 132px 132px;
 	background-repeat: no-repeat;
 }
 		
 .screenshotBloodygood {
-	background: url(gfx/screenshot_bloodygood@2x.jpg);
+	background: url(../gfx/screenshot_bloodygood@2x.jpg);
 	background-size: 310px 550px;
 	background-repeat: no-repeat;
 }
@@ -397,13 +406,13 @@ a.download {
 }
 
 .appiconVeryveggie {
-	background: url(gfx/appicon_veryveggie@2x.png);
+	background: url(../gfx/appicon_veryveggie@2x.png);
 	background-size: 132px 132px;
 	background-repeat: no-repeat;
 }
 		
 .screenshotVeryveggie {
-	background: url(gfx/screenshot_veryveggie@2x.jpg);
+	background: url(../gfx/screenshot_veryveggie@2x.jpg);
 	background-size: 310px 550px;
 	background-repeat: no-repeat;
 }
@@ -424,13 +433,13 @@ a.download {
 }
 
 .appiconKakboken {
-	background: url(gfx/appicon_kakboken@2x.png);
+	background: url(../gfx/appicon_kakboken@2x.png);
 	background-size: 132px 132px;
 	background-repeat: no-repeat;
 }
 		
 .screenshotKakboken {
-	background: url(gfx/screenshot_kakboken@2x.jpg);
+	background: url(../gfx/screenshot_kakboken@2x.jpg);
 	background-size: 310px 550px;
 	background-repeat: no-repeat;
 }
@@ -451,13 +460,13 @@ a.download {
 }
 
 .appiconVegourmet {
-	background: url(gfx/appicon_vegourmet@2x.png);
+	background: url(../gfx/appicon_vegourmet@2x.png);
 	background-size: 132px 132px;
 	background-repeat: no-repeat;
 }
 		
 .screenshotVegourmet {
-	background: url(gfx/screenshot_vegourmet@2x.jpg);
+	background: url(../gfx/screenshot_vegourmet@2x.jpg);
 	background-size: 310px 550px;
 	background-repeat: no-repeat;
 }
@@ -469,13 +478,13 @@ a.download {
 }
 
 .appiconSmoothies {
-	background: url(gfx/appicon_smoothies@2x.png);
+	background: url(../gfx/appicon_smoothies@2x.png);
 	background-size: 132px 132px;
 	background-repeat: no-repeat;
 }
 
 .screenshotSmoothies {
-	background: url(gfx/screenshot_smoothies@2x.jpg);
+	background: url(../gfx/screenshot_smoothies@2x.jpg);
 	background-size: 310px 550px;
 	background-repeat: no-repeat;
 }
@@ -486,13 +495,13 @@ a.download {
 }
 
 .appiconMeals {
-	background: url(gfx/appicon_meals@2x.png);
+	background: url(../gfx/appicon_meals@2x.png);
 	background-size: 132px 132px;
 	background-repeat: no-repeat;
 }
 
 .screenshotMeals {
-	background: url(gfx/screenshot_meals@2x.jpg);
+	background: url(../gfx/screenshot_meals@2x.jpg);
 	background-size: 310px 550px;
 	background-repeat: no-repeat;
 }
@@ -503,13 +512,13 @@ a.download {
 }
 
 .appiconWeekend {
-	background: url(gfx/appicon_weekend@2x.png);
+	background: url(../gfx/appicon_weekend@2x.png);
 	background-size: 132px 132px;
 	background-repeat: no-repeat;
 }
 
 .screenshotWeekend {
-	background: url(gfx/screenshot_weekend@2x.jpg);
+	background: url(../gfx/screenshot_weekend@2x.jpg);
 	background-size: 310px 550px;
 	background-repeat: no-repeat;
 }
@@ -520,7 +529,7 @@ a.download {
 /* Creator page */
 
 #illustration {
-	background: url(gfx/plantry-illustration@2x.jpg);
+	background: url(../gfx/plantry-illustration@2x.jpg);
   background-size: 100% auto;
 	background-repeat: no-repeat;
 	margin: 0 auto;
@@ -675,49 +684,49 @@ a.download {
 }
 
 #jenny {
-	background: url(gfx/portrait_jenny@2x.png);
+	background: url(../gfx/portrait_jenny@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #viktor {
-	background: url(gfx/portrait_viktor@2x.png);
+	background: url(../gfx/portrait_viktor@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #robert {
-	background: url(gfx/portrait_robert@2x.png);
+	background: url(../gfx/portrait_robert@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #max {
-	background: url(gfx/portrait_max@2x.png);
+	background: url(../gfx/portrait_max@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #simon {
-	background: url(gfx/portrait_simon@2x.png);
+	background: url(../gfx/portrait_simon@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #rain {
-	background: url(gfx/portrait_rain@2x.png);
+	background: url(../gfx/portrait_rain@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #paula {
-	background: url(gfx/portrait_paula@2x.png);
+	background: url(../gfx/portrait_paula@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
 
 #sara {
-	background: url(gfx/portrait_sara@2x.png);
+	background: url(../gfx/portrait_sara@2x.png);
 	background-size: 82px 82px;
 	background-repeat: no-repeat;
 }
@@ -880,18 +889,18 @@ a.avatarlink {
   }
   
   .screenshotVeryveggie {
-  	background: url(gfx/screenshot_veryveggie_dark@2x.jpg);
+  	background: url(../gfx/screenshot_veryveggie_dark@2x.jpg);
   	background-size: 310px 550px;
   	background-repeat: no-repeat;
   }
   .screenshotKakboken {
-  	background: url(gfx/screenshot_kakboken_dark@2x.jpg);
+  	background: url(../gfx/screenshot_kakboken_dark@2x.jpg);
   	background-size: 310px 550px;
   	background-repeat: no-repeat;
   }
 		
   .screenshotVegourmet {
-  	background: url(gfx/screenshot_vegourmet_dark@2x.jpg);
+  	background: url(../gfx/screenshot_vegourmet_dark@2x.jpg);
   	background-size: 310px 550px;
   	background-repeat: no-repeat;
   }
@@ -913,7 +922,7 @@ a.avatarlink {
   
   #illustration {
     margin-top: 40px;
-  	background: url(gfx/plantry-illustration-dark@2x.jpg);
+  	background: url(../gfx/plantry-illustration-dark@2x.jpg);
     background-size: 100% auto;
   	background-repeat: no-repeat;
   	width: 100%;

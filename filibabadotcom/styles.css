@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background-color: #cccccc;
+	background-color: #fff;
 	margin: 0;
 }
 
@@ -22,12 +22,12 @@ body {
 /* Site nav */
 
 .site-nav{
-  position: absolute;
+  position: fixed;
   width: 100%;
   vertical-align: middle;
-  background-color:rgba(255,255,255,.5);
-  backdrop-filter:blur(30px);
-  -webkit-backdrop-filter:blur(30px)
+  background-color:rgba(255,255,255,.6);
+  backdrop-filter:blur(60px);
+  -webkit-backdrop-filter:blur(60px)
 }
 
 .site-nav-left{
@@ -504,18 +504,38 @@ a.avatarlink {
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {
   
+	A:link {text-decoration: none; color: white;}
+	A:visited {text-decoration: none; color: white;}
+	A:active {text-decoration: none; color: white;}
+	A:hover {text-decoration: none; color: white;}
+	a:focus {outline: 0;}
+
+  
   .invertInDarkMode {
    -webkit-filter: invert(1);
    filter: invert(1);    
   }  
   
-  .site-nav-active,
+  .site-nav{
+    background-color:rgba(24,24,24,.7);
+  }
+
   .site-nav-regular,
-  .site-nav-regular:hover,
-  .site-nav-regular:active
+  .site-nav-regular:hover
   {
     color: white;
   }
+  
+  .site-nav-regular:hover
+  {
+      background-color: rgba(256, 256, 256, 0.24);
+  }
+  
+  .site-nav-active {
+    color: black;
+    background-color: white;
+  }
+
 
   body {
     background-color: rgb(0, 0, 0);

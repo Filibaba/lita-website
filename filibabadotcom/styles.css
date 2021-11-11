@@ -433,7 +433,8 @@ footer a {
 .headline {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 0;
+  margin: 0;
+  
 }
 
 #creator {
@@ -446,6 +447,7 @@ footer a {
 	padding-left: 25vw;
 	padding-right: 25vw;
 	margin-bottom: 60px;
+	margin-top: 0;
 }
 
 #creator li {

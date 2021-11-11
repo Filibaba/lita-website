@@ -28,7 +28,7 @@ body {
   z-index: 100;
   background-color:rgba(255,255,255,.6);
   backdrop-filter:blur(60px);
-  -webkit-backdrop-filter:blur(60px)
+  -webkit-backdrop-filter:blur(60px);
 }
 
 .site-nav-left{
@@ -52,6 +52,7 @@ body {
   border-radius: 100px;
   padding: 8px 16px;
   margin: 30px 4px 4px 4px;
+    transition: 0.3s;
 }
 
 .site-nav-active{
@@ -61,9 +62,9 @@ body {
 
 .site-nav-regular:hover {
   background-color: rgba(120, 120, 128, 0.16);
-  color:black;
+  color: black;
   border-radius: 100px;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 
 .site-nav-regular:active {
@@ -76,6 +77,9 @@ body {
 	position: relative;
 	display: inline-block;
 }
+
+
+/* Front page hero */
 
 .header-picture {
   display: inline-block;  
@@ -107,14 +111,18 @@ body {
 .filibaba-purpose h1 {
   font-size: 56px;
   position: relative;
+  margin-bottom: 0;
 }
 
 .filibaba-purpose p {
   font-size: 22px;
   opacity: 0.7;
-  max-width: 560px;
+  line-height: 1.3;
+  max-width: 580px;
 }
 
+
+/* Front page cards */
 
 
 .card-wrapper {
@@ -127,7 +135,7 @@ body {
   background-color: #ccc;
   height: 360px;
   max-width: 870px;
-  
+  transition: 0.4s;
 }
 
 .card-accessories {
@@ -146,6 +154,7 @@ body {
 
 .button-learn-more {
   float: right;
+  color: black;
   background-color: #ccc;
   border-radius: 100px;
   text-align: center;
@@ -153,28 +162,124 @@ body {
   font-size: 22px;
   font-weight: 600;  
   margin-right: 48px;
+  transition: 0.2s;
+}
+
+.card-phone-plantry {
+  margin-top: 53px;
+  margin-left: 53px;
+}
+
+.card-plantry-logo {
+  margin-bottom: 135px;
+  margin-left: 98px;
+}
+
+.card-handla-logo {
+  margin-bottom: 141px;
+  margin-left: 137.5px;
+}
+
+.card-phone-handla {
+  margin-top: 53px;
+  margin-left: 110px;
+}
+
+.card-illustration-meals {
+  margin-top: 37.5px;
+  margin-left: 42.5px;
 }
 
 .gradient-plantry {
   background-image: -webkit-linear-gradient(#FFDA00 0%, #FDC200 100%)
 }
 
-
-
-
-
-
-
-.separator{
-  height: 0.5px;
-  background-color: #CCCCCC;
-  width: -moz-calc(100% - 84px);
-  width: -webkit-calc(100% - 84px);
-  width: calc(100% - 84px);
-  margin-left: 42px;
-  margin-top: 99px;
-  position: absolute;
+.gradient-plantry:hover {
+  background-image: -webkit-linear-gradient(#FFE100 0%, #FDCF00 100%);
+  box-shadow:0 32px 64px rgba(0, 0, 0, 0.08);
 }
+
+.gradient-plantry:active {
+  background-image: -webkit-linear-gradient(#FDC200 0%, #FFDA00 100%);
+}
+
+.gradient-handla {
+  background-image: -webkit-linear-gradient(#D3F5DE 0%, #9EF0B9 100%)
+}
+
+.gradient-handla:hover {
+  background-image: -webkit-linear-gradient(#DBF7E4 0%, #B2F3C7 100%);
+  box-shadow:0 32px 64px rgba(0, 0, 0, 0.08);
+}
+
+.gradient-handla:active {
+  background-image: -webkit-linear-gradient(#9EF0B9 0%, #D3F5DE 100%);
+}
+
+.gradient-meals {
+  background-image: -webkit-linear-gradient(#EAEBF0 0%, #BDBCC7 100%)
+}
+
+.gradient-meals:hover {
+  background-image: -webkit-linear-gradient(#EFF0F4 0%, #C5C5CE 100%);
+  box-shadow:0 32px 64px rgba(0, 0, 0, 0.08);
+}
+
+.gradient-meals:active {
+  background-image: -webkit-linear-gradient(#BDBCC7 0%, #EAEBF0 100%);
+}
+
+
+/* Copyright */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+footer p {
+  color: #000;
+  opacity: 0.5;
+  font-weight: normal;
+  font-size: 0.6rem;
+}
+
+footer a {
+  color: #000;
+  font-weight: normal;
+  font-size: 0.6rem;
+}
+
+.copyright, .apple-notice {
+	margin-bottom: 0;
+	margin: 0 1 0vw;
+}
+
+.social-footer {
+  padding: 0;
+  margin: 0;
+}
+
+.social-footer img {
+  padding: 22px;
+  margin-top: 80px;
+  margin-bottom: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Site nav responsive header */
 
@@ -227,49 +332,7 @@ body {
 }
 
 
-/* Copyright */
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1rem 1rem 1rem;
-}
-
-footer p {
-  color: #000;
-  opacity: 0.5;
-  font-weight: normal;
-  font-size: 0.6rem;
-}
-
-footer a {
-  color: #000;
-  font-weight: normal;
-  font-size: 0.6rem;
-}
-
-footer h2 {
-  text-align: center;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-}
-
-.copyright, .apple-notice {
-	margin-bottom: 0;
-	margin: 0 1 0vw;
-}
-
-.social-footer {
-  padding: 0;
-  margin: 0;
-}
-
-.social-footer img {
-  padding: 22px;
-  margin-top: 0;
-  margin-bottom: 48px;
-}
 
 
 
@@ -278,6 +341,17 @@ footer h2 {
 
 /* CSS Migrated from Filibaba.com Below this line */
 
+
+.separator{
+  height: 0.5px;
+  background-color: #CCCCCC;
+  width: -moz-calc(100% - 84px);
+  width: -webkit-calc(100% - 84px);
+  width: calc(100% - 84px);
+  margin-left: 42px;
+  margin-top: 99px;
+  position: absolute;
+}
 
 
 .headline {

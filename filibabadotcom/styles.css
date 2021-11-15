@@ -135,7 +135,7 @@ body {
 }
 
 .filibaba-purpose {
-  max-width: 800px;
+  max-width: 758px;
 	text-align: left;
 	padding-top: 200px;
 	margin: -400px auto 0px auto;
@@ -178,6 +178,7 @@ body {
   height: 360px;
   max-width: 870px;
   transition: 0.4s;
+  overflow: hidden;
 }
 
 .card-accessories {
@@ -332,13 +333,59 @@ body {
 }
 
 
+
+
+/* Social Buttons */
+
+.social {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sociallink {
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  position: relative;
+	display: inline-block;
+	text-align: left;
+ width: 100%;
+   text-decoration: none;
+}
+
+.sociallink-separator {
+    height: 0.5px;
+  background-color: #CCCCCC;
+  width: -moz-calc(100% - 44px);
+  width: -webkit-calc(100% - 44px);
+  width: calc(100% - 44px);
+  margin-left: 44px;
+  position: relative;
+}
+
+.sociallink img {
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.social a:link, .social a:visited, .social a:active {
+  text-decoration: none;
+	color: black;
+}
+
+.social a:hover {
+  text-decoration: none;
+	color: #737373;
+	opacity: 45%;
+}
+
+
+
 /* Copyright */
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1rem 1rem 1rem;
+text-align: center;
+  padding: 16px;
 }
 
 footer p {
@@ -369,19 +416,6 @@ footer a {
   margin-top: 80px;
   margin-bottom: 32px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -453,8 +487,6 @@ footer a {
 
 
 
-  
-
 
 /* About Page*/
 
@@ -491,49 +523,7 @@ footer a {
   margin-bottom: 30px;
 }
 
-/* Social Buttons */
 
-.social {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.sociallink {
-  height: 50px;
-  line-height: 50px;
-  vertical-align: middle;
-  position: relative;
-	display: inline-block;
-	text-align: left;
- width: 100%;
-   text-decoration: none;
-}
-
-.sociallink-separator {
-    height: 0.5px;
-  background-color: #CCCCCC;
-  width: -moz-calc(100% - 44px);
-  width: -webkit-calc(100% - 44px);
-  width: calc(100% - 44px);
-  margin-left: 44px;
-  position: relative;
-}
-
-.sociallink img {
-  vertical-align: middle;
-  margin-right: 20px;
-}
-
-.social a:link, .social a:visited, .social a:active {
-  text-decoration: none;
-	color: black;
-}
-
-.social a:hover {
-  text-decoration: none;
-	color: #737373;
-	opacity: 45%;
-}
 
 
 
@@ -603,12 +593,6 @@ footer a {
 	background-repeat: no-repeat;
 }
 
-#paula {
-	background: url(gfx/portrait_paula@2x.png);
-	background-size: 82px 82px;
-	background-repeat: no-repeat;
-}
-
 #sara {
 	background: url(gfx/portrait_sara@2x.png);
 	background-size: 82px 82px;
@@ -627,11 +611,71 @@ a.avatarlink {
 
 
 
+/* Large monitor padding */
+	
+@media (min-width:1636px) {
+
+	#creator, #mission {
+		padding-left: 33%;
+		padding-right: 33%;
+	}
+	
+}
+
+
+/* Tablet */
+	
+@media (max-width:920px) {
+  
+  .header-picture img {
+    width: 200vw;
+    margin-left: -50vw;
+  }    
+  
+  .card-wrapper {
+    margin-left: 32px;
+    margin-right: 32px;
+  }  
+  
+   .filibaba-purpose {
+    margin-left: 88px;
+    margin-right: 88px;     
+   }
+  
+  
+  .button-learn-more {
+    display: none;
+  }
+
+  .card-wrapper {
+    width 98%;
+  }
+
+ .card-plantry-logo, .card-handla-logo {
+    display: inline;
+    width: 36%;
+    margin-left: 8%;
+    margin-right: 0;
+  }
+
+  .card-phone-handla {
+    margin-left: 8%;
+    align-self: flex-end;
+  }
+    
+  .card-illustration-meals {
+    width: 92%;
+    margin: 10% 4%; 
+  }  
+
+}
 
 
 
 
-/* Responsive Mobile */
+
+
+/* Mobile */
 
 @media (max-width: 640px){
 
@@ -670,7 +714,6 @@ a.avatarlink {
     border-radius: 40px;
     height: auto;
     width: 100%;
-    overflow: hidden;
   }
   
   .card img {
@@ -762,16 +805,6 @@ a.avatarlink {
   
 
 
-/* Large monitor padding */
-	
-@media (min-width:1636px) {
-
-	#creator, #mission {
-		padding-left: 33%;
-		padding-right: 33%;
-	}
-	
-}
 
 
 

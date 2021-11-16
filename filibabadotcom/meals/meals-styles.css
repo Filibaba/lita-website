@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
-
+	A:link {text-decoration: underline; color: black;}
+	A:visited {text-decoration: underline; color: black;}
+	A:active {text-decoration: underline; color: black;}
+	A:hover {text-decoration: none; color: black;}
+	A:focus {outline: 0;}
 
 /* All apps grid */
 
 #puff-content {
-  padding-top: 160px;
+  padding-top: 120px;
 }
 
 .grid {
@@ -24,6 +28,16 @@
 	-opera-border-radius:15px;
 	-khtml-border-radius:15px;
 	border-radius:15px;	
+}
+
+.puff a:link, .puff a:visited {
+  text-decoration: underline;
+}
+
+
+
+.puff a:active {
+  opacity: 0.7;
 }
 
 .puffspacer {
@@ -361,45 +375,6 @@ a.download {
 
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-  }
-  
-	A:link {text-decoration: none; color: white;}
-	A:visited {text-decoration: none; color: white;}
-	A:active {text-decoration: none; color: white;}
-	A:hover {text-decoration: none; color: white;}
-	a:focus {outline: 0;}
-  
-  .invertInDarkMode {
-   -webkit-filter: invert(1);
-   filter: invert(1);    
-  }  
-  
-  .site-nav{
-    background-color:rgba(24,24,24,.7);
-  }
-
-  .site-nav-regular,
-  .site-nav-regular:hover
-  {
-    color: white;
-  }
-  
-  .site-nav-regular:hover
-  {
-      background-color: rgba(256, 256, 256, 0.24);
-  }
-  
-  .site-nav-active, .site-nav-active:hover {
-    color: black;
-    background-color: white;
-  }
-
-  
-  
-  
  
    /* All Apps */ 
   .bloodygood,

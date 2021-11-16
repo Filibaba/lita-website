@@ -17,7 +17,7 @@ body {
 	A:visited {text-decoration: none; color: black;}
 	A:active {text-decoration: none; color: black;}
 	A:hover {text-decoration: none; color: black;}
-	a:focus {outline: 0;}
+	A:focus {outline: 0;}
 
 /* Site nav */
 
@@ -52,14 +52,14 @@ body {
   border-radius: 100px;
   padding: 7px 16px 8px 16px;
   margin: 30px 4px 30px 4px;
-  transition: 0.3s;
+  transition: opacity 0.3s;
 }
 
 .site-nav-regular:hover {
   background-color: rgba(120, 120, 128, 0.16);
   color: black;
   border-radius: 100px;
-  transition: 0.15s;
+  transition: opacity 0.15s;
 }
 
 .site-nav-active {
@@ -519,6 +519,10 @@ footer a {
   margin-bottom: 30px;
 }
 
+.advisory-board-header  {
+  color: black;
+}
+
 
 
 
@@ -903,9 +907,11 @@ a.avatarlink {
   #about,
   .portrait,
   .copyright,
-  .apple-notice {
+  .apple-notice,
+  .advisory-board-header {
     color: white;
   }
+  
 
 }
 

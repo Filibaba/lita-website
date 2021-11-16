@@ -50,7 +50,7 @@ body {
 	position: relative;
 	display: inline-block;
   border-radius: 100px;
-  padding: 8px 16px;
+  padding: 7px 16px 8px 16px;
   margin: 30px 4px 30px 4px;
   transition: 0.3s;
 }
@@ -67,8 +67,9 @@ body {
   transition: 0.15s;
 }
 
-.site-nav-regular:active {
-  opacity: 0.54;
+.site-nav-active:hover{
+  background-color: black;
+  color: white;
 }
 
 .filibaba-logo{
@@ -107,9 +108,10 @@ body {
   .site-nav-regular {
     font-size: 15px;
     margin: 30px 0px 30px 0px;
-    padding: 8px 10px;
+    padding: 7px 10px 8px 10px;
   }
 }
+
 
 
 
@@ -342,7 +344,7 @@ a.download {
 		
 .screenshotBloodygood {
 	background: url(gfx/screenshot_bloodygood@2x.jpg);
-	background-size: 310px 550px;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 

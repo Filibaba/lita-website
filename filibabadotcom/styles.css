@@ -50,7 +50,7 @@ body {
 	position: relative;
 	display: inline-block;
   border-radius: 100px;
-  padding: 8px 16px;
+  padding: 7px 16px 8px 16px;
   margin: 30px 4px 30px 4px;
   transition: 0.3s;
 }
@@ -67,8 +67,9 @@ body {
   transition: 0.15s;
 }
 
-.site-nav-regular:active {
-  opacity: 0.54;
+.site-nav-active:hover{
+  background-color: black;
+  color: white;
 }
 
 .filibaba-logo{
@@ -107,7 +108,7 @@ body {
   .site-nav-regular {
     font-size: 15px;
     margin: 30px 0px 30px 0px;
-    padding: 8px 10px;
+    padding: 7px 10px 8px 10px;
   }
 }
 
@@ -122,7 +123,8 @@ body {
 
 .header-picture {
   display: inline-block;  
-  width: 100vw;
+  width: 100vw; 
+  min-height: 50vh;
   overflow: hidden; 
 }
 
@@ -433,20 +435,10 @@ footer a {
 	line-height: 1.4;
 }
 
-#illustration {
-	background: url(gfx/plantry-illustration@2x.jpg);
-  background-size: 100% auto;
-	background-repeat: no-repeat;
-	margin: 0 auto;
-	width: 80%;
-	height: auto;
-}
-
 .headline {
   font-size: 32px;
   font-weight: bold;
   margin: 0;
-  
 }
 
 #creator {
@@ -472,7 +464,7 @@ footer a {
 }
 
 .button-contact {
-  width: 200px;
+  width: 180px;
   color: black;
   background-color: #ccc;
   border-radius: 100px;
@@ -480,7 +472,7 @@ footer a {
   padding: 16px 24px 16px 24px;
   font-size: 22px;
   font-weight: 600;  
-  margin-top: 0;
+  margin-top: 32px;
   margin-bottom: 64px;
   transition: 0.2s;
 }
@@ -683,6 +675,7 @@ a.avatarlink {
   
   .header-picture img {
     width: 400vw;
+    min-height: 600px;
     margin-left: -140vw;
   }  
   
@@ -713,6 +706,7 @@ a.avatarlink {
   .card {
     border-radius: 28px;
     height: auto;
+    min-height: 400px;
     width: 100%;
   }
   
@@ -792,6 +786,14 @@ a.avatarlink {
   
   #content {
     padding-top: 120px;
+  }
+  
+  .button-contact {
+    width: auto;
+    padding: 12px 24px 12px 24px;
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 40px;
   }
 	  
 }

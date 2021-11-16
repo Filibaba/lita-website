@@ -55,7 +55,7 @@ body {
   transition: 0.3s;
 }
 
-.site-nav-active{
+.site-nav-active, .site-nav-active:hover {
   background-color: black;
   color: white;
 }
@@ -65,11 +65,6 @@ body {
   color: black;
   border-radius: 100px;
   transition: 0.15s;
-}
-
-.site-nav-active:hover{
-  background-color: black;
-  color: white;
 }
 
 .filibaba-logo{
@@ -371,7 +366,7 @@ a.download {
 		
 .screenshotVeryveggie {
 	background: url(gfx/screenshot_veryveggie@2x.jpg);
-	background-size: 310px 550px;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
@@ -398,7 +393,7 @@ a.download {
 		
 .screenshotKakboken {
 	background: url(gfx/screenshot_kakboken@2x.jpg);
-	background-size: 310px 550px;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
@@ -425,7 +420,7 @@ a.download {
 		
 .screenshotVegourmet {
 	background: url(gfx/screenshot_vegourmet@2x.jpg);
-	background-size: 310px 550px;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
@@ -443,7 +438,7 @@ a.download {
 
 .screenshotSmoothies {
 	background: url(gfx/screenshot_smoothies@2x.jpg);
-	background-size: 310px 550px;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
@@ -460,7 +455,7 @@ a.download {
 
 .screenshotMeals {
 	background: url(gfx/screenshot_meals@2x.jpg);
-	background-size: 310px 550px;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
@@ -477,7 +472,7 @@ a.download {
 
 .screenshotWeekend {
 	background: url(gfx/screenshot_weekend@2x.jpg);
-	background-size: 310px 550px;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
@@ -587,10 +582,11 @@ a.download {
       background-color: rgba(256, 256, 256, 0.24);
   }
   
-  .site-nav-active {
+  .site-nav-active, .site-nav-active:hover {
     color: black;
     background-color: white;
   }
+
   
   
   

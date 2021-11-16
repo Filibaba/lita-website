@@ -1,182 +1,10 @@
 @charset "UTF-8";
 
 
-/* CSS copied from styles.css (Plantry stylesheet) */
-
-html {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
-}
-
-body {
-	background-color: #fff;
-	margin: 0;
-}
-
-	A:link {text-decoration: none; color: black;}
-	A:visited {text-decoration: none; color: black;}
-	A:active {text-decoration: none; color: black;}
-	A:hover {text-decoration: none; color: black;}
-	a:focus {outline: 0;}
-
-/* Site nav */
-
-.site-nav{
-  position: fixed;
-  width: 100%;
-  vertical-align: middle;
-  z-index: 100;
-  background-color:rgba(255,255,255,.6);
-  backdrop-filter:blur(60px);
-  -webkit-backdrop-filter:blur(60px);
-}
-
-.site-nav-left{
-  float: left;
-  width: 24%;
-	text-align: left;
-}
-
-.site-nav-right{
-  float: right;
-  margin-right: 24px;
-  font-size: 20px;
-  text-align: center;
-}
-  
-.site-nav-regular{
-  color: black;
-  opacity: 1.0;
-	position: relative;
-	display: inline-block;
-  border-radius: 100px;
-  padding: 7px 16px 8px 16px;
-  margin: 30px 4px 30px 4px;
-  transition: 0.3s;
-}
-
-.site-nav-active, .site-nav-active:hover {
-  background-color: black;
-  color: white;
-}
-
-.site-nav-regular:hover {
-  background-color: rgba(120, 120, 128, 0.16);
-  color: black;
-  border-radius: 100px;
-  transition: 0.15s;
-}
-
-.filibaba-logo{
-  margin-left: 24px;
-  height: 100px;
-	position: relative;
-	display: inline-block;
-}
-
-/* Site nav responsive */
-
-
-@media (max-width: 360px){
-  .filibaba-logo{
-    display: none;
-  }
-}
-
-@media (max-width: 640px){
-   .filibaba-logo{
-    margin-left: 12px;
-    margin-top: 8px;
-    height: 0;
-  	position: relative;
-  }
- 
-  .filibaba-logo img{
-    margin-left: 0px;
-    width: 48px;
-    height: auto;
-  }    
-  .site-nav-right{
-    margin-right: 12px;
-  }
-
-  .site-nav-regular {
-    font-size: 15px;
-    margin: 30px 0px 30px 0px;
-    padding: 7px 10px 8px 10px;
-  }
-}
-
-
-
-
-
-/* Copyright */
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1rem 1rem 1rem;
-}
-
-footer p {
-  color: #000;
-  opacity: 0.5;
-  font-weight: normal;
-  font-size: 0.6rem;
-}
-
-footer a {
-  color: #000;
-  font-weight: normal;
-  font-size: 0.6rem;
-}
-
-footer h2 {
-  text-align: center;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-}
-
-.copyright, .apple-notice {
-	margin-bottom: 0;
-	margin: 0 1 0vw;
-}
-
-.social-footer {
-  padding: 0;
-  margin: 0;
-}
-
-.social-footer img {
-  padding: 22px;
-  margin-top: 0;
-  margin-bottom: 48px;
-}
-
-
-
-
-
-
-/* CSS Migrated from Filibaba.com Below this line */
-
-html {
-    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
-}
-
-
-body {
-	background-color: #fff;
-	margin: 0;
-}
-
-
 
 /* All apps grid */
 
-#content {
+#puff-content {
   padding-top: 160px;
 }
 
@@ -206,24 +34,13 @@ body {
 	margin: 48px;
 }
 
-
-.valuesBox {
-	width: 29%;
-	min-width: 250px;
-	margin: 30px 2% 30px 2%;
-	position: relative;
-	display: inline-block;
-	vertical-align: top;
-}
-
-
 .appStore {
 	background: url(gfx/appstore@2x.png);
 	background-size: 199px 118px;
 	width: 199px;
 	height: 59px;
 	background-repeat: no-repeat;
-    overflow: hidden;
+  overflow: hidden;
 	margin: 55px auto 55px auto;
 	left: 0; bottom: 0; right: 0;
 }
@@ -231,21 +48,6 @@ body {
 .appStoreBlack {
 	background-position: 0 -59px;
 }
-
-.comingSoon{
-	font-weight: 600;
-	font-size: 19px;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	width: 262px;
-	margin-top: 48px;
-	margin-bottom: 24px;
-	text-align: center;
-	margin: 55px auto 55px auto;
-	left: 0; bottom: 0; right: 0;
-}
-
 
 a.download {
 	width: 199px;
@@ -261,18 +63,6 @@ a.download {
 	width: 310px;
 	height: 550px;
 }
-
-.playbutton {
-	background: url(gfx/playbutton@2x.png);
-	background-size: 120px 120px;
-	background-repeat: no-repeat;
-	height: 120px;
-	width: 120px;
-	margin: auto;
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-}
-
 
 
 /* All apps puff styling*/
@@ -319,8 +109,7 @@ a.download {
 .bloodygood {
 	background-color: #fff;
 	color: black;
-	border: 0.5px solid rgba(0, 0, 0, 0.2);
-	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.08);
 }
 
 .bloodygood a {
@@ -346,8 +135,7 @@ a.download {
 .veryveggie {
 	background-color: #fff;
 	color: black;
-	border: 0.5px solid rgba(0, 0, 0, 0.2);
-	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.08);
 }
 
 .veryveggie a {
@@ -373,8 +161,7 @@ a.download {
 .kakboken {
 	background-color: #fff;
 	color: black;
-	border: 0.5px solid rgba(0, 0, 0, 0.2);
-	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.08);
 }
 
 .kakboken a {
@@ -400,8 +187,7 @@ a.download {
 .vegourmet {
 	background-color: #fff;
 	color: #000;
-	border: 0.5px solid rgba(0, 0, 0, 0.2);
-	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.04);
+	box-shadow: 0px 5px 16px  rgba(0, 0, 0, 0.08);
 }
 
 .vegourmet a {
@@ -514,7 +300,7 @@ a.download {
 
 @media (max-width:640px) {
   
-  #content {
+  #puff-content {
     padding-top: 80px;
   }
 	

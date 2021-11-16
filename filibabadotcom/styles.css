@@ -879,14 +879,6 @@ a.avatarlink {
   	color: rgba(255, 255, 255, 0.7);
   }
   
-  #illustration {
-    margin-top: 40px;
-  	background: url(gfx/plantry-illustration-dark@2x.jpg);
-    background-size: 100% auto;
-  	background-repeat: no-repeat;
-  	width: 100%;
-  	height: auto;
-  }
   
   
   /* About Page dark*/

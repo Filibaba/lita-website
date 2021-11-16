@@ -55,16 +55,21 @@ body {
   transition: 0.3s;
 }
 
-.site-nav-active, .site-nav-active:hover {
-  background-color: black;
-  color: white;
-}
-
 .site-nav-regular:hover {
   background-color: rgba(120, 120, 128, 0.16);
   color: black;
   border-radius: 100px;
   transition: 0.15s;
+}
+
+.site-nav-active {
+  background-color: black;
+  color: white;
+}
+
+.site-nav-active:hover {
+  background-color: black;
+  color: white;
 }
 
 .filibaba-logo{
@@ -148,6 +153,10 @@ body {
   font-size: 56px;
   position: relative;
   margin-bottom: 0;
+}
+
+.smaller h1 {
+  font-size: 46px;
 }
 
 .filibaba-purpose p {
@@ -848,9 +857,14 @@ a.avatarlink {
       background-color: rgba(256, 256, 256, 0.24);
   }
   
-  .site-nav-active, .site-nav-active:hover {
+  .site-nav-active {
     color: black;
     background-color: white;
+  }
+  
+  .site-nav-active:hover {
+    color: black;
+    background-color: white;  
   }
 
   .purpose-gradient img {

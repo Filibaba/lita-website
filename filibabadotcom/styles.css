@@ -655,6 +655,11 @@ a.avatarlink {
     margin: 10% 4%; 
   }  
 
+	#creator, #mission {
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+	
 }
 
 

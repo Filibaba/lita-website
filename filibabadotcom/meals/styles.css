@@ -477,11 +477,46 @@ a.download {
 }
 
 
+/* Large monitorss */
+
+@media (min-width:1636px) {
+
+/* Wider spacer for 4 columns */
+	
+	.puffspacer {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 1128px;
+	}
+	
+}
 
 
-/* Responsive Layout */
+/* Laptop */
+	
+@media (max-width:1280px) {
+  .puff {
+  	margin: 32px;
+  }
+}
+
+
+/* Tablet */
+	
+@media (max-width:920px) {
+  .puff {
+  	margin: 24px;
+  }
+}
+
+/* Mobile */
 
 @media (max-width:640px) {
+  
+  #content {
+    padding-top: 80px;
+  }
 	
 	.puff {
 		height: auto;
@@ -535,18 +570,7 @@ a.download {
 
 }
 
-@media (min-width:1636px) {
 
-/* Wider spacer for 4 columns */
-	
-	.puffspacer {
-		position: relative;
-		display: inline-block;
-		vertical-align: top;
-		width: 1128px;
-	}
-	
-}
 
 
 /* Text and background color for dark mode */

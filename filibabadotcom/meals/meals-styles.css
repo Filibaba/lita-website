@@ -49,26 +49,7 @@
 }
 
 .appStore {
-	background: url(gfx/appstore@2x.png);
-	background-size: 199px 118px;
-	width: 199px;
-	height: 59px;
-	background-repeat: no-repeat;
-  overflow: hidden;
 	margin: 55px auto 55px auto;
-	left: 0; bottom: 0; right: 0;
-}
-
-.appStoreBlack {
-	background-position: 0 -59px;
-}
-
-a.download {
-	width: 199px;
-	height: 59px;
-    overflow: hidden;
-    text-decoration: none;
-    display: block;
 }
 
 .screenshot {

@@ -510,6 +510,18 @@ p {
 
 
 
+/* Wide gamut display support */
+
+/*
+@supports (color: color(display-p3 0 0 0 / 1)) {
+  
+  footer {
+    background-color: color(display-p3 1 0.784 0 / 1);
+  }  
+}
+*/
+
+
 
 
 /* Laptop layout */

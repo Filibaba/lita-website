@@ -131,6 +131,7 @@ body {
 .header-picture img {
   display: block;
   width: 130vw;
+  height: auto;
   margin-left: -15vw;
   object-fit: cover;
   background-repeat: no-repeat;

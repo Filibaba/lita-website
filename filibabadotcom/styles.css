@@ -23,8 +23,7 @@ body {
 
 .site-nav{
   position: fixed;
-  width: 100%;
-  vertical-align: middle;
+  width: 100vw;
   z-index: 100;
   background-color:rgba(255,255,255,.6);
   backdrop-filter:blur(60px);
@@ -33,25 +32,28 @@ body {
 
 .site-nav-left{
   float: left;
-  width: 24%;
-	text-align: left;
+  margin-left: 24px;
+	display: flex;
+	align-items: center;
+	height: 88px;
 }
 
 .site-nav-right{
   float: right;
   margin-right: 24px;
   font-size: 20px;
-  text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 88px;
 }
   
 .site-nav-regular{
   color: black;
   opacity: 1.0;
-	position: relative;
-	display: inline-block;
   border-radius: 100px;
   padding: 7px 16px 8px 16px;
-  margin: 30px 4px 30px 4px;
+  margin: 0 4px 0 4px;
   transition: opacity 0.3s;
 }
 
@@ -65,6 +67,7 @@ body {
 .site-nav-active {
   background-color: black;
   color: white;
+  margin: 0 4px 0 4px;
 }
 
 .site-nav-active:hover {
@@ -72,47 +75,44 @@ body {
   color: white;
 }
 
-.filibaba-logo{
-  margin-left: 24px;
-  height: 100px;
-	position: relative;
-	display: inline-block;
-}
 
 /* Site nav responsive */
 
+@media (max-width: 1112px){
+  .site-nav-left, .site-nav-right{
+  	height: 72px;
+  }
+}
+
+
+@media (max-width: 640px){
+
+  .site-nav-left, .site-nav-right{
+  	height: 64px;
+  }
+  
+  .site-nav-left, .site-nav-right{
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+
+  .filibaba-logo img{
+    width: 48px;
+    height: auto;
+  }   
+
+  .site-nav-regular {
+    font-size: 15px;
+    margin: 0 1px 0 1px;
+    padding: 7px 10px 8px 10px;
+  }
+}
 
 @media (max-width: 360px){
   .filibaba-logo{
     display: none;
   }
 }
-
-@media (max-width: 640px){
-   .filibaba-logo{
-    margin-left: 12px;
-    margin-top: 8px;
-    height: 0;
-  	position: relative;
-  }
- 
-  .filibaba-logo img{
-    margin-left: 0px;
-    width: 48px;
-    height: auto;
-  }    
-  .site-nav-right{
-    margin-right: 12px;
-  }
-
-  .site-nav-regular {
-    font-size: 15px;
-    margin: 30px 0px 30px 0px;
-    padding: 7px 10px 8px 10px;
-  }
-}
-
-
 
 
 
@@ -796,6 +796,7 @@ a.avatarlink {
 	
   .filibaba-animated-logo	{
     width: 170px;
+    height: auto;
   }
   
   #content {

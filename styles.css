@@ -454,9 +454,8 @@ section {
 
 .bend-top {
   padding: 0;
-  margin: -1px 0 40px 0;
+  margin: -1px 0 16px 0;
   width: 100%;
-  
 }
 
 footer {
@@ -494,12 +493,8 @@ footer img {
 }
 
 .social-footer img {
-  padding: 22px;
-  margin-top: 0;
-  margin-bottom: 48px;
+  margin: 16px 22px 48px 22px;
 }
-
-
 
 
 
@@ -976,7 +971,7 @@ p {
   }
   
   .social-footer img {
-    padding: 16px;
+    margin: 16px 16px 48px 16px;
   }
 }
 

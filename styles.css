@@ -805,11 +805,7 @@ p {
   }
   
   .hero h2 {
-    font-size: 28px; 
-    color: white;
-    background: none;
-    -webkit-background-clip: none;
-    -webkit-text-fill-color: white;
+    display: none;
   }
   
   .bend {

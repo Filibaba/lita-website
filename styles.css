@@ -127,51 +127,51 @@ html {
 
 
 
-  .button {
-    display: inline-block;
-    height: 60px;
-    line-height: 60px;
-    width: 334px;
-    border-radius: 30px;
-    font-size: 22px;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-	  transition: 0.35s;
-	  margin-bottom: 8px;
-  }
+.button {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  width: 334px;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.35s;
+  margin-bottom: 8px;
+}
 
-  .button-primary {
-    margin-top: 40px;
-    color: white;
-    background-color: black;
-  }
-  
-  .button-secondary {
-    margin-top: 16px;
-    color: black;
-    background-color: white;
-    box-shadow:0 1px 4px rgba(44, 49, 93, 0.16); 
-  }
-  
-  .button-tertiary {
-    margin-top: 16px;
-    color: black;
-  }
-  
-  .button-primary:hover {
-	  background-color: #676772;		  
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.32);
-  }
-	
-  .button-secondary:hover {
-	  background-color: rgba(120, 120, 128, 0.16);
-    box-shadow:none;
-  }
-  
-  .button-tertiary:hover {
-	  background-color: rgba(120, 120, 128, 0.16);
-  }
+.button-primary {
+  margin-top: 40px;
+  color: white;
+  background-color: black;
+}
+
+.button-secondary {
+  margin-top: 16px;
+  color: black;
+  background-color: white;
+  box-shadow:0 1px 4px rgba(44, 49, 93, 0.16); 
+}
+
+.button-tertiary {
+  margin-top: 16px;
+  color: black;
+}
+
+.button-primary:hover {
+  background-color: #676772;		  
+  box-shadow:0 1px 3px rgba(0, 0, 0, 0.32);
+}
+
+.button-secondary:hover {
+  background-color: rgba(120, 120, 128, 0.16);
+  box-shadow:none;
+}
+
+.button-tertiary:hover {
+  background-color: rgba(120, 120, 128, 0.16);
+}
 
 
 
@@ -325,41 +325,6 @@ section {
 }
 
 
-/* card from Handla
-  .cards {
-    max-width: 1400px;
-    margin-top: 65px;
-  }  
-  
-  .card {
-    transition: 0.35s; 
-    background-color: white;
-    border-radius: 32px;
-    padding: 32px;
-    margin: 12px;
-    max-width: 312px;
-    min-height: 208px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    box-shadow:0 4px 8px rgba(0, 0, 0, 0.06);
-  }
-  
-  .card h1  {
-    font-size: 24px;
-  }
-  
-  .card p {
-    font-size: 18px;
-    line-height: 25px;
-    margin: 0;
-    padding: 0;
-  }
-*/
-
-
-
-
 
 
 
@@ -371,7 +336,7 @@ section {
 
 .divider {
   height: 16px;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(44, 49, 93, 0.06);
   margin-bottom: 70px;
 }
 

@@ -10,6 +10,8 @@ html {
 
 
 
+/* Site navigation */
+
 .site-nav	A:link {text-decoration: none; color: white;}
 .site-nav	A:visited {text-decoration: none; color: white;}
 .site-nav	A:active {text-decoration: none; color: white;}

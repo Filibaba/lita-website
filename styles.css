@@ -151,7 +151,7 @@ html {
     margin-top: 16px;
     color: black;
     background-color: white;
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.16); 
+    box-shadow:0 1px 4px rgba(44, 49, 93, 0.16); 
   }
   
   .button-tertiary {
@@ -298,24 +298,64 @@ section {
 .feature-grid {
   max-width: 1100px;
   margin-bottom: 40px;
-  text-align: left;
+  align-items: center;  
+  text-align: center;
 }
 
 .feature {
+  transition: 0.35s; 
+  background-color: white;
+  border-radius: 32px;
+  padding: 32px;
+  margin: 12px;
+  max-width: 330px;
+  min-height: 312px;
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	margin: 35px;
-	width: 290px;
   text-align: left;
+  box-shadow:0 8px 32px rgba(44, 49, 93, 0.12);
 }
 
 .feature p {
-  margin: 16px 0;
+  margin: 0;
 	font-size: 18px;
-  line-height: 1.5;
+  line-height: 25px;
   padding: 0;
 }
+
+
+/* card from Handla
+  .cards {
+    max-width: 1400px;
+    margin-top: 65px;
+  }  
+  
+  .card {
+    transition: 0.35s; 
+    background-color: white;
+    border-radius: 32px;
+    padding: 32px;
+    margin: 12px;
+    max-width: 312px;
+    min-height: 208px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card h1  {
+    font-size: 24px;
+  }
+  
+  .card p {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+  }
+*/
 
 
 
@@ -515,8 +555,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.24rem;
+  font-size: 24px;
   font-weight: bold;
+  margin: 14px 0px 14px 0px;
 }
 
 p {
@@ -540,13 +581,29 @@ p {
 
 
 
-/* Smaller download button */
+/* Smaller download button & cards for smaller screens */
 
 @media screen and (max-width: 1538px) {
 .app-store-download-top img, .app-store-download-top-mobile img { 
   	width: 155.2px;
   	height: 89.6px;
 	}
+	
+  .feature p {
+  	font-size: 17px;
+  }
+  
+  h3 {
+    font-size: 22px;
+  }
+
+  .feature {
+    border-radius: 24px;
+    padding: 24px;
+    margin: 10px;
+    max-width: 330px;
+    min-height: 248px;
+  }
 }
 
 
@@ -859,6 +916,34 @@ p {
     width: 100%;
   }
   
+  
+/* card from Handla
+  .card {
+    transition: 0.35s; 
+    background-color: white;
+    border-radius: 32px;
+    padding: 32px;
+    margin: 12px;
+    max-width: 312px;
+    min-height: 208px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card h1  {
+    font-size: 24px;
+  }
+  
+  .card p {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+  }
+*/
+  
 
 
 
@@ -1043,5 +1128,7 @@ p {
   .button-primary:hover { background-color: rgba(255, 255, 255, 0.6); }
 	.button-secondary:hover { background-color: rgba(255, 255, 255, 0.3);;}
 	.button-tertiary:hover { background-color: #242426;}
+	
+  .feature { background-color: #27282E; }
   
 }

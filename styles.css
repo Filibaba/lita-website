@@ -540,19 +540,14 @@ p {
 
 
 
+/* Smaller download button */
 
-/* Wide gamut display support */
-
-/*
-@supports (color: color(display-p3 0 0 0 / 1)) {
-  
-  footer {
-    background-color: color(display-p3 1 0.784 0 / 1);
-  }  
+@media screen and (max-width: 1538px) {
+.app-store-download-top img, .app-store-download-top-mobile img { 
+  	width: 155.2px;
+  	height: 89.6px;
+	}
 }
-*/
-
-
 
 
 /* Laptop layout */
@@ -582,6 +577,7 @@ p {
   .app-store-download-top { 
     margin-top: 272px;
     margin-left: 64px;
+
   	position: absolute;
   	display: inline-block;
   }

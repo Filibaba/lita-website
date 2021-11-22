@@ -113,23 +113,6 @@ html {
 
 
 
-.separator{
-  height: 0.5px;
-  background-color: #CCCCCC;
-  width: -moz-calc(100% - 84px);
-  width: -webkit-calc(100% - 84px);
-  width: calc(100% - 84px);
-  margin-left: 42px;
-  margin-top: 99px;
-  position: absolute;
-}
-
-
-
-
-
-
-
 
 
 
@@ -193,6 +176,12 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(255, 255, 255);
+}
+
+section {
+ display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
 
@@ -286,7 +275,7 @@ header {
 
 
 
-/* Feature grid */
+/* Cards */
 
 
 section h2 {
@@ -301,14 +290,14 @@ section {
   align-items: center;  
 }
 
-.feature-grid {
+.cards {
   max-width: 1100px;
   margin-bottom: 40px;
   align-items: center;  
   text-align: center;
 }
 
-.feature {
+.card {
   transition: 0.35s; 
   background-color: white;
   border-radius: 32px;
@@ -323,22 +312,12 @@ section {
   box-shadow:0 8px 32px rgba(44, 49, 93, 0.12);
 }
 
-.feature p {
+.card p {
   margin: 0;
 	font-size: 18px;
   line-height: 25px;
   padding: 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 .divider {
   height: 16px;
@@ -560,7 +539,7 @@ p {
   	height: 89.6px;
 	}
 	
-  .feature p {
+  .card p {
   	font-size: 17px;
   }
   
@@ -568,7 +547,7 @@ p {
     font-size: 22px;
   }
 
-  .feature {
+  .card {
     border-radius: 24px;
     padding: 24px;
     margin: 10px;
@@ -675,53 +654,6 @@ p {
     width: 150%;
     margin-left: -25%;
   }
-   
-  
-
-/*Old responsive code */
-  section {
-  padding: 2rem 1rem 0rem 1rem;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  section > .content {
-    max-width: 24rem;
-    margin: auto;
-    margin-right: 5vw;
-    margin-left: 0;
-    z-index: 5;
-  }
-  
-  section > .content img {
-    margin-bottom: 1rem;
-  }
-  
-  section > .screenshot {
-    width: 357px;
-    height: 670px;
-    position: relative;
-    z-index: 2;
-    margin-left: 0;
-    margin-right: -27px;
-  }
-  
-  section > .screenshot img {
-    z-index: 6;
-    position: relative;
-  }
-  
-  section > .screenshot::before {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 200%;
-    width: 350%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-  }
 }
 
 /* Wide gamut display support */
@@ -740,7 +672,7 @@ p {
 
 @media (min-width: 760px) and (max-width: 1124px){
   
-  .feature-grid, .review-grid, .award-grid {
+  .cards, .review-grid, .award-grid {
     max-width: 728px;
   }
   
@@ -750,7 +682,7 @@ p {
 
 @media (min-width: 568px) and (max-width: 759px){
   
-  .feature-grid, .review-grid, .award-grid {
+  .cards, .review-grid, .award-grid {
     max-width: 364px;
   }
   
@@ -766,10 +698,6 @@ p {
     background-image: url(gfx/earth-bg-mobile.jpg);
     background-position: center top;
     background-size: cover;
-  }
-  
-  section {
-    padding: 16px;
   }
   
   .hero { 
@@ -836,7 +764,13 @@ p {
     text-align: center;
   }
   
-  .feature p {
+  .cards, .review-grid, .award-grid {
+    max-width: none;
+    margin-left: 24px;
+    margin-right: 24px;    
+  }
+  
+  .card p {
     margin-top: 0;
   	font-size: 15px;
     line-height: 1.5;
@@ -850,10 +784,6 @@ p {
   .button-primary { margin-top: 24px;}
   .button-secondary { margin-top: 12px;}
 
-  
-  /*old responsive code*/
-
-  
   header .app-store-download {
     padding: 0;
     margin: 0;
@@ -865,11 +795,7 @@ p {
     background: url('gfx/app_store.svg') no-repeat;
     background-size: cover;
   }  
-
-
-
-
-
+  
   section h2 {
     text-align: center;
     font-size: 1.5rem;
@@ -880,28 +806,26 @@ p {
     padding-right: env(safe-area-inset-right);
   }
 
-  .feature-grid {
-    max-width: 1090px;
+  .cards {
+    margin-left: 24px;
+    margin-right: 24px;
     margin-bottom: 0;
     text-align: center;
   }
 
-  .feature {
+  .card {
+    border-radius: 28px;
+    padding: 16px 16px 32px 16px;
+    max-width: inherit;
+    min-height: inherit;
+    width: 100%;
   	position: relative;
   	display: inline-block;
   	vertical-align: top;
-  	margin: 0;
-  	margin-bottom: 32px;
+    margin: 16px 0px 16px 0px;
     text-align: left;
-    width: 100%;
   }
   
-
-
-
-
-
-
   .award {
   	margin: 20px 0px 20px 0px;
   }
@@ -975,8 +899,6 @@ p {
     margin-bottom: 3rem;
     margin-top: 1rem;
   }
-
-
   
   h2, p {
     margin: 0;
@@ -993,6 +915,10 @@ p {
     font-size: 0.9375rem;
     margin-bottom: 1rem;
     line-height: 1.5rem;
+  }
+
+  footer {
+      margin-top: 48px;
   }
   
   .vignette {
@@ -1019,12 +945,8 @@ p {
 
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {
-  body {
+  body, .divider {
     background-color: rgb(0, 0, 0);
-  }
-  
-  .divider {
-    background-color: rgba(255, 255, 255, 0.15);
   }
   
   section p, h2, h3 {
@@ -1073,6 +995,6 @@ p {
 	.button-secondary:hover { background-color: rgba(255, 255, 255, 0.3);;}
 	.button-tertiary:hover { background-color: #242426;}
 	
-  .feature { background-color: #27282E; }
+  .card { background-color: #27282E; }
   
 }

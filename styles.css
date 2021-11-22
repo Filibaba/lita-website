@@ -479,8 +479,17 @@ footer img {
   margin: 24px 0;
 }
 
-.copyright, .apple-notice {
-	padding: 0 16px;
+.copyright {
+	padding: 0;
+	margin: 0px 0px 4px 0px;
+}
+
+.apple-notice {
+	padding: 0;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+	text-align: center;
 }
 
 .social-footer {
@@ -927,7 +936,7 @@ p {
   }
 
   footer {
-      margin-top: 48px;
+    margin-top: 48px;
   }
   
   .vignette {

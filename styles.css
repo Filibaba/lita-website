@@ -126,7 +126,7 @@ html {
   font-weight: 600;
   text-decoration: none;
   text-align: center;
-  transition: 0.35s;
+  transition: 0.15s;
   margin-bottom: 8px;
 }
 
@@ -134,6 +134,7 @@ html {
   margin-top: 40px;
   color: white;
   background-color: black;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.16); 
 }
 
 .button-secondary {
@@ -150,7 +151,7 @@ html {
 
 .button-primary:hover {
   background-color: #676772;		  
-  box-shadow:0 1px 3px rgba(0, 0, 0, 0.32);
+  box-shadow:none;
 }
 
 .button-secondary:hover {

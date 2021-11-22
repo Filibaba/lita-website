@@ -1030,6 +1030,10 @@ p {
   section p, h2, h3 {
     color: #fff;
   }
+
+  .veggies {
+    display: none;
+  }
   
   .invertInDarkMode {
    -webkit-filter: invert(1);

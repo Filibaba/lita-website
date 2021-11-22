@@ -464,15 +464,18 @@ footer {
 
 footer p {
   color: #000;
-  opacity: 0.5;
   font-weight: normal;
-  font-size: 0.6rem;
+  font-size: 11px;
 }
 
 footer a {
   color: #000;
   font-weight: normal;
-  font-size: 0.6rem;
+  font-size: 11px;
+}
+
+footer a:hover {
+  opacity: 0.7
 }
 
 footer img {
@@ -481,10 +484,11 @@ footer img {
 
 .copyright {
 	padding: 0;
-	margin: 0px 0px 4px 0px;
+	margin: 0px 0px 6px 0px;
 }
 
 .apple-notice {
+  opacity: 0.5;
 	padding: 0;
   margin-bottom: 16px;
   margin-left: 16px;

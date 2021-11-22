@@ -113,7 +113,10 @@ html {
 
 
 
-
+.buttons {
+  max-width: 364px;
+  text-align: center;
+}
 
 
 .button {
@@ -348,7 +351,6 @@ section {
 
 .award-grid {
   max-width: 1090px;
-/*   margin-bottom: 30px; */
   text-align: left;
 }
 
@@ -782,7 +784,7 @@ p {
     text-align: center;
   }
   
-  .cards, .review-grid, .award-grid {
+  .cards, .review-grid, .award-grid, .buttons {
     max-width: none;
     margin-left: 24px;
     margin-right: 24px;    
@@ -798,7 +800,7 @@ p {
     margin-bottom: 35px;
   }
 
-	.button { height: 48px; line-height: 48px; width: 300px; border-radius: 24px; font-size: 18px;}
+	.button { height: 48px; line-height: 48px; width: 100%; border-radius: 24px; font-size: 18px;}
   .button-primary { margin-top: 24px;}
   .button-secondary { margin-top: 12px;}
 

@@ -54,6 +54,8 @@ html {
   padding: 7px 16px 8px 16px;
   margin: 0 4px 0 4px;
   transition: opacity 0.3s;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
 }
 
 .site-nav-regular:hover {

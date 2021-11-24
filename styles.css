@@ -341,7 +341,7 @@ section {
   margin-bottom: 30px;
 }
 
-.image-crop {
+.ipad-margin {
   margin: -38px 0px 0px 0px;
 }  
 
@@ -805,6 +805,10 @@ p {
     width: 160%;
     margin-left: -30%;
   }
+  
+  .ipad-margin {
+    margin: 0;
+  }  
   
   .image-crop {
     overflow: hidden;

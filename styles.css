@@ -731,13 +731,17 @@ p {
 
 /* Adjust grid for two columns */
 
-@media (min-width: 760px) and (max-width: 1124px){
+@media (min-width: 700px) and (max-width: 1110px){
   
   .cards, .review-grid, .award-grid {
     max-width: 728px;
+    align-items: left;  
+    text-align: left;
   }
   
-}
+  .card {
+    margin: 12px 15px 16px 15px;    
+  }
 
 /* Adjust grid for one column */
 

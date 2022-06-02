@@ -12,10 +12,10 @@ html {
 
 /* Site navigation */
 
-.site-nav	A:link {text-decoration: none; color: white;}
-.site-nav	A:visited {text-decoration: none; color: white;}
-.site-nav	A:active {text-decoration: none; color: white;}
-.site-nav	A:hover {text-decoration: none; color: white;}
+.site-nav	A:link {text-decoration: none; color: black;}
+.site-nav	A:visited {text-decoration: none; color: black;}
+.site-nav	A:active {text-decoration: none; color: black;}
+.site-nav	A:hover {text-decoration: none; color: black;}
 .site-nav	a:focus {outline: 0;}
 
 .site-nav{
@@ -26,13 +26,6 @@ html {
 
 .site-nav a:active{
   opacity: 0.7;
-}
-
-.site-nav-left{
-  float: left;
-	display: flex;
-	align-items: center;
-	height: 100px;
 }
 
 .site-nav-right{
@@ -46,20 +39,18 @@ html {
 }
   
 .site-nav-regular{
-  background-color: rgba(120, 120, 128, 0.3);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 100px;
-  color: white;
+  color: black;
   opacity: 1.0;
   border-radius: 100px;
   padding: 7px 16px 8px 16px;
   margin: 0 4px 0 4px;
   transition: opacity 0.3s;
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
 }
 
 .site-nav-regular:hover {
-  background-color: rgba(120, 120, 128, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   color: black;
   border-radius: 100px;
   transition: opacity 0.15s;
@@ -181,7 +172,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: color(display-p3 0.875 0.89 0.937 / 1)
 }
 
 section {
@@ -208,15 +199,23 @@ header {
 }
 
 .hero {
-  background-image: url(gfx/earth-bg.jpg);
+  background: linear-gradient(to bottom, color(display-p3 1 0.956 0.102 / 1) 0%, color(display-p3 1 0.784 0 / 1) 50%, color(display-p3 1 0.855 0.33 / 1) 75%, color(display-p3 0.875 0.89 0.937 / 1) 100%);
+
+/*
+  background-image: url(gfx/veggies@2x.jpg);
   background-position: center top;
   background-size: cover;
+  background-blend-mode: multiply;
+*/
+
   color: rgb(0, 0, 0);
   padding: 160px 0 0 0;
   margin: 0 0 60px 0;
   text-align: center;
+/*
   background-attachment: fixed;
   overflow: hidden;
+*/
 }
 
 .hero-iphone {
@@ -227,6 +226,7 @@ header {
   background-size: 309px 744px;
 	background-repeat: no-repeat;
 	background-position: center center;
+	z-index: 1;
 	}
 
 .video {
@@ -234,6 +234,7 @@ header {
   margin-top: 22px;
   margin-right: 20.8px;
   border-radius: 280px 40px 40px 280px/55px 40px 40px 55px;
+	z-index: 1;
   }
 
 .app-store-download-top { 
@@ -259,19 +260,23 @@ header {
 }
 
 .bend {
-  width: 100%;
-  padding: 0;
-  margin-bottom: -16px;
-  background-image: url(gfx/bend.svg);
-  background-size: contain;
-  background-position: center top;
-  width: 100%;
+    bottom: -1px;
+    height: auto;
+    width: 102vw;
+    left: -1vw;
+    margin-top: -1px;
+    margin-bottom: 16px;
 }
 
 .veggies {
-  margin-bottom: 60px;
+  margin-left: -500px;
+  margin-top: -600px;
   width: 100%;
   max-width: 887px;
+  mix-blend-mode: multiply;
+	position: absolute;
+	display: inline-block;
+	z-index: -1;
 }
 
 .ipad-hero {
@@ -529,6 +534,10 @@ footer img {
 
 
 /* Typography */
+
+h1 {
+  font-size: 64px;
+}
 
 h2, p {
   margin: 0;
@@ -1020,11 +1029,15 @@ p {
 
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {
+  .hero {
+      background: linear-gradient(to bottom, color(display-p3 1 0.956 0.102 / 1) 0%, color(display-p3 1 0.784 0 / 1) 50%, color(display-p3 0 0 0 / 1) 100%);
+  }
+  
   body, .divider {
     background-color: rgb(0, 0, 0);
   }
   
-  section p, h2, h3, h4 {
+  section p, h1, h2, h3, h4 {
     color: #fff;
   }
 

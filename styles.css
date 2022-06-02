@@ -193,30 +193,23 @@ section {
 /* Header */
 
 header {
-  background-color: black; 
   padding: 0;
   margin: 0;
 }
 
 .hero {
-  background: linear-gradient(to bottom, color(display-p3 1 0.956 0.102 / 1) 0%, color(display-p3 1 0.784 0 / 1) 50%, color(display-p3 1 0.855 0.33 / 1) 75%, color(display-p3 0.875 0.89 0.937 / 1) 100%);
-
-/*
-  background-image: url(gfx/veggies@2x.jpg);
-  background-position: center top;
-  background-size: cover;
+  background: url(gfx/veggies@2x.jpg), linear-gradient(to bottom, color(display-p3 1 0.784 0 / 1) 0%, color(display-p3 1 0.855 0.33 / 1) 75%, color(display-p3 0.875 0.89 0.937 / 1) 100%);
+  background-position: center center;
+  background-repeat: no-repeat;
   background-blend-mode: multiply;
-*/
-
+background-position-y:  35%;
   color: rgb(0, 0, 0);
   padding: 160px 0 0 0;
   margin: 0 0 60px 0;
   text-align: center;
-/*
-  background-attachment: fixed;
-  overflow: hidden;
-*/
+
 }
+
 
 .hero-iphone {
   margin-top: 50px;
@@ -226,7 +219,7 @@ header {
   background-size: 309px 744px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	z-index: 1;
+	z-index: 10;
 	}
 
 .video {
@@ -234,7 +227,7 @@ header {
   margin-top: 22px;
   margin-right: 20.8px;
   border-radius: 280px 40px 40px 280px/55px 40px 40px 55px;
-	z-index: 1;
+	z-index: 10;
   }
 
 .app-store-download-top { 
@@ -242,6 +235,7 @@ header {
   margin-left: 80px;
 	position: absolute;
 	display: inline-block;
+		z-index: 10;
 }
 
 .hero a:active, .awards a:active {
@@ -268,16 +262,7 @@ header {
     margin-bottom: 16px;
 }
 
-.veggies {
-  margin-left: -500px;
-  margin-top: -600px;
-  width: 100%;
-  max-width: 887px;
-  mix-blend-mode: multiply;
-	position: absolute;
-	display: inline-block;
-	z-index: -1;
-}
+
 
 .ipad-hero {
   margin-bottom: 80px;
@@ -478,11 +463,12 @@ section {
 }
 
 footer {
-  background-color: #FFC800;
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0;
+  overflow: hidden; 
 }
 
 footer p {
@@ -1030,14 +1016,14 @@ p {
 /* Text and background color for dark mode */
 @media (prefers-color-scheme: dark) {
   .hero {
-      background: linear-gradient(to bottom, color(display-p3 1 0.956 0.102 / 1) 0%, color(display-p3 1 0.784 0 / 1) 50%, color(display-p3 0 0 0 / 1) 100%);
+      background: linear-gradient(to bottom, color(display-p3 1 0.784 0 / 1) 75%, color(display-p3 0 0 0 / 1) 100%);
   }
   
   body, .divider {
     background-color: rgb(0, 0, 0);
   }
   
-  section p, h1, h2, h3, h4 {
+  section p, h2, h3, h4 {
     color: #fff;
   }
 

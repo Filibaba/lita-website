@@ -172,7 +172,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: color(display-p3 0.875 0.89 0.937 / 1)
+  background-color: #fff;
 }
 
 section {
@@ -198,7 +198,7 @@ header {
 }
 
 .hero {
-  background: url(gfx/veggies@2x.jpg), linear-gradient(to bottom, color(display-p3 1 0.784 0 / 1) 0%, color(display-p3 1 0.855 0.33 / 1) 70%, color(display-p3 0.875 0.89 0.937 / 1) 98%);
+  background: url(gfx/veggies@2x.jpg), linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -463,7 +463,7 @@ section {
 }
 
 footer {
-  background-color: #FFF;
+  background-color: #FFC800;
   display: flex;
   flex-direction: column;
   align-items: center;

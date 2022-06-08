@@ -29,9 +29,6 @@
   <body>
     
   <div class="site-nav">
-    <div class="site-nav-left">
-      <a href="index.html" class="plantry-logo"><img src="../gfx/plantry.svg" alt="Plantry app icon"></a>
-    </div>
     <div class="site-nav-right">
       <a href="https://www.dropbox.com/sh/scwa5zoa7exgdb4/AACljU7700tgkgNc_9J-CGQLa?dl=0" class="site-nav-regular">Pressmaterial</a>
       <a href="../index.html" class="site-nav-regular">🇺🇸 EN</a>
@@ -39,101 +36,105 @@
   </div>
   
   <header>
-    <div class="hero">
-      <img src="../gfx/plantry.svg" alt="Plantry app icon" class="plantry-logo-mobile" width="300" height="121,95">
-      <h2 class="rellax" data-rellax-speed="-4">Planetvänlig matlagning</h2>       
-        <div class="hero-iphone rellax" data-rellax-speed="-5">
-          <video class="video" autoplay muted loop playsinline width="265" height="696">
+    <div class="hero veggies">
+      <img src="../gfx/plantry.svg" alt="Plantry app icon" class="plantry-logo" width="375" height="93">
+     
+        <div class="hero-iphone">
+          
+          <video class="video" autoplay muted loop playsinline width="282" height="610">
+
+          <source src="../video/web-SE-small.mp4" width="282" height="610" type="video/mp4" media="(max-width:480px)">
+  				<source src="../video/web-SE-medium.mp4" width="282" height="610" type="video/mp4"/>
+
 <!--
-          <source src="../video/web-SE-small.mp4" width="265" height="696" type="video/mp4" media="(max-width:480px)">
-  				<source src="../video/web-SE-medium.mp4" width="265" height="696" type="video/mp4"/>
+          <source src="https://maxrudberg.com/plantry/web-SE-small.mp4" width="282" height="610" type="video/mp4" media="(max-width:480px)">
+  				<source src="https://maxrudberg.com/plantry/web-SE-medium.mp4" width="282" height="610" type="video/mp4"/>
 -->
-          <source src="https://maxrudberg.com/plantry/web-SE-small.mp4" width="265" height="696" type="video/mp4" media="(max-width:480px)">
-  				<source src="https://maxrudberg.com/plantry/web-SE-medium.mp4" width="265" height="696" type="video/mp4"/>
   				</video>
+  				
 		      <div class="app-store-download-top rellax" data-rellax-speed="0"><a href="https://apps.apple.com/se/app/apple-store/id1109976916?pt=21520800&ct=web&mt=8#?platform=iphone"><img src="../gfx/download.svg" alt="App Store Download" width="194px" height="112px"></a></div> 
         </div>
+        
       <div class="app-store-download-top-mobile rellax" data-rellax-speed="-0.3"><a href="https://apps.apple.com/se/app/apple-store/id1109976916?pt=21520800&ct=web&mt=8#?platform=iphone"><img src="../gfx/download.svg" alt="App Store Download" width="194px" height="112px"></a></div> 
 
-      <img class="bend invertInDarkMode rellax" data-rellax-speed="0" src="../gfx/bend-filler.svg">
+      <h1>Planera. Handla. Laga.</h1>   
+      
+      <section>
+        <div class="cards">       
+            <div class="card">
+                <img src="../gfx/icon-plan.png" srcset="../gfx/icon-plan@2x.png 2x, ../gfx/icon-plan@3x.png 3x" width="60" height="60" alt="Enkel matplanering">
+                <h3>Planerat är bättre</h3>
+                <p>Anpassa en plan, eller gör en ny från grunden. Spara tid och pengar och gör bättre matval.</p>
+            </div>
+            
+            <div class="card">
+                <img src="../gfx/icon-shop.png" srcset="../gfx/icon-shop@2x.png 2x, ../gfx/icon-shop@3x.png 3x" width="60" height="60" alt="Smidig inköpslista">
+                <h3>Handla med inköpslista</h3>
+                <p>Vi gör en färdig inköpslista åt dig, med alla matvaror du behöver till matlagningen.</p>
+            </div>
+            
+          <div class="card">
+                <img src="../gfx/icon-recipes.png" srcset="../gfx/icon-recipes@2x.png 2x, ../gfx/icon-recipes@3x.png 3x" width="60" height="60" alt="Hitta nya favoriter">
+                <h3>Laga nya favoriter</h3>
+                <p>I Plantry finns över 1000 smarriga recept framtagna i samarbete med våra fantastiska kockar.</p>
+          </div>
+        </div>
+        
+    
+      </section>   
     </div>
   </header>
 
-  <section>
-    <h2 class="header-padding">Planera&nbspdina&nbspmåltider och&nbsprädda&nbspplaneten</h2>
-    <div class="cards">
-      <div class="card">
-          <img src="../gfx/icon-plantbased.png" srcset="../gfx/icon-plantbased@2x.png 2x, ../gfx/icon-plantbased@3x.png 3x" width="60" height="60" alt="Växtbaserade recept">
-          <h3>Växtbaserade recept</h3>
-          <p>Vegetariska och veganska måltider minskar ditt klimatavtryck.</p>
-      </div>
-      <div class="card">
-          <img src="../gfx/icon-better.png" srcset="../gfx/icon-better@2x.png 2x, ../gfx/icon-better@3x.png 3x" width="60" height="60" alt="Planerat är bättre">
-          <h3>Planerat är bättre</h3>
-          <p>Spara tid och pengar och gör bättre matval.</p>
-      </div>
-      <div class="card">
-          <img src="../gfx/icon-foodwaste.png" srcset="../gfx/icon-foodwaste@2x.png 2x, ../gfx/icon-foodwaste@3x.png 3x" width="60" height="60" alt="Minska natsvinnet">
-          <h3>Minska matsvinnet</h3>
-          <p>Köp bara det du behöver och använd det medan det är färskt.</p>
-      </div>
-    </div>
-    
-    <div class="image-crop"
-      <picture>
-        <img class="veggies invertInDarkMode" src="../gfx/veggies.jpg" alt="Grönsaker" srcset="../gfx/veggies@2x.jpg 2x">
-      </picture>
-    </div>
-  </section>        
+     
 
-<div class="divider">
 </div>
 
     <section>
-      <h2>Det är enkelt med Plantry</h2>
-
-      <div class="cards">          
-        <div class="card">
-            <img src="../gfx/icon-plan.png" srcset="../gfx/icon-plan@2x.png 2x, ../gfx/icon-plan@3x.png 3x" width="60" height="60" alt="Enkel matplanering">
-            <h3>Enkel matplanering</h3>
-            <p>Välj en plan och anpassa den efter din smak eller gör en ny plan från grunden.</p>
-        </div>
-        
-        <div class="card">
-            <img src="../gfx/icon-shop.png" srcset="../gfx/icon-shop@2x.png 2x, ../gfx/icon-shop@3x.png 3x" width="60" height="60" alt="Smidig inköpslista">
-            <h3>Smidig inköpslista</h3>
-            <p>Vi gör en färdig inköpslista åt dig, med alla matvaror du behöver till matlagningen.</p>
-        </div>
-        
-      <div class="card">
-            <img src="../gfx/icon-recipes.png" srcset="../gfx/icon-recipes@2x.png 2x, ../gfx/icon-recipes@3x.png 3x" width="60" height="60" alt="Hitta nya favoriter">
-            <h3>Hitta nya favoriter</h3>
-            <p>I Plantry finns över 1000 smarriga recept framtagna i samarbete med våra fantastiska kockar.</p>
-      </div>
-        
-        <div class="card">
-            <img src="../gfx/icon-cuttingedge.png" srcset="../gfx/icon-cuttingedge@2x.png 2x, ../gfx/icon-cuttingedge@3x.png 3x" width="60" height="60" alt="Widgets & Siri">
-            <h3>Widgets & Siri</h3>
-            <p>Se dina måltider på hemskärmen, eller fråga Siri "Vad det blir till middag?" och få svar på tal!</p>
-        </div>
-        
+      <h2>Praktisk. Planetvänlig.</h2>
+       <div class="cards">    
+              
         <div class="card">
             <img src="../gfx/icon-nutrition.png" srcset="../gfx/icon-nutrition@2x.png 2x, ../gfx/icon-nutrition@3x.png 3x" width="60" height="60" alt="Näringsvärden">
             <h3>Näringsvärden</h3>
             <p>Vi har kompletta näringsvärden för recepten. Dra nedåt på receptbilden för att visa alla detaljer.</p>
         </div>
+
+        <div class="card">
+            <img src="../gfx/icon-cuttingedge.png" srcset="../gfx/icon-cuttingedge@2x.png 2x, ../gfx/icon-cuttingedge@3x.png 3x" width="60" height="60" alt="Widgets">
+            <h3>Widgets</h3>
+            <p>Se dina måltider direkt på hemskärmen. Ett tryck så är du redo att laga mat.</p>
+        </div>
         
+        <div class="card">
+            <img src="../gfx/icon-better.png" srcset="../gfx/icon-better@2x.png 2x, ../gfx/icon-better@3x.png 3x" width="60" height="60" alt="Food Waste">
+            <h3>Svar på tal</h3>
+            <p>Fråga Siri "Vad blir det till middag?" så berättar hon!</p>
+        </div>
+                
         <div class="card">
             <img src="../gfx/icon-timer.png" srcset="../gfx/icon-timer@2x.png 2x, ../gfx/icon-timer@3x.png 3x" width="60" height="60" alt="Flera timers">
             <h3>Flera timers</h3>
             <p>Starta flera timers direkt i ett recept. Tryck bara på en tidsangivelse eller starta en egen från ikonen.</p>
         </div>
+
+        <div class="card">
+            <img src="../gfx/icon-foodwaste.png" srcset="../gfx/icon-foodwaste@2x.png 2x, ../gfx/icon-foodwaste@3x.png 3x" width="60" height="60" alt="Minska natsvinnet">
+            <h3>Minska matsvinnet</h3>
+            <p>Köp bara det du behöver och använd det medan det är färskt.</p>
+        </div>
+      
+        <div class="card">
+            <img src="../gfx/icon-plantbased.png" srcset="../gfx/icon-plantbased@2x.png 2x, ../gfx/icon-plantbased@3x.png 3x" width="60" height="60" alt="Växtbaserade recept">
+            <h3>Växtbaserade recept</h3>
+            <p>Vegetariska och veganska måltider minskar ditt klimatavtryck.</p>
+        </div>
+        
       </div>
     <div class="spacer">
   </section>      
         
   <section>    
-      <h2>Träffa våra kockar</h2>
+      <h2>Träffa våra kockar…</h2>
 
       <div class="cards">       
         <div class="card chef">

@@ -62,10 +62,6 @@ html {
 	display: inline-block;
 }
 
-.plantry-logo-mobile{
-  display: none;
-}
-
 
 /* Site nav responsive */
 
@@ -73,11 +69,9 @@ html {
 @media (max-width: 567px){
   
   .plantry-logo{
-    display: none;
-  }
-  
-  .plantry-logo-mobile{
-    display: inline-block;
+    width: 300px;
+    height: 121,95px;
+    transition: 0.15s;
   }
 
   .site-nav-left, .site-nav-right{
@@ -106,11 +100,11 @@ html {
 
 
 
+
 .buttons {
   max-width: 364px;
   text-align: center;
 }
-
 
 .button {
   display: inline-block;
@@ -130,7 +124,7 @@ html {
   margin-top: 40px;
   color: white;
   background-color: black;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.16); 
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.16); 
 }
 
 .button-secondary {
@@ -165,10 +159,6 @@ html {
 
 
 
-
-
-
-
 body {
   margin: 0;
   padding: 0;
@@ -176,14 +166,10 @@ body {
 }
 
 section {
- display: flex;
-    justify-content: center;
-    overflow: hidden;
+   display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
-
-
-
-
 
 
 
@@ -202,41 +188,34 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  background-position-y:  35%;
-  background-size: 918pt 413pt, 100% 100%;
+  background-position-y:  37%;
+  background-size: 826pt 346pt, 100% 100%;
   color: rgb(0, 0, 0);
-  padding: 160px 0 0 0;
+  padding: 100px 0 0 0;
   margin: 0 0 60px 0;
   text-align: center;
-
 }
 
-
 .hero-iphone {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  height: 744px;
+  height: 640px;
   background: url(gfx/hero-iphone@2x.png);
-  background-size: 309px 744px;
+  background-size: 316px 640px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	z-index: 10;
-	}
+	margin: 64px 0px 80px 0px;
+}
 
 .video {
-  height: 697px;
-  margin-top: 22px;
-  margin-right: 20.8px;
-  border-radius: 280px 40px 40px 280px/55px 40px 40px 55px;
-	z-index: 10;
-  }
+  height: 610px;
+  margin-top: 15px;
+	border-radius: 10px;
+}
 
 .app-store-download-top { 
-  margin-top: 340px;
+  margin-top: 280px;
   margin-left: 80px;
 	position: absolute;
 	display: inline-block;
-		z-index: 10;
 }
 
 .hero a:active, .awards a:active {
@@ -246,24 +225,6 @@ header {
 .app-store-download-top-mobile { 
   display: none;
 }
-
-.hero h2 {
-  font-size: 72px;
-  background: linear-gradient(to right, #FFBFD5 30%, #A3C6FF 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.bend {
-    bottom: -1px;
-    height: auto;
-    width: 102vw;
-    left: -1vw;
-    margin-top: -1px;
-    margin-bottom: 16px;
-}
-
-
 
 .ipad-hero {
   margin-bottom: 80px;
@@ -465,6 +426,7 @@ section {
 
 footer {
   background-color: #FFC800;
+  background: linear-gradient(to right,color(display-p3 0.98 0.72 0 / 1) 0%, color(display-p3 0.965 0.796 0.27 / 1) 45%, color(display-p3 0.965 0.796 0.27 / 1) 55%, color(display-p3 0.98 0.72 0 / 1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -523,7 +485,10 @@ footer img {
 /* Typography */
 
 h1 {
+  transition: 0.35s; 
   font-size: 64px;
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
 
 h2, p {
@@ -582,10 +547,9 @@ p {
 /* Smaller download button & cards for smaller screens */
 
 @media screen and (max-width: 1538px) {
-  .app-store-download-top img, .app-store-download-top-mobile img { 
-  	width: 155.2px;
-  	height: 89.6px;
-	}
+  .hero h1 {
+    font-size: 56px; 
+  }
 	
   .card p {
   	font-size: 17px;
@@ -610,46 +574,7 @@ p {
   .chef {
     min-height: 300px;
   }
-}
-
-
-/* Laptop layout */
-
-@media (min-width: 1001px) and (max-width: 1792px){
-  .hero {
-    padding: 106px 0 0 0;
-    margin: 0 0 60px 0;
-  }
-  
-  .hero-iphone {
-    margin-top: 20px;
-    margin-bottom: 0;
-    height: 595px;
-    background-size: 247px 595px;
-  	background-repeat: no-repeat;
-  	background-position: center center;
-  }
-  
-  .video {
-    height: 559px;
-    margin-top: 16.5px;
-    margin-right: 15px;
-    border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
-  }
-  
-  .app-store-download-top { 
-    margin-top: 272px;
-    margin-left: 64px;
-
-  	position: absolute;
-  	display: inline-block;
-  }
-  
-  .hero h2 {
-    font-size: 56px; 
-  }
-}
-  
+}  
   
 
 
@@ -658,36 +583,6 @@ p {
 
 @media (min-width: 568px) and (max-width: 1366px){
 
-  .header-padding {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-  
-  .hero {
-    background-image: url(gfx/earth-bg-tablet.jpg);
-    background-position: center top;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    padding: 106px 0 0 0;
-    margin: 0 0 60px 0;
-  }
-  
-  .hero-iphone {
-    margin-top: 20px;
-    margin-bottom: 0;
-    height: 595px;
-    background-size: 247px 595px;
-  	background-repeat: no-repeat;
-  	background-position: center center;
-  }
-  
-  .video {
-    height: 559px;
-    margin-top: 16.5px;
-    margin-right: 15px;
-    border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
-  }
-  
   .app-store-download-top { 
     display: none;
   }
@@ -711,17 +606,10 @@ p {
     width: 150%;
     margin-left: -25%;
   }
-}
-
-/* Wide gamut display support */
-
-@supports (color: color(display-p3 0 0 0 / 1)) {
-  
-  .hero h2 {
-    background: linear-gradient(to right, color(display-p3 1 0.74 0.83 / 1) 30%, color(display-p3 0.64 0.78 1 / 1) 70%);
-      -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    
+  footer {
+    background: linear-gradient(to right,color(display-p3 0.98 0.72 0 / 1) 0%, color(display-p3 0.965 0.796 0.27 / 1) 25%, color(display-p3 0.965 0.796 0.27 / 1) 75%, color(display-p3 0.98 0.72 0 / 1) 100%);
+  }  
 }
 
 
@@ -758,32 +646,26 @@ p {
 @media (max-width: 567px){
   
   .hero {
-    background-image: url(gfx/earth-bg-mobile.jpg);
-    background-position: center top;
-    background-size: cover;
+    background: linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
+    color: rgb(0, 0, 0);
+    padding: 80px 0 0 0;
+    margin: 0 0 40px 0;
+    text-align: center;
   }
   
-  .hero { 
-    padding: 64px 0 0 0;
-    margin: 0 0 28px 0;
+  .hero section {
+    padding-bottom: 16px;
   }
-  
+
   .hero-iphone {
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 595px;
-    background-size: 247px 595px;
-  	background-repeat: no-repeat;
-  	background-position: center center;
+   	margin: 24px 0px 64px 0px;
   }
-  
-  .video {
-    height: 559px;
-    margin-top: 16.5px;
-    margin-right: 15px;
-    border-radius: 220px 30px 30px 220px/45px 30px 30px 45px; 
-    margin-bottom: 100px;
-  }
+
+  .hero h1 {
+    font-size: 48px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }  
   
   .app-store-download-top { 
     display: none;
@@ -791,19 +673,11 @@ p {
   
   .app-store-download-top-mobile { 
     display: inherit;
-    margin-top: 48px;
+    margin-top: 24px;
     margin-bottom: 32px;
   }
   
-  .hero h2 {
-    display: none;
-  }
-  
-  .bend {
-    margin-bottom: -8px;
-  }
-  
-  .veggies, .ipad-hero {
+  .ipad-hero {
     margin-bottom: 20px;
     width: 160%;
     margin-left: -30%;
@@ -989,6 +863,8 @@ p {
   }
 
   footer {
+    background-color: #FFC800;
+    background: linear-gradient(to right,color(display-p3 0.965 0.796 0.27 / 1) 0%, color(display-p3 0.965 0.796 0.27 / 1) 100%);
     margin-top: 48px;
   }
   
@@ -1015,10 +891,21 @@ p {
 }
 
 /* Text and background color for dark mode */
-@media (prefers-color-scheme: dark) {
-  .hero {
-      background: linear-gradient(to bottom, color(display-p3 1 0.784 0 / 1) 75%, color(display-p3 0 0 0 / 1) 100%);
+@media (prefers-color-scheme: dark) {  
+  .site-nav	A:link {text-decoration: none; color: white;}
+  .site-nav	A:visited {text-decoration: none; color: white;}
+  .site-nav	A:active {text-decoration: none; color: white;}
+  .site-nav	A:hover {text-decoration: none; color: white;}
+  
+  .site-nav-regular{
+    background-color: #27282E;
   }
+  
+  .site-nav-regular:hover {
+    background-color: #27282E;
+    opacity: 0.6;
+  }  
+    
   
   body, .divider {
     background-color: rgb(0, 0, 0);
@@ -1028,10 +915,6 @@ p {
     color: #fff;
   }
 
-  .veggies {
-    display: none;
-  }
-  
   .invertInDarkMode {
    -webkit-filter: invert(1);
    filter: invert(1);    
@@ -1069,7 +952,6 @@ p {
   .button-primary:hover { background-color: rgba(255, 255, 255, 0.6); }
 	.button-secondary:hover { background-color: rgba(255, 255, 255, 0.3);;}
 	.button-tertiary:hover { background-color: #242426;}
-	
   .card { background-color: #27282E; }
   
 }

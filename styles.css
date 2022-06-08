@@ -202,7 +202,8 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-background-position-y:  35%;
+  background-position-y:  35%;
+  background-size: 918pt 413pt, 100% 100%;
   color: rgb(0, 0, 0);
   padding: 160px 0 0 0;
   margin: 0 0 60px 0;

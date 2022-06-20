@@ -648,7 +648,8 @@ p {
 @media (max-width: 567px){
   
   .hero {
-    background: linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
+    background-color: #FFC800;
+    background: linear-gradient(to right,color(display-p3 0.965 0.796 0.27 / 1) 0%, color(display-p3 0.965 0.796 0.27 / 1) 100%);
     color: rgb(0, 0, 0);
     padding: 80px 0 0 0;
     margin: 0 0 40px 0;

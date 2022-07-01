@@ -633,7 +633,7 @@ p {
 
 /* Adjust grid for one column */
 
-@media (min-width: 568px) and (max-width: 759px){
+@media (min-width: 568px) and (max-width: 740px){
   
   .cards, .review-grid, .award-grid {
     max-width: 364px;

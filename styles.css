@@ -184,6 +184,7 @@ header {
 }
 
 .hero {
+  background: url(gfx/veggies@2x.jpg), linear-gradient(to bottom, #FFE200 0%, #FAB800 100%);
   background: url(gfx/veggies@2x.jpg), linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
   background-position: center center;
   background-repeat: no-repeat;

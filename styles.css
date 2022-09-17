@@ -198,9 +198,9 @@ header {
 }
 
 .hero-iphone {
-  height: 640px;
+  height: 638px;
   background: url(gfx/hero-iphone@2x.png);
-  background-size: 316px 640px;
+  background-size: 313px 638px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	margin: 64px 0px 80px 0px;
@@ -208,8 +208,13 @@ header {
 
 .video {
   height: 610px;
-  margin-top: 15px;
-	border-radius: 10px;
+  width: 281px;
+  margin-top: 14px;
+	border-radius: 30px;
+}
+
+.dark-video {
+  display: none;
 }
 
 .app-store-download-top { 
@@ -909,8 +914,10 @@ p {
     background-color: #27282E;
     opacity: 0.6;
   }  
-    
   
+  .dark-video { display: inline; }
+  .light-video { display: none; }  
+    
   body, .divider {
     background-color: rgb(0, 0, 0);
   }

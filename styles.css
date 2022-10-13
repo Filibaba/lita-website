@@ -221,7 +221,14 @@ header {
 
 .app-store-download-top { 
   margin-top: 280px;
-  margin-left: 80px;
+  margin-left: 112px;
+	position: absolute;
+	display: inline-block;
+}
+
+.app-store-download-top-qr { 
+  margin-top: 280px;
+  margin-left: -540px;
 	position: absolute;
 	display: inline-block;
 }
@@ -592,7 +599,7 @@ p {
 
 @media (min-width: 568px) and (max-width: 1366px){
 
-  .app-store-download-top { 
+  .app-store-download-top, .app-store-download-top-qr { 
     display: none;
   }
   
@@ -677,7 +684,7 @@ p {
     margin-bottom: 32px;
   }  
   
-  .app-store-download-top { 
+  .app-store-download-top, .app-store-download-top-qr { 
     display: none;
   }
   

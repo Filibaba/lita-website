@@ -597,7 +597,7 @@ p {
 /* Tablet & Mobile layout */
 
 
-@media (min-width: 568px) and (max-width: 1366px){
+@media (min-width: 568px) and (max-width: 1052px){
 
   .app-store-download-top, .app-store-download-top-qr { 
     display: none;

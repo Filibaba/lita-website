@@ -183,14 +183,23 @@ header {
   margin: 0;
 }
 
-.hero {
-  background: url(gfx/veggies@2x.jpg), linear-gradient(to bottom, #FFE200 0%, #FAB800 100%);
-  background: url(gfx/veggies@2x.jpg), linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
+.veggies {
+  background: url(gfx/veggies@2x.jpg);
+  mix-blend-mode: multiply;
+  background-size: contain;
+  height: 96vh;
+  width: 60vw;
   background-position: center center;
   background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  background-position-y:  37%;
-  background-size: 826pt 346pt, 100% 100%;
+  background-position-y: 30%;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  position: absolute;
+}
+
+.hero {
+  background: linear-gradient(to bottom, #FFE200 0%, #FAB800 100%);
+  background: linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
   color: rgb(0, 0, 0);
   padding: 100px 0 0 0;
   margin: 0 0 60px 0;
@@ -591,6 +600,13 @@ p {
   .chef {
     min-height: 300px;
   }
+  
+  .veggies {
+    height: 96vh;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }  
 
 
@@ -625,7 +641,14 @@ p {
     
   footer {
     background: linear-gradient(to right,color(display-p3 0.98 0.72 0 / 1) 0%, color(display-p3 0.965 0.796 0.27 / 1) 25%, color(display-p3 0.965 0.796 0.27 / 1) 75%, color(display-p3 0.98 0.72 0 / 1) 100%);
-  }  
+  } 
+  
+  .veggies {
+    height: 96vh;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 
@@ -683,6 +706,10 @@ p {
     margin-top: 40px;
     margin-bottom: 32px;
   }  
+  
+  .veggies {
+    display: none;  
+   }
   
   .app-store-download-top, .app-store-download-top-qr { 
     display: none;

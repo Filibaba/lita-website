@@ -34,10 +34,11 @@
   </div>
   
   <header>
-    <div class="hero veggies">
+    <div class="hero">
+      <div class="veggies rellax" data-rellax-speed="-5"></div>
       <img src="../gfx/plantry.gif" alt="Plantry app icon" class="plantry-logo" width="387" height="97">
      
-        <div class="hero-iphone">
+        <div class="hero-iphone rellax" data-rellax-speed="0">
           
 <!--
           <video class="video dark-video" autoplay muted loop playsinline>
@@ -343,6 +344,13 @@ Wow verkligen wow!!</p>
         Apple, the Apple logo, iPad and iPhone are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Plantry and Filibaba are trademarks of Filibaba AB, registered in the EU. <a href="https://www.filibaba.com/privacypolicy.html">Privacy Policy →</a>
       </p>
     </footer>
+
+  <script src="../js/rellax.min.js"></script>
+  <script>
+  // Accepts any class name
+  var rellax = new Rellax('.rellax');
+  </script>       
+    
   </body>
 </html>
 

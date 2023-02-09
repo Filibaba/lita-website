@@ -35,7 +35,7 @@
   
   <header>
     <div class="hero">
-      <div class="veggies rellax" data-rellax-speed="-5"></div>
+      <div class="veggies rellax" data-rellax-speed="-5" id="headerimage"></div>
       <img src="../gfx/plantry.gif" alt="Plantry app icon" class="plantry-logo" width="387" height="97">
      
         <div class="hero-iphone rellax" data-rellax-speed="0">
@@ -343,6 +343,14 @@ Wow verkligen wow!!</p>
   // Accepts any class name
   var rellax = new Rellax('.rellax');
   </script>       
+ 
+    <script>
+    window.addEventListener('scroll', function() {
+      let num = (window.scrollY/window.innerHeight)*12;
+
+      document.getElementById('headerimage').style.webkitFilter = 'blur(' + num + 'px)'
+    })
+  </script>   
     
   </body>
 </html>

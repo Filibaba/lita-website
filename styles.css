@@ -926,6 +926,14 @@ p {
 }
 
 
+@media (max-width: 320px){
+  .social-footer img {
+    margin: 16px 12px 48px 12px;
+  }  
+}
+  
+
+
 /* Work around iOS limitation of fixed scrolling */
 
 @supports (-webkit-overflow-scrolling: touch) {

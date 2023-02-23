@@ -295,6 +295,10 @@ section {
   box-shadow:0 8px 32px rgba(44, 49, 93, 0.12);
 }
 
+.cardhero {
+  box-shadow: none;
+}
+
 .chef {
   min-height: 316px;
 }
@@ -1008,5 +1012,6 @@ p {
 	.button-secondary:hover { background-color: rgba(255, 255, 255, 0.3);;}
 	.button-tertiary:hover { background-color: #242426;}
   .card { background-color: #27282E; }
+  .cardhero { background-color: #000; }
   
 }

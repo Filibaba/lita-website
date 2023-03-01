@@ -339,6 +339,26 @@ section {
 }  
 
 
+.small-iphone-video {
+  height: 373px;
+  width: 172px;
+  margin-top: 9px;
+  margin-left: 10px;
+	border-radius: 20px;
+  transition: 0.35s;
+}
+
+.small-iphone {
+  height: 391px;
+  background: url(gfx/card-iphone@2x.png);
+  background-size: 192px 391px;
+	background-repeat: no-repeat;
+	background-position: left center;
+/* 	margin: 64px 0px 80px 0px; */
+  transition: 0.35s;
+}
+
+
 
 
 

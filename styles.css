@@ -522,6 +522,7 @@ footer img {
   opacity: 0.5;
 	padding: 0;
   margin-bottom: 16px;
+  padding-bottom: env(safe-area-inset-bottom);
   margin-left: 16px;
   margin-right: 16px;
 	text-align: center;

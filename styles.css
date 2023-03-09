@@ -154,6 +154,38 @@ html {
 }
 
 
+.button-form {
+  border: none;
+  width: 220px;
+  margin-top: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 4px 0px 24px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  height: 88px;
+  padding: 12px 12px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  resize: none;
+  font-size: 16px;
+}
+
+
+
 
 
 
@@ -337,6 +369,7 @@ section {
 .ipad-margin {
   margin: -38px 0px 0px 0px;
 }  
+
 
 
 

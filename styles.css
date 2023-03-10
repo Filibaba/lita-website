@@ -158,6 +158,7 @@ html {
   border: none;
   width: 220px;
   margin-top: 16px;
+  line-height: 56px;
 }
 
 input {

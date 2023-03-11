@@ -328,9 +328,6 @@ section {
   box-shadow:0 8px 32px rgba(44, 49, 93, 0.12);
 }
 
-.card:hover {	  
-  box-shadow:0 24px 48px rgba(44, 49, 93, 0.32);
-}
 
 .card-iphone {
   padding-bottom: 64px;
@@ -618,6 +615,17 @@ p {
 }  
 
 
+@media screen and (min-width: 568px) {
+  .card:hover {	  
+    box-shadow:0 24px 48px rgba(44, 49, 93, 0.32);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: 568px) {  
+  .card:hover {	  
+    background-color: #3A3A3C;
+  }
+}
 
 
 /* Smaller download button & cards for smaller screens */
@@ -1064,8 +1072,5 @@ p {
 	.button-tertiary:hover { background-color: #242426;}
   .card { background-color: #27282E; }
   .cardhero { background-color: #000; }
-  .card:hover {	  
-    background-color: #3A3A3C;
-  }
   
 }

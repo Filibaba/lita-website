@@ -1230,5 +1230,8 @@ p {
 	.button-tertiary:hover { background-color: #242426;}
   .card { background-color: #27282E; }
   .cardhero { background-color: #000; }
+  .slide-card, .slide-card:hover {
+    background-color:rgba(0,0,0,.6);
+  }
   
 }

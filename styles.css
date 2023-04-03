@@ -457,39 +457,7 @@ section {
 
 .slide-image1 {
   background-image:url(gfx/slideshow-1.jpg);
-  border: 1px solid red;
 }
-
-.slide-image2 {
-  background-image:url(gfx/slideshow-2.jpg);
-    border: 1px solid red;
-}
-
-.slide-image3 {
-  background-image:url(gfx/slideshow-3.jpg);
-    border: 1px solid red;
-}
-
-.slide-image4 {
-  background-image:url(gfx/slideshow-4.jpg);
-    border: 1px solid red;
-}
-
-.slide-image5 {
-  background-image:url(gfx/slideshow-5.jpg);
-    border: 1px solid red;
-}
-
-.slide-image6 {
-  background-image:url(gfx/slideshow-6.jpg);
-    border: 1px solid red;
-}
-
-.slide-image7 {
-  background-image:url(gfx/slideshow-7.jpg);
-    border: 1px solid red;
-}
-
 
 @keyframes slide {
   10% {
@@ -1061,39 +1029,8 @@ p {
   
   .slide-image1 {
     background-image:url(gfx/slideshow-mobile-1.jpg);
-    border: 1px solid red;
   }
-  
-  .slide-image2 {
-    background-image:url(gfx/slideshow-mobile-2.jpg);
-      border: 1px solid red;
-  }
-  
-  .slide-image3 {
-    background-image:url(gfx/slideshow-mobile-3.jpg);
-      border: 1px solid red;
-  }
-  
-  .slide-image4 {
-    background-image:url(gfx/slideshow-mobile-4.jpg);
-      border: 1px solid red;
-  }
-  
-  .slide-image5 {
-    background-image:url(gfx/slideshow-mobile-5.jpg);
-      border: 1px solid red;
-  }
-  
-  .slide-image6 {
-    background-image:url(gfx/slideshow-mobile-6.jpg);
-      border: 1px solid red;
-  }
-  
-  .slide-image7 {
-    background-image:url(gfx/slideshow-mobile-7.jpg);
-      border: 1px solid red;
-  }
-  
+
   /*   Awards  */
   
   .award-grid {

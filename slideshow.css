@@ -1,0 +1,93 @@
+
+.slide-image1 {
+  background-image:url(gfx/slideshow-1.jpg);
+}
+
+.slide-image2 {
+  background-image:url(gfx/slideshow-2.jpg);
+}
+
+.slide-image3 {
+  background-image:url(gfx/slideshow-3.jpg);
+}
+
+.slide-image4 {
+  background-image:url(gfx/slideshow-4.jpg);
+}
+
+.slide-image5 {
+  background-image:url(gfx/slideshow-5.jpg);
+}
+
+.slide-image6 {
+  background-image:url(gfx/slideshow-6.jpg);
+}
+
+.slide-image7 {
+  background-image:url(gfx/slideshow-7.jpg);
+}
+
+
+/* Mobile layout — below iPhone SE landscape size */
+
+@media (max-width: 567px){
+
+  .slide-image1 {
+    background-image:url(gfx/slideshow-mobile-1.jpg);
+  }
+  
+  .slide-image2 {
+    background-image:url(gfx/slideshow-mobile-2.jpg);
+  }
+  
+  .slide-image3 {
+    background-image:url(gfx/slideshow-mobile-3.jpg);
+  }
+  
+  .slide-image4 {
+    background-image:url(gfx/slideshow-mobile-4.jpg);
+  }
+  
+  .slide-image5 {
+    background-image:url(gfx/slideshow-mobile-5.jpg);
+  }
+  
+  .slide-image6 {
+    background-image:url(gfx/slideshow-mobile-6.jpg);
+  }
+  
+  .slide-image7 {
+    background-image:url(gfx/slideshow-mobile-7.jpg);
+  }
+}
+
+@media (min-width: 1600px){
+  
+  .slide-image1 {
+    background-image:url(gfx/slideshow-hires-1.jpg);
+  }
+  
+  .slide-image2 {
+    background-image:url(gfx/slideshow-hires-2.jpg);
+  }
+  
+  .slide-image3 {
+    background-image:url(gfx/slideshow-hires-3.jpg);
+  }
+  
+  .slide-image4 {
+    background-image:url(gfx/slideshow-hires-4.jpg);
+  }
+  
+  .slide-image5 {
+    background-image:url(gfx/slideshow-hires-5.jpg);
+  }
+  
+  .slide-image6 {
+    background-image:url(gfx/slideshow-hires-6.jpg);
+  }
+  
+  .slide-image7 {
+    background-image:url(gfx/slideshow-hires-7.jpg);
+  }
+}

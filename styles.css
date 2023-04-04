@@ -224,7 +224,7 @@ header {
   width: 60vw;
   background-position: center center;
   background-repeat: no-repeat;
-  background-position-y: 40%;
+  background-position-y: 30%;
   margin-left: 20vw;
   margin-right: 20vw;
   position: absolute;
@@ -736,7 +736,7 @@ p {
 
 /* Smaller download button & cards for smaller screens */
 
-@media screen and (max-width: 1538px) {
+@media screen and (max-width: 1538px) and (max-height: 1024px) {
   .hero h1 {
     font-size: 56px; 
   }
@@ -783,7 +783,7 @@ p {
 /* Tablet & Mobile layout */
 
 
-@media (min-width: 568px) and (max-width: 1052px){
+@media (min-width: 568px) and (max-width: 1052px) and (max-height: 1024px){
 
   .app-store-download-top, .app-store-download-top-qr { 
     display: none;

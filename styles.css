@@ -224,7 +224,7 @@ header {
   width: 60vw;
   background-position: center center;
   background-repeat: no-repeat;
-  background-position-y: 30%;
+  background-position-y: 40%;
   margin-left: 20vw;
   margin-right: 20vw;
   position: absolute;
@@ -773,6 +773,7 @@ p {
   .veggies {
     height: 96vh;
     width: 80vw;
+    background-position-y: 65%;
     margin-left: 10vw;
     margin-right: 10vw;
   }
@@ -817,6 +818,7 @@ p {
     width: 100vw;
     margin-left: 0;
     margin-right: 0;
+    background-position-y: 80%;
   }
 }
 

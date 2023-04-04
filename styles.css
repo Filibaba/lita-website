@@ -733,6 +733,15 @@ p {
   }
 }
 
+/* Veggies adjustment */
+
+@media screen and (max-width: 1700px) {
+  .veggies {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
 
 /* Smaller download button & cards for smaller screens */
 
@@ -771,11 +780,7 @@ p {
   }
   
   .veggies {
-    height: 96vh;
-    width: 80vw;
     background-position-y: 65%;
-    margin-left: 10vw;
-    margin-right: 10vw;
   }
 }  
 

@@ -733,10 +733,35 @@ p {
   }
 }
 
+/* Veggies adjustment */
+
+@media screen and (max-width: 1700px) {
+  .veggies {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media screen and (max-width: 1538px) and (max-height: 1024px) {
+   .veggies {
+    background-position-y: 65%;
+  } 
+}
+  
+@media (min-width: 568px) and (max-width: 1052px) and (max-height: 1024px) {
+  .veggies {
+    height: 96vh;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    background-position-y: 80%;
+  }
+}
 
 /* Smaller download button & cards for smaller screens */
 
-@media screen and (max-width: 1538px) and (max-height: 1024px) {
+@media screen and (max-width: 1538px) {
   .hero h1 {
     font-size: 56px; 
   }
@@ -760,8 +785,7 @@ p {
     max-width: 330px;
     min-height: 248px;
   }
-  
-  
+    
   .card-iphone {
     padding-bottom: 64px;
   }
@@ -770,20 +794,13 @@ p {
     min-height: 300px;
   }
   
-  .veggies {
-    height: 96vh;
-    width: 80vw;
-    background-position-y: 65%;
-    margin-left: 10vw;
-    margin-right: 10vw;
-  }
 }  
 
 
 /* Tablet & Mobile layout */
 
 
-@media (min-width: 568px) and (max-width: 1052px) and (max-height: 1024px){
+@media (min-width: 568px) and (max-width: 1052px){
 
   .app-store-download-top, .app-store-download-top-qr { 
     display: none;
@@ -812,14 +829,6 @@ p {
   footer {
     background: linear-gradient(to right,color(display-p3 0.98 0.72 0 / 1) 0%, color(display-p3 0.965 0.796 0.27 / 1) 25%, color(display-p3 0.965 0.796 0.27 / 1) 75%, color(display-p3 0.98 0.72 0 / 1) 100%);
   } 
-  
-  .veggies {
-    height: 96vh;
-    width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-    background-position-y: 80%;
-  }
 }
 
 

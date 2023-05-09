@@ -620,6 +620,12 @@ section {
   margin-bottom: auto;
 }
 
+.giveafork h3, .giveafork h2 {
+  color: white;
+  text-align: center;
+  text-shadow: 0px 6px 40px #000000;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -669,7 +675,7 @@ footer img {
 }
 
 .social-footer img {
-  margin: 16px 22px 24px 22px;
+  margin: 24px 22px 24px 22px;
 }
 
 

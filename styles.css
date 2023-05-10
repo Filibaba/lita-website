@@ -774,6 +774,9 @@ p {
   }
 }
 
+
+/* Laptops */
+
 @media screen and (max-width: 1538px) and (max-height: 1024px) {
 
   .plantry-logo{
@@ -781,7 +784,7 @@ p {
     height: 87px;
   }
    .veggies {
-    background-position-y: 65%;
+    background-position-y: 55%;
   } 
   
   header h2 {

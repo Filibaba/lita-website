@@ -689,10 +689,17 @@ h1 {
   transition: 0.35s; 
   font-size: 64px;
   margin-top: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
   margin-left: 8px;
   margin-right: 8px;
   font-weight: 800;
+}
+
+header h2 {
+  transition: 0.35s; 
+  margin-bottom: 32px;
+  opacity: 0.5;
+  color: black;
 }
 
 h2, p {
@@ -908,8 +915,13 @@ p {
   .hero h1 {
     font-size: 40px;
     margin-top: 40px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }  
+  
+  header h2 {
+    margin-bottom: -16px;
+    font-size: 1.5rem;
+    }  
   
   .veggies {
     display: none;  

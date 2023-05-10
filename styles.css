@@ -70,7 +70,7 @@ html {
   
   .plantry-logo{
     width: 300px;
-    height: 72px;
+    height: 75px;
     transition: 0.15s;
   }
 
@@ -234,7 +234,7 @@ header {
   background: linear-gradient(to bottom, #FFE200 0%, #FAB800 100%);
   background: linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
   color: rgb(0, 0, 0);
-  padding: 100px 0 0 0;
+  padding: 64px 0 0 0;
   margin: 0;
   text-align: center;
 }
@@ -245,7 +245,7 @@ header {
   background-size: 313px 638px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	margin: 64px 0px 80px 0px;
+	margin: 40px 0px 56px 0px;
   transition: 0.35s;
 }
 
@@ -393,7 +393,7 @@ section {
 .slide-presentation {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   margin: 0 0 60px 0;
 }
 
@@ -419,7 +419,7 @@ section {
 .slide {
   z-index: 1;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
   position: absolute;
   background-color: #000;
@@ -696,7 +696,6 @@ h1 {
 }
 
 header h2 {
-  transition: 0.35s; 
   margin-bottom: 32px;
   opacity: 0.5;
   color: black;
@@ -776,9 +775,26 @@ p {
 }
 
 @media screen and (max-width: 1538px) and (max-height: 1024px) {
+
+  .plantry-logo{
+    width: 348px;
+    height: 87px;
+  }
    .veggies {
     background-position-y: 65%;
   } 
+  
+  header h2 {
+    margin-bottom: 16px;
+  }
+ 
+  .hero {
+    padding: 48px 0 0 0;
+  }
+  
+  .hero-iphone {
+  	margin: 20px 0px 36px 0px;
+  }
 }
   
 @media (min-width: 568px) and (max-width: 1052px) and (max-height: 1024px) {
@@ -794,6 +810,7 @@ p {
 /* Smaller download button & cards for smaller screens */
 
 @media screen and (max-width: 1538px) {
+
   .hero h1 {
     font-size: 56px; 
   }

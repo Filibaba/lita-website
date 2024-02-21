@@ -30,12 +30,12 @@ html {
 
 .site-nav-right{
   float: right;
-  margin-right: 24px;
+  margin-right: 12px;
   font-size: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100px;
+	height: 72px;
 }
   
 .site-nav-regular{

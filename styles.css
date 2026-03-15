@@ -253,11 +253,13 @@ header {
   transition: 0.35s;
 }
 
-.app-store-download-top { 
+.app-store-download-top {
   margin-top: 280px;
   margin-left: 112px;
 	position: absolute;
-	display: inline-block;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .app-store-download-top-qr { 
@@ -282,6 +284,28 @@ header {
   margin-top: -16px;
   margin-bottom: 0;
   text-align: center;
+  line-height: 1.25;
+}
+
+.hero-free-hint-desktop {
+  display: block;
+  font-size: 13px;
+  opacity: 0.75;
+  margin-top: 8px;
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+  line-height: 1.25;
+}
+
+.hero-free-hint-desktop::before {
+  content: '';
+  position: absolute;
+  inset: -4px -14px;
+  background: #fdcd00;
+  filter: blur(14px);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .ipad-hero {
@@ -868,7 +892,7 @@ p {
 
 @media (min-width: 568px) and (max-width: 1052px){
 
-  .app-store-download-top, .app-store-download-top-qr {
+  .app-store-download-top, .app-store-download-top-qr, .hero-free-hint-desktop {
     display: none;
   }
 
@@ -880,6 +904,7 @@ p {
 
   .hero-free-hint {
     display: block;
+    margin-top: 8px;
     margin-bottom: 32px;
   }
 
@@ -962,10 +987,10 @@ p {
     display: none;  
    }
   
-  .app-store-download-top, .app-store-download-top-qr { 
+  .app-store-download-top, .app-store-download-top-qr, .hero-free-hint-desktop {
     display: none;
   }
-  
+
   .app-store-download-top-mobile {
     display: inherit;
     margin-top: 24px;
@@ -974,6 +999,7 @@ p {
 
   .hero-free-hint {
     display: block;
+    margin-top: 4px;
     margin-bottom: 24px;
   }
 

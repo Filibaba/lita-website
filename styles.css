@@ -232,40 +232,35 @@ header {
 }
 
 .hero-iphone {
-  height: 638px;
-  background: url(gfx/hero-iphone@2x.png);
-  background-size: 313px 638px;
-	background-repeat: no-repeat;
-	background-position: center center;
+  position: relative;
+  height: 709px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 	margin: 40px 0px 56px 0px;
   transition: 0.35s;
 }
 
-.dark-video {
-  display: none;
-}
-
-.video {
-  height: 610px;
-  width: 281px;
-  margin-top: 14px;
-	border-radius: 30px;
+.hero-iphone-img {
+  width: 340px;
+  height: 709px;
+  border-radius: 30px;
   transition: 0.35s;
 }
 
 .app-store-download-top {
-  margin-top: 280px;
-  margin-left: 112px;
-	position: absolute;
+  position: absolute;
+  top: 330px;
+  left: calc(50% + 250px);
 	display: inline-flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.app-store-download-top-qr { 
-  margin-top: 280px;
-  margin-left: -540px;
-	position: absolute;
+.app-store-download-top-qr {
+  position: absolute;
+  top: 330px;
+  right: calc(50% + 250px);
 	display: inline-block;
 }
 
@@ -364,8 +359,19 @@ section {
   border-radius: 4px;
 }
 
+.card-iphone picture:last-of-type {
+  display: block;
+  text-align: center;
+  margin: 0px -32px -20px -32px;
+}
+
+.card-iphone picture:last-of-type img {
+  display: inline-block;
+}
+
 .card-iphone {
-  padding-bottom: 64px;
+  overflow: hidden;
+  border-radius: 32px 32px 80px 80px;
 }
 
 .card-iphone p {
@@ -1302,9 +1308,6 @@ p {
     opacity: 0.6;
   }  
   
-  .dark-video { display: inline; }
-  .light-video { display: none; }  
-    
   body, .divider {
     background-color: rgb(0, 0, 0);
   }

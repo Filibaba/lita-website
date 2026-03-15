@@ -80,17 +80,12 @@
   				</video>
 -->
 
-          <video class="video dark-video" autoplay muted loop playsinline>
-    				<source src="https://maxrudberg.com/plantry/web-SE-dark-small.mp4" type="video/mp4" media="(max-width:580px)">
-    				<source src="https://maxrudberg.com/plantry/web-SE-dark.mp4" type="video/mp4">
-  				</video>
-  				
-          <video class="video light-video" autoplay muted loop playsinline>
-    				<source src="https://maxrudberg.com/plantry/web-SE-light-small.mp4" type="video/mp4" media="(max-width:580px)">
-    				<source src="https://maxrudberg.com/plantry/web-SE-light.mp4" type="video/mp4">
-  				</video>
+          <picture>
+            <source srcset="../gfx/iphone-hero.png 1x, ../gfx/iphone-hero@2x.png 2x">
+            <img src="../gfx/iphone-hero.png" class="hero-iphone-img" width="340" height="709" alt="Plantry matplaneringsapp">
+          </picture>
 
-  				
+
 		      <div class="app-store-download-top"><a href="https://apps.apple.com/se/app/apple-store/id1109976916?platform=iphone"><img src="../gfx/download.svg" alt="Hämta i App Store" width="194" height="112"></a>
 		        <p class="hero-free-hint-desktop">Gratis att ladda ner<br>Prenumeration tillgänglig</p>
 		      </div>
@@ -177,8 +172,8 @@
             <h3>Hitta recept direkt</h3>
             <p>Hitta vilket recept som helst bland över 1 000 smarriga alternativ, framtagna av våra fantastiska kockar.</p>
   	        <picture>
-  	          <source srcset="../gfx/iphone-plantbased-se.png, ../gfx/iphone-plantbased-se@2x.png 2x">
-              <img src="../gfx/iphone-plantbased-se.png" fetchpriority="low" width="192" height="391" alt="Nutrition Facts">
+  	          <source srcset="../gfx/iphone-plan.png 1x, ../gfx/iphone-plan@2x.png 2x">
+              <img src="../gfx/iphone-plan.png" fetchpriority="low" width="340" height="709" alt="Hitta recept">
   	        </picture>
         </div>
 
@@ -190,12 +185,10 @@
            </picture>
            <h3>Samla recept. Ändra i våra.</h3>
            <p>Lägg enkelt till dina egna recept i samlingen. Du kan även ändra i våra med ett knapptryck.</p>
-           <div class="small-iphone">
-             <video class="small-iphone-video" width="172" height="373" autoplay muted loop playsinline controls>
-               <source src="https://maxrudberg.com/plantry/myrecipes-SE-light-small.mp4" type="video/mp4" media="(max-width:580px)">
-               <source src="https://maxrudberg.com/plantry/myrecipes-SE-light.mp4" fetchpriority="low" type="video/mp4">
-             </video>
-           </div>
+  	        <picture>
+  	          <source srcset="../gfx/iphone-myrecipes.png 1x, ../gfx/iphone-myrecipes@2x.png 2x">
+              <img src="../gfx/iphone-myrecipes.png" fetchpriority="low" width="340" height="709" alt="Egna recept">
+  	        </picture>
         </div>
         
         <div class="card card-iphone">
@@ -207,8 +200,8 @@
             <h3>Smarta inköpslistor</h3>
             <p>Vi bygger automatiskt en smart inköpslista åt dig, med allt du behöver när du lagar mat.</p>
   	        <picture>
-  	          <source srcset="../gfx/iphone-shop-se.png, ../gfx/iphone-shop-se@2x.png 2x">
-              <img src="../gfx/iphone-shop-se.png" fetchpriority="low" width="192" height="391" alt="Handla med inköpslista">
+  	          <source srcset="../gfx/iphone-shop.png 1x, ../gfx/iphone-shop@2x.png 2x">
+              <img src="../gfx/iphone-shop.png" fetchpriority="low" width="340" height="709" alt="Handla med inköpslista">
   	        </picture>
         </div>
 
@@ -221,8 +214,8 @@
             <h3>Inbyggda timers</h3>
             <p>Starta obegränsat med timers direkt i ett recept. Tryck på en tidsangivelse eller ställ in en egen.</p>
   	        <picture>
-  	          <source srcset="../gfx/iphone-timer-se.png, ../gfx/iphone-timer-se@2x.png 2x">
-              <img src="../gfx/iphone-timer-se.png" fetchpriority="low" width="192" height="391" alt="Multiple Timers">
+  	          <source srcset="../gfx/iphone-timer.png 1x, ../gfx/iphone-timer@2x.png 2x">
+              <img src="../gfx/iphone-timer.png" fetchpriority="low" width="340" height="709" alt="Inbyggda timers">
   	        </picture>
         </div>
         
@@ -236,8 +229,8 @@
             <h3>Din veckoplan i ett ögonkast</h3>
             <p>Se din veckoplan i ett ögonkast på låsskärmen eller hemskärmen. Ett tryck och du är redo att laga mat.</p>
   	        <picture>
-  	          <source srcset="../gfx/iphone-widgets-se.png, ../gfx/iphone-widgets-se@2x.png 2x">
-              <img src="../gfx/iphone-widgets-se.png" fetchpriority="low" width="192" height="391" alt="Widgets">
+  	          <source srcset="../gfx/iphone-widgets.png 1x, ../gfx/iphone-widgets@2x.png 2x">
+              <img src="../gfx/iphone-widgets.png" fetchpriority="low" width="357" height="709" alt="Widgets">
   	        </picture>
         </div>
       
@@ -339,9 +332,8 @@
       
       <div class="image-crop">
         <picture>
-          <source srcset="../gfx/ipad-hero-dark.jpg, ../gfx/ipad-hero-dark@2x.jpg 2x" media="(prefers-color-scheme: dark)">
-          <source srcset="../gfx/ipad-hero@2x.jpg 2x">
-          <img src="../gfx/ipad-hero.jpg" fetchpriority="low" alt="Plantry on iPad" class="ipad-hero">
+          <source srcset="../gfx/ipad-hero-se@2x.jpg 2x">
+          <img src="../gfx/ipad-hero-se.jpg" fetchpriority="low" alt="Plantry on iPad" class="ipad-hero">
         </picture>
       </div>
       

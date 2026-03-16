@@ -875,22 +875,34 @@ p {
   }  
 
   .card {
+/*
     border-radius: 24px;
     padding: 24px;
+*/
     margin: 12px;
     max-width: 330px;
     min-height: 248px;
   }
     
   .card-iphone {
-    padding-bottom: 64px;
+    padding-bottom: 44px;
   }
-  
+
+  .card-iphone picture:last-of-type img {
+    width: 274px;
+    height: 571px;
+  }
+
+  .card-iphone-wide picture:last-of-type img {
+    width: 287px;
+    height: 571px;
+  }
+
   .chef {
     min-height: 300px;
   }
-  
-}  
+
+}
 
 
 /* Tablet & Mobile layout */
@@ -900,6 +912,16 @@ p {
 
   .app-store-download-top, .app-store-download-top-qr, .hero-free-hint-desktop {
     display: none;
+  }
+
+  .card-iphone picture:last-of-type img {
+    width: 274px;
+    height: 571px;
+  }
+
+  .card-iphone-wide picture:last-of-type img {
+    width: 287px;
+    height: 571px;
   }
 
   .app-store-download-top-mobile {

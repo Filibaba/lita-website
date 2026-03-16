@@ -220,6 +220,7 @@ header {
   margin-left: 20vw;
   margin-right: 20vw;
   position: absolute;
+  pointer-events: none;
 }
 
 .hero {
@@ -303,6 +304,39 @@ header {
   z-index: -1;
 }
 
+.hero-cta {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 64px;
+}
+
+.hero-cta .app-store-download-top-qr {
+  position: static;
+  display: block;
+  margin: 16px auto 0;
+}
+
+.hero-cta h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-cta .button-primary {
+  margin-top: 12px;
+}
+
+.hero-social-proof {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
 .ipad-hero {
   margin-bottom: 80px;
   width: 100%;
@@ -362,7 +396,8 @@ section {
 .card-iphone picture:last-of-type {
   display: block;
   text-align: center;
-  margin: 0px -32px -20px -32px;
+  margin: auto -32px -20px -32px;
+  padding-top: 20px;
 }
 
 .card-iphone picture:last-of-type img {
@@ -372,10 +407,8 @@ section {
 .card-iphone {
   overflow: hidden;
   border-radius: 32px 32px 80px 80px;
-}
-
-.card-iphone p {
-  height: 128px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cardhero {
@@ -925,15 +958,21 @@ p {
   }
 
   .app-store-download-top-mobile {
-    display: inherit;
-    margin-top: 48px;
-    margin-bottom: 16px;
+    display: none;
   }
 
   .hero-free-hint {
+    display: none;
+  }
+
+  .hero-cta {
     display: block;
-    margin-top: 8px;
-    margin-bottom: 32px;
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  .hero-cta .app-store-download-top-qr {
+    display: none;
   }
 
   .hero h2 {
@@ -1020,15 +1059,26 @@ p {
   }
 
   .app-store-download-top-mobile {
-    display: inherit;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    display: none;
   }
 
   .hero-free-hint {
+    display: none;
+  }
+
+  .hero-cta {
     display: block;
-    margin-top: 4px;
-    margin-bottom: 24px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    padding: 0 24px;
+  }
+
+  .hero-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-cta .app-store-download-top-qr {
+    display: none;
   }
 
   .ipad-hero {

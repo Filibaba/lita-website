@@ -328,13 +328,46 @@ header {
   margin-top: 12px;
 }
 
-.hero-social-proof {
+.hero-awards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: 16px;
+}
+
+.hero-awards-label {
   font-size: 13px;
+  font-weight: bold;
   opacity: 0.6;
-  margin-top: 12px;
+  margin-bottom: -16px;
+}
+
+.hero-awards-badges {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.award-mini {
+  background: url(gfx/award@2x.png);
+  background-size: 160px 78px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 19px;
+  width: 160px;
+  height: 98px;
+  text-align: center;
+  display: inline-block;
+}
+
+.award-mini p {
+  margin-top: 54px;
+  font-weight: bold;
+  font-size: 0.65rem;
+  line-height: 1.3;
   margin-bottom: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
 .ipad-hero {
@@ -1079,6 +1112,23 @@ p {
 
   .hero-cta .app-store-download-top-qr {
     display: none;
+  }
+
+  .hero-awards-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-awards-label {
+    margin-bottom: -44px;
+  }
+
+  .award-mini {
+    background-position-y: 8px;
+  }
+
+  .award-mini p {
+    margin-top: 40px;
   }
 
   .ipad-hero {

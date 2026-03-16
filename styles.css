@@ -333,38 +333,39 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  margin-top: 16px;
+  margin-top: 40px;
 }
 
 .hero-awards-label {
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
   opacity: 0.6;
-  margin-bottom: -16px;
+  margin-top: 16px;
+  margin-bottom: -22px;
 }
 
 .hero-awards-badges {
   display: flex;
-  gap: 8px;
+  gap: 32px;
   justify-content: center;
 }
 
 .award-mini {
   background: url(gfx/award@2x.png);
-  background-size: 160px 78px;
+  background-size: 224px 109px;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 19px;
-  width: 160px;
-  height: 98px;
+  background-position-y: 27px;
+  width: 224px;
+  height: 137px;
   text-align: center;
   display: inline-block;
 }
 
 .award-mini p {
-  margin-top: 54px;
+  margin-top: 76px;
   font-weight: bold;
-  font-size: 0.65rem;
+  font-size: 0.91rem;
   line-height: 1.3;
   margin-bottom: 0;
   padding: 0;
@@ -445,7 +446,17 @@ section {
 }
 
 .cardhero {
-  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow:0 8px 32px rgba(44, 49, 93, 0.12);
+}
+
+.cardhero:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cardhero h3,
+.cardhero p {
+  color: black;
 }
 
 .chef {
@@ -864,9 +875,12 @@ p {
   }
 }
 
-@media (prefers-color-scheme: dark) and (min-width: 568px) {  
-  .card:hover {	  
+@media (prefers-color-scheme: dark) and (min-width: 568px) {
+  .card:hover {
     background-color: #3A3A3C;
+  }
+  .cardhero:hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -1021,6 +1035,11 @@ p {
     width: 150%;
     margin-left: -25%;
   }
+
+  .hero-awards-badges {
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
 }
 
 
@@ -1114,21 +1133,25 @@ p {
     display: none;
   }
 
+  .hero-awards {
+    margin-top: 16px;
+  }
+
   .hero-awards-badges {
     flex-direction: column;
     align-items: center;
   }
 
   .hero-awards-label {
-    margin-bottom: -44px;
+    margin-bottom: 8px;
   }
 
   .award-mini {
-    background-position-y: 8px;
+    background-position-y: 11px;
   }
 
   .award-mini p {
-    margin-top: 40px;
+    margin-top: 56px;
   }
 
   .ipad-hero {
@@ -1473,10 +1496,14 @@ p {
   .button-secondary {color: white; background-color: rgba(255, 255, 255, 0.15);; box-shadow: none;}
   .button-tertiary {color: white;}
   .button-primary:hover { background-color: rgba(255, 255, 255, 0.6); }
+  .hero-cta .button-primary { color: white; background-color: black; }
+  .hero-cta .button-primary:hover { background-color: #333; }
+  .hero-cta .app-store-download-top-qr { filter: none; }
 	.button-secondary:hover { background-color: rgba(255, 255, 255, 0.3);;}
 	.button-tertiary:hover { background-color: #242426;}
   .card { background-color: #27282E; }
-  .cardhero { background-color: #000; }
+.cardhero {   background-color: rgba(255, 255, 255, 0.1);   box-shadow:0 8px 32px rgba(44, 49, 93, 0.12); }
+  .cardhero h3, .cardhero p { color: black; }
   .slide-card, .slide-card:hover {
     background-color:rgba(0,0,0,.6);
   }

@@ -58,8 +58,8 @@
     <img src="../gfx/plantry.svg" class="floating-nav-logo" alt="Plantry" width="116" height="29">
     <div class="floating-nav-links">
       <a href="https://www.dropbox.com/sh/scwa5zoa7exgdb4/AACljU7700tgkgNc_9J-CGQLa?dl=0" class="floating-nav-link">Pressmaterial</a>
-      <a href="../index.html" class="floating-nav-link">🇺🇸 In English</a>
-      <a href="https://apps.apple.com/se/app/apple-store/id1109976916?platform=iphone" class="floating-nav-cta">Hämta i App Store</a>
+      <a href="../index.html" class="floating-nav-link"><span class="nav-hide-mobile">🇺🇸 In English</span><span class="nav-show-mobile">🇺🇸</span></a>
+      <a href="https://apps.apple.com/se/app/apple-store/id1109976916?platform=iphone" class="floating-nav-cta"><span class="nav-hide-mobile">Hämta i App Store</span><span class="nav-show-mobile">Hämta</span></a>
     </div>
   </nav>
 
@@ -144,9 +144,6 @@
             </picture>
         </div>
 
-      </div>
-
-      <div class="cards">
          <div class="card card-iphone">
              <picture>
   	          <source srcset="../gfx/icon-recipes-dark.png, ../gfx/icon-recipes-dark@2x.png 2x, ../gfx/icon-recipes-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
@@ -262,9 +259,9 @@
       </div>
     </div>
 
-      <h2>…och många fler i appen!</h2>
+      <h2 class="ipad-heading">…och många fler i appen!</h2>
 
-      <div class="image-crop">
+      <div class="image-crop ipad-margin">
         <picture>
           <source srcset="../gfx/ipad-hero-se-dark.jpg 1x, ../gfx/ipad-hero-se-dark@2x.jpg 2x" media="(prefers-color-scheme: dark)">
           <source srcset="../gfx/ipad-hero-se.jpg 1x, ../gfx/ipad-hero-se@2x.jpg 2x">
@@ -385,6 +382,43 @@ Wow verkligen wow!!</p>
   var rellax = new Rellax('.rellax');
   </script>
 
+  <script>
+    const revealEls = document.querySelectorAll('section h2, .card, .award, .review, .articlequote, .ipad-hero, .slide-presentation, .giveafork, .hero-cta, .hero-awards, .buttons');
+    revealEls.forEach(el => el.classList.add('reveal'));
+
+    const heroAwards = document.querySelector('.hero-awards');
+    if (heroAwards) heroAwards.style.transitionDelay = '150ms';
+
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+
+      // Group award/review items by row (offsetTop) and stagger row by row
+      document.querySelectorAll('.award-grid, .review-grid').forEach(grid => {
+        const items = [...grid.children];
+        const rows = new Map();
+        items.forEach(item => {
+          const top = item.offsetTop;
+          if (!rows.has(top)) rows.set(top, []);
+          rows.get(top).push(item);
+        });
+        let rowIndex = 0;
+        rows.forEach(rowItems => {
+          rowItems.forEach(item => item.style.transitionDelay = (rowIndex * 100) + 'ms');
+          rowIndex++;
+        });
+      });
+
+      revealEls.forEach(el => revealObserver.observe(el));
+    }));
+  </script>
+
    <script>
     const floatingNav = document.getElementById('floatingNav');
     const headerLogo = document.querySelector('.plantry-logo');
@@ -394,7 +428,8 @@ Wow verkligen wow!!</p>
       let num = (window.scrollY/window.innerHeight)*12;
       document.getElementById('headerimage').style.webkitFilter = 'blur(' + num + 'px)';
 
-      if (headerLogo.getBoundingClientRect().bottom < 0) {
+      const isMobile = window.innerWidth < 568;
+      if (isMobile ? window.scrollY > 0 : headerLogo.getBoundingClientRect().bottom < 0) {
         floatingNav.classList.add('is-scrolled');
       } else {
         floatingNav.classList.remove('is-scrolled');

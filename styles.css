@@ -127,6 +127,9 @@ html {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
+.nav-show-mobile { display: none; }
+.nav-hide-mobile { display: inline; }
+
 .floating-nav-cta {
   display: inline-block;
   background-color: white;
@@ -506,10 +509,28 @@ header {
 }
 
 .ipad-hero {
-  margin-bottom: 80px;
+  margin-bottom: 0;
   width: 100%;
 }
 
+.ipad-heading {
+  margin-top: 24px !important;
+}
+
+
+
+/* Scroll reveal */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 /* Cards */
@@ -961,12 +982,12 @@ h2, p {
 
 h2 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: medium;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: medium;
   margin: 14px 0px 14px 0px;
 }
 
@@ -1131,6 +1152,12 @@ p {
 /* Tablet & Mobile layout */
 
 
+@media (max-width: 1280px){
+  .hero {
+    padding-top: 80px;
+  }
+}
+
 @media (min-width: 568px) and (max-width: 1052px){
 
   .app-store-download-top, .app-store-download-top-qr, .hero-free-hint-desktop {
@@ -1189,11 +1216,16 @@ p {
 /* Adjust grid for two columns */
 
 @media (min-width: 700px) and (max-width: 1110px){
-  
+
   .cards, .review-grid, .award-grid {
     max-width: 728px;
-    align-items: left;  
+    align-items: left;
     text-align: left;
+  }
+
+  .card {
+    max-width: calc(50% - 24px);
+    flex: 1 1 calc(50% - 24px);
   }
 }
 
@@ -1215,12 +1247,25 @@ p {
 @media (max-width: 567px){
   
   .hero {
-    background-color: #FFC800;
-    background: linear-gradient(to right,color(display-p3 0.965 0.796 0.27 / 1) 0%, color(display-p3 0.965 0.796 0.27 / 1) 100%);
-    color: rgb(0, 0, 0);
+    background-color: #141f33;
+    background: #141f33;
+    color: white;
     padding: 80px 0 0 0;
     text-align: center;
   }
+
+  .floating-nav-logo {
+    display: none;
+  }
+
+  .floating-nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-show-mobile { display: inline; }
+  .nav-hide-mobile { display: none; }
   
   .slide-presentation {
     margin: 0 0 40px 0;
@@ -1231,12 +1276,12 @@ p {
   }
 
   .hero-iphone {
-   	margin: 24px 0px 64px 0px;
+   	margin: 24px 0px 32px 0px;
   }
 
   .hero h1 {
     font-size: 40px;
-    margin-top: 40px;
+    margin-top: 0;
     margin-bottom: 16px;
   }  
   
@@ -1246,8 +1291,16 @@ p {
     }  
   
   .veggies {
-    display: none;  
-   }
+    display: block;
+    width: 140vw;
+    height: 70vh;
+    left: 0;
+    right: 0;
+    margin-left: -20vw;
+    margin-right: 0;
+    background-position: center 100%;
+    opacity: 0.6;
+  }
   
   .app-store-download-top, .app-store-download-top-qr, .hero-free-hint-desktop {
     display: none;
@@ -1333,7 +1386,17 @@ p {
   .cards, .review-grid, .award-grid, .buttons {
     max-width: none;
     margin-left: 24px;
-    margin-right: 24px;    
+    margin-right: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .buttons .button {
+    height: 44px;
+    line-height: 44px;
+    width: auto;
+    padding: 0 32px;
+    font-size: 17px;
   }
   
   .card p {
@@ -1371,7 +1434,7 @@ p {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0px 8px 24px 8px;
+    margin: 40px 8px 24px 8px;
     padding-bottom: 0;
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);

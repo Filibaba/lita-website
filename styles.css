@@ -447,9 +447,17 @@ header {
 }
 
 .hero-cta h3 {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 800;
-  color: white;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background: repeating-linear-gradient(105deg, #a86500, #ffcc27 25%, #a86500 50%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -474,11 +482,13 @@ header {
 }
 
 .hero-awards-label {
-  font-size: 1.125rem;
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: 500;
   opacity: 0.6;
   margin-top: 16px;
   margin-bottom: -22px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .hero-awards-badges {
@@ -970,6 +980,7 @@ h1 {
 
 header h2 {
   font-size: 2rem;
+  font-weight: 400;
   margin-bottom: 32px;
   opacity: 0.5;
   color: white;

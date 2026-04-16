@@ -424,9 +424,16 @@ Wow verkligen wow!!</p>
     const headerLogo = document.querySelector('.plantry-logo');
     const heroEl = document.querySelector('.hero');
 
+    const trialHeading = document.querySelector('.hero-cta h3');
+
     window.addEventListener('scroll', function() {
       let num = (window.scrollY/window.innerHeight)*12;
       document.getElementById('headerimage').style.webkitFilter = 'blur(' + num + 'px)';
+
+      if (trialHeading) {
+        const pos = (window.scrollY * 0.3) % 100;
+        trialHeading.style.backgroundPosition = `${pos}% 0`;
+      }
 
       const isMobile = window.innerWidth < 568;
       if (isMobile ? window.scrollY > 0 : headerLogo.getBoundingClientRect().bottom < 0) {

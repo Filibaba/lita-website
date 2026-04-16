@@ -55,6 +55,119 @@ html {
   transition: opacity 0.15s;
 }
 
+/* Floating Navigation */
+
+.floating-nav {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 32px);
+  max-width: calc(100vw - 32px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 8px 8px 20px;
+  border-radius: 100px;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 0.5px solid transparent;
+  box-shadow: none;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, max-width 0.5s ease, -webkit-backdrop-filter 0.4s ease;
+}
+
+.floating-nav.is-scrolled {
+  max-width: 980px;
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  background: rgba(20, 31, 51, 0.78);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.floating-nav.is-past-hero {
+  background: rgba(242, 242, 247, 0.72);
+  border: 0.5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.floating-nav-logo {
+  height: 30px;
+  width: auto;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: brightness(0);
+  margin-top: 4px;
+}
+
+.floating-nav.is-scrolled .floating-nav-logo {
+  opacity: 1;
+}
+
+.floating-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.floating-nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 100px;
+  transition: background-color 0.15s, color 0.4s ease;
+  white-space: nowrap;
+}
+
+.floating-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.floating-nav-cta {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: background-color 0.15s, color 0.4s ease;
+  margin-left: 4px;
+}
+
+.floating-nav-cta:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Light mode: white logo/links over dark hero, switch to dark once past it */
+@media (prefers-color-scheme: light) {
+  .floating-nav.is-scrolled .floating-nav-logo {
+    filter: brightness(0) invert(1);
+  }
+  .floating-nav.is-past-hero .floating-nav-logo {
+    filter: brightness(0);
+  }
+  .floating-nav.is-past-hero .floating-nav-link {
+    color: #1c1c1e;
+  }
+  .floating-nav.is-past-hero .floating-nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+  .floating-nav.is-past-hero .floating-nav-cta {
+    background-color: #1c1c1e;
+    color: white;
+  }
+  .floating-nav.is-past-hero .floating-nav-cta:hover {
+    background-color: #3a3a3c;
+  }
+}
+
 .plantry-logo{
   height: 100px;
 	position: relative;
@@ -210,7 +323,6 @@ header {
 
 .veggies {
   background: url(gfx/veggies@2x.jpg);
-  mix-blend-mode: multiply;
   background-size: contain;
   height: 96vh;
   width: 60vw;
@@ -221,15 +333,20 @@ header {
   margin-right: 20vw;
   position: absolute;
   pointer-events: none;
+  z-index: -1;
 }
 
 .hero {
-  background: linear-gradient(to bottom, #FFE200 0%, #FAB800 100%);
-  background: linear-gradient(to bottom, color(display-p3 1 0.87 0 / 1) 0%, color(display-p3 0.98 0.72 0 / 1) 100%);
-  color: rgb(0, 0, 0);
-  padding: 64px 0 0 0;
+  background: #141f33;
+  color: white;
+  padding: 64px 0 80px 0;
   margin: 0;
   text-align: center;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-iphone {
@@ -314,18 +431,35 @@ header {
   position: static;
   display: block;
   margin: 16px auto 0;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 0;
+}
+
+.hero-cta .app-store-download-top-qr img {
+  filter: invert(1);
+  mix-blend-mode: screen;
+  display: block;
 }
 
 .hero-cta h3 {
   font-size: 32px;
   font-weight: 800;
-  color: black;
+  color: white;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .hero-cta .button-primary {
   margin-top: 12px;
+  color: black;
+  background-color: white;
+}
+
+.hero-cta .button-primary:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
 }
 
 .hero-awards {
@@ -351,7 +485,7 @@ header {
 }
 
 .award-mini {
-  background: url(gfx/award@2x.png);
+  background: url(gfx/awardDarkMode@2x.png);
   background-size: 290px 142px;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -383,6 +517,7 @@ header {
 
 section h2 {
   text-align: center;
+  margin-top: 64px;
   margin-bottom: 20px;
 }
 
@@ -390,7 +525,7 @@ section {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
 .cards {
@@ -816,7 +951,7 @@ header h2 {
   font-size: 2rem;
   margin-bottom: 32px;
   opacity: 0.5;
-  color: black;
+  color: white;
 }
 
 h2, p {
@@ -1509,9 +1644,6 @@ p {
   .button-secondary {color: white; background-color: rgba(255, 255, 255, 0.15);; box-shadow: none;}
   .button-tertiary {color: white;}
   .button-primary:hover { background-color: rgba(255, 255, 255, 0.6); }
-  .hero-cta .button-primary { color: white; background-color: black; }
-  .hero-cta .button-primary:hover { background-color: #333; }
-  .hero-cta .app-store-download-top-qr { filter: none; }
 	.button-secondary:hover { background-color: rgba(255, 255, 255, 0.3);;}
 	.button-tertiary:hover { background-color: #242426;}
   .card { background-color: #27282E; }
@@ -1520,5 +1652,32 @@ p {
   .slide-card, .slide-card:hover {
     background-color:rgba(0,0,0,.6);
   }
-  
+
+  .floating-nav.is-past-hero {
+    background: rgba(28, 28, 36, 0.72);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .floating-nav-logo {
+    filter: brightness(0) invert(1);
+  }
+
+  .floating-nav-link {
+    color: white;
+  }
+
+  .floating-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .floating-nav-cta {
+    background-color: white;
+    color: black;
+  }
+
+  .floating-nav-cta:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
 }

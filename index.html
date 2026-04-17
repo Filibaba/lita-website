@@ -80,8 +80,8 @@
       <p class="hero-free-hint">Free to download<br>In-app subscription available</p> 
   
 
-      <h1>Delicious dinners. Planned&nbsp;in&nbsp;<i>seconds</i>.</h1>
-      <h2>Your grocery list,&nbsp;automatically.</h2>
+      <h1>Delicious dinners. Planned in <i>seconds</i>.</h1>
+      <h2>Your grocery list, automatically.</h2>
 
       <div class="hero-cta">
         <h3>Start your 7 day free trial</h3>
@@ -160,38 +160,9 @@
                   <img src="gfx/iphone-plan.png" fetchpriority="low" width="340" height="709" alt="Reduce food waste">
                 </picture>
             </div>
-            
-<!--
-            <div class="card card-iphone">
-      	        <picture>
-    	          <source srcset="gfx/icon-plantbased-dark.png, gfx/icon-plantbased-dark@2x.png 2x, gfx/icon-plantbased-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-    	          <source srcset="gfx/icon-plantbased.png, gfx/icon-plantbased@2x.png 2x, gfx/icon-plantbased@3x.png 3x">
-                <img src="gfx/icon-plantbased.png" width="60" height="60" alt="Plant-Based Recipes">
-      	        </picture>
-                <h3>Plant-based meals</h3>
-                <p>Eat plant-based to reduce your climate impact. Not vegan? Add your own recipes or tweak ours.</p>
-                <picture>
-                  <source srcset="gfx/iphone-plantbased.png 1x, gfx/iphone-plantbased@2x.png 2x">
-                  <img src="gfx/iphone-plantbased.png" fetchpriority="low" width="340" height="709" alt="Delicious plant-based meals">
-                </picture>
-            </div>
-            
-            <div class="card card-iphone">
-  	        <picture>
-    	          <source srcset="gfx/icon-recipes-dark.png, gfx/icon-recipes-dark@2x.png 2x, gfx/icon-recipes-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-    	          <source srcset="gfx/icon-recipes.png, gfx/icon-recipes@2x.png 2x, gfx/icon-recipes@3x.png 3x">
-                <img src="gfx/icon-recipes.png" fetchpriority="low" width="60" height="60" alt="Find New Favorites">
-    	        </picture>
-            <h3>Recipes you'll love</h3>
-            <p>In Plantry you'll find more than 1000 tasty recipes brought to you by our amazing chefs.</p>
-                <picture>
-                  <source srcset="gfx/iphone-recipes.png 1x, gfx/iphone-recipes@2x.png 2x">
-                  <img src="gfx/iphone-recipes.png" fetchpriority="low" width="340" height="709" alt="Eat well every week">
-                </picture>
-            </div>
--->
-        
-        
+
+
+
         <div class="card card-iphone">
   	        <picture>
   	          <source srcset="gfx/icon-timer-dark.png, gfx/icon-timer-dark@2x.png 2x, gfx/icon-timer-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
@@ -220,32 +191,8 @@
   	        </picture>
         </div>
         
-<!--
-        <div class="card">
-            <picture>
-  	          <source srcset="gfx/icon-feedback-dark.png, gfx/icon-feedback-dark@2x.png 2x, gfx/icon-feedback-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-  	          <source srcset="gfx/icon-feedback.png, gfx/icon-feedback@2x.png 2x, gfx/icon-feedback@3x.png 3x">
-              <img src="gfx/icon-feedback.png" fetchpriority="low" width="60" height="60" alt="feedback">
-  	        </picture>
-              <h3>Help make Plantry even better for you</h3>
-                                               
-            <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label>Name (optional)<input type="text" name="name" /></label>
-              </p>
-              <p>
-                <label>Email (optional)<input type="email" name="email" /></label>
-              </p>
 
-              <p>
-                <label>Message <textarea name="message"></textarea></label>
-              </p>
-              <p>
-                <button class="button button-primary button-form" type="submit">Send</button>
-              </p>
-            </form>
-        </div>  
--->      
+
 
 
       </div>
@@ -358,12 +305,7 @@
             <p>Yes, You Can Cook!</p>
         </div>
 
-<!--
-        <div class="award">
-            <p>Great Apps<br>for iOS 16</p>
-        </div>
--->
-        
+
         <div class="award">
             <p>Apps for<br>Sustainability</p>
         </div>
@@ -425,7 +367,8 @@
       </div>
     </section>
     
-    <div class="giveafork">
+    <div class="giveafork" id="giveafork">
+      <div class="giveafork-bg" id="giveaforkBg"></div>
       <img class="bend-top invertInDarkMode" fetchpriority="low" src="gfx/bend-top.svg" alt="Bend">
       <h1>Cook&nbsplike&nbspyou give&nbspa&nbspfork.</h1>
       <h3>Planet friendly meal planning</h3>
@@ -497,6 +440,42 @@
     const headerLogo = document.querySelector('.plantry-logo');
     const heroEl = document.querySelector('.hero');
     const trialHeading = document.querySelector('.hero-cta h3');
+    const veggiesEl = document.getElementById('headerimage');
+    const giveaforkBg = document.getElementById('giveaforkBg');
+    const giveaforkEl = document.getElementById('giveafork');
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Smoothed mouse position (-1 to 1 each axis), lerped for silky motion
+    let mouseX = 0, mouseY = 0;
+    let smoothX = 0, smoothY = 0;
+    if (!reducedMotion) {
+      window.addEventListener('mousemove', e => {
+        mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;   // -1 left → +1 right
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;   // -1 top  → +1 bottom
+      }, { passive: true, capture: true });
+    }
+
+    // rAF loop — scroll tilt + cursor tilt combined, always wins over Spline's own animation
+    (function splineTiltLoop() {
+      if (window.__splinePhone && window.__splinePhoneBase) {
+        const b = window.__splinePhoneBase;
+        if (reducedMotion) {
+          // Keep phone at its resting angle, no motion
+          window.__splinePhone.rotation.x = b.rx;
+          window.__splinePhone.rotation.y = b.ry;
+        } else {
+          const ease = 0.06;
+          smoothX += (mouseX - smoothX) * ease;
+          smoothY += (mouseY - smoothY) * ease;
+
+          const scrollProgress = Math.min(window.scrollY / 700, 1);
+          window.__splinePhone.rotation.x = b.rx - scrollProgress * 0.45 + smoothY * 0.12;
+          window.__splinePhone.rotation.y = b.ry + smoothX * 0.18;
+        }
+      }
+      requestAnimationFrame(splineTiltLoop);
+    }());
 
     // Track logo/hero visibility via IntersectionObserver — no getBoundingClientRect on scroll
     let logoVisible = true;
@@ -516,46 +495,54 @@
       document.getElementById('headerimage').style.webkitFilter =
         'blur(' + (sy / window.innerHeight * 12) + 'px)';
 
-      if (trialHeading) {
+      if (trialHeading && !reducedMotion) {
         trialHeading.style.backgroundPosition = ((sy * 0.3) % 100) + '% 0';
       }
 
       if (window.innerWidth < 568) {
         floatingNav.classList.toggle('is-scrolled', sy > 0);
       }
-    }, { passive: true });
 
-    // Smoothed mouse position (-1 to 1 each axis), lerped for silky motion
-    let mouseX = 0, mouseY = 0;
-    let smoothX = 0, smoothY = 0;
-    window.addEventListener('mousemove', e => {
-      mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;   // -1 left → +1 right
-      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;   // -1 top  → +1 bottom
-    }, { passive: true });
-
-    // rAF loop — scroll tilt + cursor tilt combined, always wins over Spline's own animation
-    (function splineTiltLoop() {
-      if (window.__splinePhone && window.__splinePhoneBase) {
-        // Ease mouse toward target (lerp factor controls lag/smoothness)
-        const ease = 0.06;
-        smoothX += (mouseX - smoothX) * ease;
-        smoothY += (mouseY - smoothY) * ease;
-
-        const b = window.__splinePhoneBase;
-        const scrollProgress = Math.min(window.scrollY / 700, 1);
-
-        // Scroll tilts the phone back on X; mouse adds subtle X + Y wobble
-        window.__splinePhone.rotation.x = b.rx - scrollProgress * 0.45 + smoothY * 0.12;
-        window.__splinePhone.rotation.y = b.ry + smoothX * 0.18;
+      // Dim veggies to 60% as user scrolls — starts immediately, complete by 400px
+      if (veggiesEl) {
+        const dimProgress = Math.min(sy / 400, 1);
+        veggiesEl.style.opacity = 1 - dimProgress * 0.4; // 1.0 → 0.6
       }
-      requestAnimationFrame(splineTiltLoop);
-    }());
+
+      // Footer parallax + blur — image scrolls at a slower rate
+      if (giveaforkBg && giveaforkEl) {
+        const rect = giveaforkEl.getBoundingClientRect();
+        const visible = rect.bottom > 0 && rect.top < window.innerHeight;
+        if (visible) {
+          // How far through the footer we've scrolled (-1 entering, 0 center, 1 leaving)
+          const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+          const translateY = (progress - 0.5) * -120; // parallax travel range
+          // Blur fades out as footer comes fully into view
+          const blurAmount = Math.max(0, (1 - progress * 2) * 6);
+          giveaforkBg.style.transform = `translateY(${translateY}px)`;
+          giveaforkBg.style.filter = `blur(${blurAmount}px)`;
+        }
+      }
+    }, { passive: true });
   </script>
 
   <script type="module">
     import 'https://unpkg.com/@splinetool/viewer@1.12.84/build/spline-viewer.js';
 
     const viewer = document.getElementById('spline-viewer');
+
+    // Inject badge-hiding style into shadow DOM as early as possible
+    const hideSplineBadge = () => {
+      if (!viewer.shadowRoot) return;
+      if (viewer.shadowRoot.querySelector('style[data-hide-badge]')) return;
+      const style = document.createElement('style');
+      style.setAttribute('data-hide-badge', '');
+      style.textContent = '#logo { display: none !important; }';
+      viewer.shadowRoot.appendChild(style);
+    };
+    hideSplineBadge();
+    const badgePoll = setInterval(() => { hideSplineBadge(); if (viewer.shadowRoot?.querySelector('#logo')) clearInterval(badgePoll); }, 100);
+    setTimeout(() => clearInterval(badgePoll), 10000);
 
     let splinePollId;
     const splineLoader = document.getElementById('splineLoader');
@@ -570,6 +557,14 @@
       clearInterval(splinePollId);
       // Hide loader once scene is ready
       if (splineLoader) splineLoader.classList.add('is-hidden');
+
+      // Hide the "Built with Spline" badge via shadow DOM injection
+      try {
+        const style = document.createElement('style');
+        style.textContent = '#logo { display: none !important; }';
+        viewer.shadowRoot.appendChild(style);
+      } catch(e) {}
+
       return true;
     }
 

@@ -354,12 +354,56 @@ header {
 
 .hero-iphone {
   position: relative;
-  height: 709px;
+  height: 760px;
+  width: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
-	margin: 40px 0px 56px 0px;
-  transition: 0.35s;
+  margin: 0px auto 0px;
+  transform-style: preserve-3d;
+}
+
+/* XL screens — keep the full large viewport */
+@media screen and (min-width: 1600px) {
+  .hero-iphone {
+    height: 960px;
+    width: 680px;
+  }
+}
+
+.hero-spline {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  background: transparent;
+}
+
+.spline-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.spline-loader.is-hidden {
+  opacity: 0;
+}
+
+.spline-loader-spinner {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: spline-spin 0.8s linear infinite;
+}
+
+@keyframes spline-spin {
+  to { transform: rotate(360deg); }
 }
 
 .hero-iphone-img {
@@ -971,7 +1015,7 @@ footer img {
 
 h1 {
   font-size: 64px;
-  margin-top: 24px;
+  margin-top: 8px;
   margin-bottom: 0;
   margin-left: 8px;
   margin-right: 8px;
@@ -1084,14 +1128,9 @@ p {
   }
   
   .hero-iphone {
-  	margin: 20px 0px 36px 0px;
-    height: 571px;
-  }
-
-  .hero-iphone-img {
-    width: 274px;
-    height: 571px;
-    border-radius: 24px;
+    margin: 0px auto;
+    height: 620px;
+    width: 460px;
   }
 }
   
@@ -1287,7 +1326,9 @@ p {
   }
 
   .hero-iphone {
-   	margin: 24px 0px 32px 0px;
+    margin: 0px auto;
+    width: 380px;
+    height: 620px;
   }
 
   .hero h1 {

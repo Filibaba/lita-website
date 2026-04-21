@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bowl</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    }
+
+    #c { display: block; width: 100vw; height: 100vh; }
+
+    /* ── Panel ──────────────────────────────────────────────────── */
+    #panel {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      width: 256px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(22px) saturate(2);
+      -webkit-backdrop-filter: blur(22px) saturate(2);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+      box-shadow:
+        0 2px 1px rgba(255,255,255,0.6) inset,
+        0 6px 28px rgba(0,0,0,0.11),
+        0 1px 6px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      user-select: none;
+    }
+
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.32);
+      margin-bottom: 4px;
+    }
+
+    .section { display: flex; flex-direction: column; gap: 9px; }
+
+    .ctrl-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      height: 24px;
+    }
+
+    .ctrl-label {
+      font-size: 13px;
+      font-weight: 450;
+      color: rgba(0,0,0,0.78);
+      flex: 0 0 76px;
+    }
+
+    .ctrl-val {
+      font-size: 11.5px;
+      font-variant-numeric: tabular-nums;
+      color: rgba(0,0,0,0.36);
+      min-width: 34px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    input[type="color"] {
+      width: 34px;
+      height: 24px;
+      border: none;
+      border-radius: 7px;
+      padding: 2px 3px;
+      background: transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      flex: 1;
+      height: 3px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 2px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #1a1208;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.28);
+      cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 15px;
+      height: 15px;
+      border: none;
+      border-radius: 50%;
+      background: #1a1208;
+      cursor: pointer;
+    }
+
+    .sep {
+      height: 1px;
+      background: rgba(0,0,0,0.065);
+      margin: 0 -2px;
+    }
+
+    .btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+
+    .btn {
+      padding: 8px 0;
+      font-size: 12px;
+      font-weight: 560;
+      font-family: inherit;
+      letter-spacing: 0.01em;
+      border: 1px solid rgba(0,0,0,0.11);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.75);
+      color: rgba(0,0,0,0.78);
+      cursor: pointer;
+      transition: background 0.12s, transform 0.1s, box-shadow 0.12s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      outline: none;
+    }
+
+    .btn:hover {
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 7px rgba(0,0,0,0.09);
+    }
+
+    .btn:active { transform: scale(0.95); }
+
+    .btn.full {
+      grid-column: span 2;
+      background: #1a1208;
+      color: rgba(242,237,228,0.92);
+      border-color: transparent;
+      box-shadow: 0 2px 8px rgba(26,18,8,0.28);
+    }
+
+    .btn.full:hover { background: #0e0904; }
+
+    .hint {
+      font-size: 10.5px;
+      color: rgba(0,0,0,0.26);
+      text-align: center;
+    }
+
+    /* ── Mode tabs ─────────────────────────────────────────────── */
+    #tabs {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 3px;
+      padding: 3px;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(22px) saturate(2);
+      -webkit-backdrop-filter: blur(22px) saturate(2);
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 100px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+      z-index: 200;
+      user-select: none;
+    }
+
+    .tab {
+      padding: 5px 18px;
+      font-size: 12.5px;
+      font-weight: 500;
+      font-family: inherit;
+      letter-spacing: 0.01em;
+      color: rgba(0,0,0,0.42);
+      background: transparent;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: color 0.15s, background 0.15s, box-shadow 0.15s;
+      outline: none;
+    }
+
+    .tab.active {
+      color: rgba(0,0,0,0.82);
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+
+    body.web-mode #c { cursor: grab; }
+    body.web-mode.dragging #c { cursor: grabbing; }
+  </style>
+</head>
+<body>
+
+<canvas id="c"></canvas>
+
+<div id="tabs">
+  <button class="tab active" id="tabEditor">Editor</button>
+  <button class="tab"        id="tabWeb">Web</button>
+</div>
+
+<div id="panel">
+  <!-- Palette -->
+  <div class="section">
+    <div class="section-title">Palette</div>
+    <div class="ctrl-row">
+      <span class="ctrl-label">Background</span>
+      <input type="color" id="bgPicker" value="#f2ede4">
+    </div>
+    <div class="ctrl-row">
+      <span class="ctrl-label">Stroke</span>
+      <input type="color" id="strokePicker" value="#1a1208">
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- Stroke -->
+  <div class="section">
+    <div class="section-title">Stroke</div>
+    <div class="ctrl-row">
+      <span class="ctrl-label">Thickness</span>
+      <input type="range" id="thicknessSlider" min="1" max="20" step="0.5" value="18">
+      <span class="ctrl-val" id="thicknessVal">18</span>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- Animations -->
+  <div class="section">
+    <div class="section-title">Animate</div>
+    <div class="btn-grid">
+      <button class="btn" id="btnDrop">↑ Drop</button>
+      <button class="btn" id="btnToss">↗ Toss</button>
+      <button class="btn" id="btnSpin">⟳ Spin</button>
+      <button class="btn" id="btnTumble">↻ Tumble</button>
+      <button class="btn" id="btnBounce">↕ Bounce</button>
+      <button class="btn" id="btnSlide">→ Slide</button>
+      <button class="btn full" id="btnReset">Reset</button>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- Surface -->
+  <div class="section">
+    <div class="section-title">Surface</div>
+    <div class="ctrl-row">
+      <span class="ctrl-label">Height</span>
+      <input type="range" id="gndY" min="-2.5" max="2.5" step="0.05" value="0">
+      <span class="ctrl-val" id="gndYVal">0.0</span>
+    </div>
+    <div class="ctrl-row">
+      <span class="ctrl-label">Tilt X</span>
+      <input type="range" id="gndTiltX" min="-25" max="25" step="1" value="0">
+      <span class="ctrl-val" id="gndTiltXVal">0°</span>
+    </div>
+    <div class="ctrl-row">
+      <span class="ctrl-label">Tilt Z</span>
+      <input type="range" id="gndTiltZ" min="-25" max="25" step="1" value="0">
+      <span class="ctrl-val" id="gndTiltZVal">0°</span>
+    </div>
+  </div>
+
+  <div class="hint">Drag to orbit · Scroll to zoom</div>
+</div>
+
+<!-- ─── Scripts ──────────────────────────────────────────────────────────── -->
+<script type="importmap">
+{
+  "imports": {
+    "three":          "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/":  "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+    "cannon-es":      "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE  from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
+import * as CANNON from 'cannon-es';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Config
+// ─────────────────────────────────────────────────────────────────────────────
+const cfg = {
+  bgColor:     '#f2ede4',
+  strokeColor: '#1a1208',
+  thickness:   18,      // slider value (1–20)
+  groundY:     0,
+  groundTiltX: 0,
+  groundTiltZ: 0,
+};
+
+// ─── Mode ─────────────────────────────────────────────────────────────────────
+let appMode = 'editor';   // 'editor' | 'web'
+let webDropTimer   = null;
+let webLandTimer   = null;
+let webClickTimer  = null;
+
+// ─── Drag state (web mode) ────────────────────────────────────────────────────
+const dragRay      = new THREE.Raycaster();
+const dragPlane    = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+let   isDragging   = false;
+let   dragMoved    = false;
+let   webResetCooldown = false;
+const dragCurrent  = new THREE.Vector3();   // world-space bowl position during drag
+const dragHistory  = [];                    // [{x, z, t}] for velocity smoothing
+
+// Bowl constants
+const R        = 1;
+const FLAT_Y   = -(R * 0.88);
+const FLAT_R   = Math.sqrt(R * R - FLAT_Y * FLAT_Y);
+const REST_Y   = -FLAT_Y;   // body.y when bowl bottom just touches ground at y=0
+
+// Converts UI thickness → world-space outline expansion.
+// With transparent bowl walls both the near AND far wall back-faces are visible,
+// so total visual stroke width ≈ 2 × expansion. Halving keeps the same weight.
+function toWorld(t) { return t * 0.008; }
+// Torus tube radius — diameter (2×) matches toWorld, with a little extra to
+// compensate for angle foreshortening at low camera angles.
+function toTube(t) { return t * 0.006; }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Renderer
+// ─────────────────────────────────────────────────────────────────────────────
+const canvas   = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Scene + Camera
+// ─────────────────────────────────────────────────────────────────────────────
+const scene  = new THREE.Scene();
+scene.background = new THREE.Color(cfg.bgColor);
+
+const camera = new THREE.PerspectiveCamera(38, window.innerWidth / window.innerHeight, 0.1, 120);
+// 45° down angle: equal Y and Z distance
+camera.position.set(0, 5.5, 5.5);
+camera.lookAt(0, 0.4, 0);
+
+const orbit = new OrbitControls(camera, canvas);
+orbit.target.set(0, 0.4, 0);
+orbit.enableDamping   = true;
+orbit.dampingFactor   = 0.04;
+orbit.minDistance     = 2;
+orbit.maxDistance     = 22;
+orbit.maxPolarAngle   = Math.PI * 0.415; // ~74.7° from top / ~15° above horizon — matches the low reference angle
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Outline shader  ─ back-face expansion technique
+// Expands vertices along their normals (object space) to create a thick stroke
+// rendered only on back faces, visible around the silhouette.
+// ─────────────────────────────────────────────────────────────────────────────
+const outlineVert = /* glsl */`
+  uniform float uThickness;
+  void main() {
+    vec3 pos = position + normal * uThickness;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+  }
+`;
+const outlineFrag = /* glsl */`
+  uniform vec3 uColor;
+  void main() {
+    gl_FragColor = vec4(uColor, 1.0);
+    #include <colorspace_fragment>
+  }
+`;
+
+function makeOutlineMat(geo) {
+  return new THREE.ShaderMaterial({
+    uniforms: {
+      uThickness: { value: toWorld(cfg.thickness) },
+      uColor:     { value: new THREE.Color(cfg.strokeColor) },
+    },
+    vertexShader:   outlineVert,
+    fragmentShader: outlineFrag,
+    side: THREE.BackSide,
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Bowl geometry  ─ lower hemisphere, bottom vertices clamped flat
+// ─────────────────────────────────────────────────────────────────────────────
+function makeBowlGeo() {
+  const geo = new THREE.SphereGeometry(R, 80, 40, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2);
+  const pos = geo.attributes.position;
+  for (let i = 0; i < pos.count; i++) {
+    if (pos.getY(i) < FLAT_Y) pos.setY(i, FLAT_Y);
+  }
+  pos.needsUpdate = true;
+  const welded = mergeVertices(geo);
+  // Bake 180° Y rotation so the UV seam always faces -Z (away from camera)
+  welded.applyMatrix4(new THREE.Matrix4().makeRotationY(Math.PI));
+  welded.computeVertexNormals();
+  return welded;
+}
+
+const bowlGeo = makeBowlGeo();
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Bowl group — all parts move together
+// ─────────────────────────────────────────────────────────────────────────────
+const bowlGroup = new THREE.Group();
+scene.add(bowlGroup);
+
+// 1. Bowl outline — rendered first so the fill can paint over the interior.
+const outlineMat  = makeOutlineMat(bowlGeo);
+const outlineMesh = new THREE.Mesh(bowlGeo, outlineMat);
+bowlGroup.add(outlineMesh);
+
+// 2. Opaque fill — rendered after the outline so it covers interior back-face
+//    artifacts; only the exterior silhouette (beyond the fill boundary) stays black.
+const fillMat  = new THREE.MeshBasicMaterial({ color: cfg.bgColor, side: THREE.DoubleSide });
+const fillMesh = new THREE.Mesh(bowlGeo, fillMat);
+bowlGroup.add(fillMesh);
+
+// 2. Flat bottom cap  (bg color disc to close the bottom)
+const capMat  = new THREE.MeshBasicMaterial({ color: cfg.bgColor, side: THREE.DoubleSide });
+const capMesh = new THREE.Mesh(new THREE.CircleGeometry(FLAT_R, 72), capMat);
+capMesh.rotation.x = -Math.PI / 2;
+capMesh.position.y  = FLAT_Y;
+bowlGroup.add(capMesh);
+
+// 3. Rim ring — torus at the bowl opening (y = 0, radius = R).
+function makeTorus() {
+  const tube   = toWorld(cfg.thickness) * 0.6;
+  const center = R + toWorld(cfg.thickness) - tube; // outer edge aligns with bowl outline, no seam
+  const geo = new THREE.TorusGeometry(center, tube, 16, 128);
+  const mat = new THREE.MeshBasicMaterial({
+    color: cfg.strokeColor,
+    polygonOffset: true,       // render torus in front so it caps the seam
+    polygonOffsetFactor: -1,
+    polygonOffsetUnits: -1,
+  });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.rotation.x = Math.PI / 2;
+  return mesh;
+}
+
+let rimMesh = makeTorus();
+bowlGroup.add(rimMesh);
+
+// Bottom edge ring intentionally omitted — the flattened base is hidden.
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Ground
+// ─────────────────────────────────────────────────────────────────────────────
+// Ground visual — transparent so it never intersects the bowl visually.
+// Physics plane is separate and still fully active.
+const groundMat  = new THREE.MeshBasicMaterial({ color: cfg.bgColor, side: THREE.DoubleSide, transparent: true, opacity: 0 });
+const groundMesh = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), groundMat);
+groundMesh.rotation.x = -Math.PI / 2;
+scene.add(groundMesh);
+
+// Subtle grid for spatial reference
+const gridMat  = new THREE.LineBasicMaterial({ color: cfg.strokeColor, opacity: 0.08, transparent: true });
+const gridHelper = new THREE.GridHelper(18, 18);
+gridHelper.material = gridMat;
+scene.add(gridHelper);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Physics  ─ Cannon-es
+// ─────────────────────────────────────────────────────────────────────────────
+const world = new CANNON.World({ gravity: new CANNON.Vec3(0, -18, 0) });
+world.broadphase      = new CANNON.NaiveBroadphase();
+world.solver.iterations = 12;
+
+// Ground (static infinite plane)
+const groundBody = new CANNON.Body({ mass: 0 });
+groundBody.addShape(new CANNON.Plane());
+world.addBody(groundBody);
+syncGroundPhysics();   // initial orientation
+
+// Bowl body  ─ truncated cylinder approximation
+// Height = |FLAT_Y|, centered at y = FLAT_Y/2 below the body origin
+const bowlBody = new CANNON.Body({ mass: 0.8, linearDamping: 0.15, angularDamping: 0.82 });
+const cylH = -FLAT_Y;
+bowlBody.addShape(
+  new CANNON.Cylinder(R, FLAT_R, cylH, 18),
+  new CANNON.Vec3(0, FLAT_Y / 2, 0)
+);
+bowlBody.position.set(0, cfg.groundY + REST_Y, 0);
+world.addBody(bowlBody);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Helpers
+// ─────────────────────────────────────────────────────────────────────────────
+function syncGroundPhysics() {
+  const tx = cfg.groundTiltX * (Math.PI / 180);
+  const tz = cfg.groundTiltZ * (Math.PI / 180);
+  const base = new CANNON.Quaternion();
+  base.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2);
+  const qx = new CANNON.Quaternion(); qx.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), tx);
+  const qz = new CANNON.Quaternion(); qz.setFromAxisAngle(new CANNON.Vec3(0, 0, 1), tz);
+  groundBody.quaternion.copy(base.mult(qx).mult(qz));
+  groundBody.position.y = cfg.groundY;
+}
+
+function syncGroundVisual() {
+  const tx = cfg.groundTiltX * (Math.PI / 180);
+  const tz = cfg.groundTiltZ * (Math.PI / 180);
+  groundMesh.rotation.set(-Math.PI / 2 + tx, 0, tz);
+  groundMesh.position.y = cfg.groundY;
+  gridHelper.rotation.set(tx, 0, tz);
+  gridHelper.position.y  = cfg.groundY + 0.001;
+}
+
+function refreshColors() {
+  scene.background.set(cfg.bgColor);
+  fillMat.color.set(cfg.bgColor);
+  capMat.color.set(cfg.bgColor);
+
+  outlineMat.uniforms.uColor.value.set(cfg.strokeColor);
+  rimMesh.material.color.set(cfg.strokeColor);
+  gridMat.color.set(cfg.strokeColor);
+}
+
+function rebuildRim() {
+  bowlGroup.remove(rimMesh);
+  rimMesh.geometry.dispose();
+  rimMesh.material.dispose();
+  rimMesh = makeTorus();
+  bowlGroup.add(rimMesh);
+}
+
+function refreshThickness() {
+  outlineMat.uniforms.uThickness.value = toWorld(cfg.thickness);
+  rebuildRim();
+}
+
+function resetBowl() {
+  bowlBody.wakeUp();
+  bowlBody.velocity.setZero();
+  bowlBody.angularVelocity.setZero();
+  bowlBody.force.setZero();
+  bowlBody.torque.setZero();
+  bowlBody.position.set(0, cfg.groundY + REST_Y, 0);
+  bowlBody.quaternion.set(0, 0, 0, 1);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Render loop
+// ─────────────────────────────────────────────────────────────────────────────
+const clock = new THREE.Clock();
+
+(function animate() {
+  requestAnimationFrame(animate);
+
+  const dt = Math.min(clock.getDelta(), 0.05);
+
+  // Web mode: lock bowl to drag position; reset if out of bounds
+  if (appMode === 'web') {
+    if (isDragging) {
+      bowlBody.velocity.setZero();
+      bowlBody.angularVelocity.setZero();
+      bowlBody.position.set(dragCurrent.x, cfg.groundY + REST_Y, dragCurrent.z);
+    } else {
+      if (!webResetCooldown) {
+        const bx = bowlBody.position.x, bz = bowlBody.position.z;
+        const by = bowlBody.position.y;
+        if (Math.abs(bx) > 14 || Math.abs(bz) > 14 || by < cfg.groundY - 4) {
+          webResetCooldown = true;
+          setTimeout(() => { webResetCooldown = false; }, 2500);
+          webDropAndSpin();
+        }
+      }
+    }
+  }
+
+  world.step(1 / 60, dt, 3);
+
+  // Sync bowl group → Cannon body
+  bowlGroup.position.copy(bowlBody.position);
+  bowlGroup.quaternion.copy(bowlBody.quaternion);
+
+  orbit.update();
+  renderer.render(scene, camera);
+})();
+
+// ─────────────────────────────────────────────────────────────────────────────
+// UI wiring
+// ─────────────────────────────────────────────────────────────────────────────
+
+document.getElementById('bgPicker').addEventListener('input', e => {
+  cfg.bgColor = e.target.value; refreshColors();
+});
+
+document.getElementById('strokePicker').addEventListener('input', e => {
+  cfg.strokeColor = e.target.value; refreshColors();
+});
+
+document.getElementById('thicknessSlider').addEventListener('input', e => {
+  cfg.thickness = parseFloat(e.target.value);
+  document.getElementById('thicknessVal').textContent = cfg.thickness;
+  refreshThickness();
+});
+
+// Ground
+document.getElementById('gndY').addEventListener('input', e => {
+  cfg.groundY = parseFloat(e.target.value);
+  document.getElementById('gndYVal').textContent = cfg.groundY.toFixed(1);
+  syncGroundPhysics(); syncGroundVisual();
+});
+
+document.getElementById('gndTiltX').addEventListener('input', e => {
+  cfg.groundTiltX = parseFloat(e.target.value);
+  document.getElementById('gndTiltXVal').textContent = cfg.groundTiltX.toFixed(0) + '°';
+  syncGroundPhysics(); syncGroundVisual();
+});
+
+document.getElementById('gndTiltZ').addEventListener('input', e => {
+  cfg.groundTiltZ = parseFloat(e.target.value);
+  document.getElementById('gndTiltZVal').textContent = cfg.groundTiltZ.toFixed(0) + '°';
+  syncGroundPhysics(); syncGroundVisual();
+});
+
+// Animate buttons
+document.getElementById('btnDrop').addEventListener('click', () => {
+  bowlBody.wakeUp();
+  bowlBody.velocity.setZero();
+  bowlBody.angularVelocity.setZero();
+  bowlBody.quaternion.set(0, 0, 0, 1);
+  bowlBody.position.set(0, cfg.groundY + 5.5, 0);
+});
+
+document.getElementById('btnToss').addEventListener('click', () => {
+  bowlBody.wakeUp();
+  bowlBody.velocity.set((Math.random()-0.5)*5, 7+Math.random()*3, (Math.random()-0.5)*5);
+  bowlBody.angularVelocity.set((Math.random()-0.5)*4, 0, (Math.random()-0.5)*4);
+});
+
+document.getElementById('btnSpin').addEventListener('click', () => {
+  bowlBody.wakeUp();
+  bowlBody.angularVelocity.set(0, 14, 0);
+});
+
+document.getElementById('btnTumble').addEventListener('click', () => {
+  bowlBody.wakeUp();
+  bowlBody.velocity.set(0, 4, 0);
+  bowlBody.angularVelocity.set(
+    (Math.random()-0.5)*14, (Math.random()-0.5)*8, (Math.random()-0.5)*14
+  );
+});
+
+document.getElementById('btnBounce').addEventListener('click', () => {
+  bowlBody.wakeUp();
+  bowlBody.velocity.set(0, 5.5, 0);
+  bowlBody.angularVelocity.setZero();
+  bowlBody.quaternion.set(0, 0, 0, 1);
+});
+
+document.getElementById('btnSlide').addEventListener('click', () => {
+  bowlBody.wakeUp();
+  const a = Math.random() * Math.PI * 2;
+  bowlBody.velocity.set(Math.cos(a)*6, 0.2, Math.sin(a)*6);
+  bowlBody.angularVelocity.set(0, (Math.random()-0.5)*3, 0);
+});
+
+document.getElementById('btnReset').addEventListener('click', resetBowl);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Mode switching
+// ─────────────────────────────────────────────────────────────────────────────
+function webDropAndSpin() {
+  isDragging = false;
+  document.body.classList.remove('dragging');
+  bowlBody.wakeUp();
+  bowlBody.velocity.set(0, 0, 0);
+  bowlBody.angularVelocity.set(0, 0, 0);
+  bowlBody.force.setZero();
+  bowlBody.torque.setZero();
+  bowlBody.quaternion.set(0, 0, 0, 1);
+  bowlBody.position.set(0, cfg.groundY + 5.5, 0);
+  if (webDropTimer)  { clearTimeout(webDropTimer);  webDropTimer  = null; }
+  if (webLandTimer)  { clearTimeout(webLandTimer);  webLandTimer  = null; }
+  // Poll until bowl has landed, then fire 6 spin kicks 10 ms apart
+  let landingFired = false;
+  const pollLanding = () => {
+    if (appMode !== 'web' || landingFired) return;
+    const nearGround = bowlBody.position.y < cfg.groundY + REST_Y + 0.25;
+    const slowV      = Math.abs(bowlBody.velocity.y) < 1.0;
+    if (nearGround && slowV) {
+      landingFired = true;
+      bowlBody.wakeUp();
+      bowlBody.velocity.setZero();
+      for (let i = 0; i < 6; i++) {
+        webLandTimer = setTimeout(() => {
+          if (appMode !== 'web') return;
+          bowlBody.wakeUp();
+          bowlBody.angularVelocity.set(1.5, 18, 0); // Y-spin + X wobble so rotation is visible
+        }, i * 10);
+      }
+    } else {
+      webDropTimer = setTimeout(pollLanding, 50);
+    }
+  };
+  webDropTimer = setTimeout(pollLanding, 500); // start checking after 590 ms
+}
+
+function enterWebMode() {
+  appMode = 'web';
+  document.body.classList.add('web-mode');
+  document.getElementById('panel').style.display = 'none';
+  document.getElementById('tabEditor').classList.remove('active');
+  document.getElementById('tabWeb').classList.add('active');
+
+  orbit.enabled = false;
+  camera.position.set(0, 4.68, 6.38);
+  orbit.target.set(0, 0.4, 0);
+  camera.lookAt(0, 0.4, 0);
+  gridHelper.visible = false;
+
+  cfg.groundY = 0; cfg.groundTiltX = 0; cfg.groundTiltZ = 0;
+  syncGroundPhysics(); syncGroundVisual();
+
+  webResetCooldown = false;
+  webDropAndSpin();
+}
+
+function enterEditorMode() {
+  appMode = 'editor';
+  isDragging = false;
+  document.body.classList.remove('web-mode', 'dragging');
+  document.getElementById('panel').style.display = 'flex';
+  document.getElementById('tabWeb').classList.remove('active');
+  document.getElementById('tabEditor').classList.add('active');
+
+  orbit.enabled = true;
+  gridHelper.visible = true;
+
+  if (webDropTimer)  { clearTimeout(webDropTimer);  webDropTimer  = null; }
+  if (webLandTimer)  { clearTimeout(webLandTimer);  webLandTimer  = null; }
+  if (webClickTimer) { clearTimeout(webClickTimer); webClickTimer = null; }
+
+  cfg.groundTiltX = 0; cfg.groundTiltZ = 0;
+  document.getElementById('gndTiltX').value = 0;
+  document.getElementById('gndTiltZ').value = 0;
+  document.getElementById('gndTiltXVal').textContent = '0°';
+  document.getElementById('gndTiltZVal').textContent = '0°';
+  syncGroundPhysics(); syncGroundVisual();
+}
+
+document.getElementById('tabEditor').addEventListener('click', () => {
+  if (appMode !== 'editor') enterEditorMode();
+});
+document.getElementById('tabWeb').addEventListener('click', () => {
+  if (appMode !== 'web') enterWebMode();
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Web mode — drag to throw, click = Bounce, double-click = Tumble
+// ─────────────────────────────────────────────────────────────────────────────
+function webMouseToGround(e) {
+  const ndc = new THREE.Vector2(
+    (e.clientX / window.innerWidth)  *  2 - 1,
+    (e.clientY / window.innerHeight) * -2 + 1
+  );
+  dragRay.setFromCamera(ndc, camera);
+  dragPlane.constant = -(cfg.groundY + REST_Y);
+  const hit = new THREE.Vector3();
+  return dragRay.ray.intersectPlane(dragPlane, hit); // null if ray parallel to plane
+}
+
+canvas.addEventListener('mousedown', e => {
+  if (appMode !== 'web') return;
+  const hit = webMouseToGround(e);
+  if (!hit) return;
+  isDragging  = true;
+  dragMoved   = false;
+  dragHistory.length = 0;
+  dragCurrent.set(bowlBody.position.x, cfg.groundY + REST_Y, bowlBody.position.z);
+  dragHistory.push({ x: hit.x, z: hit.z, t: performance.now() });
+  document.body.classList.add('dragging');
+  if (webDropTimer) { clearTimeout(webDropTimer); webDropTimer = null; }
+  if (webClickTimer) { clearTimeout(webClickTimer); webClickTimer = null; }
+});
+
+window.addEventListener('mousemove', e => {
+  if (appMode !== 'web' || !isDragging) return;
+  const hit = webMouseToGround(e);
+  if (!hit) return;
+  dragMoved = true;
+  dragCurrent.set(hit.x, cfg.groundY + REST_Y, hit.z);
+  const now = performance.now();
+  dragHistory.push({ x: hit.x, z: hit.z, t: now });
+  if (dragHistory.length > 6) dragHistory.shift();
+});
+
+window.addEventListener('mouseup', () => {
+  if (appMode !== 'web' || !isDragging) return;
+  isDragging = false;
+  document.body.classList.remove('dragging');
+
+  if (dragMoved && dragHistory.length >= 2) {
+    const a = dragHistory[0], b = dragHistory[dragHistory.length - 1];
+    const dt = (b.t - a.t) / 1000;
+    if (dt > 0) {
+      let vx = (b.x - a.x) / dt;
+      let vz = (b.z - a.z) / dt;
+      const speed = Math.sqrt(vx * vx + vz * vz);
+      const cap = 18;
+      if (speed > cap) { vx *= cap / speed; vz *= cap / speed; }
+      bowlBody.wakeUp();
+      bowlBody.velocity.set(vx, 0, vz);
+    }
+  }
+});
+
+canvas.addEventListener('click', () => {
+  if (appMode !== 'web' || dragMoved) return;
+  webClickTimer = setTimeout(() => {
+    webClickTimer = null;
+    bowlBody.wakeUp();
+    bowlBody.velocity.set(0, 5.5, 0);
+    bowlBody.angularVelocity.setZero();
+    bowlBody.quaternion.set(0, 0, 0, 1);
+  }, 200);
+});
+
+canvas.addEventListener('dblclick', () => {
+  if (appMode !== 'web') return;
+  if (webClickTimer) { clearTimeout(webClickTimer); webClickTimer = null; }
+  bowlBody.wakeUp();
+  bowlBody.velocity.set(0, 4, 0);
+  bowlBody.angularVelocity.set(
+    (Math.random() - 0.5) * 14,
+    (Math.random() - 0.5) * 8,
+    (Math.random() - 0.5) * 14
+  );
+});
+
+// Resize
+window.addEventListener('resize', () => {
+  const w = window.innerWidth, h = window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// Init ground visual
+syncGroundVisual();
+</script>
+</body>
+</html>

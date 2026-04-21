@@ -125,8 +125,8 @@
               <source srcset="gfx/icon-myrecipes.png, gfx/icon-myrecipes@2x.png 2x, gfx/icon-myrecipes@3x.png 3x">
               <img src="gfx/icon-myrecipes.png" width="60" height="60" alt="Find New Favorites">
             </picture>
-            <h3>Recipes from anywhere</h3>
-            <p>Save recipes from the web, add your own, or tweak ours.</p>
+            <h3>Save any recipe</h3>
+            <p>Turn any web recipe into a premium experience. Add your own or tweak ours.</p>
             <picture>
               <source srcset="gfx/iphone-myrecipes.png, gfx/iphone-myrecipes@2x.png 2x">
               <img src="gfx/iphone-myrecipes.png" fetchpriority="low" width="340" height="709" alt="Plant-Based Recipes">
@@ -161,7 +161,19 @@
                 </picture>
             </div>
 
-
+        <div class="card card-iphone card-iphone-wide">
+  	        <picture>
+  	          <source srcset="gfx/icon-cuttingedge-dark.png, gfx/icon-cuttingedge-dark@2x.png 2x, gfx/icon-cuttingedge-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
+  	          <source srcset="gfx/icon-cuttingedge.png, gfx/icon-cuttingedge@2x.png 2x, gfx/icon-cuttingedge@3x.png 3x">
+              <img src="gfx/icon-cuttingedge.png" fetchpriority="low" width="60" height="60" alt="Widgets">
+  	        </picture>
+            <h3>Your meal plan at a glance</h3>
+            <p>See your meal plan at a glance on your Lock Screen or Home Screen. One tap and you're ready to cook.</p>
+  	        <picture>
+  	          <source srcset="gfx/iphone-widgets.png, gfx/iphone-widgets@2x.png 2x">
+              <img src="gfx/iphone-widgets.png" fetchpriority="low" width="357" height="709" alt="Widgets">
+  	        </picture>
+        </div>
 
         <div class="card card-iphone">
   	        <picture>
@@ -176,21 +188,7 @@
               <img src="gfx/iphone-timer.png" fetchpriority="low" width="340" height="709" alt="Multiple Timers">
   	        </picture>
         </div>
-        
-        <div class="card card-iphone card-iphone-wide">
-  	        <picture>
-  	          <source srcset="gfx/icon-cuttingedge-dark.png, gfx/icon-cuttingedge-dark@2x.png 2x, gfx/icon-cuttingedge-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-  	          <source srcset="gfx/icon-cuttingedge.png, gfx/icon-cuttingedge@2x.png 2x, gfx/icon-cuttingedge@3x.png 3x">
-              <img src="gfx/icon-cuttingedge.png" fetchpriority="low" width="60" height="60" alt="Widgets">
-  	        </picture>
-            <h3>Your meal plan at a glance</h3>
-            <p>See your meal plan at a glance on your Lock Screen or Home Screen. One tap and you're ready to cook.</p>
-  	        <picture>
-  	          <source srcset="gfx/iphone-widgets.png, gfx/iphone-widgets@2x.png 2x">
-              <img src="gfx/iphone-widgets.png" fetchpriority="low" width="357" height="709" alt="Widgets">
-  	        </picture>
-        </div>
-        
+                
 
 
 
@@ -360,8 +358,15 @@
             <p><b>Easy And Ethical Meal Prep </b><br>Whether you’re concerned with the ethical, environmental, or health ramifications, Plantry is here to support all your vegan and vegetarian needs.</p>
             <a href="https://www.tapsmart.com/news/plantry-meal-planner-easy-ethical-meal-prep/"><img src="gfx/tapsmart.png" fetchpriority="low" srcset="gfx/tapsmart@2x.png 2x, gfx/tapsmart@3x.png 3x" alt="TapSmart" class="invertInDarkMode"></a>
         </div>
-      </div>       
-      
+      </div>
+
+      <!-- Interactive bowl -->
+      <div class="bowl-section">
+        <canvas id="bowl-canvas"></canvas>
+        <div class="bowl-fade-top"></div>
+        <div class="bowl-fade-bottom"></div>
+      </div>
+
       <div class="buttons">
         <a href="https://apps.apple.com/app/apple-store/id1109976916?platform=iphone" class="button button-primary">Download on the App Store</a>
       </div>
@@ -391,187 +396,20 @@
     </div>
     
   <script src="js/rellax.min.js"></script>
-  <script>
-  // Accepts any class name
-  var rellax = new Rellax('.rellax');
-  </script>    
-  
-  <script>
-    const revealEls = document.querySelectorAll('section h2, .card, .award, .review, .articlequote, .ipad-hero, .slide-presentation, .giveafork, .hero-cta, .hero-awards, .buttons');
-    revealEls.forEach(el => el.classList.add('reveal'));
+  <script>var rellax = new Rellax('.rellax');</script>
+  <script src="js/main.js"></script>
 
-    // Give hero-awards a delay so it fades in after the hero-cta
-    const heroAwards = document.querySelector('.hero-awards');
-    if (heroAwards) heroAwards.style.transitionDelay = '150ms';
-
-    // Wait for browser to paint the hidden state, then start observing
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
-
-      // Group award/review items by row (offsetTop) and stagger row by row
-      document.querySelectorAll('.award-grid, .review-grid').forEach(grid => {
-        const items = [...grid.children];
-        const rows = new Map();
-        items.forEach(item => {
-          const top = item.offsetTop;
-          if (!rows.has(top)) rows.set(top, []);
-          rows.get(top).push(item);
-        });
-        let rowIndex = 0;
-        rows.forEach(rowItems => {
-          rowItems.forEach(item => item.style.transitionDelay = (rowIndex * 100) + 'ms');
-          rowIndex++;
-        });
-      });
-
-      revealEls.forEach(el => revealObserver.observe(el));
-    }));
-  </script>
-
-   <script>
-    const floatingNav = document.getElementById('floatingNav');
-    const headerLogo = document.querySelector('.plantry-logo');
-    const heroEl = document.querySelector('.hero');
-    const trialHeading = document.querySelector('.hero-cta h3');
-    const veggiesEl = document.getElementById('headerimage');
-    const giveaforkBg = document.getElementById('giveaforkBg');
-    const giveaforkEl = document.getElementById('giveafork');
-
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Smoothed mouse position (-1 to 1 each axis), lerped for silky motion
-    let mouseX = 0, mouseY = 0;
-    let smoothX = 0, smoothY = 0;
-    if (!reducedMotion) {
-      window.addEventListener('mousemove', e => {
-        mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;   // -1 left → +1 right
-        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;   // -1 top  → +1 bottom
-      }, { passive: true, capture: true });
+  <script type="importmap">
+  {
+    "imports": {
+      "three":         "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+      "cannon-es":     "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
     }
-
-    // rAF loop — scroll tilt + cursor tilt combined, always wins over Spline's own animation
-    (function splineTiltLoop() {
-      if (window.__splinePhone && window.__splinePhoneBase) {
-        const b = window.__splinePhoneBase;
-        if (reducedMotion) {
-          // Keep phone at its resting angle, no motion
-          window.__splinePhone.rotation.x = b.rx;
-          window.__splinePhone.rotation.y = b.ry;
-        } else {
-          const ease = 0.06;
-          smoothX += (mouseX - smoothX) * ease;
-          smoothY += (mouseY - smoothY) * ease;
-
-          const scrollProgress = Math.min(window.scrollY / 700, 1);
-          window.__splinePhone.rotation.x = b.rx - scrollProgress * 0.45 + smoothY * 0.12;
-          window.__splinePhone.rotation.y = b.ry + smoothX * 0.18;
-        }
-      }
-      requestAnimationFrame(splineTiltLoop);
-    }());
-
-    // Track logo/hero visibility via IntersectionObserver — no getBoundingClientRect on scroll
-    let logoVisible = true;
-    new IntersectionObserver(([e]) => {
-      logoVisible = e.isIntersecting;
-      if (window.innerWidth >= 568) floatingNav.classList.toggle('is-scrolled', !logoVisible);
-    }, { threshold: 0 }).observe(headerLogo);
-
-    new IntersectionObserver(([e]) => {
-      floatingNav.classList.toggle('is-past-hero', !e.isIntersecting);
-    }, { threshold: 0 }).observe(heroEl);
-
-    // Passive scroll — only cheap style writes, no layout reads
-    window.addEventListener('scroll', function() {
-      const sy = window.scrollY;
-
-      document.getElementById('headerimage').style.webkitFilter =
-        'blur(' + (sy / window.innerHeight * 12) + 'px)';
-
-      if (trialHeading && !reducedMotion) {
-        trialHeading.style.backgroundPosition = ((sy * 0.3) % 100) + '% 0';
-      }
-
-      if (window.innerWidth < 568) {
-        floatingNav.classList.toggle('is-scrolled', sy > 0);
-      }
-
-      // Dim veggies to 60% as user scrolls — starts immediately, complete by 400px
-      if (veggiesEl) {
-        const dimProgress = Math.min(sy / 400, 1);
-        veggiesEl.style.opacity = 1 - dimProgress * 0.4; // 1.0 → 0.6
-      }
-
-      // Footer parallax + blur — image scrolls at a slower rate
-      if (giveaforkBg && giveaforkEl) {
-        const rect = giveaforkEl.getBoundingClientRect();
-        const visible = rect.bottom > 0 && rect.top < window.innerHeight;
-        if (visible) {
-          // How far through the footer we've scrolled (-1 entering, 0 center, 1 leaving)
-          const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-          const translateY = (progress - 0.5) * -120; // parallax travel range
-          // Blur fades out as footer comes fully into view
-          const blurAmount = Math.max(0, (1 - progress * 2) * 6);
-          giveaforkBg.style.transform = `translateY(${translateY}px)`;
-          giveaforkBg.style.filter = `blur(${blurAmount}px)`;
-        }
-      }
-    }, { passive: true });
+  }
   </script>
-
-  <script type="module">
-    import 'https://unpkg.com/@splinetool/viewer@1.12.84/build/spline-viewer.js';
-
-    const viewer = document.getElementById('spline-viewer');
-
-    // Inject badge-hiding style into shadow DOM as early as possible
-    const hideSplineBadge = () => {
-      if (!viewer.shadowRoot) return;
-      if (viewer.shadowRoot.querySelector('style[data-hide-badge]')) return;
-      const style = document.createElement('style');
-      style.setAttribute('data-hide-badge', '');
-      style.textContent = '#logo { display: none !important; }';
-      viewer.shadowRoot.appendChild(style);
-    };
-    hideSplineBadge();
-    const badgePoll = setInterval(() => { hideSplineBadge(); if (viewer.shadowRoot?.querySelector('#logo')) clearInterval(badgePoll); }, 100);
-    setTimeout(() => clearInterval(badgePoll), 10000);
-
-    let splinePollId;
-    const splineLoader = document.getElementById('splineLoader');
-
-    function initSplinePhone() {
-      const app = viewer._spline;
-      if (!app) return false;
-      const phone = app.getAllObjects().find(o => o.name === 'IPhone Air');
-      if (!phone) return false;
-      window.__splinePhone = phone;
-      window.__splinePhoneBase = { rx: phone.rotation.x, ry: phone.rotation.y, rz: phone.rotation.z };
-      clearInterval(splinePollId);
-      // Hide loader once scene is ready
-      if (splineLoader) splineLoader.classList.add('is-hidden');
-
-      // Hide the "Built with Spline" badge via shadow DOM injection
-      try {
-        const style = document.createElement('style');
-        style.textContent = '#logo { display: none !important; }';
-        viewer.shadowRoot.appendChild(style);
-      } catch(e) {}
-
-      return true;
-    }
-
-    viewer.addEventListener('load', initSplinePhone, { once: true });
-    splinePollId = setInterval(() => initSplinePhone(), 250);
-    setTimeout(() => clearInterval(splinePollId), 20000);
-  </script>
+  <script type="module" src="js/spline-init.js"></script>
+  <script type="module" src="js/bowl.js"></script>
 
   </body>
 </html>

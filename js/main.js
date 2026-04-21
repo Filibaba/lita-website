@@ -1,0 +1,119 @@
+// ── Scroll reveal ─────────────────────────────────────────────────────────────
+const revealEls = document.querySelectorAll('section h2, .card, .award, .review, .articlequote, .ipad-hero, .slide-presentation, .giveafork, .hero-cta, .hero-awards, .buttons');
+revealEls.forEach(el => el.classList.add('reveal'));
+
+const heroAwards = document.querySelector('.hero-awards');
+if (heroAwards) heroAwards.style.transitionDelay = '150ms';
+
+requestAnimationFrame(() => requestAnimationFrame(() => {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+
+  // Stagger award/review rows
+  document.querySelectorAll('.award-grid, .review-grid').forEach(grid => {
+    const items = [...grid.children];
+    const rows  = new Map();
+    items.forEach(item => {
+      const top = item.offsetTop;
+      if (!rows.has(top)) rows.set(top, []);
+      rows.get(top).push(item);
+    });
+    let rowIndex = 0;
+    rows.forEach(rowItems => {
+      rowItems.forEach(item => item.style.transitionDelay = (rowIndex * 100) + 'ms');
+      rowIndex++;
+    });
+  });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+}));
+
+// ── Nav + scroll effects + Spline tilt ───────────────────────────────────────
+const floatingNav  = document.getElementById('floatingNav');
+const headerLogo   = document.querySelector('.plantry-logo');
+const heroEl       = document.querySelector('.hero');
+const trialHeading = document.querySelector('.hero-cta h3');
+const veggiesEl    = document.getElementById('headerimage');
+const giveaforkBg  = document.getElementById('giveaforkBg');
+const giveaforkEl  = document.getElementById('giveafork');
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Smoothed cursor position for Spline tilt
+let mouseX = 0, mouseY = 0, smoothX = 0, smoothY = 0;
+if (!reducedMotion) {
+  window.addEventListener('mousemove', e => {
+    mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  }, { passive: true, capture: true });
+}
+
+// rAF loop — overrides Spline's internal animation every frame
+(function splineTiltLoop() {
+  if (window.__splinePhone && window.__splinePhoneBase) {
+    const b = window.__splinePhoneBase;
+    if (reducedMotion) {
+      window.__splinePhone.rotation.x = b.rx;
+      window.__splinePhone.rotation.y = b.ry;
+    } else {
+      const ease = 0.06;
+      smoothX += (mouseX - smoothX) * ease;
+      smoothY += (mouseY - smoothY) * ease;
+      const scrollProgress = Math.min(window.scrollY / 700, 1);
+      window.__splinePhone.rotation.x = b.rx - scrollProgress * 0.45 + smoothY * 0.12;
+      window.__splinePhone.rotation.y = b.ry + smoothX * 0.18;
+    }
+  }
+  requestAnimationFrame(splineTiltLoop);
+}());
+
+// Track logo/hero via IntersectionObserver — no layout reads on scroll
+let logoVisible = true;
+new IntersectionObserver(([e]) => {
+  logoVisible = e.isIntersecting;
+  if (window.innerWidth >= 568) floatingNav.classList.toggle('is-scrolled', !logoVisible);
+}, { threshold: 0 }).observe(headerLogo);
+
+new IntersectionObserver(([e]) => {
+  floatingNav.classList.toggle('is-past-hero', !e.isIntersecting);
+}, { threshold: 0 }).observe(heroEl);
+
+window.addEventListener('scroll', function () {
+  const sy = window.scrollY;
+
+  document.getElementById('headerimage').style.webkitFilter =
+    'blur(' + (sy / window.innerHeight * 12) + 'px)';
+
+  if (trialHeading && !reducedMotion) {
+    trialHeading.style.backgroundPosition = ((sy * 0.3) % 100) + '% 0';
+  }
+
+  if (window.innerWidth < 568) {
+    floatingNav.classList.toggle('is-scrolled', sy > 0);
+  }
+
+  // Dim veggies to 60% as user scrolls
+  if (veggiesEl) {
+    veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
+  }
+
+  // Footer parallax + blur + dim
+  if (giveaforkBg && giveaforkEl) {
+    const rect = giveaforkEl.getBoundingClientRect();
+    if (rect.bottom > 0 && rect.top < window.innerHeight) {
+      // 0 = entering bottom, 0.5 = centered, 1 = leaving top
+      const progress  = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      const translateY = (progress - 0.5) * 800;
+      const blurAmount = Math.max(0, (1 - progress * 2) * 30);
+      const brightness = 0.6 + 0.4 * Math.min(progress * 2, 1);
+      giveaforkBg.style.transform = `translateY(${translateY}px)`;
+      giveaforkBg.style.filter    = `blur(${blurAmount}px) brightness(${brightness})`;
+    }
+  }
+}, { passive: true });

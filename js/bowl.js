@@ -109,10 +109,37 @@ gq.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2);
 groundBody.quaternion.copy(gq);
 world.addBody(groundBody);
 
-const bowlBody = new CANNON.Body({ mass: 0.8, linearDamping: 0.15, angularDamping: 0.82 });
+const bowlPhysMat = new CANNON.Material('bowl');
+const wallPhysMat = new CANNON.Material('wall');
+world.addContactMaterial(new CANNON.ContactMaterial(bowlPhysMat, wallPhysMat, {
+  restitution: 0.50,
+  friction:    0.10,
+}));
+
+const bowlBody = new CANNON.Body({ mass: 0.8, linearDamping: 0.15, angularDamping: 0.82, material: bowlPhysMat });
 bowlBody.addShape(new CANNON.Cylinder(R, FLAT_R, -FLAT_Y, 18), new CANNON.Vec3(0, FLAT_Y / 2, 0));
 bowlBody.position.set(0, GND_Y + REST_Y, 0);
 world.addBody(bowlBody);
+
+// ── Invisible boundary walls ──────────────────────────────────────────────────
+// Positions are projected from screen edges onto the bowl ground plane each resize.
+function makeWallBody(yAxisAngle) {
+  const body = new CANNON.Body({ mass: 0, material: wallPhysMat });
+  body.addShape(new CANNON.Plane());
+  if (yAxisAngle !== 0) {
+    const q = new CANNON.Quaternion();
+    q.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), yAxisAngle);
+    body.quaternion.copy(q);
+  }
+  world.addBody(body);
+  return body;
+}
+// normal +X (rotate +90°) → blocks bowl going past left edge
+const leftWall  = makeWallBody( Math.PI / 2);
+// normal -X (rotate -90°) → blocks bowl going past right edge
+const rightWall = makeWallBody(-Math.PI / 2);
+// normal +Z (no rotation) → blocks bowl going past back (top of screen)
+const backWall  = makeWallBody(0);
 
 // ── Drag to throw ─────────────────────────────────────────────────────────────
 const dragRay     = new THREE.Raycaster();
@@ -212,12 +239,32 @@ const clock = new THREE.Clock();
   renderer.render(scene, camera);
 }());
 
-// ── Resize ────────────────────────────────────────────────────────────────────
+// ── Resize + wall placement ───────────────────────────────────────────────────
+const wallRay    = new THREE.Raycaster();
+const wallGndPl  = new THREE.Plane(new THREE.Vector3(0, 1, 0), -(GND_Y + REST_Y));
+
+function updateWalls() {
+  const hit = new THREE.Vector3();
+
+  // Left screen edge → world x at bowl ground level
+  wallRay.setFromCamera(new THREE.Vector2(-1, 0), camera);
+  if (wallRay.ray.intersectPlane(wallGndPl, hit)) leftWall.position.set(hit.x, 0, 0);
+
+  // Right screen edge
+  wallRay.setFromCamera(new THREE.Vector2(1, 0), camera);
+  if (wallRay.ray.intersectPlane(wallGndPl, hit)) rightWall.position.set(hit.x, 0, 0);
+
+  // Top screen edge → back wall z
+  wallRay.setFromCamera(new THREE.Vector2(0, 1), camera);
+  if (wallRay.ray.intersectPlane(wallGndPl, hit)) backWall.position.set(0, 0, hit.z);
+}
+
 function resize() {
   const w = canvas.clientWidth, h = canvas.clientHeight;
   if (!w || !h) return;
   renderer.setSize(w, h, false);
   camera.aspect = w / h; camera.updateProjectionMatrix();
+  updateWalls();
 }
 new ResizeObserver(resize).observe(canvas);
 resize();

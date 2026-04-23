@@ -122,24 +122,17 @@ bowlBody.position.set(0, GND_Y + REST_Y, 0);
 world.addBody(bowlBody);
 
 // ── Invisible boundary walls ──────────────────────────────────────────────────
-// Positions are projected from screen edges onto the bowl ground plane each resize.
-function makeWallBody(yAxisAngle) {
+// Positions and normals are derived from the camera frustum each resize so walls
+// follow perspective and the bowl bounces exactly at the visible screen edges.
+function makeWallBody() {
   const body = new CANNON.Body({ mass: 0, material: wallPhysMat });
   body.addShape(new CANNON.Plane());
-  if (yAxisAngle !== 0) {
-    const q = new CANNON.Quaternion();
-    q.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), yAxisAngle);
-    body.quaternion.copy(q);
-  }
   world.addBody(body);
   return body;
 }
-// normal +X (rotate +90°) → blocks bowl going past left edge
-const leftWall  = makeWallBody( Math.PI / 2);
-// normal -X (rotate -90°) → blocks bowl going past right edge
-const rightWall = makeWallBody(-Math.PI / 2);
-// normal +Z (no rotation) → blocks bowl going past back (top of screen)
-const backWall  = makeWallBody(0);
+const leftWall  = makeWallBody();
+const rightWall = makeWallBody();
+const backWall  = makeWallBody();
 
 // ── Drag to throw ─────────────────────────────────────────────────────────────
 const dragRay     = new THREE.Raycaster();
@@ -240,23 +233,56 @@ const clock = new THREE.Clock();
 }());
 
 // ── Resize + wall placement ───────────────────────────────────────────────────
-const wallRay    = new THREE.Raycaster();
-const wallGndPl  = new THREE.Plane(new THREE.Vector3(0, 1, 0), -(GND_Y + REST_Y));
+const wallRay     = new THREE.Raycaster();
+const wallGndPl   = new THREE.Plane(new THREE.Vector3(0, 1, 0), -(GND_Y + REST_Y));
+const wallFrustum = new THREE.Frustum();
+const wallVPM     = new THREE.Matrix4();
+const wallDefN    = new THREE.Vector3(0, 0, 1); // Cannon Plane default local normal
+
+// Returns the frustum plane's XZ-projected normal (drops Y so the wall stays
+// vertical regardless of camera tilt, then renormalizes).
+function frustumXZNormal(planeIdx) {
+  const n = wallFrustum.planes[planeIdx].normal.clone();
+  n.y = 0;
+  return n.normalize();
+}
 
 function updateWalls() {
+  // Rebuild frustum from current camera
+  wallVPM.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse);
+  wallFrustum.setFromProjectionMatrix(wallVPM);
+
   const hit = new THREE.Vector3();
 
-  // Left screen edge → world x at bowl ground level
+  // Three.js frustum plane layout (setFromProjectionMatrix):
+  //   planes[0] = right plane  (inward normal has −X component)
+  //   planes[1] = left plane   (inward normal has +X component)
+  //   planes[3] = top plane    (used for back wall)
+
+  // Left wall — frustum planes[1], normal faces inward (+X side)
+  const leftN = frustumXZNormal(1);
   wallRay.setFromCamera(new THREE.Vector2(-1, 0), camera);
-  if (wallRay.ray.intersectPlane(wallGndPl, hit)) leftWall.position.set(hit.x, 0, 0);
+  if (wallRay.ray.intersectPlane(wallGndPl, hit)) {
+    leftWall.position.set(hit.x, 0, hit.z);
+    const tq = new THREE.Quaternion().setFromUnitVectors(wallDefN, leftN);
+    leftWall.quaternion.set(tq.x, tq.y, tq.z, tq.w);
+  }
 
-  // Right screen edge
+  // Right wall — frustum planes[0], normal faces inward (−X side)
+  const rightN = frustumXZNormal(0);
   wallRay.setFromCamera(new THREE.Vector2(1, 0), camera);
-  if (wallRay.ray.intersectPlane(wallGndPl, hit)) rightWall.position.set(hit.x, 0, 0);
+  if (wallRay.ray.intersectPlane(wallGndPl, hit)) {
+    rightWall.position.set(hit.x, 0, hit.z);
+    const tq = new THREE.Quaternion().setFromUnitVectors(wallDefN, rightN);
+    rightWall.quaternion.set(tq.x, tq.y, tq.z, tq.w);
+  }
 
-  // Top screen edge → back wall z
+  // Back wall — vertical plane at top-of-screen ground edge, normal toward camera (+Z)
   wallRay.setFromCamera(new THREE.Vector2(0, 1), camera);
-  if (wallRay.ray.intersectPlane(wallGndPl, hit)) backWall.position.set(0, 0, hit.z);
+  if (wallRay.ray.intersectPlane(wallGndPl, hit)) {
+    backWall.position.set(0, 0, hit.z);
+    backWall.quaternion.set(0, 0, 0, 1); // identity → default normal (0,0,1) faces camera
+  }
 }
 
 function resize() {

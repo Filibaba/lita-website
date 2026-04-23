@@ -53,8 +53,8 @@ const bowlGeo = (() => {
     if (pos.getY(i) < FLAT_Y) pos.setY(i, FLAT_Y);
   }
   pos.needsUpdate = true;
+  geo.deleteAttribute('uv'); // remove UVs so seam vertices (same XYZ, different U) merge correctly
   const w = mergeVertices(geo);
-  w.applyMatrix4(new THREE.Matrix4().makeRotationY(Math.PI));
   w.computeVertexNormals();
   return w;
 })();

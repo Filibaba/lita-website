@@ -1322,6 +1322,13 @@ p {
     transition: none;
   }
 
+  /* Remove backdrop-filter blur from nav on mobile — too GPU-expensive */
+  .floating-nav.is-scrolled,
+  .floating-nav.is-past-hero {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   
   .hero {
     background-color: #141f33;

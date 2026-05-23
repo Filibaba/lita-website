@@ -45,75 +45,122 @@ const giveaforkEl  = document.getElementById('giveafork');
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Smoothed cursor position for Spline tilt
+// ── Cached layout values — avoids mid-scroll layout reads ─────────────────────
+let cachedScrollY = 0;
+let cachedVW      = window.innerWidth;
+let cachedVH      = window.innerHeight;
+let giveaforkTop  = 0;
+let giveaforkH    = 0;
+
+function cacheLayout() {
+  cachedVW = window.innerWidth;
+  cachedVH = window.innerHeight;
+  if (giveaforkEl) {
+    giveaforkTop = giveaforkEl.offsetTop;
+    giveaforkH   = giveaforkEl.offsetHeight;
+  }
+}
+cacheLayout();
+window.addEventListener('resize', cacheLayout, { passive: true });
+
+// ── Smoothed cursor position for Spline tilt ─────────────────────────────────
 let mouseX = 0, mouseY = 0, smoothX = 0, smoothY = 0;
 if (!reducedMotion) {
   window.addEventListener('mousemove', e => {
-    mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;
-    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    mouseX = (e.clientX / cachedVW - 0.5) * 2;
+    mouseY = (e.clientY / cachedVH - 0.5) * 2;
   }, { passive: true, capture: true });
 }
 
-// rAF loop — overrides Spline's internal animation every frame
+// ── Spline tilt rAF loop — only writes when values actually change ────────────
+let _splineRx = null, _splineRy = null;
 (function splineTiltLoop() {
   if (window.__splinePhone && window.__splinePhoneBase) {
     const b = window.__splinePhoneBase;
     if (reducedMotion) {
-      window.__splinePhone.rotation.x = b.rx;
-      window.__splinePhone.rotation.y = b.ry;
+      if (_splineRx !== b.rx || _splineRy !== b.ry) {
+        window.__splinePhone.rotation.x = b.rx;
+        window.__splinePhone.rotation.y = b.ry;
+        _splineRx = b.rx; _splineRy = b.ry;
+      }
     } else {
       const ease = 0.06;
       smoothX += (mouseX - smoothX) * ease;
       smoothY += (mouseY - smoothY) * ease;
-      const scrollProgress = Math.min(window.scrollY / 700, 1);
-      window.__splinePhone.rotation.x = b.rx - scrollProgress * 0.45 + smoothY * 0.12;
-      window.__splinePhone.rotation.y = b.ry + smoothX * 0.18;
+      const scrollProgress = Math.min(cachedScrollY / 700, 1);
+      const rx = b.rx - scrollProgress * 0.45 + smoothY * 0.12;
+      const ry = b.ry + smoothX * 0.18;
+      if (Math.abs(rx - _splineRx) > 1e-5 || Math.abs(ry - _splineRy) > 1e-5) {
+        window.__splinePhone.rotation.x = rx;
+        window.__splinePhone.rotation.y = ry;
+        _splineRx = rx; _splineRy = ry;
+      }
     }
   }
   requestAnimationFrame(splineTiltLoop);
 }());
 
-// Track logo/hero via IntersectionObserver — no layout reads on scroll
-let logoVisible = true;
+// ── Track logo/hero via IntersectionObserver — no layout reads on scroll ──────
 new IntersectionObserver(([e]) => {
-  logoVisible = e.isIntersecting;
-  if (window.innerWidth >= 568) floatingNav.classList.toggle('is-scrolled', !logoVisible);
+  if (cachedVW >= 568) floatingNav.classList.toggle('is-scrolled', !e.isIntersecting);
 }, { threshold: 0 }).observe(headerLogo);
 
 new IntersectionObserver(([e]) => {
   floatingNav.classList.toggle('is-past-hero', !e.isIntersecting);
 }, { threshold: 0 }).observe(heroEl);
 
-window.addEventListener('scroll', function () {
-  const sy = window.scrollY;
+// ── rAF-throttled scroll handler ──────────────────────────────────────────────
+// All DOM writes are batched into one rAF per frame — no forced layout mid-scroll.
+let scrollTick = false;
 
-  document.getElementById('headerimage').style.webkitFilter =
-    'blur(' + (sy / window.innerHeight * 12) + 'px)';
+function applyScrollEffects() {
+  const sy     = cachedScrollY;
+  const vh     = cachedVH;
+  const mobile = cachedVW < 568;
 
+  // Veggies: opacity always; blur only on desktop (GPU-expensive on mobile)
+  if (veggiesEl) {
+    veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
+    if (!mobile) {
+      const blurPx = sy / vh * 12;
+      veggiesEl.style.filter = `blur(${blurPx}px)`;
+    }
+  }
+
+  // Gradient text scroll
   if (trialHeading && !reducedMotion) {
     trialHeading.style.backgroundPosition = ((sy * 0.3) % 100) + '% 0';
   }
 
-  if (window.innerWidth < 568) {
-    floatingNav.classList.toggle('is-scrolled', sy > 0);
-  }
+  // Mobile nav scrolled state (desktop uses IntersectionObserver above)
+  if (mobile) floatingNav.classList.toggle('is-scrolled', sy > 0);
 
-  // Dim veggies to 60% as user scrolls
-  if (veggiesEl) {
-    veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
-  }
-
-  // Footer parallax + blur + dim
-  if (giveaforkBg && giveaforkEl) {
-    const rect = giveaforkEl.getBoundingClientRect();
-    if (rect.bottom > 0 && rect.top < window.innerHeight) {
-      // 0 = entering bottom, 0.5 = centered, 1 = leaving top
-      const progress  = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+  // Footer parallax — position cached, no getBoundingClientRect()
+  if (giveaforkBg && giveaforkH) {
+    const rectTop    = giveaforkTop - sy;
+    const rectBottom = rectTop + giveaforkH;
+    if (rectBottom > 0 && rectTop < vh) {
+      const progress   = (vh - rectTop) / (vh + giveaforkH);
       const translateY = (progress - 0.5) * 800;
-      const blurAmount = Math.max(0, (1 - progress * 2) * 30);
       const brightness = 0.6 + 0.4 * Math.min(progress * 2, 1);
       giveaforkBg.style.transform = `translateY(${translateY}px)`;
-      giveaforkBg.style.filter    = `blur(${blurAmount}px) brightness(${brightness})`;
+      if (mobile) {
+        // Skip blur on mobile — brightness only
+        giveaforkBg.style.filter = `brightness(${brightness})`;
+      } else {
+        const blurAmount = Math.max(0, (1 - progress * 2) * 30);
+        giveaforkBg.style.filter = `blur(${blurAmount}px) brightness(${brightness})`;
+      }
     }
+  }
+
+  scrollTick = false;
+}
+
+window.addEventListener('scroll', () => {
+  cachedScrollY = window.scrollY;
+  if (!scrollTick) {
+    requestAnimationFrame(applyScrollEffects);
+    scrollTick = true;
   }
 }, { passive: true });

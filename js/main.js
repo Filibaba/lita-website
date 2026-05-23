@@ -118,13 +118,10 @@ function applyScrollEffects() {
   const vh     = cachedVH;
   const mobile = cachedVW < 568;
 
-  // Veggies: opacity always; blur only on desktop (GPU-expensive on mobile)
-  if (veggiesEl) {
+  // Veggies: opacity + blur — desktop only
+  if (!mobile && veggiesEl) {
     veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
-    if (!mobile) {
-      const blurPx = sy / vh * 12;
-      veggiesEl.style.filter = `blur(${blurPx}px)`;
-    }
+    veggiesEl.style.filter  = `blur(${sy / vh * 12}px)`;
   }
 
   // Gradient text scroll
@@ -135,22 +132,17 @@ function applyScrollEffects() {
   // Mobile nav scrolled state (desktop uses IntersectionObserver above)
   if (mobile) floatingNav.classList.toggle('is-scrolled', sy > 0);
 
-  // Footer parallax — position cached, no getBoundingClientRect()
-  if (giveaforkBg && giveaforkH) {
+  // Footer parallax — desktop only
+  if (!mobile && giveaforkBg && giveaforkH) {
     const rectTop    = giveaforkTop - sy;
     const rectBottom = rectTop + giveaforkH;
     if (rectBottom > 0 && rectTop < vh) {
       const progress   = (vh - rectTop) / (vh + giveaforkH);
       const translateY = (progress - 0.5) * 800;
+      const blurAmount = Math.max(0, (1 - progress * 2) * 30);
       const brightness = 0.6 + 0.4 * Math.min(progress * 2, 1);
       giveaforkBg.style.transform = `translateY(${translateY}px)`;
-      if (mobile) {
-        // Skip blur on mobile — brightness only
-        giveaforkBg.style.filter = `brightness(${brightness})`;
-      } else {
-        const blurAmount = Math.max(0, (1 - progress * 2) * 30);
-        giveaforkBg.style.filter = `blur(${blurAmount}px) brightness(${brightness})`;
-      }
+      giveaforkBg.style.filter    = `blur(${blurAmount}px) brightness(${brightness})`;
     }
   }
 

@@ -1314,6 +1314,14 @@ p {
 /* Mobile layout — below iPhone SE landscape size */
 
 @media (max-width: 567px){
+
+  /* Disable scroll-reveal fade on mobile — content is visible immediately */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   
   .hero {
     background-color: #141f33;

@@ -19,7 +19,7 @@ html {
 
 .site-nav{
   position: absolute;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
 }
 
@@ -310,6 +310,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 section {
@@ -1320,6 +1321,7 @@ p {
     color: white;
     padding: 80px 0 0 0;
     text-align: center;
+    overflow: hidden;
   }
 
   .floating-nav-logo {
@@ -1345,7 +1347,7 @@ p {
 
   .hero-iphone {
     margin: 0px auto;
-    width: 100vw;
+    width: 100%;
     height: 480px;
   }
 

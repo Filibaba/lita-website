@@ -942,11 +942,14 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* Behind the parallax image, so blurred edges fade into black, not the page */
+  background: #000;
 }
 
 .giveafork-bg {
   position: absolute;
-  inset: -15% 0;
+  /* Overscan on all sides — the parallax blur must never expose an edge */
+  inset: -15% -80px;
   background-size: cover;
   background-position: center center;
   background-image: url(gfx/giveafork.jpg);

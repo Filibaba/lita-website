@@ -959,15 +959,18 @@ section {
   z-index: 1;
 }
 
-.giveafork h1 {
+/* Styled as the page h1 but marked up as h2 — one h1 per page */
+.giveafork h2 {
+  font-size: 64px;
+  font-weight: 800;
   color: white;
   text-align: center;
   text-shadow: 0px 6px 40px #192526;
-  margin-top: 4vh;
-  margin-bottom: auto;
+  margin: 4vh 8px auto;
+  padding: 0;
 }
 
-.giveafork h3, .giveafork h2 {
+.giveafork h3 {
   color: white;
   text-align: center;
   text-shadow: 0px 6px 40px #000000;
@@ -1171,8 +1174,8 @@ p {
     font-size: 56px; 
   }
   
-  .giveafork h1 {
-    font-size: 56px; 
+  .giveafork h2 {
+    font-size: 56px;
   }
 	
   .card p {
@@ -1697,7 +1700,7 @@ p {
     line-height: 1.5rem;
   }
   
-  .giveafork h1 {
+  .giveafork h2 {
     font-size: 40px;
     color: white;
     text-align: center;

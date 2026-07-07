@@ -124,7 +124,7 @@ function applyScrollEffects() {
 
   // Veggies: parallax on all sizes, opacity + blur desktop only
   if (veggiesEl) {
-    veggiesEl.style.transform = `translate3d(0, ${sy * veggiesParallax}px, 0)`;
+    if (!reducedMotion) veggiesEl.style.transform = `translate3d(0, ${sy * veggiesParallax}px, 0)`;
     if (!mobile) {
       veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
       veggiesEl.style.filter  = `blur(${sy / vh * 12}px)`;
@@ -140,7 +140,7 @@ function applyScrollEffects() {
   if (mobile) floatingNav.classList.toggle('is-scrolled', sy > 0);
 
   // Footer parallax — desktop only
-  if (!mobile && giveaforkBg && giveaforkH) {
+  if (!mobile && !reducedMotion && giveaforkBg && giveaforkH) {
     const rectTop    = giveaforkTop - sy;
     const rectBottom = rectTop + giveaforkH;
     if (rectBottom > 0 && rectTop < vh) {

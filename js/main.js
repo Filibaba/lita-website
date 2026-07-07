@@ -46,7 +46,7 @@ const giveaforkEl  = document.getElementById('giveafork');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ── Cached layout values — avoids mid-scroll layout reads ─────────────────────
-let cachedScrollY   = 0;
+let cachedScrollY   = window.scrollY;
 let cachedVW        = window.innerWidth;
 let cachedVH        = window.innerHeight;
 let giveaforkTop    = 0;
@@ -66,6 +66,14 @@ function cacheLayout() {
 }
 cacheLayout();
 window.addEventListener('resize', cacheLayout, { passive: true });
+
+// Offsets shift while images load on a cold cache (e.g. first visit to the
+// other language version) — re-cache once everything is in and re-apply.
+window.addEventListener('load', () => {
+  cacheLayout();
+  cachedScrollY = window.scrollY;
+  requestAnimationFrame(applyScrollEffects);
+});
 
 // ── Smoothed cursor position for Spline tilt ─────────────────────────────────
 let mouseX = 0, mouseY = 0, smoothX = 0, smoothY = 0;

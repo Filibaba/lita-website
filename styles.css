@@ -572,6 +572,8 @@ header {
 .ipad-hero {
   margin-bottom: 0;
   width: 100%;
+  /* Scale with width; the img width/height attrs reserve the space pre-load */
+  height: auto;
 }
 
 .ipad-heading {

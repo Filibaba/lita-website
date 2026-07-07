@@ -303,20 +303,10 @@ function applyColors() {
 }
 mq.addEventListener('change', e => { isDark = e.matches; applyColors(); });
 
-// ── Start: wait for Download button to appear, then drop ─────────────────────
-let bowlStarted = false;
-function startBowl() {
-  if (bowlStarted) return;
-  bowlStarted = true;
-  webDropAndSpin();
-}
-
-const buttonsEl = document.querySelector('.buttons');
-if (buttonsEl && !buttonsEl.classList.contains('is-visible')) {
-  const mo = new MutationObserver(() => {
-    if (buttonsEl.classList.contains('is-visible')) { mo.disconnect(); startBowl(); }
-  });
-  mo.observe(buttonsEl, { attributes: true, attributeFilter: ['class'] });
-} else {
-  startBowl();
-}
+// ── Start: drop as soon as the bowl section scrolls into view ────────────────
+new IntersectionObserver(([entry], observer) => {
+  if (entry.isIntersecting) {
+    observer.disconnect();
+    webDropAndSpin();
+  }
+}, { threshold: 0.2 }).observe(canvas);

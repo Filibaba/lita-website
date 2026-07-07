@@ -46,15 +46,19 @@ const giveaforkEl  = document.getElementById('giveafork');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ── Cached layout values — avoids mid-scroll layout reads ─────────────────────
-let cachedScrollY = 0;
-let cachedVW      = window.innerWidth;
-let cachedVH      = window.innerHeight;
-let giveaforkTop  = 0;
-let giveaforkH    = 0;
+let cachedScrollY   = 0;
+let cachedVW        = window.innerWidth;
+let cachedVH        = window.innerHeight;
+let giveaforkTop    = 0;
+let giveaforkH      = 0;
+let veggiesParallax = 0;
 
 function cacheLayout() {
   cachedVW = window.innerWidth;
   cachedVH = window.innerHeight;
+  // 500px of downward drift over (element height + viewport) of scroll —
+  // same curve as the old Rellax speed -5
+  if (veggiesEl) veggiesParallax = 500 / (veggiesEl.offsetHeight + cachedVH);
   if (giveaforkEl) {
     giveaforkTop = giveaforkEl.offsetTop;
     giveaforkH   = giveaforkEl.offsetHeight;
@@ -118,10 +122,13 @@ function applyScrollEffects() {
   const vh     = cachedVH;
   const mobile = cachedVW < 568;
 
-  // Veggies: opacity + blur — desktop only
-  if (!mobile && veggiesEl) {
-    veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
-    veggiesEl.style.filter  = `blur(${sy / vh * 12}px)`;
+  // Veggies: parallax on all sizes, opacity + blur desktop only
+  if (veggiesEl) {
+    veggiesEl.style.transform = `translate3d(0, ${sy * veggiesParallax}px, 0)`;
+    if (!mobile) {
+      veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
+      veggiesEl.style.filter  = `blur(${sy / vh * 12}px)`;
+    }
   }
 
   // Gradient text scroll

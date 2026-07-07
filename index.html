@@ -25,7 +25,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.plantry.app/gfx/social-large.jpg">
     <meta name="theme-color" content="#FFC800" media="(max-width:567px)">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.84/build/spline-viewer.js"></script>
     <link rel="stylesheet" href="styles.css" fetchpriority="high">
     <link rel="stylesheet" href="slideshow.css" fetchpriority="low">
     <link rel="shortcut icon" href="gfx/plantry-favicon.png">
@@ -72,7 +71,7 @@
           <div class="spline-loader" id="splineLoader">
             <div class="spline-loader-spinner"></div>
           </div>
-          <spline-viewer id="spline-viewer" url="https://prod.spline.design/Uhij1wd5IIyz-XnY/scene.splinecode" class="hero-spline"></spline-viewer>
+          <canvas id="spline-canvas" class="hero-spline" data-scene="https://prod.spline.design/Uhij1wd5IIyz-XnY/scene.splinecode"></canvas>
         </div>
         
       <div class="app-store-download-top-mobile"><a href="https://apps.apple.com/app/apple-store/id1109976916?platform=iphone"><img src="gfx/download.svg" alt="App Store Download" width="155" height="90"></a></div>
@@ -398,14 +397,22 @@
   <script type="importmap">
   {
     "imports": {
-      "three":         "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three":         "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
       "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
       "cannon-es":     "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
     }
   }
   </script>
   <script type="module" src="js/spline-init.js"></script>
-  <script type="module" src="js/bowl.js"></script>
+  <script type="module">
+    // Load the bowl (three + cannon-es) only when its section is a viewport away
+    new IntersectionObserver(([entry], observer) => {
+      if (entry.isIntersecting) {
+        observer.disconnect();
+        import('./js/bowl.js');
+      }
+    }, { rootMargin: '100% 0px' }).observe(document.querySelector('.bowl-section'));
+  </script>
 
   </body>
 </html>

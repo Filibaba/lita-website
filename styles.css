@@ -130,6 +130,26 @@ html {
 .nav-show-mobile { display: none; }
 .nav-hide-mobile { display: inline; }
 
+/* Section jump links — hidden only on mobile */
+@media (max-width: 567px) {
+  .nav-jump { display: none; }
+}
+
+/* Narrow tablets: compact nav labels so five items fit the pill */
+@media (max-width: 767px) {
+  .nav-hide-mobile { display: none; }
+  .nav-show-mobile { display: inline; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Land jumps below the fixed nav */
+#features, #faq {
+  scroll-margin-top: 90px;
+}
+
 .floating-nav-cta {
   display: inline-block;
   background-color: white;
@@ -1224,7 +1244,7 @@ p {
 /* Tablet & Mobile layout */
 
 
-@media (max-width: 1280px){
+@media (max-width: 1538px){
   .hero {
     padding-top: 80px;
   }

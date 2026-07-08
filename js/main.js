@@ -65,7 +65,12 @@ function cacheLayout() {
   }
 }
 cacheLayout();
-window.addEventListener('resize', cacheLayout, { passive: true });
+// Re-apply on resize too, so effects clear when crossing the mobile breakpoint
+// (e.g. rotating an iPhone to landscape and back)
+window.addEventListener('resize', () => {
+  cacheLayout();
+  requestAnimationFrame(applyScrollEffects);
+}, { passive: true });
 
 // Offsets shift while images load on a cold cache (e.g. first visit to the
 // other language version) — re-cache once everything is in and re-apply.
@@ -136,6 +141,10 @@ function applyScrollEffects() {
     if (!mobile) {
       veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
       veggiesEl.style.filter  = `blur(${sy / vh * 12}px)`;
+    } else if (veggiesEl.style.filter) {
+      // Clear leftovers from a wider viewport (rotation, window resize)
+      veggiesEl.style.opacity = '';
+      veggiesEl.style.filter  = '';
     }
   }
 
@@ -159,6 +168,10 @@ function applyScrollEffects() {
       giveaforkBg.style.transform = `translateY(${translateY}px)`;
       giveaforkBg.style.filter    = `blur(${blurAmount}px) brightness(${brightness})`;
     }
+  } else if (giveaforkBg && giveaforkBg.style.filter) {
+    // Clear leftovers from a wider viewport so the image isn't stuck blurred
+    giveaforkBg.style.transform = '';
+    giveaforkBg.style.filter    = '';
   }
 
   scrollTick = false;

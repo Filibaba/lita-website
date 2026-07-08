@@ -465,21 +465,11 @@ header {
   font-size: 13px;
   opacity: 0.75;
   width: fit-content;
-  margin: 16px auto 0;
+  /* Breathing room around the download button, clear of the QR below */
+  margin: 16px auto 28px;
   padding: 0;
   text-align: center;
-  position: relative;
   line-height: 1.25;
-}
-
-.hero-free-hint-desktop::before {
-  content: '';
-  position: absolute;
-  inset: -4px -14px;
-  background: #fdcd00;
-  filter: blur(14px);
-  border-radius: 50%;
-  z-index: -1;
 }
 
 .hero-cta {
@@ -509,15 +499,13 @@ header {
   font-weight: 800;
   display: block;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 12px;
   background: repeating-linear-gradient(105deg, #a86500, #ffcc27 25%, #a86500 50%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .hero-cta .button-primary {

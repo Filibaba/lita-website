@@ -444,22 +444,13 @@ header {
   display: none;
 }
 
-.hero-free-hint {
-  display: none;
-  font-size: 13px;
-  opacity: 0.6;
-  margin-top: -16px;
-  margin-bottom: 0;
-  text-align: center;
-  line-height: 1.25;
-}
-
 .hero-free-hint-desktop {
   display: block;
   font-size: 13px;
   opacity: 0.75;
-  margin-top: 8px;
-  margin-bottom: 0;
+  width: fit-content;
+  margin: 16px auto 0;
+  padding: 0;
   text-align: center;
   position: relative;
   line-height: 1.25;
@@ -1237,7 +1228,7 @@ p {
 
 @media (min-width: 568px) and (max-width: 1052px){
 
-  .app-store-download-top, .app-store-download-top-qr, .hero-free-hint-desktop {
+  .app-store-download-top, .app-store-download-top-qr {
     display: none;
   }
 
@@ -1252,10 +1243,6 @@ p {
   }
 
   .app-store-download-top-mobile {
-    display: none;
-  }
-
-  .hero-free-hint {
     display: none;
   }
 
@@ -1403,16 +1390,13 @@ p {
     opacity: 0.6;
   }
   
-  .app-store-download-top, .app-store-download-top-qr, .hero-free-hint-desktop {
+  .app-store-download-top, .app-store-download-top-qr {
     display: none;
   }
 
   .app-store-download-top-mobile {
-    display: none;
-  }
-
-  .hero-free-hint {
-    display: none;
+    display: block;
+    margin-top: -8px;
   }
 
   .hero-cta {

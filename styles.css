@@ -263,6 +263,11 @@ html {
   margin: 20px 0 10px;
 }
 
+/* FAQ answers sit back a little */
+.about-inner h3 + p {
+  opacity: 0.7;
+}
+
 .button {
   display: inline-block;
   height: 60px;

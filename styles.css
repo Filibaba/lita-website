@@ -227,6 +227,21 @@ html {
   overflow: visible;
 }
 
+/* About / FAQ prose */
+.about-inner {
+  max-width: 640px;
+  padding: 0 24px 72px;
+}
+
+.about-inner p {
+  line-height: 1.55;
+}
+
+.about-inner h3 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+
 .button {
   display: inline-block;
   height: 60px;

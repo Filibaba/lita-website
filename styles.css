@@ -250,7 +250,7 @@ html {
 /* About / FAQ prose */
 .about-inner {
   max-width: 640px;
-  padding: 0 24px 72px;
+  padding: 0 24px 8px;
 }
 
 .about-inner p {

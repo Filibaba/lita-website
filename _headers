@@ -1,0 +1,11 @@
+# Cache static assets. Filenames are not fingerprinted, so keep windows
+# moderate — a changed image or script propagates within a day/month.
+/gfx/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

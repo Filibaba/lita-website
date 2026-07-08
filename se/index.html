@@ -25,6 +25,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.plantry.app/gfx/social-large-se.jpg">
     <meta name="theme-color" content="#FFC800" media="(max-width:567px)">
+    <link rel="preload" as="image" href="../gfx/veggies@2x.jpg" fetchpriority="high">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://prod.spline.design" crossorigin>
     <link rel="stylesheet" href="../styles.css" fetchpriority="high">
     <link rel="stylesheet" href="../slideshow.css" fetchpriority="low">
     <link rel="shortcut icon" href="../gfx/plantry-favicon.png">
@@ -74,7 +77,10 @@
   <header>
     <div class="hero">
       <div class="veggies" id="headerimage"></div>
-      <img src="../gfx/plantry.gif" alt="Plantry inköpslista & recept app" class="plantry-logo" width="387" height="97">
+      <picture>
+        <source type="image/webp" srcset="../gfx/plantry-anim.webp">
+        <img src="../gfx/plantry.gif" alt="Plantry inköpslista & recept app" class="plantry-logo" width="387" height="97">
+      </picture>
 
         <div class="hero-iphone" id="heroIphone">
           <div class="spline-loader" id="splineLoader">
@@ -114,13 +120,14 @@
             <picture>
               <source srcset="../gfx/icon-plan-dark.png, ../gfx/icon-plan-dark@2x.png 2x, ../gfx/icon-plan-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
               <source srcset="../gfx/icon-plan.png, ../gfx/icon-plan@2x.png 2x, ../gfx/icon-plan@3x.png 3x">
-              <img src="../gfx/icon-plan.png" width="60" height="60" alt="Planerat är bättre">
+              <img loading="lazy" decoding="async" src="../gfx/icon-plan.png" width="60" height="60" alt="Planerat är bättre">
             </picture>
             <h3>Ät bra varje vecka</h3>
             <p>Välj en veckomeny, justera den, eller gör en ny från grunden. Spara tid & pengar och ät hälsosammare.</p>
             <picture>
+              <source type="image/webp" srcset="../gfx/iphone-startplan-se.webp 1x, ../gfx/iphone-startplan-se@2x.webp 2x">
               <source srcset="../gfx/iphone-startplan-se.png 1x, ../gfx/iphone-startplan-se@2x.png 2x">
-              <img src="../gfx/iphone-startplan-se.png" fetchpriority="low" width="340" height="709" alt="At bra varje vecka">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-startplan-se.png" fetchpriority="low" width="340" height="709" alt="At bra varje vecka">
             </picture>
         </div>
 
@@ -128,13 +135,14 @@
             <picture>
               <source srcset="../gfx/icon-myrecipes-dark.png, ../gfx/icon-myrecipes-dark@2x.png 2x, ../gfx/icon-myrecipes-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
               <source srcset="../gfx/icon-myrecipes.png, ../gfx/icon-myrecipes@2x.png 2x, ../gfx/icon-myrecipes@3x.png 3x">
-              <img src="../gfx/icon-myrecipes.png" fetchpriority="low" width="60" height="60" alt="Laga nya favoriter">
+              <img loading="lazy" decoding="async" src="../gfx/icon-myrecipes.png" fetchpriority="low" width="60" height="60" alt="Laga nya favoriter">
             </picture>
             <h3>Spara recept från webben</h3>
             <p>Lyft recept från webben till en ny nivå. Lägg till egna eller justera våra.</p>
             <picture>
+              <source type="image/webp" srcset="../gfx/iphone-myrecipes-se.webp 1x, ../gfx/iphone-myrecipes-se@2x.webp 2x">
               <source srcset="../gfx/iphone-myrecipes-se.png 1x, ../gfx/iphone-myrecipes-se@2x.png 2x">
-              <img src="../gfx/iphone-myrecipes-se.png" fetchpriority="low" width="340" height="709" alt="Goda vegorecept">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-myrecipes-se.png" fetchpriority="low" width="340" height="709" alt="Goda vegorecept">
             </picture>
         </div>
 
@@ -142,13 +150,14 @@
             <picture>
               <source srcset="../gfx/icon-shop-dark.png, ../gfx/icon-shop-dark@2x.png 2x, ../gfx/icon-shop-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
               <source srcset="../gfx/icon-shop.png, ../gfx/icon-shop@2x.png 2x, ../gfx/icon-shop@3x.png 3x">
-              <img src="../gfx/icon-shop.png" fetchpriority="low" width="60" height="60" alt="Handla med inköpslista">
+              <img loading="lazy" decoding="async" src="../gfx/icon-shop.png" fetchpriority="low" width="60" height="60" alt="Handla med inköpslista">
             </picture>
             <h3>Smarta inköpslistor</h3>
             <p>Få en automatisk inköpslista med allt du behöver när du lagar mat.</p>
             <picture>
+              <source type="image/webp" srcset="../gfx/iphone-shop-se.webp 1x, ../gfx/iphone-shop-se@2x.webp 2x">
               <source srcset="../gfx/iphone-shop-se.png 1x, ../gfx/iphone-shop-se@2x.png 2x">
-              <img src="../gfx/iphone-shop-se.png" fetchpriority="low" width="340" height="709" alt="Minska matsvinnet">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-shop-se.png" fetchpriority="low" width="340" height="709" alt="Minska matsvinnet">
             </picture>
         </div>
 
@@ -156,13 +165,14 @@
              <picture>
   	          <source srcset="../gfx/icon-recipes-dark.png, ../gfx/icon-recipes-dark@2x.png 2x, ../gfx/icon-recipes-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
   	          <source srcset="../gfx/icon-recipes.png, ../gfx/icon-recipes@2x.png 2x, ../gfx/icon-recipes@3x.png 3x">
-              <img src="../gfx/icon-recipes.png" fetchpriority="low" width="60" height="60" alt="Laga nya favoriter">
+              <img loading="lazy" decoding="async" src="../gfx/icon-recipes.png" fetchpriority="low" width="60" height="60" alt="Laga nya favoriter">
   	        </picture>
             <h3>Recept du faktiskt lagar</h3>
             <p>Upptäck över 1 000 smarriga alternativ, framtagna av våra fantastiska kockar.</p>
   	        <picture>
+  	          <source type="image/webp" srcset="../gfx/iphone-plan-se.webp 1x, ../gfx/iphone-plan-se@2x.webp 2x">
   	          <source srcset="../gfx/iphone-plan-se.png 1x, ../gfx/iphone-plan-se@2x.png 2x">
-              <img src="../gfx/iphone-plan-se.png" fetchpriority="low" width="340" height="709" alt="Minska matsvinnet">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-plan-se.png" fetchpriority="low" width="340" height="709" alt="Minska matsvinnet">
   	        </picture>
         </div>
 
@@ -170,13 +180,14 @@
   	        <picture>
   	          <source srcset="../gfx/icon-cuttingedge-dark.png, ../gfx/icon-cuttingedge-dark@2x.png 2x, ../gfx/icon-cuttingedge-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
   	          <source srcset="../gfx/icon-cuttingedge.png, ../gfx/icon-cuttingedge@2x.png 2x, ../gfx/icon-cuttingedge@3x.png 3x">
-              <img src="../gfx/icon-cuttingedge.png" fetchpriority="low" width="60" height="60" alt="Widgets">
+              <img loading="lazy" decoding="async" src="../gfx/icon-cuttingedge.png" fetchpriority="low" width="60" height="60" alt="Widgets">
   	        </picture>
             <h3>Din veckoplan i ett ögonkast</h3>
             <p>Se din veckoplan på låsskärmen eller hemskärmen. Ett tryck och du är redo att laga mat.</p>
   	        <picture>
+  	          <source type="image/webp" srcset="../gfx/iphone-widgets-se.webp 1x, ../gfx/iphone-widgets-se@2x.webp 2x">
   	          <source srcset="../gfx/iphone-widgets-se.png 1x, ../gfx/iphone-widgets-se@2x.png 2x">
-              <img src="../gfx/iphone-widgets-se.png" fetchpriority="low" width="357" height="709" alt="Widgets">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-widgets-se.png" fetchpriority="low" width="357" height="709" alt="Widgets">
   	        </picture>
         </div>
 
@@ -184,13 +195,14 @@
   	        <picture>
   	          <source srcset="../gfx/icon-timer-dark.png, ../gfx/icon-timer-dark@2x.png 2x, ../gfx/icon-timer-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
   	          <source srcset="../gfx/icon-timer.png, ../gfx/icon-timer@2x.png 2x, ../gfx/icon-timer@3x.png 3x">
-              <img src="../gfx/icon-timer.png" fetchpriority="low" width="60" height="60" alt="Flera timers">
+              <img loading="lazy" decoding="async" src="../gfx/icon-timer.png" fetchpriority="low" width="60" height="60" alt="Flera timers">
   	        </picture>
             <h3>Inbyggda timers</h3>
             <p>Starta flera timers direkt i ett recept. Tryck på en tidsangivelse eller ställ in en egen.</p>
   	        <picture>
+  	          <source type="image/webp" srcset="../gfx/iphone-timer-se.webp 1x, ../gfx/iphone-timer-se@2x.webp 2x">
   	          <source srcset="../gfx/iphone-timer-se.png 1x, ../gfx/iphone-timer-se@2x.png 2x">
-              <img src="../gfx/iphone-timer-se.png" fetchpriority="low" width="340" height="709" alt="Inbyggda timers">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-timer-se.png" fetchpriority="low" width="340" height="709" alt="Inbyggda timers">
   	        </picture>
         </div>              
         
@@ -204,42 +216,42 @@
 
       <div class="cards">
         <div class="card chef">
-            <img src="../gfx/chef-veryveggie.png" fetchpriority="low" srcset="../gfx/chef-veryveggie@2x.png 2x, ../gfx/chef-veryveggie@3x.png 3x" width="99" height="99" alt="Very Veggie">
+            <img loading="lazy" decoding="async" src="../gfx/chef-veryveggie.png" fetchpriority="low" srcset="../gfx/chef-veryveggie@2x.png 2x, ../gfx/chef-veryveggie@3x.png 3x" width="99" height="99" alt="Very Veggie">
             <h3 class="tighter-spacing">Sara Ask & Lisa Bjärbo</h3>
             <h4>Mera vego</h4>
             <p>Perfekta vardagsrecept för familjelivet – god, smakrik mat även när tiden är knapp.</p>
         </div>
 
         <div class="card chef">
-            <img src="../gfx/chef-bloodygood.png" fetchpriority="low" srcset="../gfx/chef-bloodygood@2x.png 2x, ../gfx/chef-bloodygood@3x.png 3x" width="99" height="99" alt="Bloody Good">
+            <img loading="lazy" decoding="async" src="../gfx/chef-bloodygood.png" fetchpriority="low" srcset="../gfx/chef-bloodygood@2x.png 2x, ../gfx/chef-bloodygood@3x.png 3x" width="99" height="99" alt="Bloody Good">
             <h3 class="tighter-spacing">Gustav Johansson</h3>
             <h4>Jävligt gott</h4>
             <p>Gustav lär dig hur du bäst använder växtbaserade ingredienser för den rätta texturen och mycket smak.</p>
         </div>
 
         <div class="card chef">
-            <img src="../gfx/chef-foodpharmacy.png" fetchpriority="low" srcset="../gfx/chef-foodpharmacy@2x.png 2x, ../gfx/chef-foodpharmacy@3x.png 3x" width="101" height="101" alt="Food Pharmacy">
+            <img loading="lazy" decoding="async" src="../gfx/chef-foodpharmacy.png" fetchpriority="low" srcset="../gfx/chef-foodpharmacy@2x.png 2x, ../gfx/chef-foodpharmacy@3x.png 3x" width="101" height="101" alt="Food Pharmacy">
             <h3 class="smaller-title tighter-spacing">Mia Clase & Lina Nertby Aurell</h3>
             <h4>Food Pharmacy</h4>
             <p>Laga deras utsökta antiinflammatoriska recept för små men livsviktiga förändringar.</p>
         </div>
 
         <div class="card chef">
-            <img src="../gfx/chef-nordickitchen.png" fetchpriority="low" srcset="../gfx/chef-nordickitchen@2x.png 2x, ../gfx/chef-nordickitchen@3x.png 3x" width="99" height="99" alt="Nordic Kitchen">
+            <img loading="lazy" decoding="async" src="../gfx/chef-nordickitchen.png" fetchpriority="low" srcset="../gfx/chef-nordickitchen@2x.png 2x, ../gfx/chef-nordickitchen@3x.png 3x" width="99" height="99" alt="Nordic Kitchen">
             <h3 class="tighter-spacing">Sofia Nordgren</h3>
             <h4>Nordic Kitchen</h4>
             <p>Växtbaserad matlagning där säsongsbetonade ingredienser står i fokus.</p>
         </div>
 
         <div class="card chef">
-            <img src="../gfx/chef-maggies.png" fetchpriority="low" srcset="../gfx/chef-maggies@2x.png 2x, ../gfx/chef-maggies@3x.png 3x" width="99" height="99" alt="Maggie's Pantry">
+            <img loading="lazy" decoding="async" src="../gfx/chef-maggies.png" fetchpriority="low" srcset="../gfx/chef-maggies@2x.png 2x, ../gfx/chef-maggies@3x.png 3x" width="99" height="99" alt="Maggie's Pantry">
             <h3 class="tighter-spacing">Maggie Bergius</h3>
             <h4>Maggies Skafferi</h4>
             <p>Lättlagad, växtbaserad, och smarrig mat för hela familjen!</p>
         </div>
 
         <div class="card chef">
-            <img src="../gfx/chef-selinas.png" fetchpriority="low" srcset="../gfx/chef-selinas@2x.png 2x, ../gfx/chef-selinas@3x.png 3x" width="99" height="99" alt="Selinas">
+            <img loading="lazy" decoding="async" src="../gfx/chef-selinas.png" fetchpriority="low" srcset="../gfx/chef-selinas@2x.png 2x, ../gfx/chef-selinas@3x.png 3x" width="99" height="99" alt="Selinas">
             <h3 class="tighter-spacing">Selina Hami</h3>
             <h4>Selinas</h4>
             <p>Med inspiration från Syrien, Libanon och Ungern skapar Selina spännande växtbaserade recept.</p>
@@ -249,10 +261,10 @@
 
   <div class="slide-presentation">
       <div class="slide-card-mobile">
-          <img src="../gfx/chef-linnea.png" fetchpriority="low" srcset="../gfx/chef-linnea@2x.png 2x, ../gfx/chef-linnea@3x.png 3x" width="92" height="92" alt="Linnea">
+          <img loading="lazy" decoding="async" src="../gfx/chef-linnea.png" fetchpriority="low" srcset="../gfx/chef-linnea@2x.png 2x, ../gfx/chef-linnea@3x.png 3x" width="92" height="92" alt="Linnea">
       </div>
       <div class="card slide-card">
-          <img src="../gfx/chef-linnea.png" fetchpriority="low" srcset="../gfx/chef-linnea@2x.png 2x, ../gfx/chef-linnea@3x.png 3x" width="92" height="92" alt="Linnea">
+          <img loading="lazy" decoding="async" src="../gfx/chef-linnea.png" fetchpriority="low" srcset="../gfx/chef-linnea@2x.png 2x, ../gfx/chef-linnea@3x.png 3x" width="92" height="92" alt="Linnea">
           <h3>Linnéas lantkök</h3>
           <p>Linnéa lagar mycket efter säsong med grönsaker från den egna odlingen och vild mat från skogen.</p>
       </div>
@@ -273,7 +285,7 @@
       <div class="image-crop ipad-margin">
         <picture>
           <source srcset="../gfx/ipad-hero-se-dark@2x.jpg" media="(prefers-color-scheme: dark)">
-          <img src="../gfx/ipad-hero-se@2x.jpg" fetchpriority="low" width="1753" height="765" alt="Plantry on iPad" class="ipad-hero">
+          <img loading="lazy" decoding="async" src="../gfx/ipad-hero-se@2x.jpg" fetchpriority="low" width="1753" height="765" alt="Plantry on iPad" class="ipad-hero">
         </picture>
       </div>
 
@@ -331,7 +343,7 @@
 
       <div class="review-grid">
       <div class="review">
-            <img src="../gfx/fivestars.svg" fetchpriority="low" class="invertInDarkMode" alt="Five stars">
+            <img loading="lazy" decoding="async" src="../gfx/fivestars.svg" fetchpriority="low" class="invertInDarkMode" alt="Five stars">
             <p><b>Vart har du varit hela mitt liv?? 🥘</b> Livets app precis det här jag behövt! ❤️ Superfin UX, enkelt att ta sig runt appen, olika sektioner med matplaner! Att det finns en sektion för atleter var en banger för mig idrottare! 🏃‍♂️❤️
 
 Vill man ha koll pa näringsinnehållet i måltiden så finns ju även detta såklart snyggt och prydligt i appen perfekt om man vill ha koll på kalorierna ❤️
@@ -341,19 +353,19 @@ Wow verkligen wow!!</p>
       </div>
 
         <div class="review">
-            <img src="../gfx/fivestars.svg" fetchpriority="low" class="invertInDarkMode" alt="Fem stjärnor">
+            <img loading="lazy" decoding="async" src="../gfx/fivestars.svg" fetchpriority="low" class="invertInDarkMode" alt="Fem stjärnor">
             <p><b>Busbra jobbat!</b> Först tänkte jag "Aha, in app purchases, prenumeration, det går fetbort", men så fel jag hade. Massor med vegetariska och veganska recept, smart med olika inriktningar […] För första gången i apphistorien känner jag att det är helt OK att pröjsa för en prenumeration.</p>
             <h2>— På spaning efter den&nbsp;snö&nbsp;som&nbsp;smält</h2>
         </div>
 
         <div class="articlequote">
             <p><b>5 Vegan Apps That Make Your Life Easier </b><br>Plantry creates a shopping list of everything you need to make the recipes. They also provide the nutritional values for every recipe, a built-in timer, and more! We love it already!</p>
-            <a href="https://vegoutmag.com/nationwide/lifestyle-article.php?id=33"><img src="../gfx/vegout.png" fetchpriority="low" srcset="../gfx/vegout@2x.png 2x, ../gfx/vegout@3x.png 3x" alt="TapSmart" class="invertInDarkMode"></a>
+            <a href="https://vegoutmag.com/nationwide/lifestyle-article.php?id=33"><img loading="lazy" decoding="async" src="../gfx/vegout.png" fetchpriority="low" srcset="../gfx/vegout@2x.png 2x, ../gfx/vegout@3x.png 3x" alt="TapSmart" class="invertInDarkMode"></a>
         </div>
 
         <div class="articlequote">
             <p><b>Easy And Ethical Meal Prep </b><br>Whether you're concerned with the ethical, environmental, or health ramifications, Plantry is here to support all your vegan and vegetarian needs.</p>
-            <a href="https://www.tapsmart.com/news/plantry-meal-planner-easy-ethical-meal-prep/"><img src="../gfx/tapsmart.png" fetchpriority="low" srcset="../gfx/tapsmart@2x.png 2x, ../gfx/tapsmart@3x.png 3x" alt="TapSmart" class="invertInDarkMode"></a>
+            <a href="https://www.tapsmart.com/news/plantry-meal-planner-easy-ethical-meal-prep/"><img loading="lazy" decoding="async" src="../gfx/tapsmart.png" fetchpriority="low" srcset="../gfx/tapsmart@2x.png 2x, ../gfx/tapsmart@3x.png 3x" alt="TapSmart" class="invertInDarkMode"></a>
         </div>
       </div>
 
@@ -397,14 +409,14 @@ Wow verkligen wow!!</p>
 
     <div class="giveafork" id="giveafork">
       <div class="giveafork-bg" id="giveaforkBg"></div>
-      <img class="bend-top invertInDarkMode" fetchpriority="low" src="../gfx/bend-top.svg" alt="Bend">
+      <img loading="lazy" decoding="async" class="bend-top invertInDarkMode" fetchpriority="low" src="../gfx/bend-top.svg" alt="Bend">
       <h2>Cook&nbsp;like&nbsp;you give&nbsp;a&nbsp;fork.</h2>
       <h3>Planetvänlig matplanering</h3>
       <footer>
 
         <div class="social-footer">
-  				<a href="mailto:hello@filibaba.com"><img src="../gfx/socialEmail.svg" alt="Email" width="24" height="24"></a>
-  				<a href="https://instagram.com/getplantry/"><img src="../gfx/socialInstagram.svg" alt="Instagram" width="24" height="24"></a>
+  				<a href="mailto:hello@filibaba.com"><img loading="lazy" decoding="async" src="../gfx/socialEmail.svg" alt="Email" width="24" height="24"></a>
+  				<a href="https://instagram.com/getplantry/"><img loading="lazy" decoding="async" src="../gfx/socialInstagram.svg" alt="Instagram" width="24" height="24"></a>
         </div>
 
         <p class="copyright">

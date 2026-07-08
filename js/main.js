@@ -80,6 +80,12 @@ window.addEventListener('load', () => {
   requestAnimationFrame(applyScrollEffects);
 });
 
+// Lazy images finish after the load event and can still shift offsets —
+// re-cache as each one lands.
+document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+  if (!img.complete) img.addEventListener('load', cacheLayout, { once: true });
+});
+
 // ── Smoothed cursor position for Spline tilt ─────────────────────────────────
 let mouseX = 0, mouseY = 0, smoothX = 0, smoothY = 0;
 if (!reducedMotion) {

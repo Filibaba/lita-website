@@ -953,6 +953,8 @@ section {
   padding: 0;
   margin: -1px 0 16px -8px;
   width: calc(100% + 16px);
+  /* Scale with width; the img width/height attrs reserve the space pre-load */
+  height: auto;
 }
 
 .giveafork {

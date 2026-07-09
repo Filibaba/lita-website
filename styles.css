@@ -487,10 +487,6 @@ header {
   opacity: 0.7;
 }
 
-.app-store-download-top-mobile {
-  display: none;
-}
-
 .hero-free-hint-desktop {
   display: block;
   font-size: 13px;
@@ -1279,10 +1275,6 @@ p {
     height: 571px;
   }
 
-  .app-store-download-top-mobile {
-    display: none;
-  }
-
   .hero-cta {
     display: block;
     margin-top: 24px;
@@ -1429,11 +1421,6 @@ p {
   
   .app-store-download-top, .app-store-download-top-qr {
     display: none;
-  }
-
-  .app-store-download-top-mobile {
-    display: block;
-    margin-top: -8px;
   }
 
   .hero-cta {

@@ -1569,6 +1569,27 @@ p {
     text-align: left;
   }
 
+  /* Screenshot and chef cards lose the card chrome on phones —
+     extra class in the selector so this also wins over the dark-mode bg */
+  .cards .card-iphone,
+  .cards .chef {
+    background: none;
+    box-shadow: none;
+    /* Drop the horizontal card padding but keep the vertical rhythm */
+    padding: 16px 0 32px;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .cards .card-iphone picture:last-of-type {
+    margin: auto 0 0;
+    padding-top: 12px;
+  }
+
+  .cards .card-iphone picture:last-of-type img {
+    border-radius: 24px;
+  }
+
   /*   Slideshow */
   
   .slide-card {

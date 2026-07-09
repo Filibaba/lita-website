@@ -268,6 +268,12 @@ html {
   opacity: 0.7;
 }
 
+/* Links read as the surrounding text, underline only */
+.about-inner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .button {
   display: inline-block;
   height: 60px;

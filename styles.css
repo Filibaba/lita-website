@@ -686,6 +686,13 @@ section {
   flex-direction: column;
 }
 
+/* The Leftovers shot is a two-phone composition — same height as the other
+   screenshots, but wider, so it carries its own width at each breakpoint. */
+.card-iphone-xwide picture:last-of-type img {
+  width: 372px;
+  height: 709px;
+}
+
 .cardhero {
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow:0 8px 32px rgba(44, 49, 93, 0.12);
@@ -1243,6 +1250,11 @@ p {
     height: 571px;
   }
 
+  .card-iphone-xwide picture:last-of-type img {
+    width: 300px;
+    height: 571px;
+  }
+
   .chef {
     min-height: 300px;
   }
@@ -1272,6 +1284,11 @@ p {
 
   .card-iphone-wide picture:last-of-type img {
     width: 287px;
+    height: 571px;
+  }
+
+  .card-iphone-xwide picture:last-of-type img {
+    width: 300px;
     height: 571px;
   }
 
@@ -1588,6 +1605,11 @@ p {
 
   .cards .card-iphone picture:last-of-type img {
     border-radius: 24px;
+  }
+
+  .cards .card-iphone-xwide picture:last-of-type img {
+    max-width: 100%;
+    height: auto;
   }
 
   /*   Slideshow */

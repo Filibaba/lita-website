@@ -1,6 +1,7 @@
 # Collapse file-path duplicates of the canonical URLs
 /index.html / 301!
 /se/index.html /se/ 301!
+/de/index.html /de/ 301!
 
 # Redirect domain aliases to primary domain
 https://www.lita.kitchen/* https://www.plantry.app/:splat 301!

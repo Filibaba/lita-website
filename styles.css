@@ -1387,7 +1387,17 @@ p {
   .floating-nav-links {
     width: 100%;
     justify-content: center;
-    gap: 20px;
+    /* Tight enough that the longest label set still fits: the row has ~315px inside a 375px
+       screen, and German/Swedish press labels are far wider than the English ones. */
+    gap: 8px;
+  }
+
+  .floating-nav-link {
+    padding: 8px 10px;
+  }
+
+  .floating-nav-cta {
+    padding: 10px 14px;
   }
 
   .nav-show-mobile { display: inline; }

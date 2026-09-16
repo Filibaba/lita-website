@@ -1,3 +1,16 @@
+# Short URLs for the App Store support and privacy fields
+/support /support.html 200
+/se/support /se/support.html 200
+/de/support /de/support.html 200
+/privacy /privacy.html 200
+/se/privacy /se/privacy.html 200
+/de/privacy /de/privacy.html 200
+
+# The old company-wide policy is still hosted here and now contradicts Plantry's own.
+# Force (!) because the file exists: without it the file would win over the rule.
+/privacypolicy.html /privacy.html 301!
+/privacypolicy /privacy.html 301!
+
 # Collapse file-path duplicates of the canonical URLs
 /index.html / 301!
 /se/index.html /se/ 301!

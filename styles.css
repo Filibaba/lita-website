@@ -396,7 +396,10 @@ header {
 .hero {
   background: #141f33;
   color: white;
-  padding: 64px 0 80px 0;
+  /* Clears the floating nav, which sits at top:12px and has grown taller items since it
+     gained Support and the language menu. Narrower breakpoints already used 80px, so the
+     widest screens were the cramped ones. */
+  padding: 112px 0 80px 0;
   margin: 0;
   text-align: center;
   position: relative;
@@ -1271,6 +1274,15 @@ p {
   }
 }
 
+/* Desktop and tablet below the widest breakpoint: 80px left only 14px under the nav, which
+   is not enough now that it carries Support, the press kit and the language menu. Phones
+   keep 80px, where the nav is shorter and the screen is scarcer. */
+@media (min-width: 568px) and (max-width: 1538px){
+  .hero {
+    padding-top: 96px;
+  }
+}
+
 @media (min-width: 568px) and (max-width: 1052px){
 
   .app-store-download-top, .app-store-download-top-qr {
@@ -1952,4 +1964,128 @@ p {
     background: linear-gradient(to top, #000000, transparent);
   }
 
+}
+
+/* The page you are already on, marked in the nav. Reads like the hover state so it
+   belongs to the same family, but it stays put instead of following the pointer. */
+.floating-nav-link[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+@media (prefers-color-scheme: light) {
+  .floating-nav.is-past-hero .floating-nav-link[aria-current="page"] {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* ── Language menu ────────────────────────────────────────────────────────────
+   A <details> rather than a scripted menu: it opens on click, closes on Escape,
+   and works before any JavaScript runs. More languages are coming, so the list
+   grows downward instead of pushing the nav wider. */
+.nav-lang {
+  position: relative;
+}
+
+.nav-lang > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.nav-lang > summary::-webkit-details-marker { display: none; }
+.nav-lang > summary::marker { content: ""; }
+
+.nav-lang-chevron {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.nav-lang[open] .nav-lang-chevron { transform: rotate(180deg); }
+
+/* `display: flex` below would otherwise override the browser's own hiding of a closed
+   <details>, leaving the menu on screen before anyone opens it. */
+.nav-lang:not([open]) > .nav-lang-menu {
+  display: none;
+}
+
+.nav-lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  padding: 6px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(28, 28, 36, 0.86);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.nav-lang-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Every row reserves the tick's width, so the names stay on one line whichever
+   language is selected and the list does not shift as you switch. */
+.nav-lang-menu a::before {
+  content: "";
+  width: 12px;
+  flex: none;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.nav-lang-menu a:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+/* The language you are already reading, marked the way a menu marks its selection. */
+.nav-lang-menu a[aria-current="true"]::before {
+  content: "✓";
+}
+
+/* Once the nav is over white content it turns light, and so does its menu. */
+@media (prefers-color-scheme: light) {
+  .floating-nav.is-past-hero .nav-lang-menu {
+    background: rgba(255, 255, 255, 0.92);
+    border: 0.5px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+  .floating-nav.is-past-hero .nav-lang-menu a { color: #1c1c1e; }
+  .floating-nav.is-past-hero .nav-lang-menu a:hover { background-color: rgba(0, 0, 0, 0.06); }
+}
+
+/* ── Simplified footer ────────────────────────────────────────────────────────
+   For pages that are read rather than browsed: the same bend into the same dark
+   band, without the full-height photograph or the headline above it. */
+.simple-footer {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: #000;
+}
+
+.simple-footer .bend-top {
+  display: block;
+}
+
+.simple-footer footer {
+  padding-top: 8px;
 }

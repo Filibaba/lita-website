@@ -6,6 +6,7 @@
 /dk/support /dk/support.html 200
 /nl/support /nl/support.html 200
 /fr/support /fr/support.html 200
+/es/support /es/support.html 200
 /privacy /privacy.html 200
 /se/privacy /se/privacy.html 200
 /de/privacy /de/privacy.html 200
@@ -13,6 +14,7 @@
 /dk/privacy /dk/privacy.html 200
 /nl/privacy /nl/privacy.html 200
 /fr/privacy /fr/privacy.html 200
+/es/privacy /es/privacy.html 200
 
 # The old company-wide policy is still hosted here and now contradicts Plantry's own.
 # Force (!) because the file exists: without it the file would win over the rule.
@@ -27,6 +29,7 @@
 /dk/index.html /dk/ 301!
 /nl/index.html /nl/ 301!
 /fr/index.html /fr/ 301!
+/es/index.html /es/ 301!
 
 # Redirect domain aliases to primary domain
 https://www.lita.kitchen/* https://www.plantry.app/:splat 301!

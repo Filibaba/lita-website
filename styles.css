@@ -8,6 +8,35 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
 }
 
+/* Japanese. -apple-system already reaches Hiragino on Apple devices, but elsewhere the
+   Helvetica / sans-serif fallback hands Japanese to whatever CJK face the system picks
+   first, often a Chinese one. Name the Japanese faces, break lines by Japanese rules, and
+   undo the Latin-only touches: synthetic italics and tracked uppercase labels. */
+html:lang(ja),
+.nav-lang-menu a:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic UI", "Yu Gothic", YuGothic, Meiryo, "Noto Sans JP", sans-serif;
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+:lang(ja) :is(h1, h2, h3, h4) {
+  /* Breaks headings between phrases (bunsetsu) where supported; ignored elsewhere. */
+  word-break: auto-phrase;
+}
+/* The hero headline is two short sentences: break only at the <wbr> between them. */
+:lang(ja) header h1 { word-break: keep-all; }
+:lang(ja) i { font-style: normal; }
+:lang(ja) .hero-awards-label { letter-spacing: normal; }
+
+/* Finnish and Icelandic compounds run long enough to overflow a phone-width heading. */
+:lang(fi) :is(h1, h2, h3, h4),
+:lang(is) :is(h1, h2, h3, h4) {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
 
 /* Site navigation */
 

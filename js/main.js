@@ -1,9 +1,15 @@
 // ── Scroll reveal ─────────────────────────────────────────────────────────────
-const revealEls = document.querySelectorAll('section h2, .card, .award, .review, .articlequote, .ipad-hero, .slide-presentation, .giveafork, .hero-cta, .hero-awards, .buttons');
+const revealEls = document.querySelectorAll('section h2, .card, .award, .review, .articlequote, .ipad-hero, .slide-presentation, .giveafork, .hero-cta, .hero-awards, .buttons, .duo-lead, .duo-folded');
 revealEls.forEach(el => el.classList.add('reveal'));
 
 const heroAwards = document.querySelector('.hero-awards');
 if (heroAwards) heroAwards.style.transitionDelay = '150ms';
+
+// The Duo section follows its heading in: the line just after it, the folded phone a beat later.
+const duoLead = document.querySelector('.duo-lead');
+if (duoLead) duoLead.style.transitionDelay = '100ms';
+const duoFolded = document.querySelector('.duo-folded');
+if (duoFolded) duoFolded.style.transitionDelay = '200ms';
 
 requestAnimationFrame(() => requestAnimationFrame(() => {
   const revealObserver = new IntersectionObserver((entries) => {

@@ -407,19 +407,37 @@ header {
   margin: 0;
 }
 
+/* Hero kitchen. The box spans the full width so the kitchen can reach past the old still life's
+   column; each breakpoint still sets the still life's old box (--box-w x --box-h, offset --box-x,
+   vertical position --box-p) and the image is placed so the still life lands exactly where the old
+   3:2 still life rendered (contain, centred, width-limited). In the 2000x1126 artwork the old still
+   life spans x 388-1601, y 34-843. */
 .veggies {
-  background: url(gfx/veggies@2x.jpg);
-  background-size: contain;
-  height: 96vh;
-  width: 60vw;
-  background-position: center center;
+  --box-w: 60vw;
+  --box-h: 96vh;
+  --box-x: 20vw;
+  --box-p: 0.30;
+  --old-w: min(var(--box-w), calc(var(--box-h) * 1.5));
+  --old-h: calc(var(--old-w) / 1.5);
+  --new-w: calc(var(--old-w) / 0.6067);
+  --new-h: calc(var(--new-w) * 0.563);
+  /* JPEG on purpose: WebP blocks visibly in the near-black wall even at q90; JPEG stays smooth down to about q46 (this file is q60, which keeps the added grain). */
+  background-image: url(gfx/hero-kitchen@2x.jpg);
   background-repeat: no-repeat;
-  background-position-y: 30%;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  background-size: var(--new-w) var(--new-h);
+  background-position:
+    calc(var(--box-x) + (var(--box-w) - var(--old-w)) / 2 - var(--new-w) * 0.194)
+    calc((var(--box-h) - var(--old-h)) * var(--box-p) - var(--new-h) * 0.0302);
+  height: var(--box-h);
+  width: 100vw;
+  left: 0;
+  margin: 0;
   position: absolute;
   pointer-events: none;
   z-index: -1;
+  /* Soft bottom edge whatever the window shape, on top of the fade in the image itself. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent);
+  mask-image: linear-gradient(to bottom, #000 72%, transparent);
 }
 
 .hero {
@@ -1230,9 +1248,8 @@ p {
 
 @media screen and (max-width: 1700px) {
   .veggies {
-    width: 80vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    --box-w: 80vw;
+    --box-x: 10vw;
   }
 }
 
@@ -1246,7 +1263,7 @@ p {
     height: 70px;
   }
    .veggies {
-    background-position-y: 55%;
+    --box-p: 0.55;
   } 
   
   header h2 {
@@ -1266,11 +1283,10 @@ p {
   
 @media (min-width: 568px) and (max-width: 1052px) and (max-height: 1024px) {
   .veggies {
-    height: 96vh;
-    width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-    background-position-y: 80%;
+    --box-w: 100vw;
+    --box-h: 96vh;
+    --box-x: 0vw;
+    --box-p: 0.80;
   }
 }
 
@@ -1517,13 +1533,10 @@ p {
   
   .veggies {
     display: block;
-    width: 140vw;
-    height: 70vh;
-    left: 0;
-    right: 0;
-    margin-left: -20vw;
-    margin-right: 0;
-    background-position: center 100%;
+    --box-w: 140vw;
+    --box-h: 70vh;
+    --box-x: -20vw;
+    --box-p: 1;
     opacity: 0.6;
   }
   
@@ -2163,3 +2176,4 @@ p {
 .simple-footer footer {
   padding-top: 8px;
 }
+

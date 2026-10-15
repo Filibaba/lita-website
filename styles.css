@@ -2177,3 +2177,28 @@ p {
   padding-top: 8px;
 }
 
+/* The iPhone feature cards sit straight on the page at every width: no card fill, shadow or
+   rounded clip around the phone (phones already drop it in the max-width: 567px block). The
+   padding stays so the text and phone keep their spacing. Extra class so this beats the dark-mode
+   card fill and the hover rules. */
+.cards .card-iphone,
+.cards .card-iphone:hover {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+/* Without the card fill the rows need more air between them, so each phone reads as part of the
+   text above it rather than the block below. */
+.cards .card-iphone {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 567px) {
+  .cards .card-iphone {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+}

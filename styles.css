@@ -634,6 +634,46 @@ header {
   margin-top: 24px !important;
 }
 
+/* iPhone Duo */
+
+.duo-section {
+  padding: 0 16px;
+}
+
+.duo-section h2 {
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+}
+
+.duo-lead {
+  max-width: 680px;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #333333; /* the card body text colour */
+}
+
+/* Each sentence wraps as one unit, so a line breaks between sentences rather than inside one. */
+.duo-lead span {
+  display: inline-block;
+}
+
+@media (max-width: 567px) {
+  .duo-lead { font-size: 1.0625rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .duo-lead { color: #fff; }
+}
+
+.duo-folded {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto 24px;
+}
+
 
 
 /* Scroll reveal */

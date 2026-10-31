@@ -2159,6 +2159,30 @@ p {
   .floating-nav.is-past-hero .nav-lang-menu a:hover { background-color: rgba(0, 0, 0, 0.06); }
 }
 
+/* The link to Handla above the social icons, as Handla's footer links here. The logo's artwork sits
+   inside empty space in the SVG, so its margins take that space back. */
+footer .handla-link {
+  display: block;
+  margin: 32px 16px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer .handla-link span {
+  display: block;
+  font-size: 12px;
+  font-variant: small-caps;
+  letter-spacing: 5.5px;
+}
+
+footer .handla-link img {
+  display: block;
+  width: 221px;
+  height: auto;
+  margin: -6px auto -20px;
+  filter: invert(1);
+}
+
 /* ── Simplified footer ────────────────────────────────────────────────────────
    For pages that are read rather than browsed: the same bend into the same dark
    band, without the full-height photograph or the headline above it. */

@@ -175,7 +175,7 @@ html:lang(ja),
 }
 
 /* Land jumps below the fixed nav */
-#features, #faq {
+#features, #faq, #terms {
   scroll-margin-top: 90px;
 }
 

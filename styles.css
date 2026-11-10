@@ -1145,6 +1145,10 @@ footer {
   align-items: center;
   padding: 0;
   overflow: hidden;
+  /* iOS Safari's text autosizing enlarged the trademark notice, which wraps over several lines,
+     but not the one-line copyright above it, so the two came out in different sizes. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 footer p {

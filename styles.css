@@ -1112,7 +1112,7 @@ section {
   inset: -15% -80px;
   background-size: cover;
   background-position: center center;
-  background-image: url(gfx/giveafork.jpg);
+  background-image: url(gfx/giveafork-countertop.jpg);
   will-change: transform, filter;
   z-index: 0;
 }

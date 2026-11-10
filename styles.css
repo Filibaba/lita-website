@@ -1478,7 +1478,7 @@ p {
 
 /* Adjust grid for two columns */
 
-@media (min-width: 680px) and (max-width: 1110px){
+@media (min-width: 640px) and (max-width: 1110px){
 
   .cards, .review-grid, .award-grid {
     max-width: 728px;
@@ -1495,7 +1495,7 @@ p {
 
 /* Adjust grid for one column */
 
-@media (min-width: 568px) and (max-width: 679px){
+@media (min-width: 568px) and (max-width: 639px){
   
   .cards, .review-grid, .award-grid {
     max-width: 364px;
@@ -1503,9 +1503,9 @@ p {
   
 }
 
-/* Two cards a row from 680 to 760 (iPhone Duo unfolded, about 703 wide, used to get one): tighter
+/* Two cards a row from 640 to 760 (iPhone Duo unfolded, about 703 wide, used to get one): tighter
    card margins and padding and slightly smaller phones so two fit side by side. */
-@media (min-width: 680px) and (max-width: 760px){
+@media (min-width: 640px) and (max-width: 760px){
 
   .cards, .review-grid, .award-grid {
     max-width: calc(100% - 16px);
@@ -1537,10 +1537,10 @@ p {
     height: 525px;
   }
 
-  /* Awards and reviews are 290 wide with 35 margins: two needed 720. */
+  /* Awards and reviews are 290 wide with 35 margins: two needed 720, and 640 leaves 624. */
   .award, .review {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
   }
 }
 

@@ -2319,7 +2319,8 @@ p {
 /* Room before the next section, which otherwise starts right under the bands. */
 .watch-section { padding-bottom: 72px; }
 
-@media (max-width: 640px) {
+/* Stacked wherever three side by side (804 wide) don't fit, the unfolded iPhone Duo included. */
+@media (max-width: 859px) {
   .watch-trio { flex-direction: column; align-items: center; gap: 48px; }
   .watch-trio img { width: min(280px, 78vw); }
 }

@@ -1117,6 +1117,21 @@ section {
   z-index: 0;
 }
 
+/* A fade to 30% black under the tagline, links and notice, so they sit on calmer ground than the
+   photo's own highlights. Above the photo, below the text (pseudo-elements aren't matched by the
+   rule below). */
+.giveafork::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  z-index: 0;
+}
+
 .giveafork > *:not(.giveafork-bg) {
   position: relative;
   z-index: 1;

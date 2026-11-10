@@ -1478,7 +1478,7 @@ p {
 
 /* Adjust grid for two columns */
 
-@media (min-width: 700px) and (max-width: 1110px){
+@media (min-width: 680px) and (max-width: 1110px){
 
   .cards, .review-grid, .award-grid {
     max-width: 728px;
@@ -1495,12 +1495,47 @@ p {
 
 /* Adjust grid for one column */
 
-@media (min-width: 568px) and (max-width: 740px){
+@media (min-width: 568px) and (max-width: 679px){
   
   .cards, .review-grid, .award-grid {
     max-width: 364px;
   }
   
+}
+
+/* Two cards a row from 680 to 760 (iPhone Duo unfolded, about 703 wide, used to get one): tighter
+   card margins and padding and slightly smaller phones so two fit side by side. */
+@media (min-width: 680px) and (max-width: 760px){
+
+  .cards, .review-grid, .award-grid {
+    max-width: calc(100% - 16px);
+  }
+
+  .card {
+    margin: 8px;
+    padding: 24px 20px;
+    max-width: calc(50% - 16px);
+    flex: 1 1 calc(50% - 16px);
+  }
+
+  .card-iphone picture:last-of-type {
+    margin: auto -20px -20px -20px;
+  }
+
+  .card-iphone picture:last-of-type img {
+    width: 252px;
+    height: 525px;
+  }
+
+  .card-iphone-wide picture:last-of-type img {
+    width: 264px;
+    height: 525px;
+  }
+
+  .card-iphone-xwide picture:last-of-type img {
+    width: 276px;
+    height: 525px;
+  }
 }
 
   

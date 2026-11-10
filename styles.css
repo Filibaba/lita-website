@@ -1536,6 +1536,12 @@ p {
     width: 276px;
     height: 525px;
   }
+
+  /* Awards and reviews are 290 wide with 35 margins: two needed 720. */
+  .award, .review {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 
   

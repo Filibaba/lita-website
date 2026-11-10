@@ -58,6 +58,7 @@ let cachedVH        = window.innerHeight;
 let giveaforkTop    = 0;
 let giveaforkH      = 0;
 let veggiesParallax = 0;
+const touchScreen = window.matchMedia('(any-pointer: coarse)').matches;
 
 function cacheLayout() {
   cachedVW = window.innerWidth;
@@ -169,8 +170,9 @@ function applyScrollEffects() {
   // Mobile nav scrolled state (desktop uses IntersectionObserver above)
   if (mobile) floatingNav.classList.toggle('is-scrolled', sy > 0);
 
-  // Footer parallax — desktop only
-  if (!mobile && !reducedMotion && giveaforkBg && giveaforkH) {
+  // Footer parallax — desktop only: not on phones, and not on touch screens at any width (iPad,
+  // iPhone Duo unfolded), where the photo just sits still.
+  if (!mobile && !touchScreen && !reducedMotion && giveaforkBg && giveaforkH) {
     const rectTop    = giveaforkTop - sy;
     const rectBottom = rectTop + giveaforkH;
     if (rectBottom > 0 && rectTop < vh) {

@@ -297,6 +297,42 @@ html:lang(ja),
   opacity: 0.7;
 }
 
+/* The FAQ's answers fold away under their questions, so the section reads as a list of
+   questions rather than a wall of text; a tap opens one. */
+.faq-item { align-self: stretch; width: 100%; border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent); }
+.faq-item:last-of-type { border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent); }
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 { margin: 0; }
+/* A chevron, pointing down while folded and up when open. */
+.faq-item summary::after {
+  content: "";
+  flex: none;
+  width: 9px;
+  height: 9px;
+  margin: 0 4px 5px 0;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  opacity: 0.55;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease, margin 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(-135deg); margin-bottom: -5px; }
+.faq-item p { opacity: 0.7; }
+.faq-item + h3 { margin-top: 32px; }
+/* The site colours text by element (section p, h3), so the dividers and chevron take
+   their colour from here. */
+.faq-item { color: #000; }
+@media (prefers-color-scheme: dark) { .faq-item { color: #fff; } }
+
 /* Links read as the surrounding text, underline only */
 .about-inner a {
   color: inherit;
@@ -674,6 +710,7 @@ header {
 /* Each sentence wraps as one unit, so a line breaks between sentences rather than inside one. */
 .duo-lead span {
   display: inline-block;
+  text-wrap: balance;
 }
 
 @media (max-width: 567px) {
@@ -2201,4 +2238,28 @@ p {
     margin-top: 16px;
     margin-bottom: 24px;
   }
+}
+
+/* ── Apple Watch ──────────────────────────────────────────────────────────── */
+/* Three watches, each its own image with its full band (transparent, so one image serves
+   light and dark): side by side, or stacked on a phone, where three in a row would come
+   out too small to read. */
+.watch-trio {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px auto;
+}
+.watch-trio img {
+  display: block;
+  width: 252px;
+  height: auto;
+}
+
+/* Room before the next section, which otherwise starts right under the bands. */
+.watch-section { padding-bottom: 72px; }
+
+@media (max-width: 640px) {
+  .watch-trio { flex-direction: column; align-items: center; gap: 8px; }
+  .watch-trio img { width: min(280px, 78vw); }
 }

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="apple-itunes-app" content="app-id=1109976916, affiliate-data=pt=21520800&amp;ct=web-da-banner">
     <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
-    <title>Plantry: Madplanlægning, ugeplan & indkøbsliste</title>
+    <title>Plantry: Opskriftsamling, madplan & indkøbsliste</title>
     <meta name="description"
-    content="Bestem aftensmaden nemt. Planlæg ugen på sekunder med 1 200+ opskrifter og smarte indkøbslister, gratis på iPhone & iPad.">
+    content="Bestem aftensmaden nemt. Gem opskrifter fra enhver hjemmeside eller reel, planlæg ugen på sekunder og få en smart indkøbsliste, gratis på iPhone & iPad.">
     <link rel="canonical" href="https://plantry.app/dk/">
     <link rel="alternate" hreflang="da" href="https://plantry.app/dk/">
     <link rel="alternate" hreflang="en" href="https://plantry.app/">
@@ -25,11 +25,11 @@
 	<meta property="og:url" content="https://plantry.app/dk/">
 	<meta property="og:locale" content="da_DK">
 	<meta property="og:locale:alternate" content="en_US">
-	<meta property="og:description" content="Bestem aftensmaden nemt. Planlæg ugen på sekunder med 1 200+ opskrifter og smarte indkøbslister, gratis på iPhone & iPad.">
+	<meta property="og:description" content="Bestem aftensmaden nemt. Gem opskrifter fra enhver hjemmeside eller reel, planlæg ugen på sekunder og få en smart indkøbsliste, gratis på iPhone & iPad.">
 	<meta property="og:image" content="https://plantry.app/gfx/social.jpg">
     <meta name="twitter:creator" content="@GetPlantry">
     <meta name="twitter:title" content="Plantry: Bestem aftensmaden nemt">
-    <meta name="twitter:description" content="Bestem aftensmaden nemt. Planlæg ugen på sekunder med 1 200+ opskrifter og smarte indkøbslister, gratis på iPhone & iPad.">
+    <meta name="twitter:description" content="Bestem aftensmaden nemt. Gem opskrifter fra enhver hjemmeside eller reel, planlæg ugen på sekunder og få en smart indkøbsliste, gratis på iPhone & iPad.">
     <meta name="twitter:site" content="@GetPlantry">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://plantry.app/gfx/social.jpg">
@@ -37,7 +37,7 @@
     <link rel="preload" as="image" href="../gfx/hero-kitchen@2x.jpg" type="image/jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://prod.spline.design" crossorigin>
-    <link rel="stylesheet" href="../styles.css" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css?v=keeper1" fetchpriority="high">
     <link rel="stylesheet" href="../slideshow.css" fetchpriority="low">
     <link rel="shortcut icon" href="../gfx/plantry-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/plantry-appicon.png">
@@ -46,7 +46,7 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Plantry: Ugeplan & indkøbsliste",
-      "description": "Bestem aftensmaden nemt. Planlæg ugen på sekunder med 1 200+ opskrifter og smarte indkøbslister, gratis på iPhone & iPad.",
+      "description": "Bestem aftensmaden nemt. Gem opskrifter fra enhver hjemmeside eller reel, planlæg ugen på sekunder og få en smart indkøbsliste, gratis på iPhone & iPad.",
       "url": "https://plantry.app/dk/",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "iOS, iPadOS",
@@ -293,6 +293,25 @@
       </picture>
   </section>
 
+  <section class="duo-section watch-section">
+      <h2>Lavet til Apple Watch</h2>
+      <p class="duo-lead"><span>Indkøbslisten på håndleddet.</span> <span>Sæt flueben, mens du handler, og tilføj mere med stemmen.</span></p>
+      <div class="watch-trio" role="img" aria-label="Plantry på Apple Watch: indkøbslisten, ugens madplan og diktering">
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-1.webp 1x, ../gfx/watch-1@2x.webp 2x">
+          <img src="../gfx/watch-1.png" srcset="../gfx/watch-1@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
+          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-3.webp 1x, ../gfx/watch-3@2x.webp 2x">
+          <img src="../gfx/watch-3.png" srcset="../gfx/watch-3@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+      </div>
+  </section>
+
 
   <section>
       <h2>Mød vores kokke…</h2>
@@ -475,61 +494,100 @@ Wow, virkelig wow!!</p>
 
     <section id="faq">
       <div class="about-inner">
-        <h2>Appen til madplanlægning, ugeplan og indkøbsliste</h2>
-        <p>Plantry er en app til madplanlægning til iPhone og iPad, som fjerner det evige &rdquo;hvad skal vi have til aftensmad?&rdquo;. Vælg en færdig ugeplan, juster den, eller byg din egen fra bunden, så skriver Plantry indkøbslisten for dig på få sekunder. Mens du planlægger, foreslår appen opskrifter, der passer til det, du allerede har valgt.</p>
-        <p>Alle de opskrifter, vi udgiver, er plantebaserede: over 1&nbsp;200 vegetariske og veganske aftensretter skabt af vores kokke, fra hurtige hverdagsretter til weekendfavoritter. Gem opskrifter, du finder på nettet, i den samme samling, hold styr på ugens madplan og indkøbslisten med widgets på låseskærmen eller hjemmeskærmen, og lav mad med timere indbygget i hver opskrift.</p>
+        <h2>Opskriftsamling, madplan og indkøbsliste i én app</h2>
+        <p>Plantry er en app til opskrifter, madplanlægning og indkøbslister til iPhone og iPad, som fjerner det evige &rdquo;hvad skal vi have til aftensmad?&rdquo;. Saml de opskrifter, du elsker, ét sted, vælg en færdig ugeplan, juster den, eller byg din egen fra bunden, så skriver Plantry indkøbslisten for dig på få sekunder. Mens du planlægger, foreslår appen opskrifter, der passer til det, du allerede har valgt.</p>
+        <p>Gem opskrifter fra enhver hjemmeside, fra Instagram eller TikTok, skriv familiens favoritter ned, eller vælg blandt over 1&nbsp;200 aftensretter fra vores kokke, fra hurtige hverdagsretter til weekendfavoritter, med et stort udvalg af vegetariske og veganske retter. De havner alle i den samme kogebog. Hold styr på ugens madplan og indkøbslisten med widgets på låseskærmen eller hjemmeskærmen, og lav mad med timere indbygget i hver opskrift.</p>
         <p>Et halvfyldt køleskab, der skal spises op? Skriv, hvad du har derhjemme, eller tag et par billeder af køleskabet, så rangerer den nye Rester-funktion opskrifterne efter, hvor meget af det de bruger. Indkøbslisten sorterer sig selv efter varehylderne i den rækkefølge, du faktisk handler i, giver hver ingrediens sit eget illustrerede ikon, og bliver printet lige så pænt som opskrifterne og ugeplanen.</p>
-        <h3>Virker Plantry på iPhone Duo?</h3>
-        <p>Ja. Fold den ud, og Plantry fylder den store skærm med flere af dine kogebøger, madplaner og opskrifter. Hængslet gør arbejdet: Fold den, mens en opskrift er åben, så tager madlavningstilstanden over, eller fold den halvt på tværs, så ligger ingredienserne på den ene side og trinene på den anden.</p>
+        <details class="faq-item">
+          <summary><h3>Virker Plantry på iPhone Duo?</h3></summary>
+          <p>Ja. Fold den ud, og Plantry fylder den store skærm med flere af dine kogebøger, madplaner og opskrifter. Hængslet gør arbejdet: Fold den, mens en opskrift er åben, så tager madlavningstilstanden over, eller fold den halvt på tværs, så ligger ingredienserne på den ene side og trinene på den anden.</p>
+        </details>
 
 
-        <h3>Er Plantry gratis?</h3>
-        <p>Plantry er gratis at hente, og alle nye medlemmer får 7 dages gratis prøveperiode. Derefter låser et abonnement i appen op for alle ugeplaner og opskrifter. Den aktuelle pris vises altid i appen, før du bestemmer dig, og du kan opsige når som helst.</p>
+        <details class="faq-item">
+          <summary><h3>Virker Plantry på Apple Watch?</h3></summary>
+          <p>Ja. Indkøbslisten følger med på håndleddet: Sæt flueben ved varerne, mens du handler, tilføj mere med stemmen, og se ugens madplan med et enkelt blik. Ændringerne går direkte tilbage til din iPhone.</p>
+        </details>
 
-        <h3>Er opskrifterne vegetariske eller veganske?</h3>
-        <p>De opskrifter, der følger med Plantry, er plantebaserede: en blanding af veganske og vegetariske retter fra kokke, der laver den slags mad hver dag. Men appen er ikke begrænset til dem. Gem hvilken som helst opskrift fra nettet, eller skriv din egen, og kategoriser den som fisk, kød, fjerkræ eller skaldyr lige så nemt som vegetarisk. Den havner i den samme kogebog, den samme ugeplan og den samme indkøbsliste.</p>
+        <details class="faq-item">
+          <summary><h3>Er Plantry gratis?</h3></summary>
+          <p>Plantry er gratis at hente, og alle nye medlemmer får 7 dages gratis prøveperiode. Derefter låser et abonnement i appen op for alle ugeplaner og opskrifter. Den aktuelle pris vises altid i appen, før du bestemmer dig, og du kan opsige når som helst.</p>
+        </details>
 
-        <h3>Kan jeg kun se veganske eller glutenfri opskrifter?</h3>
-        <p>Ja. Under Kostpræferencer i indstillingerne filtrerer du hele appen: til vegansk, glutenfri eller begge dele på én gang. Søgning, madplaner og forslag følger dit valg.</p>
+        <details class="faq-item">
+          <summary><h3>Hvilke slags opskrifter kan jeg gemme i Plantry?</h3></summary>
+          <p>Alle slags. Gem hvilken som helst opskrift fra nettet, eller skriv din egen, fra fisk, kød og fjerkræ til vegansk, så havner den i den samme kogebog, den samme ugeplan og den samme indkøbsliste. Vores kokkes opskrifter rummer et stort udvalg af vegetariske og veganske retter, og med Kostpræferencer ser du kun dem, når du har lyst.</p>
+        </details>
 
-        <h3>Kan jeg bruge Plantry som opskriftssamling?</h3>
-        <p>Ja. Plantry fungerer som din egen digitale kogebog. Gem opskrifter fra hvilken som helst hjemmeside, tilføj familiefavoritter fra bunden, eller juster vores, så de passer til dig. Alt, hvad du samler, havner i Min&nbsp;kogebog, som du kan tilpasse helt med dit eget navn, din egen beskrivelse og dit eget billede, og hver opskrift er klar til at blive lagt ind i næste uges madplan.</p>
+        <details class="faq-item">
+          <summary><h3>Kan jeg kun se vegetariske, veganske eller glutenfri opskrifter?</h3></summary>
+          <p>Ja. Under Kostpræferencer i indstillingerne filtrerer du hele appen: til vegetarisk eller vegansk, til glutenfri, eller til glutenfri kombineret med en af dem. Søgning, madplaner og forslag følger dit valg.</p>
+        </details>
 
-        <h3>Kan jeg gemme opskrifter fra Instagram og TikTok?</h3>
-        <p>Ja. Del en madlavningsreel eller en TikTok til Plantry, så henter appen videoen, laver teksten om til en komplet opskrift og skriver trinnene fra videoen ud, når de mangler i beskrivelsen. Klippet afspilles øverst i den gemte opskrift, så du kan følge med, mens du laver maden.</p>
+        <details class="faq-item">
+          <summary><h3>Kan jeg bruge Plantry som opskriftssamling?</h3></summary>
+          <p>Ja. Plantry fungerer som din egen digitale kogebog. Gem opskrifter fra hvilken som helst hjemmeside, tilføj familiefavoritter fra bunden, eller juster vores, så de passer til dig. Alt, hvad du samler, havner i Min&nbsp;kogebog, som du kan tilpasse helt med dit eget navn, din egen beskrivelse og dit eget billede, og hver opskrift er klar til at blive lagt ind i næste uges madplan.</p>
+        </details>
 
-        <h3>Hvordan fungerer indkøbslisten?</h3>
-        <p>Når du planlægger ugen, samler Plantry automatisk alle de ingredienser, du skal bruge, i én enkelt indkøbsliste, så én tur i butikken rækker til hele ugen. Varerne sorteres efter varehylder, og du kan trække kategorierne rundt i den rækkefølge, du faktisk går gennem din butik. Hver ingrediens får en håndtegnet illustration, så listen er nem at overskue med indkøbsvognen i den ene hånd, og du kan tilføje og rette dine egne varer med forslag, der lærer, hvad du plejer at købe.</p>
+        <details class="faq-item">
+          <summary><h3>Kan jeg gemme opskrifter fra Instagram og TikTok?</h3></summary>
+          <p>Ja. Del en madlavningsreel eller en TikTok til Plantry, så henter appen videoen, laver teksten om til en komplet opskrift og skriver trinnene fra videoen ud, når de mangler i beskrivelsen. Klippet afspilles øverst i den gemte opskrift, så du kan følge med, mens du laver maden.</p>
+        </details>
 
-        <h3>Kan Plantry hjælpe mig med at bruge rester op?</h3>
-        <p>Ja. Det er præcis det, Rester-funktionen er til for. Skriv, hvad du allerede har derhjemme, eller tag et par billeder af køleskabet, så rangerer Plantry opskrifterne efter, hvor meget af det de bruger. Vælg dem, du kan lide, så havner de direkte i din plan.</p>
+        <details class="faq-item">
+          <summary><h3>Hvordan fungerer indkøbslisten?</h3></summary>
+          <p>Når du planlægger ugen, samler Plantry automatisk alle de ingredienser, du skal bruge, i én enkelt indkøbsliste, så én tur i butikken rækker til hele ugen. Varerne sorteres efter varehylder, og du kan trække kategorierne rundt i den rækkefølge, du faktisk går gennem din butik. Hver ingrediens får en håndtegnet illustration, så listen er nem at overskue med indkøbsvognen i den ene hånd, og du kan tilføje og rette dine egne varer med forslag, der lærer, hvad du plejer at købe.</p>
+        </details>
 
-        <h3>Kan jeg lave mad uden at svine skærmen til?</h3>
-        <p>Ja. I fuldskærmstilstand med håndfri læses hvert trin op, og du styrer med stemmen, så du aldrig behøver at pille ved skærmen med klistrede fingre. Der er også håndbevægelser, og den lytter på det sprog, du bruger Plantry på, eller på engelsk, hvis din iPhone ikke genkender sproget.</p>
+        <details class="faq-item">
+          <summary><h3>Kan Plantry hjælpe mig med at bruge rester op?</h3></summary>
+          <p>Ja. Det er præcis det, Rester-funktionen er til for. Skriv, hvad du allerede har derhjemme, eller tag et par billeder af køleskabet, så rangerer Plantry opskrifterne efter, hvor meget af det de bruger. Vælg dem, du kan lide, så havner de direkte i din plan.</p>
+        </details>
 
-        <h3>Kan jeg ændre, hvor mange portioner en opskrift giver?</h3>
-        <p>Indstil husstandens portionsstørrelse én gang, så skaleres alle opskrifter derefter, sammen med mængderne på indkøbslisten. Gæster til aftensmad? Vælg et andet antal for en enkelt opskrift uden at ændre dit sædvanlige.</p>
+        <details class="faq-item">
+          <summary><h3>Kan jeg lave mad uden at svine skærmen til?</h3></summary>
+          <p>Ja. I fuldskærmstilstand med håndfri læses hvert trin op, og du styrer med stemmen, så du aldrig behøver at pille ved skærmen med klistrede fingre. Der er også håndbevægelser, og den lytter på det sprog, du bruger Plantry på, eller på engelsk, hvis din iPhone ikke genkender sproget.</p>
+        </details>
 
-        <h3>Kan jeg printe en opskrift eller min indkøbsliste?</h3>
-        <p>Ja. Du kan printe en enkelt opskrift, en hel ugeplan eller din indkøbsliste, hver især formateret til papir og ikke bare dumpet direkte fra skærmen.</p>
+        <details class="faq-item">
+          <summary><h3>Kan jeg ændre, hvor mange portioner en opskrift giver?</h3></summary>
+          <p>Indstil husstandens portionsstørrelse én gang, så skaleres alle opskrifter derefter, sammen med mængderne på indkøbslisten. Gæster til aftensmad? Vælg et andet antal for en enkelt opskrift uden at ændre dit sædvanlige.</p>
+        </details>
 
-        <h3>Hvad kan jeg lægge på låseskærmen?</h3>
-        <p>Plantry har widgets til både ugeplanen og indkøbslisten, på låseskærmen og hjemmeskærmen. Hav aftenens opskrift, og hvor langt du er nået i ugen, lige for øjnene af dig, eller tag selve listen med, så den er ét blik væk i butikken. På iOS 27 findes begge i en ny ekstra stor størrelse, med mere i syne på én gang.</p>
+        <details class="faq-item">
+          <summary><h3>Kan jeg printe en opskrift eller min indkøbsliste?</h3></summary>
+          <p>Ja. Du kan printe en enkelt opskrift, en hel ugeplan eller din indkøbsliste, hver især formateret til papir og ikke bare dumpet direkte fra skærmen.</p>
+        </details>
 
-        <h3>Fungerer Plantry på iPad?</h3>
-        <p>Ja. Plantry er bygget til både iPhone og iPad, og Apple har fremhævet den blandt de bedste apps til iPadOS.</p>
+        <details class="faq-item">
+          <summary><h3>Hvad kan jeg lægge på låseskærmen?</h3></summary>
+          <p>Plantry har widgets til både ugeplanen og indkøbslisten, på låseskærmen og hjemmeskærmen. Hav aftenens opskrift, og hvor langt du er nået i ugen, lige for øjnene af dig, eller tag selve listen med, så den er ét blik væk i butikken. På iOS 27 findes begge i en ny ekstra stor størrelse, med mere i syne på én gang.</p>
+        </details>
 
-        <h3>Findes Plantry på svensk?</h3>
-        <p>Ja. Appen er fuldt lokaliseret på svensk, med opskrifter fra folkekære svenske kokke. <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a></p>
+        <details class="faq-item">
+          <summary><h3>Fungerer Plantry på iPad?</h3></summary>
+          <p>Ja. Plantry er bygget til både iPhone og iPad, og Apple har fremhævet den blandt de bedste apps til iPadOS.</p>
+        </details>
 
-        <h3>Findes Plantry på tysk?</h3>
-        <p>Ja. Appen er fuldt lokaliseret på tysk, opskrifter og indkøbsliste inklusive. Du kan skifte mellem engelsk, svensk og tysk når som helst under Indstillinger. <a href="../de/index.html">Mehr auf Deutsch&nbsp;&rarr;</a></p>
+        <details class="faq-item">
+          <summary><h3>Findes Plantry på svensk?</h3></summary>
+          <p>Ja. Appen er fuldt lokaliseret på svensk, med opskrifter fra folkekære svenske kokke. <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a></p>
+        </details>
 
-        <h3>Findes Plantry på dansk?</h3>
-        <p>Ja. Appen er fuldt lokaliseret på dansk, opskrifter og indkøbsliste inklusive. Du kan skifte mellem dansk, engelsk, svensk og tysk når som helst under Indstillinger.</p>
+        <details class="faq-item">
+          <summary><h3>Findes Plantry på tysk?</h3></summary>
+          <p>Ja. Appen er fuldt lokaliseret på tysk, opskrifter og indkøbsliste inklusive. Du kan skifte mellem appens 11 sprog når som helst under Indstillinger. <a href="../de/index.html">Mehr auf Deutsch&nbsp;&rarr;</a></p>
+        </details>
 
-        <h3>Findes Plantry til Android?</h3>
-        <p>Plantry er en app til iPhone og iPad. Der findes i øjeblikket ingen version til Android.</p>
+        <details class="faq-item">
+          <summary><h3>Findes Plantry på dansk?</h3></summary>
+          <p>Ja. Appen er fuldt lokaliseret på dansk, opskrifter og indkøbsliste inklusive. Du kan skifte mellem appens 11 sprog når som helst under Indstillinger.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Findes Plantry til Android?</h3></summary>
+          <p>Plantry er en app til iPhone og iPad. Der findes i øjeblikket ingen version til Android.</p>
+        </details>
 
         <h3>Har du flere spørgsmål?</h3>
         <p>Skriv til os på <a href="mailto:hello@filibaba.com">hello@filibaba.com</a>, eller tryk på Indstillinger &rarr; Skriv til os &rarr; Send feedback i appen. Vi læser alt.</p>
@@ -563,7 +621,7 @@ Wow, virkelig wow!!</p>
       </footer>
     </div>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=keeper1"></script>
   <script src="../js/lang-menu.js"></script>
 
   <script type="importmap">

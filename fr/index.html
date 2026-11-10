@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="apple-itunes-app" content="app-id=1109976916, affiliate-data=pt=21520800&amp;ct=web-fr-banner">
     <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
-    <title>Plantry&nbsp;: menu de la semaine et liste de courses</title>
+    <title>Plantry&nbsp;: carnet de recettes, menus et liste de courses</title>
     <meta name="description"
-    content="Le dîner, enfin réglé. Planifie ta semaine en quelques secondes avec plus de 1 200 recettes et une liste de courses maline, gratuit sur iPhone et iPad.">
+    content="Le dîner, enfin réglé. Enregistre des recettes depuis n’importe quel site ou reel, planifie ta semaine en quelques secondes et obtiens une liste de courses maline, gratuit sur iPhone et iPad.">
     <link rel="canonical" href="https://plantry.app/fr/">
     <link rel="alternate" hreflang="fr" href="https://plantry.app/fr/">
     <link rel="alternate" hreflang="en" href="https://plantry.app/">
@@ -25,11 +25,11 @@
 	<meta property="og:url" content="https://plantry.app/fr/">
 	<meta property="og:locale" content="fr_FR">
 	<meta property="og:locale:alternate" content="en_US">
-	<meta property="og:description" content="Le dîner, enfin réglé. Planifie ta semaine en quelques secondes avec plus de 1 200 recettes et une liste de courses maline, gratuit sur iPhone et iPad.">
+	<meta property="og:description" content="Le dîner, enfin réglé. Enregistre des recettes depuis n’importe quel site ou reel, planifie ta semaine en quelques secondes et obtiens une liste de courses maline, gratuit sur iPhone et iPad.">
 	<meta property="og:image" content="https://plantry.app/gfx/social.jpg">
     <meta name="twitter:creator" content="@GetPlantry">
     <meta name="twitter:title" content="Plantry&nbsp;: le dîner, enfin réglé">
-    <meta name="twitter:description" content="Le dîner, enfin réglé. Planifie ta semaine en quelques secondes avec plus de 1 200 recettes et une liste de courses maline, gratuit sur iPhone et iPad.">
+    <meta name="twitter:description" content="Le dîner, enfin réglé. Enregistre des recettes depuis n’importe quel site ou reel, planifie ta semaine en quelques secondes et obtiens une liste de courses maline, gratuit sur iPhone et iPad.">
     <meta name="twitter:site" content="@GetPlantry">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://plantry.app/gfx/social.jpg">
@@ -37,7 +37,7 @@
     <link rel="preload" as="image" href="../gfx/hero-kitchen@2x.jpg" type="image/jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://prod.spline.design" crossorigin>
-    <link rel="stylesheet" href="../styles.css" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css?v=keeper1" fetchpriority="high">
     <link rel="stylesheet" href="../slideshow.css" fetchpriority="low">
     <link rel="shortcut icon" href="../gfx/plantry-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/plantry-appicon.png">
@@ -46,7 +46,7 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Plantry : menu de la semaine et liste de courses",
-      "description": "Le dîner, enfin réglé. Planifie ta semaine en quelques secondes avec plus de 1 200 recettes et une liste de courses maline, gratuit sur iPhone et iPad.",
+      "description": "Le dîner, enfin réglé. Enregistre des recettes depuis n’importe quel site ou reel, planifie ta semaine en quelques secondes et obtiens une liste de courses maline, gratuit sur iPhone et iPad.",
       "url": "https://plantry.app/fr/",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "iOS, iPadOS",
@@ -293,6 +293,25 @@
       </picture>
   </section>
 
+  <section class="duo-section watch-section">
+      <h2>Pensé pour l’Apple Watch</h2>
+      <p class="duo-lead"><span>Ta liste de courses au poignet.</span> <span>Coche au fil des rayons, et ajoute des articles à la voix.</span></p>
+      <div class="watch-trio" role="img" aria-label="Plantry sur l’Apple Watch&nbsp;: la liste de courses, le menu de la semaine et la dictée">
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-1.webp 1x, ../gfx/watch-1@2x.webp 2x">
+          <img src="../gfx/watch-1.png" srcset="../gfx/watch-1@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
+          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-3.webp 1x, ../gfx/watch-3@2x.webp 2x">
+          <img src="../gfx/watch-3.png" srcset="../gfx/watch-3@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+      </div>
+  </section>
+
 
   <section>
       <h2>Rencontre nos chefs…</h2>
@@ -475,55 +494,90 @@ Wow, vraiment wow&nbsp;!!</p>
 
     <section id="faq">
       <div class="about-inner">
-        <h2>L’app de menus de la semaine et de liste de courses</h2>
-        <p>Plantry est une application de menus pour iPhone et iPad qui te retire de la tête l’éternel «&nbsp;qu’est-ce qu’on mange ce soir&nbsp;?&nbsp;». Choisis un menu de la semaine tout prêt, retouche-le ou construis le tien de zéro&nbsp;: Plantry écrit la liste de courses en quelques secondes. Pendant que tu planifies, elle te propose des recettes qui vont bien avec ce que tu as déjà choisi.</p>
-        <p>Chaque recette que nous publions est végétale&nbsp;: plus de 1 200 dîners végétariens et véganes créés par nos chefs, du plat de semaine express aux favoris du week-end. Enregistre dans la même collection les recettes que tu trouves sur le web, garde le menu de la semaine et la liste de courses sous la main grâce aux widgets de l’écran verrouillé ou de l’écran d’accueil, et cuisine avec des minuteurs intégrés à chaque recette.</p>
+        <h2>Ton carnet de recettes, tes menus et ta liste de courses, réunis</h2>
+        <p>Plantry est un carnet de recettes, un planificateur de menus et une liste de courses pour iPhone et iPad qui te retire de la tête l’éternel «&nbsp;qu’est-ce qu’on mange ce soir&nbsp;?&nbsp;». Garde au même endroit les recettes que tu aimes, choisis un menu de la semaine tout prêt, retouche-le ou construis le tien de zéro&nbsp;: Plantry écrit la liste de courses en quelques secondes. Pendant que tu planifies, elle te propose des recettes qui vont bien avec ce que tu as déjà choisi.</p>
+        <p>Enregistre des recettes depuis n’importe quel site, Instagram ou TikTok, note les grands classiques de la famille, ou pioche parmi plus de 1 200 dîners créés par nos chefs, du plat de semaine express aux favoris du week-end, avec un large choix de plats végétariens et véganes. Tout se retrouve dans le même livre de cuisine. Garde le menu de la semaine et la liste de courses sous la main grâce aux widgets de l’écran verrouillé ou de l’écran d’accueil, et cuisine avec des minuteurs intégrés à chaque recette.</p>
         <p>Un demi-frigo à écouler&nbsp;? Dis ce que tu as, ou prends quelques photos de ton frigo, et la nouvelle fonction Restes classe les recettes selon ce qu’elles en utilisent. La liste de courses se range toute seule par rayon, dans l’ordre où tu traverses vraiment ton magasin, donne à chaque ingrédient son icône illustrée et s’imprime aussi joliment qu’une recette ou qu’un menu.</p>
-        <h3>Plantry fonctionne-t-il sur l’iPhone Duo&nbsp;?</h3>
-        <p>Oui. Déplie-le et Plantry remplit le grand écran avec davantage de tes livres de cuisine, de tes menus et de tes recettes. La charnière fait le travail&nbsp;: plie-le sur une recette et le mode Cuisine prend le relais, ou plie-le à moitié à l’horizontale et les ingrédients se placent d’un côté, les étapes de l’autre.</p>
+        <details class="faq-item">
+          <summary><h3>Plantry fonctionne-t-il sur l’iPhone Duo&nbsp;?</h3></summary>
+          <p>Oui. Déplie-le et Plantry remplit le grand écran avec davantage de tes livres de cuisine, de tes menus et de tes recettes. La charnière fait le travail&nbsp;: plie-le sur une recette et le mode Cuisine prend le relais, ou plie-le à moitié à l’horizontale et les ingrédients se placent d’un côté, les étapes de l’autre.</p>
+        </details>
 
 
-        <h3>Plantry est-elle gratuite&nbsp;?</h3>
-        <p>Plantry se télécharge gratuitement, et chaque nouveau membre a 7 jours d’essai gratuit. Ensuite, un abonnement dans l’app débloque tous les menus de la semaine et toutes les recettes. Le prix du moment est toujours affiché dans l’app avant que tu t’engages, et tu peux résilier quand tu veux.</p>
+        <details class="faq-item">
+          <summary><h3>Plantry fonctionne-t-il sur l’Apple Watch&nbsp;?</h3></summary>
+          <p>Oui. Ta liste de courses t’accompagne au poignet&nbsp;: coche les articles au fil des rayons, ajoute-en à la voix et jette un œil au menu de la semaine. Les modifications reviennent aussitôt sur ton iPhone.</p>
+        </details>
 
-        <h3>Les recettes sont-elles végétariennes ou véganes&nbsp;?</h3>
-        <p>Les recettes livrées avec Plantry sont végétales&nbsp;: un mélange de plats véganes et végétariens, signés par des chefs qui cuisinent ainsi tous les jours. L’app, elle, ne s’y limite pas. Enregistre n’importe quelle recette du web ou écris la tienne, et classe-la en poisson, viande, volaille ou fruits de mer aussi facilement qu’en végétarien. Elle rejoint le même livre de cuisine, le même menu de la semaine et la même liste de courses.</p>
+        <details class="faq-item">
+          <summary><h3>Plantry est-elle gratuite&nbsp;?</h3></summary>
+          <p>Plantry se télécharge gratuitement, et chaque nouveau membre a 7 jours d’essai gratuit. Ensuite, un abonnement dans l’app débloque tous les menus de la semaine et toutes les recettes. Le prix du moment est toujours affiché dans l’app avant que tu t’engages, et tu peux résilier quand tu veux.</p>
+        </details>
 
-        <h3>Puis-je n’afficher que les recettes véganes ou sans gluten&nbsp;?</h3>
-        <p>Oui. Préférences alimentaires, dans les Réglages, filtre toute l’app&nbsp;: en végane, en sans gluten, ou les deux à la fois. La recherche, les menus de la semaine et les suggestions suivent ton choix.</p>
+        <details class="faq-item">
+          <summary><h3>Quels types de recettes puis-je garder dans Plantry&nbsp;?</h3></summary>
+          <p>Tous. Enregistre n’importe quelle recette du web ou écris la tienne, du poisson, de la viande et de la volaille au végane&nbsp;: elle rejoint le même livre de cuisine, le même menu de la semaine et la même liste de courses. Les recettes de nos chefs comptent une grande collection de plats végétariens et véganes, et Préférences alimentaires n’affiche qu’eux quand tu le souhaites.</p>
+        </details>
 
-        <h3>Puis-je me servir de Plantry comme carnet de recettes&nbsp;?</h3>
-        <p>Oui. Plantry fait aussi office de livre de cuisine numérique. Enregistre des recettes depuis n’importe quel site, ajoute les classiques de la famille ou retouche les nôtres pour qu’elles collent à ta façon de cuisiner. Tout ce que tu rassembles vit dans Mes&nbsp;recettes, que tu personnalises entièrement avec ton propre nom, ta description et ton image, et chaque recette qui s’y trouve est prête à glisser dans le menu de la semaine prochaine.</p>
+        <details class="faq-item">
+          <summary><h3>Puis-je n’afficher que les recettes végétariennes, véganes ou sans gluten&nbsp;?</h3></summary>
+          <p>Oui. Préférences alimentaires, dans les Réglages, filtre toute l’app&nbsp;: en végétarien ou en végane, en sans gluten, ou en sans gluten combiné à l’un des deux. La recherche, les menus de la semaine et les suggestions suivent ton choix.</p>
+        </details>
 
-        <h3>Puis-je enregistrer des recettes d’Instagram et de TikTok&nbsp;?</h3>
-        <p>Oui. Partage un reel de cuisine ou un TikTok vers Plantry&nbsp;: l’app récupère la vidéo, transforme la légende en recette complète et rédige les étapes à partir de la vidéo quand la légende les oublie. Le clip se lit en haut de la recette enregistrée, pour que tu puisses suivre en cuisinant.</p>
+        <details class="faq-item">
+          <summary><h3>Puis-je me servir de Plantry comme carnet de recettes&nbsp;?</h3></summary>
+          <p>Oui. Plantry fait aussi office de livre de cuisine numérique. Enregistre des recettes depuis n’importe quel site, ajoute les classiques de la famille ou retouche les nôtres pour qu’elles collent à ta façon de cuisiner. Tout ce que tu rassembles vit dans Mes&nbsp;recettes, que tu personnalises entièrement avec ton propre nom, ta description et ton image, et chaque recette qui s’y trouve est prête à glisser dans le menu de la semaine prochaine.</p>
+        </details>
 
-        <h3>Comment marche la liste de courses&nbsp;?</h3>
-        <p>Quand tu planifies ta semaine, Plantry rassemble tout seul chaque ingrédient dont tu auras besoin dans une seule liste de courses&nbsp;: une seule sortie couvre la semaine entière. Les articles se rangent par rayon, et tu fais glisser ces rayons dans l’ordre où tu traverses vraiment ton magasin. Chaque ingrédient reçoit une illustration dessinée à la main, pour que la liste se lise d’un regard avec un caddie dans l’autre main, et tu ajoutes et modifies tes propres articles avec des suggestions qui apprennent ce que tu achètes d’habitude.</p>
+        <details class="faq-item">
+          <summary><h3>Puis-je enregistrer des recettes d’Instagram et de TikTok&nbsp;?</h3></summary>
+          <p>Oui. Partage un reel de cuisine ou un TikTok vers Plantry&nbsp;: l’app récupère la vidéo, transforme la légende en recette complète et rédige les étapes à partir de la vidéo quand la légende les oublie. Le clip se lit en haut de la recette enregistrée, pour que tu puisses suivre en cuisinant.</p>
+        </details>
 
-        <h3>Plantry m’aide-t-elle à écouler les restes&nbsp;?</h3>
-        <p>Oui, c’est exactement à ça que sert la fonction Restes. Dis ce que tu as déjà chez toi, ou prends quelques photos de ton frigo, et Plantry classe les recettes selon ce qu’elles en utilisent. Choisis celles qui te tentent et elles partent directement dans ton menu.</p>
+        <details class="faq-item">
+          <summary><h3>Comment marche la liste de courses&nbsp;?</h3></summary>
+          <p>Quand tu planifies ta semaine, Plantry rassemble tout seul chaque ingrédient dont tu auras besoin dans une seule liste de courses&nbsp;: une seule sortie couvre la semaine entière. Les articles se rangent par rayon, et tu fais glisser ces rayons dans l’ordre où tu traverses vraiment ton magasin. Chaque ingrédient reçoit une illustration dessinée à la main, pour que la liste se lise d’un regard avec un caddie dans l’autre main, et tu ajoutes et modifies tes propres articles avec des suggestions qui apprennent ce que tu achètes d’habitude.</p>
+        </details>
 
-        <h3>Puis-je cuisiner sans salir l’écran&nbsp;?</h3>
-        <p>Oui. Le mode cuisine plein écran avec les mains libres lit chaque étape à voix haute et obéit à la voix, pour que tu n’aies jamais à toucher l’écran les doigts collants. Les gestes de la main fonctionnent aussi, et il écoute dans la langue dans laquelle tu utilises Plantry, ou en anglais si ton iPhone ne reconnaît pas cette langue.</p>
+        <details class="faq-item">
+          <summary><h3>Plantry m’aide-t-elle à écouler les restes&nbsp;?</h3></summary>
+          <p>Oui, c’est exactement à ça que sert la fonction Restes. Dis ce que tu as déjà chez toi, ou prends quelques photos de ton frigo, et Plantry classe les recettes selon ce qu’elles en utilisent. Choisis celles qui te tentent et elles partent directement dans ton menu.</p>
+        </details>
 
-        <h3>Puis-je changer le nombre de personnes d’une recette&nbsp;?</h3>
-        <p>Règle une fois le nombre de Portions de ton foyer et chaque recette s’ajuste, tout comme les quantités de ta liste de courses. Des invités à table&nbsp;? Choisis un autre nombre sur une recette précise sans changer ton réglage par défaut.</p>
+        <details class="faq-item">
+          <summary><h3>Puis-je cuisiner sans salir l’écran&nbsp;?</h3></summary>
+          <p>Oui. Le mode cuisine plein écran avec les mains libres lit chaque étape à voix haute et obéit à la voix, pour que tu n’aies jamais à toucher l’écran les doigts collants. Les gestes de la main fonctionnent aussi, et il écoute dans la langue dans laquelle tu utilises Plantry, ou en anglais si ton iPhone ne reconnaît pas cette langue.</p>
+        </details>
 
-        <h3>Puis-je imprimer une recette ou ma liste de courses&nbsp;?</h3>
-        <p>Oui. Tu imprimes une recette seule, un menu de la semaine entier ou ta liste de courses, chacun mis en page pour le papier plutôt que recopié de l’écran.</p>
+        <details class="faq-item">
+          <summary><h3>Puis-je changer le nombre de personnes d’une recette&nbsp;?</h3></summary>
+          <p>Règle une fois le nombre de Portions de ton foyer et chaque recette s’ajuste, tout comme les quantités de ta liste de courses. Des invités à table&nbsp;? Choisis un autre nombre sur une recette précise sans changer ton réglage par défaut.</p>
+        </details>
 
-        <h3>Que puis-je mettre sur mon écran verrouillé&nbsp;?</h3>
-        <p>Plantry a des widgets pour le menu de la semaine comme pour la liste de courses, sur l’écran verrouillé et sur l’écran d’accueil. Garde sous les yeux la recette de ce soir et ton avancée dans la semaine, ou emporte la liste elle-même pour qu’elle soit à un regard en magasin. Sur iOS 27, les deux existent dans une nouvelle très grande taille, avec plus de choses visibles d’un coup.</p>
+        <details class="faq-item">
+          <summary><h3>Puis-je imprimer une recette ou ma liste de courses&nbsp;?</h3></summary>
+          <p>Oui. Tu imprimes une recette seule, un menu de la semaine entier ou ta liste de courses, chacun mis en page pour le papier plutôt que recopié de l’écran.</p>
+        </details>
 
-        <h3>Plantry fonctionne-t-elle sur iPad&nbsp;?</h3>
-        <p>Oui. Plantry est faite pour l’iPhone et pour l’iPad, et Apple l’a mise en avant parmi les meilleures applis pour iPadOS.</p>
+        <details class="faq-item">
+          <summary><h3>Que puis-je mettre sur mon écran verrouillé&nbsp;?</h3></summary>
+          <p>Plantry a des widgets pour le menu de la semaine comme pour la liste de courses, sur l’écran verrouillé et sur l’écran d’accueil. Garde sous les yeux la recette de ce soir et ton avancée dans la semaine, ou emporte la liste elle-même pour qu’elle soit à un regard en magasin. Sur iOS 27, les deux existent dans une nouvelle très grande taille, avec plus de choses visibles d’un coup.</p>
+        </details>
 
-        <h3>Dans quelles langues Plantry existe-t-elle&nbsp;?</h3>
-        <p>Plantry est entièrement localisée en français, anglais, suédois, allemand, norvégien, danois, néerlandais et espagnol, recettes et liste de courses comprises. Tu changes de langue quand tu veux dans les Réglages. <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a> <a href="../de/index.html">Mehr auf Deutsch&nbsp;&rarr;</a></p>
+        <details class="faq-item">
+          <summary><h3>Plantry fonctionne-t-elle sur iPad&nbsp;?</h3></summary>
+          <p>Oui. Plantry est faite pour l’iPhone et pour l’iPad, et Apple l’a mise en avant parmi les meilleures applis pour iPadOS.</p>
+        </details>
 
-        <h3>Plantry existe-t-elle sur Android&nbsp;?</h3>
-        <p>Plantry est une application pour iPhone et iPad. Il n’y a pas de version Android pour le moment.</p>
+        <details class="faq-item">
+          <summary><h3>Dans quelles langues Plantry existe-t-elle&nbsp;?</h3></summary>
+          <p>Plantry est entièrement localisée en français, anglais, suédois, allemand, norvégien, danois, néerlandais, espagnol, finnois, islandais et japonais, recettes et liste de courses comprises. Tu changes de langue quand tu veux dans les Réglages. <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a> <a href="../de/index.html">Mehr auf Deutsch&nbsp;&rarr;</a></p>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Plantry existe-t-elle sur Android&nbsp;?</h3></summary>
+          <p>Plantry est une application pour iPhone et iPad. Il n’y a pas de version Android pour le moment.</p>
+        </details>
 
         <h3>Il te reste une question&nbsp;?</h3>
         <p>Écris-nous à <a href="mailto:hello@filibaba.com">hello@filibaba.com</a>, ou touche dans l’app Réglages &rarr; Écris-nous &rarr; Donne ton avis. Nous lisons tout.</p>
@@ -557,7 +611,7 @@ Wow, vraiment wow&nbsp;!!</p>
       </footer>
     </div>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=keeper1"></script>
   <script src="../js/lang-menu.js"></script>
 
   <script type="importmap">

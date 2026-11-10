@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="apple-itunes-app" content="app-id=1109976916, affiliate-data=pt=21520800&amp;ct=web-fi-banner">
     <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
-    <title>Plantry: viikon ruokalista, reseptit ja ostoslista</title>
+    <title>Plantry: reseptikirja, viikon ruokalista ja ostoslista</title>
     <meta name="description"
-    content="Arkiruoka ratkaistu. Suunnittele viikkosi sekunneissa: yli 1&nbsp;200 reseptiä ja fiksu ostoslista, ilmaiseksi iPhonelle ja iPadille.">
+    content="Arkiruoka ratkaistu. Tallenna reseptit miltä tahansa sivustolta tai videolta ja suunnittele viikkosi sekunneissa fiksun ostoslistan kera, ilmaiseksi iPhonelle ja iPadille.">
     <link rel="canonical" href="https://plantry.app/fi/">
     <link rel="alternate" hreflang="fi" href="https://plantry.app/fi/">
     <link rel="alternate" hreflang="en" href="https://plantry.app/">
@@ -25,11 +25,11 @@
 	<meta property="og:url" content="https://plantry.app/fi/">
 	<meta property="og:locale" content="fi_FI">
 	<meta property="og:locale:alternate" content="en_US">
-	<meta property="og:description" content="Arkiruoka ratkaistu. Suunnittele viikkosi sekunneissa: yli 1&nbsp;200 reseptiä ja fiksu ostoslista, ilmaiseksi iPhonelle ja iPadille.">
+	<meta property="og:description" content="Arkiruoka ratkaistu. Tallenna reseptit miltä tahansa sivustolta tai videolta ja suunnittele viikkosi sekunneissa fiksun ostoslistan kera, ilmaiseksi iPhonelle ja iPadille.">
 	<meta property="og:image" content="https://plantry.app/gfx/social.jpg">
     <meta name="twitter:creator" content="@GetPlantry">
     <meta name="twitter:title" content="Plantry: arkiruoka ratkaistu">
-    <meta name="twitter:description" content="Arkiruoka ratkaistu. Suunnittele viikkosi sekunneissa: yli 1&nbsp;200 reseptiä ja fiksu ostoslista, ilmaiseksi iPhonelle ja iPadille.">
+    <meta name="twitter:description" content="Arkiruoka ratkaistu. Tallenna reseptit miltä tahansa sivustolta tai videolta ja suunnittele viikkosi sekunneissa fiksun ostoslistan kera, ilmaiseksi iPhonelle ja iPadille.">
     <meta name="twitter:site" content="@GetPlantry">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://plantry.app/gfx/social.jpg">
@@ -37,7 +37,7 @@
     <link rel="preload" as="image" href="../gfx/hero-kitchen@2x.jpg" type="image/jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://prod.spline.design" crossorigin>
-    <link rel="stylesheet" href="../styles.css" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css?v=keeper1" fetchpriority="high">
     <link rel="stylesheet" href="../slideshow.css" fetchpriority="low">
     <link rel="shortcut icon" href="../gfx/plantry-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/plantry-appicon.png">
@@ -46,7 +46,7 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Plantry: viikon ruokalista ja ostoslista",
-      "description": "Arkiruoka ratkaistu. Suunnittele viikkosi sekunneissa: yli 1 200 reseptiä ja fiksu ostoslista, ilmaiseksi iPhonelle ja iPadille.",
+      "description": "Arkiruoka ratkaistu. Tallenna reseptit miltä tahansa sivustolta tai videolta ja suunnittele viikkosi sekunneissa fiksun ostoslistan kera, ilmaiseksi iPhonelle ja iPadille.",
       "url": "https://plantry.app/fi/",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "iOS, iPadOS",
@@ -293,6 +293,25 @@
       </picture>
   </section>
 
+  <section class="duo-section watch-section">
+      <h2>Tehty Apple Watchille</h2>
+      <p class="duo-lead"><span>Ostoslista ranteessasi.</span> <span>Ruksaa ostokset kaupassa ja lisää uusia äänelläsi.</span></p>
+      <div class="watch-trio" role="img" aria-label="Plantry Apple Watchissa: ostoslista, viikon ruokalista ja sanelu">
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-1.webp 1x, ../gfx/watch-1@2x.webp 2x">
+          <img src="../gfx/watch-1.png" srcset="../gfx/watch-1@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
+          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-3.webp 1x, ../gfx/watch-3@2x.webp 2x">
+          <img src="../gfx/watch-3.png" srcset="../gfx/watch-3@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+      </div>
+  </section>
+
 
   <section>
       <h2>Tutustu kokkeihimme…</h2>
@@ -471,55 +490,90 @@
 
     <section id="faq">
       <div class="about-inner">
-        <h2>Ruokalistat kiireisille viikoille</h2>
-        <p>Plantry on ruokalista- ja ostoslistasovellus iPhonelle ja iPadille, joka vie sinulta iltaisen ”mitä tänään syötäisiin?” -pohdinnan. Valitse valmis viikon ruokalista, muokkaa sitä tai rakenna oma alusta asti, niin Plantry kirjoittaa ostoslistan puolestasi sekunneissa. Suunnitellessasi se ehdottaa reseptejä, jotka sopivat jo valitsemiesi ruokien kanssa.</p>
-        <p>Jokainen julkaisemamme resepti on kasvipohjainen: yli 1&nbsp;200 kasvis- ja vegaanista päivällistä kokkiemme tekeminä, nopeista arkiruoista viikonlopun suosikkeihin. Tallenna verkosta löytämäsi reseptit samaan kokoelmaan, pidä viikon ruokalista ja ostoslista widgettien avulla lukitusnäytöllä tai Koti-valikossa ja kokkaa ajastimilla, jotka on rakennettu suoraan jokaiseen reseptiin.</p>
+        <h2>Reseptikirja, ruokalista ja ostoslista samassa sovelluksessa</h2>
+        <p>Plantry on reseptikirja-, ruokalista- ja ostoslistasovellus iPhonelle ja iPadille, joka vie sinulta iltaisen ”mitä tänään syötäisiin?” -pohdinnan. Pidä rakkaimmat reseptisi yhdessä paikassa, valitse valmis viikon ruokalista, muokkaa sitä tai rakenna oma alusta asti, niin Plantry kirjoittaa ostoslistan puolestasi sekunneissa. Suunnitellessasi se ehdottaa reseptejä, jotka sopivat jo valitsemiesi ruokien kanssa.</p>
+        <p>Tallenna reseptejä miltä tahansa verkkosivulta, Instagramista tai TikTokista, kirjoita muistiin perheen suosikit tai valitse yli 1&nbsp;200 kokkiemme päivällisestä, nopeista arkiruoista viikonlopun suosikkeihin, ja mukana on laaja valikoima kasvis- ja vegaaniruokia. Kaikki päätyvät samaan keittokirjaan. Pidä viikon ruokalista ja ostoslista widgettien avulla lukitusnäytöllä tai Koti-valikossa ja kokkaa ajastimilla, jotka on rakennettu suoraan jokaiseen reseptiin.</p>
         <p>Puoli jääkaapillista käytettävää? Kirjoita, mitä sinulla on, tai ota pari kuvaa jääkaapistasi, niin uusi Tähteet-toiminto järjestää reseptit sen mukaan, kuinka paljon niistä ne käyttävät. Ostoslista järjestyy itse kaupan osastoihin siinä järjestyksessä, jossa oikeasti kuljet kaupassa, antaa jokaiselle ainekselle oman kuvitetun kuvakkeen ja tulostuu yhtä kauniisti kuin mikä tahansa resepti tai ruokalista.</p>
-        <h3>Toimiiko Plantry iPhone Duossa?</h3>
-        <p>Kyllä. Avaa se, niin Plantry täyttää suuren näytön ja näyttää enemmän keittokirjojasi, ruokalistojasi ja reseptejäsi. Sarana tekee työn: taita se, kun resepti on auki, niin kokkaustila ottaa ohjat, tai taita se vaakasuunnassa puoliksi, niin ainekset ovat toisella puolella ja vaiheet toisella.</p>
+        <details class="faq-item">
+          <summary><h3>Toimiiko Plantry iPhone Duossa?</h3></summary>
+          <p>Kyllä. Avaa se, niin Plantry täyttää suuren näytön ja näyttää enemmän keittokirjojasi, ruokalistojasi ja reseptejäsi. Sarana tekee työn: taita se, kun resepti on auki, niin kokkaustila ottaa ohjat, tai taita se vaakasuunnassa puoliksi, niin ainekset ovat toisella puolella ja vaiheet toisella.</p>
+        </details>
 
 
-        <h3>Onko Plantry ilmainen?</h3>
-        <p>Plantryn lataaminen on ilmaista, ja jokainen uusi jäsen saa 7 päivän ilmaisen kokeilujakson. Sen jälkeen sovelluksen sisäinen tilaus avaa kaikki ruokalistat ja reseptit. Ajankohtainen hinta näkyy aina sovelluksessa ennen kuin sitoudut, ja voit perua tilauksen milloin tahansa.</p>
+        <details class="faq-item">
+          <summary><h3>Toimiiko Plantry Apple Watchissa?</h3></summary>
+          <p>Kyllä. Ostoslista kulkee mukanasi ranteessa: ruksaa tuotteet kaupassa, lisää uusia äänelläsi ja katso viikon ruokalista yhdellä silmäyksellä. Muutokset siirtyvät suoraan iPhonellesi.</p>
+        </details>
 
-        <h3>Ovatko reseptit kasvis- vai vegaanisia?</h3>
-        <p>Plantryn mukana tulevat reseptit ovat kasvipohjaisia: sekoitus vegaani- ja kasvisruokia kokeilta, jotka laittavat ruokaa näin joka päivä. Itse sovellus ei kuitenkaan rajoitu niihin. Tallenna mikä tahansa resepti verkosta tai kirjoita oma, ja luokittele se kalaksi, lihaksi, siipikarjaksi tai äyriäisiksi yhtä helposti kuin kasvisruoaksi. Se päätyy samaan keittokirjaan, samalle ruokalistalle ja samaan ostoslistaan.</p>
+        <details class="faq-item">
+          <summary><h3>Onko Plantry ilmainen?</h3></summary>
+          <p>Plantryn lataaminen on ilmaista, ja jokainen uusi jäsen saa 7 päivän ilmaisen kokeilujakson. Sen jälkeen sovelluksen sisäinen tilaus avaa kaikki ruokalistat ja reseptit. Ajankohtainen hinta näkyy aina sovelluksessa ennen kuin sitoudut, ja voit perua tilauksen milloin tahansa.</p>
+        </details>
 
-        <h3>Voinko nähdä vain vegaaniset tai gluteenittomat reseptit?</h3>
-        <p>Kyllä. Asetusten Ruokavaliotoiveet suodattavat koko sovelluksen: vegaaniseksi, gluteenittomaksi tai molemmiksi yhtä aikaa. Haku, ruokalistat ja ehdotukset noudattavat valintaasi.</p>
+        <details class="faq-item">
+          <summary><h3>Millaisia reseptejä voin tallentaa Plantryyn?</h3></summary>
+          <p>Kaikenlaisia. Tallenna mikä tahansa resepti verkosta tai kirjoita oma, kala-, liha- ja kanaruoista vegaaniseen, niin se päätyy samaan keittokirjaan, samalle ruokalistalle ja samaan ostoslistaan. Kokkiemme resepteissä on laaja kokoelma kasvis- ja vegaaniruokia, ja Ruokavaliotoiveilla näet halutessasi vain ne.</p>
+        </details>
 
-        <h3>Voinko käyttää Plantrya reseptikirjana?</h3>
-        <p>Kyllä. Plantry toimii myös omana digitaalisena keittokirjanasi. Tallenna reseptejä miltä tahansa verkkosivulta, lisää perheen suosikit alusta asti tai muokkaa meidän reseptejämme omaan tyyliisi sopiviksi. Kaikki keräämäsi päätyy Omaan&nbsp;keittokirjaan, jonka voit muokata kokonaan omalla nimellä, kuvauksella ja kuvalla, ja jokainen sen resepti on valmis siirtymään ensi viikon ruokalistalle.</p>
+        <details class="faq-item">
+          <summary><h3>Voinko nähdä vain kasvis-, vegaaniset tai gluteenittomat reseptit?</h3></summary>
+          <p>Kyllä. Asetusten Ruokavaliotoiveet suodattavat koko sovelluksen: kasvis- tai vegaaniruokiin, gluteenittomiin tai gluteenittomiin yhdessä jommankumman kanssa. Haku, ruokalistat ja ehdotukset noudattavat valintaasi.</p>
+        </details>
 
-        <h3>Voinko tallentaa reseptejä Instagramista ja TikTokista?</h3>
-        <p>Kyllä. Jaa ruokareeli tai TikTok Plantrylle, niin se hakee videon, muuttaa kuvatekstin täydeksi reseptiksi ja kirjoittaa vaiheet videon perusteella, jos kuvateksti jättää ne pois. Video toistuu tallennetun reseptin yläreunassa, joten voit seurata sitä kokatessasi.</p>
+        <details class="faq-item">
+          <summary><h3>Voinko käyttää Plantrya reseptikirjana?</h3></summary>
+          <p>Kyllä. Plantry toimii myös omana digitaalisena keittokirjanasi. Tallenna reseptejä miltä tahansa verkkosivulta, lisää perheen suosikit alusta asti tai muokkaa meidän reseptejämme omaan tyyliisi sopiviksi. Kaikki keräämäsi päätyy Omaan&nbsp;keittokirjaan, jonka voit muokata kokonaan omalla nimellä, kuvauksella ja kuvalla, ja jokainen sen resepti on valmis siirtymään ensi viikon ruokalistalle.</p>
+        </details>
 
-        <h3>Miten ostoslista toimii?</h3>
-        <p>Kun suunnittelet viikkosi, Plantry kerää automaattisesti kaikki tarvitsemasi ainekset yhdelle ostoslistalle, joten yksi kauppareissu riittää koko viikoksi. Tuotteet järjestyvät kaupan osastoihin, ja voit vetää osastot siihen järjestykseen, jossa oikeasti kierrät kauppasi. Jokainen aines saa käsin piirretyn kuvituksen, joten listaa on helppo silmäillä ostoskärry toisessa kädessä, ja voit lisätä ja muokata omia tuotteitasi ehdotusten avulla, jotka oppivat, mitä yleensä ostat.</p>
+        <details class="faq-item">
+          <summary><h3>Voinko tallentaa reseptejä Instagramista ja TikTokista?</h3></summary>
+          <p>Kyllä. Jaa ruokareeli tai TikTok Plantrylle, niin se hakee videon, muuttaa kuvatekstin täydeksi reseptiksi ja kirjoittaa vaiheet videon perusteella, jos kuvateksti jättää ne pois. Video toistuu tallennetun reseptin yläreunassa, joten voit seurata sitä kokatessasi.</p>
+        </details>
 
-        <h3>Auttaako Plantry hyödyntämään tähteet?</h3>
-        <p>Kyllä, juuri sitä varten Tähteet-toiminto on. Kirjoita, mitä sinulla jo on kotona, tai ota pari kuvaa jääkaapistasi, niin Plantry järjestää reseptit sen mukaan, kuinka paljon niistä ne käyttävät. Valitse mieleisesi, niin ne siirtyvät suoraan ruokalistallesi.</p>
+        <details class="faq-item">
+          <summary><h3>Miten ostoslista toimii?</h3></summary>
+          <p>Kun suunnittelet viikkosi, Plantry kerää automaattisesti kaikki tarvitsemasi ainekset yhdelle ostoslistalle, joten yksi kauppareissu riittää koko viikoksi. Tuotteet järjestyvät kaupan osastoihin, ja voit vetää osastot siihen järjestykseen, jossa oikeasti kierrät kauppasi. Jokainen aines saa käsin piirretyn kuvituksen, joten listaa on helppo silmäillä ostoskärry toisessa kädessä, ja voit lisätä ja muokata omia tuotteitasi ehdotusten avulla, jotka oppivat, mitä yleensä ostat.</p>
+        </details>
 
-        <h3>Voinko kokata sotkematta näyttöä?</h3>
-        <p>Kyllä. Koko näytön kokkaustila handsfree-toiminnolla lukee jokaisen vaiheen ääneen ja tottelee äänikomentoja, joten sinun ei tarvitse koskaan napauttaa näyttöä tahmeilla sormilla. Myös käsieleet toimivat. Äänikomennot toimivat sillä kielellä, jolla käytät Plantrya, tai englanniksi, jos iPhonesi ei tunnista kieltä.</p>
+        <details class="faq-item">
+          <summary><h3>Auttaako Plantry hyödyntämään tähteet?</h3></summary>
+          <p>Kyllä, juuri sitä varten Tähteet-toiminto on. Kirjoita, mitä sinulla jo on kotona, tai ota pari kuvaa jääkaapistasi, niin Plantry järjestää reseptit sen mukaan, kuinka paljon niistä ne käyttävät. Valitse mieleisesi, niin ne siirtyvät suoraan ruokalistallesi.</p>
+        </details>
 
-        <h3>Voinko muuttaa, kuinka monelle resepti riittää?</h3>
-        <p>Aseta kotitaloutesi annokset kerran, niin jokainen resepti skaalautuu niiden mukaan, samoin ostoslistan määrät. Vieraita tulossa? Aseta yksittäiseen reseptiin eri määrä muuttamatta oletustasi.</p>
+        <details class="faq-item">
+          <summary><h3>Voinko kokata sotkematta näyttöä?</h3></summary>
+          <p>Kyllä. Koko näytön kokkaustila handsfree-toiminnolla lukee jokaisen vaiheen ääneen ja tottelee äänikomentoja, joten sinun ei tarvitse koskaan napauttaa näyttöä tahmeilla sormilla. Myös käsieleet toimivat. Äänikomennot toimivat sillä kielellä, jolla käytät Plantrya, tai englanniksi, jos iPhonesi ei tunnista kieltä.</p>
+        </details>
 
-        <h3>Voinko tulostaa reseptin tai ostoslistan?</h3>
-        <p>Kyllä. Voit tulostaa yksittäisen reseptin, koko viikon ruokalistan tai ostoslistasi, ja jokainen niistä on taitettu paperille eikä vain kopioitu näytöltä.</p>
+        <details class="faq-item">
+          <summary><h3>Voinko muuttaa, kuinka monelle resepti riittää?</h3></summary>
+          <p>Aseta kotitaloutesi annokset kerran, niin jokainen resepti skaalautuu niiden mukaan, samoin ostoslistan määrät. Vieraita tulossa? Aseta yksittäiseen reseptiin eri määrä muuttamatta oletustasi.</p>
+        </details>
 
-        <h3>Mitä voin lisätä lukitusnäytölle?</h3>
-        <p>Plantrylla on widgetit sekä ruokalistalle että ostoslistalle, lukitusnäytölle ja Koti-valikkoon. Pidä illan resepti ja viikon eteneminen näkyvillä, tai ota mukaan itse lista, jolloin se on kaupassa yhden vilkaisun päässä. iOS 27:ssä molemmista on uusi erittäin suuri koko, jossa näkyy kerralla enemmän.</p>
+        <details class="faq-item">
+          <summary><h3>Voinko tulostaa reseptin tai ostoslistan?</h3></summary>
+          <p>Kyllä. Voit tulostaa yksittäisen reseptin, koko viikon ruokalistan tai ostoslistasi, ja jokainen niistä on taitettu paperille eikä vain kopioitu näytöltä.</p>
+        </details>
 
-        <h3>Toimiiko Plantry iPadilla?</h3>
-        <p>Kyllä. Plantry on tehty sekä iPhonelle että iPadille, ja Apple on nostanut sen parhaiden iPadOS-sovellusten joukkoon.</p>
+        <details class="faq-item">
+          <summary><h3>Mitä voin lisätä lukitusnäytölle?</h3></summary>
+          <p>Plantrylla on widgetit sekä ruokalistalle että ostoslistalle, lukitusnäytölle ja Koti-valikkoon. Pidä illan resepti ja viikon eteneminen näkyvillä, tai ota mukaan itse lista, jolloin se on kaupassa yhden vilkaisun päässä. iOS 27:ssä molemmista on uusi erittäin suuri koko, jossa näkyy kerralla enemmän.</p>
+        </details>
 
-        <h3>Millä kielillä Plantry on saatavilla?</h3>
-        <p>Plantry on täysin lokalisoitu suomeksi, englanniksi, ruotsiksi, saksaksi, norjaksi, tanskaksi, hollanniksi, ranskaksi, espanjaksi, islanniksi ja japaniksi, reseptit ja ostoslista mukaan lukien. Voit vaihtaa kieltä milloin tahansa Asetuksista. <a href="../index.html">Read more in English&nbsp;&rarr;</a> <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a></p>
+        <details class="faq-item">
+          <summary><h3>Toimiiko Plantry iPadilla?</h3></summary>
+          <p>Kyllä. Plantry on tehty sekä iPhonelle että iPadille, ja Apple on nostanut sen parhaiden iPadOS-sovellusten joukkoon.</p>
+        </details>
 
-        <h3>Onko Plantry saatavilla Androidille?</h3>
-        <p>Plantry on iPhone- ja iPad-sovellus. Android-versiota ei tällä hetkellä ole.</p>
+        <details class="faq-item">
+          <summary><h3>Millä kielillä Plantry on saatavilla?</h3></summary>
+          <p>Plantry on täysin lokalisoitu suomeksi, englanniksi, ruotsiksi, saksaksi, norjaksi, tanskaksi, hollanniksi, ranskaksi, espanjaksi, islanniksi ja japaniksi, reseptit ja ostoslista mukaan lukien. Voit vaihtaa kieltä milloin tahansa Asetuksista. <a href="../index.html">Read more in English&nbsp;&rarr;</a> <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a></p>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Onko Plantry saatavilla Androidille?</h3></summary>
+          <p>Plantry on iPhone- ja iPad-sovellus. Android-versiota ei tällä hetkellä ole.</p>
+        </details>
 
         <h3>Jäikö jotain kysyttävää?</h3>
         <p>Kirjoita meille osoitteeseen <a href="mailto:hello@filibaba.com">hello@filibaba.com</a> tai napauta sovelluksessa Asetukset &rarr; Ota yhteyttä &rarr; Lähetä palautetta. Luemme kaiken.</p>
@@ -553,7 +607,7 @@
       </footer>
     </div>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=keeper1"></script>
   <script src="../js/lang-menu.js"></script>
 
   <script type="importmap">

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="apple-itunes-app" content="app-id=1109976916, affiliate-data=pt=21520800&amp;ct=web-ja-banner">
     <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
-    <title>Plantry：献立・レシピ・買い物リストのアプリ</title>
+    <title>Plantry：レシピ保存・献立・買い物リストのアプリ</title>
     <meta name="description"
-    content="今日の晩ごはん、もう迷いません。1,200以上の植物性レシピと賢い買い物リストで、1週間の献立が数秒で完成。iPhone・iPadで無料ダウンロード。">
+    content="今日の晩ごはん、もう迷いません。どんなサイトやリール動画のレシピも保存でき、1週間の献立は数秒で完成、買い物リストも自動で。iPhone・iPadで無料ダウンロード。">
     <link rel="canonical" href="https://plantry.app/jp/">
     <link rel="alternate" hreflang="ja" href="https://plantry.app/jp/">
     <link rel="alternate" hreflang="en" href="https://plantry.app/">
@@ -25,11 +25,11 @@
 	<meta property="og:url" content="https://plantry.app/jp/">
 	<meta property="og:locale" content="ja_JP">
 	<meta property="og:locale:alternate" content="en_US">
-	<meta property="og:description" content="今日の晩ごはん、もう迷いません。1,200以上の植物性レシピと賢い買い物リストで、1週間の献立が数秒で完成。iPhone・iPadで無料ダウンロード。">
+	<meta property="og:description" content="今日の晩ごはん、もう迷いません。どんなサイトやリール動画のレシピも保存でき、1週間の献立は数秒で完成、買い物リストも自動で。iPhone・iPadで無料ダウンロード。">
 	<meta property="og:image" content="https://plantry.app/gfx/social.jpg">
     <meta name="twitter:creator" content="@GetPlantry">
     <meta name="twitter:title" content="Plantry：晩ごはん、もう迷わない">
-    <meta name="twitter:description" content="今日の晩ごはん、もう迷いません。1,200以上の植物性レシピと賢い買い物リストで、1週間の献立が数秒で完成。iPhone・iPadで無料ダウンロード。">
+    <meta name="twitter:description" content="今日の晩ごはん、もう迷いません。どんなサイトやリール動画のレシピも保存でき、1週間の献立は数秒で完成、買い物リストも自動で。iPhone・iPadで無料ダウンロード。">
     <meta name="twitter:site" content="@GetPlantry">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://plantry.app/gfx/social.jpg">
@@ -37,7 +37,7 @@
     <link rel="preload" as="image" href="../gfx/hero-kitchen@2x.jpg" type="image/jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://prod.spline.design" crossorigin>
-    <link rel="stylesheet" href="../styles.css" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css?v=keeper1" fetchpriority="high">
     <link rel="stylesheet" href="../slideshow.css" fetchpriority="low">
     <link rel="shortcut icon" href="../gfx/plantry-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/plantry-appicon.png">
@@ -46,7 +46,7 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Plantry：献立と買い物リスト",
-      "description": "今日の晩ごはん、もう迷いません。1,200以上の植物性レシピと賢い買い物リストで、1週間の献立が数秒で完成。iPhone・iPadで無料ダウンロード。",
+      "description": "今日の晩ごはん、もう迷いません。どんなサイトやリール動画のレシピも保存でき、1週間の献立は数秒で完成、買い物リストも自動で。iPhone・iPadで無料ダウンロード。",
       "url": "https://plantry.app/jp/",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "iOS, iPadOS",
@@ -293,6 +293,25 @@
       </picture>
   </section>
 
+  <section class="duo-section watch-section">
+      <h2>Apple Watchにも対応</h2>
+      <p class="duo-lead"><span>買い物リストを手首に。</span> <span>買い物しながらチェックして、声で追加も。</span></p>
+      <div class="watch-trio" role="img" aria-label="Apple WatchのPlantry：買い物リスト、今週の献立、音声入力">
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-1.webp 1x, ../gfx/watch-1@2x.webp 2x">
+          <img src="../gfx/watch-1.png" srcset="../gfx/watch-1@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
+          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../gfx/watch-3.webp 1x, ../gfx/watch-3@2x.webp 2x">
+          <img src="../gfx/watch-3.png" srcset="../gfx/watch-3@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+        </picture>
+      </div>
+  </section>
+
 
   <section>
       <h2>シェフたちを紹介します…</h2>
@@ -471,55 +490,90 @@
 
     <section id="faq">
       <div class="about-inner">
-        <h2>忙しい1週間のための、植物性の献立アプリ</h2>
-        <p>Plantryは、iPhoneとiPadで使える献立・買い物リストアプリ。毎晩の「今日の晩ごはん、何にしよう？」から解放されます。用意された1週間の献立を選んでアレンジしても、一から自分で組み立ててもOK。買い物リストはPlantryが数秒で作ってくれます。献立を立てている間も、すでに選んだ料理に合うレシピを提案します。</p>
-        <p>私たちが公開するレシピはすべて植物性。シェフたちが考えた1,200以上のベジタリアン・ヴィーガンの晩ごはんが、平日にさっと作れる料理から週末のごちそうまでそろっています。Webで見つけたレシピも同じコレクションに保存でき、今週の献立と買い物リストはウィジェットでロック画面やホーム画面に。どのレシピにもタイマーが組み込まれています。</p>
+        <h2>レシピ保存、献立、買い物リストがひとつになったアプリ</h2>
+        <p>Plantryは、iPhoneとiPadで使えるレシピ保存・献立・買い物リストアプリ。毎晩の「今日の晩ごはん、何にしよう？」から解放されます。お気に入りのレシピはひとつの場所にまとめて保存。用意された1週間の献立を選んでアレンジしても、一から自分で組み立ててもOK。買い物リストはPlantryが数秒で作ってくれます。献立を立てている間も、すでに選んだ料理に合うレシピを提案します。</p>
+        <p>どんなWebサイトやInstagram、TikTokのレシピも保存でき、家族の定番レシピも書き残せます。シェフたちが考えた1,200以上の晩ごはんも、平日にさっと作れる料理から週末のごちそうまでそろっていて、ベジタリアン・ヴィーガン料理も豊富です。どれも同じ料理ブックに入ります。今週の献立と買い物リストはウィジェットでロック画面やホーム画面に。どのレシピにもタイマーが組み込まれています。</p>
         <p>冷蔵庫に使い切りたい食材がたくさん？家にあるものを入力するか、冷蔵庫を何枚か撮影すれば、新しい残り物機能が、たくさん使えるレシピから順に並べてくれます。買い物リストは、実際にお店を回る順番どおりに売り場ごとに並び、材料ひとつひとつにイラストアイコンがつきます。レシピや献立と同じように、きれいに印刷することもできます。</p>
-        <h3>PlantryはiPhone Duoに対応していますか？</h3>
-        <p>はい。開くとPlantryが大きなディスプレイいっぱいに広がり、料理ブック、献立、レシピがもっと表示されます。ヒンジが活躍します。レシピを開いたまま折りたたむと調理モードに切り替わり、横向きにして半分だけ折りたたむと片側に材料、もう片側に作り方が表示されます。</p>
+        <details class="faq-item">
+          <summary><h3>PlantryはiPhone Duoに対応していますか？</h3></summary>
+          <p>はい。開くとPlantryが大きなディスプレイいっぱいに広がり、料理ブック、献立、レシピがもっと表示されます。ヒンジが活躍します。レシピを開いたまま折りたたむと調理モードに切り替わり、横向きにして半分だけ折りたたむと片側に材料、もう片側に作り方が表示されます。</p>
+        </details>
 
 
-        <h3>Plantryは無料ですか？</h3>
-        <p>Plantryのダウンロードは無料で、新規メンバーは誰でも7日間の無料トライアルを利用できます。その後は、App内のサブスクリプションですべての献立とレシピが使えるようになります。現在の価格は申し込む前に必ずアプリ内に表示され、いつでも解約できます。</p>
+        <details class="faq-item">
+          <summary><h3>PlantryはApple Watchに対応していますか？</h3></summary>
+          <p>はい。買い物リストを手首で確認できます。買い物しながらチェックを入れたり、声で追加したり、今週の献立をひと目で確認したりできます。変更はすぐにiPhoneに反映されます。</p>
+        </details>
 
-        <h3>レシピはベジタリアン？ヴィーガン？</h3>
-        <p>Plantryに収録されているレシピは植物性で、毎日こうした料理を作っているシェフたちによる、ヴィーガンとベジタリアンの料理がそろっています。ただし、Plantry自体はそれだけに限りません。Webのレシピを保存したり自分のレシピを書いたりして、ベジタリアンと同じように、魚、肉、鶏肉、魚介類にも簡単に分類できます。どれも同じ料理ブック、同じ献立、同じ買い物リストに入ります。</p>
+        <details class="faq-item">
+          <summary><h3>Plantryは無料ですか？</h3></summary>
+          <p>Plantryのダウンロードは無料で、新規メンバーは誰でも7日間の無料トライアルを利用できます。その後は、App内のサブスクリプションですべての献立とレシピが使えるようになります。現在の価格は申し込む前に必ずアプリ内に表示され、いつでも解約できます。</p>
+        </details>
 
-        <h3>ヴィーガンやグルテンフリーのレシピだけを表示できますか？</h3>
-        <p>はい。「設定」の「食事の好み」で、アプリ全体をヴィーガン、グルテンフリー、またはその両方に絞り込めます。検索、献立、おすすめのすべてがその設定に従います。</p>
+        <details class="faq-item">
+          <summary><h3>Plantryにはどんなレシピを保存できますか？</h3></summary>
+          <p>どんなレシピでも保存できます。Webのレシピを保存したり自分のレシピを書いたりでき、魚、肉、鶏肉からヴィーガンまで、どれも同じ料理ブック、同じ献立、同じ買い物リストに入ります。シェフたちのレシピにはベジタリアン・ヴィーガン料理がたっぷりそろっていて、「食事の好み」を使えば、いつでもそれだけを表示できます。</p>
+        </details>
 
-        <h3>Plantryをレシピ帳として使えますか？</h3>
-        <p>はい。Plantryは、自分だけのデジタル料理ブックにもなります。どんなWebサイトからでもレシピを保存したり、家族の定番料理を一から追加したり、Plantryのレシピを自分の作り方に合わせてアレンジしたり。集めたレシピはすべて「マイ料理ブック」に入り、名前や説明、画像を自由にカスタマイズできます。そこにあるレシピはどれも、来週の献立にすぐ加えられます。</p>
+        <details class="faq-item">
+          <summary><h3>ベジタリアン、ヴィーガン、グルテンフリーのレシピだけを表示できますか？</h3></summary>
+          <p>はい。「設定」の「食事の好み」で、アプリ全体をベジタリアンまたはヴィーガン、グルテンフリー、あるいはグルテンフリーといずれかの組み合わせに絞り込めます。検索、献立、おすすめのすべてがその設定に従います。</p>
+        </details>
 
-        <h3>InstagramやTikTokのレシピを保存できますか？</h3>
-        <p>はい。料理のリールやTikTokをPlantryに共有すると、動画を取り込み、キャプションを読み取って完全なレシピにします。キャプションに手順がないときは、動画から手順を書き起こします。保存したレシピのいちばん上で動画が再生されるので、見ながら料理できます。</p>
+        <details class="faq-item">
+          <summary><h3>Plantryをレシピ帳として使えますか？</h3></summary>
+          <p>はい。Plantryは、自分だけのデジタル料理ブックにもなります。どんなWebサイトからでもレシピを保存したり、家族の定番料理を一から追加したり、Plantryのレシピを自分の作り方に合わせてアレンジしたり。集めたレシピはすべて「マイ料理ブック」に入り、名前や説明、画像を自由にカスタマイズできます。そこにあるレシピはどれも、来週の献立にすぐ加えられます。</p>
+        </details>
 
-        <h3>買い物リストはどんな仕組みですか？</h3>
-        <p>1週間の献立を立てると、必要な材料をPlantryが自動でひとつの買い物リストにまとめるので、一度の買い物で1週間分がそろいます。アイテムは自動で売り場ごとに並び、その売り場は、いつもお店を回る順番にドラッグで並べ替えられます。材料にはそれぞれ手描きのイラストがつくので、カートを押しながらでもリストをさっと確認できます。よく買うものを覚えてくれる候補を使って、自分のアイテムを追加・編集することもできます。</p>
+        <details class="faq-item">
+          <summary><h3>InstagramやTikTokのレシピを保存できますか？</h3></summary>
+          <p>はい。料理のリールやTikTokをPlantryに共有すると、動画を取り込み、キャプションを読み取って完全なレシピにします。キャプションに手順がないときは、動画から手順を書き起こします。保存したレシピのいちばん上で動画が再生されるので、見ながら料理できます。</p>
+        </details>
 
-        <h3>残り物を使い切るのに役立ちますか？</h3>
-        <p>はい、それこそが残り物機能の役目です。家にあるものを入力するか、冷蔵庫を何枚か撮影すると、Plantryがたくさん使えるレシピから順に並べます。気に入ったものを選べば、そのまま献立に追加されます。</p>
+        <details class="faq-item">
+          <summary><h3>買い物リストはどんな仕組みですか？</h3></summary>
+          <p>1週間の献立を立てると、必要な材料をPlantryが自動でひとつの買い物リストにまとめるので、一度の買い物で1週間分がそろいます。アイテムは自動で売り場ごとに並び、その売り場は、いつもお店を回る順番にドラッグで並べ替えられます。材料にはそれぞれ手描きのイラストがつくので、カートを押しながらでもリストをさっと確認できます。よく買うものを覚えてくれる候補を使って、自分のアイテムを追加・編集することもできます。</p>
+        </details>
 
-        <h3>画面を汚さずに料理できますか？</h3>
-        <p>はい。ハンズフリー対応のフルスクリーン調理モードが手順をひとつずつ読み上げ、音声コマンドで操作できるので、汚れた指で画面に触れる必要はありません。ハンドジェスチャーにも対応しています。音声コマンドはPlantryで使っている言語で使えます。iPhoneがその言語の音声認識に対応していない場合は英語で聞き取ります。</p>
+        <details class="faq-item">
+          <summary><h3>残り物を使い切るのに役立ちますか？</h3></summary>
+          <p>はい、それこそが残り物機能の役目です。家にあるものを入力するか、冷蔵庫を何枚か撮影すると、Plantryがたくさん使えるレシピから順に並べます。気に入ったものを選べば、そのまま献立に追加されます。</p>
+        </details>
 
-        <h3>レシピの人数を変えられますか？</h3>
-        <p>家族の人数分を一度設定すれば、すべてのレシピがそれに合わせて調整され、買い物リストの分量も変わります。お客さんが来るときは？個別のレシピで別の人数分を設定しても、いつもの設定はそのままです。</p>
+        <details class="faq-item">
+          <summary><h3>画面を汚さずに料理できますか？</h3></summary>
+          <p>はい。ハンズフリー対応のフルスクリーン調理モードが手順をひとつずつ読み上げ、音声コマンドで操作できるので、汚れた指で画面に触れる必要はありません。ハンドジェスチャーにも対応しています。音声コマンドはPlantryで使っている言語で使えます。iPhoneがその言語の音声認識に対応していない場合は英語で聞き取ります。</p>
+        </details>
 
-        <h3>レシピや買い物リストを印刷できますか？</h3>
-        <p>はい。レシピ1品、1週間分の献立、買い物リストを、それぞれ画面をそのまま出力するのではなく、紙に合わせたレイアウトで印刷できます。</p>
+        <details class="faq-item">
+          <summary><h3>レシピの人数を変えられますか？</h3></summary>
+          <p>家族の人数分を一度設定すれば、すべてのレシピがそれに合わせて調整され、買い物リストの分量も変わります。お客さんが来るときは？個別のレシピで別の人数分を設定しても、いつもの設定はそのままです。</p>
+        </details>
 
-        <h3>ロック画面には何を置けますか？</h3>
-        <p>Plantryには献立用と買い物リスト用のウィジェットがあり、ロック画面とホーム画面の両方に置けます。今夜のレシピや今週の進み具合をいつでも表示したり、リストそのものを置いて、お店でひと目で確認できるようにしたり。iOS 27では、どちらも新しい特大サイズに対応し、一度にもっと多くの情報を表示できます。</p>
+        <details class="faq-item">
+          <summary><h3>レシピや買い物リストを印刷できますか？</h3></summary>
+          <p>はい。レシピ1品、1週間分の献立、買い物リストを、それぞれ画面をそのまま出力するのではなく、紙に合わせたレイアウトで印刷できます。</p>
+        </details>
 
-        <h3>PlantryはiPadでも使えますか？</h3>
-        <p>はい。PlantryはiPhoneとiPadの両方のために作られていて、AppleからiPadOSのベストAppのひとつとして紹介されています。</p>
+        <details class="faq-item">
+          <summary><h3>ロック画面には何を置けますか？</h3></summary>
+          <p>Plantryには献立用と買い物リスト用のウィジェットがあり、ロック画面とホーム画面の両方に置けます。今夜のレシピや今週の進み具合をいつでも表示したり、リストそのものを置いて、お店でひと目で確認できるようにしたり。iOS 27では、どちらも新しい特大サイズに対応し、一度にもっと多くの情報を表示できます。</p>
+        </details>
 
-        <h3>Plantryは何語に対応していますか？</h3>
-        <p>Plantryは、日本語、英語、スウェーデン語、ドイツ語、ノルウェー語、デンマーク語、オランダ語、フランス語、スペイン語、フィンランド語、アイスランド語に完全対応しています。レシピも買い物リストも、すべて選んだ言語で表示されます。言語は「設定」からいつでも切り替えられます。<a href="../index.html">Read more in English&nbsp;&rarr;</a> <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a></p>
+        <details class="faq-item">
+          <summary><h3>PlantryはiPadでも使えますか？</h3></summary>
+          <p>はい。PlantryはiPhoneとiPadの両方のために作られていて、AppleからiPadOSのベストAppのひとつとして紹介されています。</p>
+        </details>
 
-        <h3>Android版はありますか？</h3>
-        <p>PlantryはiPhoneとiPad向けのアプリです。現在、Android版はありません。</p>
+        <details class="faq-item">
+          <summary><h3>Plantryは何語に対応していますか？</h3></summary>
+          <p>Plantryは、日本語、英語、スウェーデン語、ドイツ語、ノルウェー語、デンマーク語、オランダ語、フランス語、スペイン語、フィンランド語、アイスランド語に完全対応しています。レシピも買い物リストも、すべて選んだ言語で表示されます。言語は「設定」からいつでも切り替えられます。<a href="../index.html">Read more in English&nbsp;&rarr;</a> <a href="../se/index.html">Läs mer på svenska&nbsp;&rarr;</a></p>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Android版はありますか？</h3></summary>
+          <p>PlantryはiPhoneとiPad向けのアプリです。現在、Android版はありません。</p>
+        </details>
 
         <h3>ほかにご質問は？</h3>
         <p><a href="mailto:hello@filibaba.com">hello@filibaba.com</a>までメールするか、アプリで「設定」&rarr;「メールで問い合わせ」&rarr;「フィードバックを送信」をタップしてください。いただいたメッセージにはすべて目を通しています。</p>
@@ -553,7 +607,7 @@
       </footer>
     </div>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=keeper1"></script>
   <script src="../js/lang-menu.js"></script>
 
   <script type="importmap">

@@ -704,7 +704,7 @@ header {
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.4;
-  color: #333333; /* the card body text colour */
+  color: rgba(0, 0, 0, 0.62); /* slightly dimmed, as on Handla's page */
 }
 
 /* Each sentence wraps as one unit, so a line breaks between sentences rather than inside one. */
@@ -718,7 +718,7 @@ header {
 }
 
 @media (prefers-color-scheme: dark) {
-  .duo-lead { color: #fff; }
+  .duo-lead { color: rgba(255, 255, 255, 0.62); }
 }
 
 .duo-folded {

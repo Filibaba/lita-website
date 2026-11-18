@@ -1,0 +1,114 @@
+/* Golden yellow style (sketch, 8.8 App Store look).
+   Loaded after styles.css. One warm palette in both colour schemes:
+   Plantry yellow → amber hero, near-black type, warm off-white sections, yellow icons. */
+
+:root {
+  --gold: #FFCE00;
+  --gold-mid: #FFB400;
+  --amber: #FF8C00;
+  --ink: #1A1614;
+  --ink-soft: rgba(26, 22, 20, 0.66);
+  --cream: #FFF8EC;
+  --card: #FFFFFF;
+  color-scheme: light;
+}
+
+/* ---------- Page ---------- */
+
+body,
+.divider {
+  background-color: var(--cream) !important;
+  color: var(--ink) !important;
+}
+
+section,
+section h2,
+section h3,
+section p,
+.faq-item,
+.duo-section h2 {
+  color: var(--ink) !important;
+}
+
+.duo-lead { color: var(--ink-soft) !important; }
+
+/* ---------- Hero: the golden header ---------- */
+
+.hero {
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-mid) 60%, var(--amber) 100%) !important;
+  color: var(--ink) !important;
+}
+
+/* The kitchen still life, screen-blended: its dark wall drops away and the produce reads as pale light,
+   as in the App Store header. */
+.veggies {
+  mix-blend-mode: screen;
+  opacity: 0.85;
+  /* The photo's wall is near-black, not black: feather every edge so its box never shows. */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 68%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%) !important;
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 68%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%) !important;
+  mask-composite: intersect;
+}
+
+.plantry-logo { filter: brightness(0); opacity: 0.92; }
+
+.hero h1 { color: var(--ink) !important; }
+header h2 { color: var(--ink) !important; opacity: 0.62 !important; }
+
+.hero-cta h3 {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  color: var(--ink) !important;
+}
+
+.hero-cta .button-primary,
+.button-primary {
+  background-color: var(--ink) !important;
+  color: #fff !important;
+}
+.hero-cta .button-primary:hover,
+.button-primary:hover { background-color: #3a322d !important; }
+
+.hero-free-hint-desktop,
+.hero-awards-label { color: var(--ink-soft) !important; }
+
+/* White laurels, dark text (as on the store screenshots). */
+.award-mini { background-image: url(gfx/awardDarkMode@2x.png) !important; }
+.award-mini p { color: var(--ink) !important; }
+
+/* ---------- Floating nav over the yellow hero ---------- */
+
+.floating-nav .floating-nav-logo { filter: brightness(0) !important; }
+.floating-nav .floating-nav-link { color: var(--ink) !important; }
+.floating-nav .floating-nav-link:hover { background-color: rgba(26, 22, 20, 0.08) !important; }
+.floating-nav .floating-nav-cta { background-color: var(--ink) !important; color: #fff !important; }
+.floating-nav.is-scrolled,
+.floating-nav.is-past-hero { background: rgba(255, 248, 236, 0.82) !important; }
+
+/* ---------- Cards ---------- */
+
+.card {
+  background-color: var(--card) !important;
+  box-shadow: 0 10px 36px rgba(180, 110, 0, 0.16) !important;
+}
+.card h3 { color: var(--ink) !important; }
+.card p { color: #4a4038 !important; }
+
+/* Feature icons: one golden family instead of a rainbow. */
+.card > picture:first-child img {
+  filter: grayscale(1) sepia(1) saturate(7) hue-rotate(-10deg) brightness(1.12) contrast(1.05);
+}
+
+/* ---------- Golden bands between sections ---------- */
+
+.awards,
+.duo-section {
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-mid) 60%, var(--amber) 100%) !important;
+  padding-bottom: 48px;
+}
+.awards h2, .awards p, .duo-section h2 { color: var(--ink) !important; }

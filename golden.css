@@ -1,6 +1,5 @@
 /* Golden yellow style (sketch, 8.8 App Store look).
-   Loaded after styles.css. One warm palette in both colour schemes:
-   Plantry yellow → amber hero, near-black type, warm off-white sections, yellow icons. */
+   Loaded after styles.css. Only the header goes golden; the rest of the page stays as in styles.css. */
 
 :root {
   --gold: #FFCE00;
@@ -8,52 +7,23 @@
   --amber: #FF8C00;
   --ink: #1A1614;
   --ink-soft: rgba(26, 22, 20, 0.66);
-  --cream: #FFF8EC;
-  --card: #FFFFFF;
-  color-scheme: light;
 }
-
-/* ---------- Page ---------- */
-
-body,
-.divider {
-  background-color: var(--cream) !important;
-  color: var(--ink) !important;
-}
-
-section,
-section h2,
-section h3,
-section p,
-.faq-item,
-.duo-section h2 {
-  color: var(--ink) !important;
-}
-
-.duo-lead { color: var(--ink-soft) !important; }
 
 /* ---------- Hero: the golden header ---------- */
 
 .hero {
-  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-mid) 60%, var(--amber) 100%) !important;
+  /* Continues the edges of the golden still life: amber-yellow on top, orange at the foot. */
+  background: linear-gradient(180deg, #FFAA01 0%, #FF9201 55%, #FF7801 100%) !important;
   color: var(--ink) !important;
 }
 
-/* The kitchen still life, screen-blended: its dark wall drops away and the produce reads as pale light,
-   as in the App Store header. */
+/* The golden still life (same framing and size as hero-kitchen@2x.jpg, so the positioning in styles.css holds).
+   Its edges are feathered in the file itself, so it melts into the gradient at every breakpoint. */
 .veggies {
-  mix-blend-mode: screen;
-  opacity: 0.85;
-  /* The photo's wall is near-black, not black: feather every edge so its box never shows. */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 68%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%) !important;
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 68%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%) !important;
-  mask-composite: intersect;
+  background-image: url(gfx/hero-golden@2x.webp) !important;
+  opacity: 1 !important;
 }
 
-.plantry-logo { filter: brightness(0); opacity: 0.92; }
 
 .hero h1 { color: var(--ink) !important; }
 header h2 { color: var(--ink) !important; opacity: 0.62 !important; }
@@ -66,49 +36,79 @@ header h2 { color: var(--ink) !important; opacity: 0.62 !important; }
   color: var(--ink) !important;
 }
 
-.hero-cta .button-primary,
-.button-primary {
+.hero-cta .button-primary {
   background-color: var(--ink) !important;
   color: #fff !important;
 }
-.hero-cta .button-primary:hover,
-.button-primary:hover { background-color: #3a322d !important; }
+.hero-cta .button-primary:hover { background-color: #3a322d !important; }
 
 .hero-free-hint-desktop,
-.hero-awards-label { color: var(--ink-soft) !important; }
+.hero-awards-label { color: rgba(26, 22, 20, 0.84) !important; opacity: 1 !important; }
+.hero-awards-label .awards-label-gap { display: inline-block; width: 1.4em; }
+.hero-awards-label .awards-stars { letter-spacing: 0.08em; margin-right: 0.3em; }
+.hero-awards-label .awards-star-dim { opacity: 0.3; }
 
-/* White laurels, dark text (as on the store screenshots). */
-.award-mini { background-image: url(gfx/awardDarkMode@2x.png) !important; }
+/* Solid white laurels and a white App Store glyph (no icon tile), dark text, as on the store screenshots. */
+.award-mini { background-image: url(gfx/award-header@2x.png) !important; }
 .award-mini p { color: var(--ink) !important; }
 
 /* ---------- Floating nav over the yellow hero ---------- */
 
-.floating-nav .floating-nav-logo { filter: brightness(0) !important; }
-.floating-nav .floating-nav-link { color: var(--ink) !important; }
-.floating-nav .floating-nav-link:hover { background-color: rgba(26, 22, 20, 0.08) !important; }
-.floating-nav .floating-nav-cta { background-color: var(--ink) !important; color: #fff !important; }
-.floating-nav.is-scrolled,
-.floating-nav.is-past-hero { background: rgba(255, 248, 236, 0.82) !important; }
+.floating-nav:not(.is-past-hero) .floating-nav-logo { filter: brightness(0) !important; }
+.floating-nav:not(.is-past-hero) .floating-nav-link { color: var(--ink) !important; }
+.floating-nav:not(.is-past-hero) .floating-nav-link:hover { background-color: rgba(26, 22, 20, 0.08) !important; }
+.floating-nav:not(.is-past-hero) .floating-nav-cta { background-color: var(--ink) !important; color: #fff !important; }
 
-/* ---------- Cards ---------- */
-
-.card {
-  background-color: var(--card) !important;
-  box-shadow: 0 10px 36px rgba(180, 110, 0, 0.16) !important;
-}
-.card h3 { color: var(--ink) !important; }
-.card p { color: #4a4038 !important; }
-
-/* Feature icons: one golden family instead of a rainbow. */
-.card > picture:first-child img {
-  filter: grayscale(1) sepia(1) saturate(7) hue-rotate(-10deg) brightness(1.12) contrast(1.05);
+/* Scrolled but still over the header: light golden glass instead of the old navy, in both colour schemes. */
+.floating-nav.is-scrolled:not(.is-past-hero) {
+  background: rgba(255, 226, 140, 0.62) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 4px 24px rgba(150, 70, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
 }
 
-/* ---------- Golden bands between sections ---------- */
-
-.awards,
-.duo-section {
-  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-mid) 60%, var(--amber) 100%) !important;
-  padding-bottom: 48px;
+/* Past the golden header, the download button carries the gold. */
+.floating-nav.is-past-hero .floating-nav-cta {
+  /* The yellow of the Meal plans icon: bright at the top, deeper at the foot. */
+  background: linear-gradient(180deg, #FFE000 0%, #FCCB00 50%, #F8B700 100%) !important;
+  color: var(--ink) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 3px rgba(150, 90, 0, 0.2) !important;
 }
-.awards h2, .awards p, .duo-section h2 { color: var(--ink) !important; }
+.floating-nav.is-past-hero .floating-nav-cta:hover { filter: brightness(1.06); }
+
+/* ---------- Features: no cards, just icon, text and phone on the page ---------- */
+
+#features .card {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* ---------- Awards on the page: just the App Store glyph, black on light, white on dark ---------- */
+
+.award { background-image: url(gfx/award-glyph@2x.png) !important; }
+@media (prefers-color-scheme: dark) {
+  .award { background-image: url(gfx/award-glyph-dark@2x.png) !important; }
+}
+
+/* ---------- QR code: black code on a white tile ---------- */
+
+.hero-cta .app-store-download-top-qr {
+  background: #fff !important;
+  box-shadow: 0 6px 20px rgba(150, 70, 0, 0.18);
+}
+.hero-cta .app-store-download-top-qr img {
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Less air above and below the iPhone Duo */
+.duo-section:has(.duo-folded) h2 { margin-top: 36px; }
+/* The image is min(960px, page width) wide and empty under the phone: below the shadow for the last
+   9% of its width in light mode, below the phone for the last 19.5% in dark mode. Pull up into it. */
+.duo-folded { margin-bottom: calc(-0.09 * min(960px, 100vw - 32px)); }
+@media (prefers-color-scheme: dark) {
+  .duo-folded { margin-bottom: calc(-0.195 * min(960px, 100vw - 32px)); }
+}
+.duo-section:has(.duo-folded) + section h2 { margin-top: 144px; }
+/* Room between the watches and the next heading (24 + 36 + 64) */
+.watch-section { padding-bottom: 36px; }

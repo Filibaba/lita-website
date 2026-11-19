@@ -131,9 +131,11 @@ let _splineRx = null, _splineRy = null;
 }());
 
 // ── Track logo/hero via IntersectionObserver — no layout reads on scroll ──────
+// The bar turns solid as soon as the hero logo starts to slide under it (the bar's bottom edge is
+// about 84px down), not once the logo has left the screen, so the two never overlap.
 new IntersectionObserver(([e]) => {
-  if (cachedVW >= 568) floatingNav.classList.toggle('is-scrolled', !e.isIntersecting);
-}, { threshold: 0 }).observe(headerLogo);
+  if (cachedVW >= 568) floatingNav.classList.toggle('is-scrolled', e.intersectionRatio < 1);
+}, { threshold: 1, rootMargin: '-84px 0px 0px 0px' }).observe(headerLogo);
 
 new IntersectionObserver(([e]) => {
   floatingNav.classList.toggle('is-past-hero', !e.isIntersecting);

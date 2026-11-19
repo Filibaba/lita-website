@@ -34,11 +34,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://plantry.app/gfx/social.jpg">
     <meta name="theme-color" content="#FFC800" media="(max-width:567px)">
-    <link rel="preload" as="image" href="../gfx/hero-kitchen@2x.jpg" type="image/jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="../gfx/hero-golden@2x.webp" type="image/webp" fetchpriority="high">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://prod.spline.design" crossorigin>
     <link rel="stylesheet" href="../styles.css?v=keeper8" fetchpriority="high">
     <link rel="stylesheet" href="../slideshow.css" fetchpriority="low">
+    <link rel="stylesheet" href="../golden.css?v=logo1">
     <link rel="shortcut icon" href="../gfx/plantry-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/plantry-appicon.png">
     <script type="application/ld+json">
@@ -105,8 +106,8 @@
     <div class="hero">
       <div class="veggies" id="headerimage"></div>
       <picture>
-        <source type="image/webp" srcset="../gfx/plantry-anim.webp">
-        <img src="../gfx/plantry.gif" alt="Plantry indkøbsliste- og opskriftsapp" class="plantry-logo" width="387" height="97">
+        <source type="image/webp" srcset="../gfx/plantry-ink.webp">
+        <img src="../gfx/plantry-ink.webp" alt="Plantry indkøbsliste- og opskriftsapp" class="plantry-logo" width="387" height="97">
       </picture>
 
         <div class="hero-iphone" id="heroIphone">
@@ -126,7 +127,7 @@
         <p class="hero-free-hint-desktop">Gratis at hente. Abonnement tilgængeligt.</p>
         <div class="app-store-download-top-qr"><a href="https://apps.apple.com/dk/app/apple-store/id1109976916?platform=iphone&amp;pt=21520800&amp;ct=web-da-qr&amp;mt=8"><img src="../gfx/qrcode.svg" alt="Scan for at hente Plantry i App Store" width="112" height="112"></a></div>
         <div class="hero-awards">
-          <p class="hero-awards-label">Udvalgt af Apple · ★ 4,0 på App Store</p>
+          <p class="hero-awards-label">Udvalgt af Apple<span class="awards-label-gap" aria-hidden="true"></span><span class="awards-stars" role="img" aria-label="4,0 ud af 5 stjerner">★★★★<span class="awards-star-dim">★</span></span> 4,0 på App Store</p>
           <div class="hero-awards-badges">
             <div class="award-mini"><p>De bedste apps til<br>iPadOS</p></div>
             <div class="award-mini"><p>Apps vi<br>elsker</p></div>
@@ -153,22 +154,7 @@
             <picture>
               <source type="image/webp" srcset="../gfx/iphone-startplan-dk.webp 1x, ../gfx/iphone-startplan-dk@2x.webp 2x">
               <source srcset="../gfx/iphone-startplan-dk.png 1x, ../gfx/iphone-startplan-dk@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-startplan-dk.png" fetchpriority="low" width="340" height="709" alt="Køkkenet i Plantry med ugens aktive madplan">
-            </picture>
-        </div>
-
-        <div class="card card-iphone">
-            <picture>
-              <source srcset="../gfx/icon-saverecipe-dark.png, ../gfx/icon-saverecipe-dark@2x.png 2x, ../gfx/icon-saverecipe-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-              <source srcset="../gfx/icon-saverecipe.png, ../gfx/icon-saverecipe@2x.png 2x, ../gfx/icon-saverecipe@3x.png 3x">
-              <img loading="lazy" decoding="async" src="../gfx/icon-saverecipe.png" fetchpriority="low" width="60" height="60" alt="Lav nye favoritter">
-            </picture>
-            <h3>Gem opskrifter fra site eller reel</h3>
-            <p>Løft opskrifter fra nettet, eller en madlavningsvideo fra Instagram og TikTok, op på et nyt niveau. Tilføj dine egne, eller juster vores.</p>
-            <picture>
-              <source type="image/webp" srcset="../gfx/iphone-myrecipes-dk.webp 1x, ../gfx/iphone-myrecipes-dk@2x.webp 2x">
-              <source srcset="../gfx/iphone-myrecipes-dk.png 1x, ../gfx/iphone-myrecipes-dk@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-myrecipes-dk.png" fetchpriority="low" width="340" height="709" alt="En opskrift på solsikkeburgere gemt i Plantry fra nettet">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-startplan-dk.png" fetchpriority="low" width="340" height="709" alt="Fanen Opskrifter i Plantry med ugens aktive madplan">
             </picture>
         </div>
 
@@ -183,38 +169,23 @@
             <picture>
               <source type="image/webp" srcset="../gfx/iphone-shop-dk.webp 1x, ../gfx/iphone-shop-dk@2x.webp 2x">
               <source srcset="../gfx/iphone-shop-dk.png 1x, ../gfx/iphone-shop-dk@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-shop-dk.png" fetchpriority="low" width="340" height="709" alt="En indkøbsliste i Plantry med illustrerede vareikoner, sorteret efter varehylde">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-shop-dk.png" fetchpriority="low" width="340" height="709" alt="En indkøbsliste i Plantry med illustrerede vareikoner, sorteret efter varehylde, med de opskrifter, den er til">
             </picture>
         </div>
 
-         <div class="card card-iphone">
+        <div class="card card-iphone">
             <picture>
               <source srcset="../gfx/icon-plan-dark.png, ../gfx/icon-plan-dark@2x.png 2x, ../gfx/icon-plan-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
               <source srcset="../gfx/icon-plan.png, ../gfx/icon-plan@2x.png 2x, ../gfx/icon-plan@3x.png 3x">
               <img loading="lazy" decoding="async" src="../gfx/icon-plan.png" fetchpriority="low" width="60" height="60" alt="Madplaner">
             </picture>
-            <h3>Planer lavet af vores kokke</h3>
-            <p>Bladr gennem færdige ugeplaner med et tema, og byt det ud, du ikke er i humør til.</p>
+            <h3>Planlæg ugen på <em>sekunder</em></h3>
+            <p>Svar på et par hurtige spørgsmål, og få en uges aftensmad. Ikke lyst til en af retterne? Byt en hvilken som helst ret med ét tryk.</p>
             <picture>
-              <source type="image/webp" srcset="../gfx/iphone-mealplans-dk.webp 1x, ../gfx/iphone-mealplans-dk@2x.webp 2x">
-              <source srcset="../gfx/iphone-mealplans-dk.png 1x, ../gfx/iphone-mealplans-dk@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-mealplans-dk.png" fetchpriority="low" width="340" height="709" alt="Bladr gennem færdige ugeplaner i Plantry">
+              <source type="image/webp" srcset="../gfx/iphone-quickweek-dk.webp 1x, ../gfx/iphone-quickweek-dk@2x.webp 2x">
+              <source srcset="../gfx/iphone-quickweek-dk.png 1x, ../gfx/iphone-quickweek-dk@2x.png 2x">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-quickweek-dk.png" fetchpriority="low" width="340" height="709" alt="Redigering af en hurtig ugeplan i Plantry med en byt-knap på hver ret">
             </picture>
-        </div>
-
-        <div class="card card-iphone">
-             <picture>
-  	          <source srcset="../gfx/icon-recipes-dark.png, ../gfx/icon-recipes-dark@2x.png 2x, ../gfx/icon-recipes-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-  	          <source srcset="../gfx/icon-recipes.png, ../gfx/icon-recipes@2x.png 2x, ../gfx/icon-recipes@3x.png 3x">
-              <img loading="lazy" decoding="async" src="../gfx/icon-recipes.png" fetchpriority="low" width="60" height="60" alt="Lav nye favoritter">
-  	        </picture>
-            <h3>Opskrifter, du faktisk laver</h3>
-            <p>Opdag over 1 200 lækre retter, skabt af vores fantastiske kokke.</p>
-  	        <picture>
-  	          <source type="image/webp" srcset="../gfx/iphone-plan-dk.webp 1x, ../gfx/iphone-plan-dk@2x.webp 2x">
-  	          <source srcset="../gfx/iphone-plan-dk.png 1x, ../gfx/iphone-plan-dk@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-plan-dk.png" fetchpriority="low" width="340" height="709" alt="En plantebaseret nudelopskrift åben i Plantry">
-  	        </picture>
         </div>
 
         <div class="card card-iphone card-iphone-xwide">
@@ -232,13 +203,43 @@
             </picture>
         </div>
 
+        <div class="card card-iphone">
+            <picture>
+              <source srcset="../gfx/icon-saverecipe-dark.png, ../gfx/icon-saverecipe-dark@2x.png 2x, ../gfx/icon-saverecipe-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
+              <source srcset="../gfx/icon-saverecipe.png, ../gfx/icon-saverecipe@2x.png 2x, ../gfx/icon-saverecipe@3x.png 3x">
+              <img loading="lazy" decoding="async" src="../gfx/icon-saverecipe.png" fetchpriority="low" width="60" height="60" alt="Lav nye favoritter">
+            </picture>
+            <h3>Gem opskrifter fra site&nbsp;eller&nbsp;reel</h3>
+            <p>Løft opskrifter fra nettet, eller en madlavningsvideo fra Instagram og TikTok, op på et nyt niveau. Tilføj dine egne, eller juster vores.</p>
+            <picture>
+              <source type="image/webp" srcset="../gfx/iphone-myrecipes-dk.webp 1x, ../gfx/iphone-myrecipes-dk@2x.webp 2x">
+              <source srcset="../gfx/iphone-myrecipes-dk.png 1x, ../gfx/iphone-myrecipes-dk@2x.png 2x">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-myrecipes-dk.png" fetchpriority="low" width="340" height="709" alt="En opskrift på solsikkeburgere gemt i Plantry fra nettet">
+            </picture>
+        </div>
+
+        <div class="card card-iphone">
+             <picture>
+  	          <source srcset="../gfx/icon-chefs-dark.png, ../gfx/icon-chefs-dark@2x.png 2x, ../gfx/icon-chefs-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
+  	          <source srcset="../gfx/icon-chefs.png, ../gfx/icon-chefs@2x.png 2x, ../gfx/icon-chefs@3x.png 3x">
+              <img loading="lazy" decoding="async" src="../gfx/icon-chefs.png" fetchpriority="low" width="60" height="60" alt="">
+  	        </picture>
+            <h3>Opdag 1 200+ opskrifter</h3>
+            <p>Over 1 200 lækre opskrifter, skabt af vores fantastiske kokke.</p>
+  	        <picture>
+  	          <source type="image/webp" srcset="../gfx/iphone-plan-dk.webp 1x, ../gfx/iphone-plan-dk@2x.webp 2x">
+  	          <source srcset="../gfx/iphone-plan-dk.png 1x, ../gfx/iphone-plan-dk@2x.png 2x">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-plan-dk.png" fetchpriority="low" width="340" height="709" alt="En nudelopskrift åben i Plantry">
+  	        </picture>
+        </div>
+
         <div class="card card-iphone card-iphone-wide">
   	        <picture>
   	          <source srcset="../gfx/icon-cuttingedge-dark.png, ../gfx/icon-cuttingedge-dark@2x.png 2x, ../gfx/icon-cuttingedge-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
   	          <source srcset="../gfx/icon-cuttingedge.png, ../gfx/icon-cuttingedge@2x.png 2x, ../gfx/icon-cuttingedge@3x.png 3x">
               <img loading="lazy" decoding="async" src="../gfx/icon-cuttingedge.png" fetchpriority="low" width="60" height="60" alt="Widgets">
   	        </picture>
-            <h3>Planen og listen med ét blik</h3>
+            <h3>Madplanen med ét blik</h3>
             <p>Læg ugeplanen eller indkøbslisten på låseskærmen eller hjemmeskærmen. Ét tryk, og du er klar til at lave mad eller handle.</p>
   	        <picture>
   	          <source type="image/webp" srcset="../gfx/iphone-widgets-dk.webp 1x, ../gfx/iphone-widgets-dk@2x.webp 2x">
@@ -275,16 +276,15 @@
               <source srcset="../gfx/iphone-appearance-dk.png 1x, ../gfx/iphone-appearance-dk@2x.png 2x">
               <img loading="lazy" decoding="async" src="../gfx/iphone-appearance-dk.png" fetchpriority="low" width="340" height="709" alt="Udseendeindstillinger i Plantry med temafarver og opskriftslayout">
             </picture>
-        </div>              
-        
-      </div>
+        </div>
 
-    <div class="spacer"></div>
+
+      </div>
   </section>
 
   <section class="duo-section">
-      <h2>Lavet til iPhone Duo</h2>
-      <p class="duo-lead"><span>Fold den ud til den store skærm.</span> <span>Fold den på en opskrift, så tager madlavningstilstanden over.</span></p>
+      <h2>Fold ud og planlæg, fold sammen og lav mad</h2>
+      <p class="duo-lead"><span>På iPhone Duo er der plads til mere af ugen på den store skærm.</span> <span>Fold den på en opskrift, så tager madlavningstilstanden over.</span></p>
       <picture>
         <source type="image/webp" media="(prefers-color-scheme: dark)" srcset="../gfx/duo-folded-dk-dark.webp 1x, ../gfx/duo-folded-dk-dark@2x.webp 2x">
         <source type="image/webp" srcset="../gfx/duo-folded-dk.webp 1x, ../gfx/duo-folded-dk@2x.webp 2x">
@@ -294,20 +294,20 @@
   </section>
 
   <section class="duo-section watch-section">
-      <h2>Lavet til Apple Watch</h2>
-      <p class="duo-lead"><span>Indkøbslisten på håndleddet.</span> <span>Sæt flueben, mens du handler, og tilføj mere med stemmen.</span></p>
-      <div class="watch-trio" role="img" aria-label="Plantry på Apple Watch: indkøbslisten, ugens madplan og diktering">
+      <h2>Handl med hænderne fri</h2>
+      <p class="duo-lead"><span>Indkøbslisten på Apple Watch.</span> <span>Sæt flueben, mens du handler, og tilføj mere med stemmen.</span></p>
+      <div class="watch-trio" role="img" aria-label="Plantry på Apple Watch: indkøbslisten med ugens madplan, varer, der krydses af, mens du handler, og en opskrift">
         <picture>
           <source type="image/webp" srcset="../gfx/watch-1.webp 1x, ../gfx/watch-1@2x.webp 2x">
           <img src="../gfx/watch-1.png" srcset="../gfx/watch-1@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
         </picture>
         <picture>
-          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
-          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+          <source type="image/webp" srcset="../gfx/watch-tick-dk.webp 1x, ../gfx/watch-tick-dk@2x.webp 2x">
+          <img src="../gfx/watch-tick-dk.png" srcset="../gfx/watch-tick-dk@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
         </picture>
         <picture>
-          <source type="image/webp" srcset="../gfx/watch-3.webp 1x, ../gfx/watch-3@2x.webp 2x">
-          <img src="../gfx/watch-3.png" srcset="../gfx/watch-3@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
+          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
         </picture>
       </div>
   </section>
@@ -328,7 +328,7 @@
             <img loading="lazy" decoding="async" src="../gfx/chef-bloodygood.png" fetchpriority="low" srcset="../gfx/chef-bloodygood@2x.png 2x, ../gfx/chef-bloodygood@3x.png 3x" width="99" height="99" alt="Bloody Good">
             <h3 class="tighter-spacing">Gustav Johansson</h3>
             <h4>Jävligt gott</h4>
-            <p>Gustav lærer dig, hvordan du bedst bruger plantebaserede ingredienser for den rette tekstur og masser af smag.</p>
+            <p>Gustav lærer dig at få den rette tekstur og mest mulig smag ud af hver råvare.</p>
         </div>
 
         <div class="card chef">
@@ -342,21 +342,21 @@
             <img loading="lazy" decoding="async" src="../gfx/chef-nordickitchen.png" fetchpriority="low" srcset="../gfx/chef-nordickitchen@2x.png 2x, ../gfx/chef-nordickitchen@3x.png 3x" width="99" height="99" alt="Nordic Kitchen">
             <h3 class="tighter-spacing">Sofia Nordgren</h3>
             <h4>Nordic Kitchen</h4>
-            <p>Plantebaseret madlavning, hvor sæsonens ingredienser er i fokus.</p>
+            <p>Hverdagsmad, hvor sæsonens ingredienser er i fokus.</p>
         </div>
 
         <div class="card chef">
             <img loading="lazy" decoding="async" src="../gfx/chef-maggies.png" fetchpriority="low" srcset="../gfx/chef-maggies@2x.png 2x, ../gfx/chef-maggies@3x.png 3x" width="99" height="99" alt="Maggie's Pantry">
             <h3 class="tighter-spacing">Maggie Bergius</h3>
             <h4>Maggies Skafferi</h4>
-            <p>Nem, plantebaseret og lækker mad til hele familien!</p>
+            <p>Nem og lækker mad til hele familien!</p>
         </div>
 
         <div class="card chef">
             <img loading="lazy" decoding="async" src="../gfx/chef-selinas.png" fetchpriority="low" srcset="../gfx/chef-selinas@2x.png 2x, ../gfx/chef-selinas@3x.png 3x" width="99" height="99" alt="Selinas">
             <h3 class="tighter-spacing">Selina Hami</h3>
             <h4>Selinas</h4>
-            <p>Med inspiration fra Syrien, Libanon og Ungarn skaber Selina spændende plantebaserede opskrifter.</p>
+            <p>Med inspiration fra Syrien, Libanon og Ungarn skaber Selina spændende opskrifter.</p>
         </div>
         <div class="spacer"></div>
       </div>
@@ -472,9 +472,10 @@ Wow, virkelig wow!!</p>
             <h2>— Zoire</h2>
         </div>
 
-        <div class="articlequote">
-            <p><b>5 veganske apps, der gør livet nemmere</b><br>Plantry laver en indkøbsliste med alt, hvad du skal bruge til opskrifterne. Derudover får du næringsindhold for hver opskrift, en indbygget timer og meget mere! Vi elsker den allerede!</p>
-            <a href="https://vegoutmag.com/nationwide/lifestyle-article.php?id=33"><img loading="lazy" decoding="async" src="../gfx/vegout.png" fetchpriority="low" srcset="../gfx/vegout@2x.png 2x, ../gfx/vegout@3x.png 3x" width="132" height="70" alt="VegOut Magazine" class="invertInDarkMode"></a>
+        <div class="review">
+            <img loading="lazy" decoding="async" src="../gfx/fivestars.svg" fetchpriority="low" width="143" height="25" alt="Fem stjerner" class="invertInDarkMode">
+            <p><b>Den her app er fantastisk.</b> Jeg har brugt Plantry til at planlægge mine måltider i omkring to måneder nu, og med fem måltider om ugen er jeg ikke stødt på en eneste ret, jeg ikke kunne lide. [&hellip;] Alle de opskrifter, jeg har lavet, har været ret nemme og ikke særligt tidskrævende, men de er SÅ GODE. [&hellip;] Jeg har nok også sparet omkring 200 dollars om måneden på dagligvarer på den måde. Helt det værd.</p>
+            <h2>&mdash; r0m0$</h2>
         </div>
 
         <div class="articlequote">
@@ -626,7 +627,7 @@ Wow, virkelig wow!!</p>
       </footer>
     </div>
 
-  <script src="../js/main.js?v=keeper2"></script>
+  <script src="../js/main.js?v=keeper3"></script>
   <script src="../js/lang-menu.js"></script>
 
   <script type="importmap">

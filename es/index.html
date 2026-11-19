@@ -34,11 +34,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://plantry.app/gfx/social.jpg">
     <meta name="theme-color" content="#FFC800" media="(max-width:567px)">
-    <link rel="preload" as="image" href="../gfx/hero-kitchen@2x.jpg" type="image/jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="../gfx/hero-golden@2x.webp" type="image/webp" fetchpriority="high">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://prod.spline.design" crossorigin>
     <link rel="stylesheet" href="../styles.css?v=keeper8" fetchpriority="high">
     <link rel="stylesheet" href="../slideshow.css" fetchpriority="low">
+    <link rel="stylesheet" href="../golden.css?v=logo1">
     <link rel="shortcut icon" href="../gfx/plantry-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/plantry-appicon.png">
     <script type="application/ld+json">
@@ -105,8 +106,8 @@
     <div class="hero">
       <div class="veggies" id="headerimage"></div>
       <picture>
-        <source type="image/webp" srcset="../gfx/plantry-anim.webp">
-        <img src="../gfx/plantry.gif" alt="Plantry, la app de recetas y lista de la compra" class="plantry-logo" width="387" height="97">
+        <source type="image/webp" srcset="../gfx/plantry-ink.webp">
+        <img src="../gfx/plantry-ink.webp" alt="Plantry, la app de recetas y lista de la compra" class="plantry-logo" width="387" height="97">
       </picture>
 
         <div class="hero-iphone" id="heroIphone">
@@ -126,7 +127,7 @@
         <p class="hero-free-hint-desktop">Descarga gratis. Suscripción dentro de la app.</p>
         <div class="app-store-download-top-qr"><a href="https://apps.apple.com/es/app/apple-store/id1109976916?platform=iphone&amp;pt=21520800&amp;ct=web-es-qr&amp;mt=8"><img src="../gfx/qrcode.svg" alt="Escanea para descargar Plantry en el App Store" width="112" height="112"></a></div>
         <div class="hero-awards">
-          <p class="hero-awards-label">Destacada por Apple · ★ 4,2 en el App Store</p>
+          <p class="hero-awards-label">Destacada por Apple<span class="awards-label-gap" aria-hidden="true"></span><span class="awards-stars" role="img" aria-label="4,2 de 5 estrellas">★★★★<span class="awards-star-dim">★</span></span> 4,2 en el App Store</p>
           <div class="hero-awards-badges">
             <div class="award-mini"><p>Mejores apps<br>para iPadOS</p></div>
             <div class="award-mini"><p>Apps que nos<br>encantan</p></div>
@@ -153,22 +154,7 @@
             <picture>
               <source type="image/webp" srcset="../gfx/iphone-startplan-es.webp 1x, ../gfx/iphone-startplan-es@2x.webp 2x">
               <source srcset="../gfx/iphone-startplan-es.png 1x, ../gfx/iphone-startplan-es@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-startplan-es.png" fetchpriority="low" width="340" height="709" alt="La pestaña Cocina de Plantry, con el menú semanal activo">
-            </picture>
-        </div>
-
-        <div class="card card-iphone">
-            <picture>
-              <source srcset="../gfx/icon-saverecipe-dark.png, ../gfx/icon-saverecipe-dark@2x.png 2x, ../gfx/icon-saverecipe-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-              <source srcset="../gfx/icon-saverecipe.png, ../gfx/icon-saverecipe@2x.png 2x, ../gfx/icon-saverecipe@3x.png 3x">
-              <img loading="lazy" decoding="async" src="../gfx/icon-saverecipe.png" fetchpriority="low" width="60" height="60" alt="Descubrir recetas nuevas">
-            </picture>
-            <h3>Guarda recetas de webs y reels</h3>
-            <p>Convierte cualquier receta de la web, o un vídeo de cocina de Instagram y TikTok, en una receta de verdad. Añade las tuyas o ajusta las nuestras.</p>
-            <picture>
-              <source type="image/webp" srcset="../gfx/iphone-myrecipes-es.webp 1x, ../gfx/iphone-myrecipes-es@2x.webp 2x">
-              <source srcset="../gfx/iphone-myrecipes-es.png 1x, ../gfx/iphone-myrecipes-es@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-myrecipes-es.png" fetchpriority="low" width="340" height="709" alt="Una receta de hamburguesa de pipas de girasol guardada en Plantry desde la web">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-startplan-es.png" fetchpriority="low" width="340" height="709" alt="La pestaña Recetas de Plantry, con el menú semanal activo">
             </picture>
         </div>
 
@@ -183,38 +169,23 @@
             <picture>
               <source type="image/webp" srcset="../gfx/iphone-shop-es.webp 1x, ../gfx/iphone-shop-es@2x.webp 2x">
               <source srcset="../gfx/iphone-shop-es.png 1x, ../gfx/iphone-shop-es@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-shop-es.png" fetchpriority="low" width="340" height="709" alt="Una lista de la compra de Plantry con iconos ilustrados, ordenada por pasillos">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-shop-es.png" fetchpriority="low" width="340" height="709" alt="Una lista de la compra de Plantry con iconos ilustrados, ordenada por pasillos, con las recetas para las que es">
             </picture>
         </div>
 
-         <div class="card card-iphone">
+        <div class="card card-iphone">
             <picture>
               <source srcset="../gfx/icon-plan-dark.png, ../gfx/icon-plan-dark@2x.png 2x, ../gfx/icon-plan-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
               <source srcset="../gfx/icon-plan.png, ../gfx/icon-plan@2x.png 2x, ../gfx/icon-plan@3x.png 3x">
               <img loading="lazy" decoding="async" src="../gfx/icon-plan.png" fetchpriority="low" width="60" height="60" alt="Menús semanales">
             </picture>
-            <h3>Menús de nuestros chefs</h3>
-            <p>Explora menús semanales ya hechos, construidos alrededor de un tema, y cambia lo que no te apetezca.</p>
+            <h3>Planifica tu semana en <em>segundos</em></h3>
+            <p>Responde unas preguntas rápidas y ten una semana de cenas. ¿Algún plato no te apetece? Cámbialo con un toque.</p>
             <picture>
-              <source type="image/webp" srcset="../gfx/iphone-mealplans-es.webp 1x, ../gfx/iphone-mealplans-es@2x.webp 2x">
-              <source srcset="../gfx/iphone-mealplans-es.png 1x, ../gfx/iphone-mealplans-es@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-mealplans-es.png" fetchpriority="low" width="340" height="709" alt="Explorar menús semanales ya hechos en Plantry">
+              <source type="image/webp" srcset="../gfx/iphone-quickweek-es.webp 1x, ../gfx/iphone-quickweek-es@2x.webp 2x">
+              <source srcset="../gfx/iphone-quickweek-es.png 1x, ../gfx/iphone-quickweek-es@2x.png 2x">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-quickweek-es.png" fetchpriority="low" width="340" height="709" alt="Editando un menú semanal rápido en Plantry, con un botón para cambiar cada plato">
             </picture>
-        </div>
-
-        <div class="card card-iphone">
-             <picture>
-  	          <source srcset="../gfx/icon-recipes-dark.png, ../gfx/icon-recipes-dark@2x.png 2x, ../gfx/icon-recipes-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
-  	          <source srcset="../gfx/icon-recipes.png, ../gfx/icon-recipes@2x.png 2x, ../gfx/icon-recipes@3x.png 3x">
-              <img loading="lazy" decoding="async" src="../gfx/icon-recipes.png" fetchpriority="low" width="60" height="60" alt="Descubrir recetas nuevas">
-  	        </picture>
-            <h3>Recetas que vas a repetir</h3>
-            <p>Descubre más de 1.200 platos sabrosos, creados por nuestros estupendos chefs.</p>
-  	        <picture>
-              <source type="image/webp" srcset="../gfx/iphone-plan-es.webp 1x, ../gfx/iphone-plan-es@2x.webp 2x">
-              <source srcset="../gfx/iphone-plan-es.png 1x, ../gfx/iphone-plan-es@2x.png 2x">
-              <img loading="lazy" decoding="async" src="../gfx/iphone-plan-es.png" fetchpriority="low" width="340" height="709" alt="Una receta vegetal de noodles abierta en Plantry">
-  	        </picture>
         </div>
 
         <div class="card card-iphone card-iphone-xwide">
@@ -232,13 +203,43 @@
             </picture>
         </div>
 
+        <div class="card card-iphone">
+            <picture>
+              <source srcset="../gfx/icon-saverecipe-dark.png, ../gfx/icon-saverecipe-dark@2x.png 2x, ../gfx/icon-saverecipe-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
+              <source srcset="../gfx/icon-saverecipe.png, ../gfx/icon-saverecipe@2x.png 2x, ../gfx/icon-saverecipe@3x.png 3x">
+              <img loading="lazy" decoding="async" src="../gfx/icon-saverecipe.png" fetchpriority="low" width="60" height="60" alt="Descubrir recetas nuevas">
+            </picture>
+            <h3>Guarda recetas de webs y&nbsp;reels</h3>
+            <p>Convierte cualquier receta de la web, o un vídeo de cocina de Instagram y TikTok, en una receta de verdad. Añade las tuyas o ajusta las nuestras.</p>
+            <picture>
+              <source type="image/webp" srcset="../gfx/iphone-myrecipes-es.webp 1x, ../gfx/iphone-myrecipes-es@2x.webp 2x">
+              <source srcset="../gfx/iphone-myrecipes-es.png 1x, ../gfx/iphone-myrecipes-es@2x.png 2x">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-myrecipes-es.png" fetchpriority="low" width="340" height="709" alt="Una receta de hamburguesa de pipas de girasol guardada en Plantry desde la web">
+            </picture>
+        </div>
+
+        <div class="card card-iphone">
+             <picture>
+  	          <source srcset="../gfx/icon-chefs-dark.png, ../gfx/icon-chefs-dark@2x.png 2x, ../gfx/icon-chefs-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
+  	          <source srcset="../gfx/icon-chefs.png, ../gfx/icon-chefs@2x.png 2x, ../gfx/icon-chefs@3x.png 3x">
+              <img loading="lazy" decoding="async" src="../gfx/icon-chefs.png" fetchpriority="low" width="60" height="60" alt="">
+  	        </picture>
+            <h3>Descubre más de 1.200 recetas</h3>
+            <p>Más de 1.200 recetas sabrosas, creadas por nuestros estupendos chefs.</p>
+  	        <picture>
+              <source type="image/webp" srcset="../gfx/iphone-plan-es.webp 1x, ../gfx/iphone-plan-es@2x.webp 2x">
+              <source srcset="../gfx/iphone-plan-es.png 1x, ../gfx/iphone-plan-es@2x.png 2x">
+              <img loading="lazy" decoding="async" src="../gfx/iphone-plan-es.png" fetchpriority="low" width="340" height="709" alt="Una receta de noodles abierta en Plantry">
+  	        </picture>
+        </div>
+
         <div class="card card-iphone card-iphone-wide">
   	        <picture>
   	          <source srcset="../gfx/icon-cuttingedge-dark.png, ../gfx/icon-cuttingedge-dark@2x.png 2x, ../gfx/icon-cuttingedge-dark@3x.png 3x" media="(prefers-color-scheme: dark)">
   	          <source srcset="../gfx/icon-cuttingedge.png, ../gfx/icon-cuttingedge@2x.png 2x, ../gfx/icon-cuttingedge@3x.png 3x">
               <img loading="lazy" decoding="async" src="../gfx/icon-cuttingedge.png" fetchpriority="low" width="60" height="60" alt="Widgets">
   	        </picture>
-            <h3>Tu menú y tu lista, siempre a mano</h3>
+            <h3>Tu menú, siempre a mano</h3>
             <p>Pon tu menú semanal o tu lista de la compra en la pantalla bloqueada o en la pantalla de inicio. Un toque y ya estás listo para cocinar o para comprar.</p>
   	        <picture>
               <source type="image/webp" srcset="../gfx/iphone-widgets-es.webp 1x, ../gfx/iphone-widgets-es@2x.webp 2x">
@@ -275,16 +276,15 @@
               <source srcset="../gfx/iphone-appearance-es.png 1x, ../gfx/iphone-appearance-es@2x.png 2x">
               <img loading="lazy" decoding="async" src="../gfx/iphone-appearance-es.png" fetchpriority="low" width="340" height="709" alt="Los ajustes de aspecto de Plantry, con los colores de tema y el diseño de las recetas">
             </picture>
-        </div>              
-        
-      </div>
+        </div>
 
-    <div class="spacer"></div>
+
+      </div>
   </section>
 
   <section class="duo-section">
-      <h2>Pensada para el iPhone Duo</h2>
-      <p class="duo-lead"><span>Despliégalo para la pantalla grande.</span> <span>Pliégalo sobre una receta y el modo cocina toma el mando.</span></p>
+      <h2>Despliégalo para planificar, pliégalo para cocinar</h2>
+      <p class="duo-lead"><span>En el iPhone Duo, la pantalla grande muestra más de tu semana.</span> <span>Pliégalo sobre una receta y el modo cocina toma el mando.</span></p>
       <picture>
         <source type="image/webp" media="(prefers-color-scheme: dark)" srcset="../gfx/duo-folded-es-dark.webp 1x, ../gfx/duo-folded-es-dark@2x.webp 2x">
         <source type="image/webp" srcset="../gfx/duo-folded-es.webp 1x, ../gfx/duo-folded-es@2x.webp 2x">
@@ -294,20 +294,20 @@
   </section>
 
   <section class="duo-section watch-section">
-      <h2>Hecho para el Apple Watch</h2>
-      <p class="duo-lead"><span>Tu lista de la compra en la muñeca.</span> <span>Tacha mientras compras y añade más con la voz.</span></p>
-      <div class="watch-trio" role="img" aria-label="Plantry en el Apple Watch: la lista de la compra, el menú de la semana y el dictado">
+      <h2>Haz la compra con las manos libres</h2>
+      <p class="duo-lead"><span>Tu lista de la compra en el Apple Watch.</span> <span>Tacha mientras compras y añade más con la voz.</span></p>
+      <div class="watch-trio" role="img" aria-label="Plantry en el Apple Watch: la lista de la compra con el menú de la semana, artículos tachados mientras compras y una receta">
         <picture>
           <source type="image/webp" srcset="../gfx/watch-1.webp 1x, ../gfx/watch-1@2x.webp 2x">
           <img src="../gfx/watch-1.png" srcset="../gfx/watch-1@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
         </picture>
         <picture>
-          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
-          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+          <source type="image/webp" srcset="../gfx/watch-tick-es.webp 1x, ../gfx/watch-tick-es@2x.webp 2x">
+          <img src="../gfx/watch-tick-es.png" srcset="../gfx/watch-tick-es@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
         </picture>
         <picture>
-          <source type="image/webp" srcset="../gfx/watch-3.webp 1x, ../gfx/watch-3@2x.webp 2x">
-          <img src="../gfx/watch-3.png" srcset="../gfx/watch-3@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
+          <source type="image/webp" srcset="../gfx/watch-2.webp 1x, ../gfx/watch-2@2x.webp 2x">
+          <img src="../gfx/watch-2.png" srcset="../gfx/watch-2@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="252" height="396" alt="">
         </picture>
       </div>
   </section>
@@ -328,7 +328,7 @@
             <img loading="lazy" decoding="async" src="../gfx/chef-bloodygood.png" fetchpriority="low" srcset="../gfx/chef-bloodygood@2x.png 2x, ../gfx/chef-bloodygood@3x.png 3x" width="99" height="99" alt="Bloody Good">
             <h3 class="tighter-spacing">Gustav Johansson</h3>
             <h4>Jävligt gott</h4>
-            <p>Gustav te enseña a sacar lo mejor de los ingredientes vegetales, con la textura justa y el máximo sabor.</p>
+            <p>Gustav te enseña a sacar de cada ingrediente la textura justa y el máximo sabor.</p>
         </div>
 
         <div class="card chef">
@@ -342,21 +342,21 @@
             <img loading="lazy" decoding="async" src="../gfx/chef-nordickitchen.png" fetchpriority="low" srcset="../gfx/chef-nordickitchen@2x.png 2x, ../gfx/chef-nordickitchen@3x.png 3x" width="99" height="99" alt="Nordic Kitchen">
             <h3 class="tighter-spacing">Sofia Nordgren</h3>
             <h4>Nordic Kitchen</h4>
-            <p>Cocina vegetal donde los productos de temporada son los protagonistas.</p>
+            <p>Cocina de diario donde los productos de temporada son los protagonistas.</p>
         </div>
 
         <div class="card chef">
             <img loading="lazy" decoding="async" src="../gfx/chef-maggies.png" fetchpriority="low" srcset="../gfx/chef-maggies@2x.png 2x, ../gfx/chef-maggies@3x.png 3x" width="99" height="99" alt="Maggie's Pantry">
             <h3 class="tighter-spacing">Maggie Bergius</h3>
             <h4>Maggies Skafferi</h4>
-            <p>¡Comida vegetal, fácil y sabrosa para toda la familia!</p>
+            <p>¡Comida fácil y sabrosa para toda la familia!</p>
         </div>
 
         <div class="card chef">
             <img loading="lazy" decoding="async" src="../gfx/chef-selinas.png" fetchpriority="low" srcset="../gfx/chef-selinas@2x.png 2x, ../gfx/chef-selinas@3x.png 3x" width="99" height="99" alt="Selinas">
             <h3 class="tighter-spacing">Selina Hami</h3>
             <h4>Selinas</h4>
-            <p>Con inspiración de Siria, Líbano y Hungría, Selina crea recetas vegetales llenas de carácter.</p>
+            <p>Con inspiración de Siria, Líbano y Hungría, Selina crea recetas llenas de carácter.</p>
         </div>
         <div class="spacer"></div>
       </div>
@@ -472,9 +472,10 @@
             <h2>— Zoire</h2>
         </div>
 
-        <div class="articlequote">
-            <p><b>5 apps veganas que te hacen la vida más fácil</b><br>Plantry crea una lista de la compra con todo lo que necesitas para las recetas. Además, incluye los valores nutricionales de cada receta, un temporizador integrado ¡y mucho más! ¡Ya nos encanta!</p>
-            <a href="https://vegoutmag.com/nationwide/lifestyle-article.php?id=33"><img loading="lazy" decoding="async" src="../gfx/vegout.png" fetchpriority="low" srcset="../gfx/vegout@2x.png 2x, ../gfx/vegout@3x.png 3x" width="132" height="70" alt="VegOut Magazine" class="invertInDarkMode"></a>
+        <div class="review">
+            <img loading="lazy" decoding="async" src="../gfx/fivestars.svg" fetchpriority="low" width="143" height="25" alt="Cinco estrellas" class="invertInDarkMode">
+            <p><b>Esta app es genial.</b> Llevo unos dos meses usando Plantry para planificar mis comidas y, con cinco comidas a la semana, no me he encontrado ni un plato que no me gustara. [&hellip;] Todas las recetas que he hecho han sido bastante fáciles y no llevan mucho tiempo, pero están BUENÍSIMAS. [&hellip;] Seguramente también me he ahorrado unos 200 dólares al mes en la compra. Merece totalmente la pena.</p>
+            <h2>&mdash; r0m0$</h2>
         </div>
 
         <div class="articlequote">
@@ -616,7 +617,7 @@
       </footer>
     </div>
 
-  <script src="../js/main.js?v=keeper2"></script>
+  <script src="../js/main.js?v=keeper3"></script>
   <script src="../js/lang-menu.js"></script>
 
   <script type="importmap">

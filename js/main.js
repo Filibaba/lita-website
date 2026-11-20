@@ -154,12 +154,10 @@ function applyScrollEffects() {
   if (veggiesEl) {
     if (!mobile) {
       if (!reducedMotion) veggiesEl.style.transform = `translate3d(0, ${sy * veggiesParallax}px, 0)`;
-      veggiesEl.style.opacity = 1 - Math.min(sy / 400, 1) * 0.4;
       veggiesEl.style.filter  = `blur(${sy / vh * 12}px)`;
     } else if (veggiesEl.style.filter || veggiesEl.style.transform) {
       // Clear leftovers from a wider viewport (rotation, window resize)
       veggiesEl.style.transform = '';
-      veggiesEl.style.opacity   = '';
       veggiesEl.style.filter    = '';
     }
   }

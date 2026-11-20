@@ -3,10 +3,8 @@
 // first, fetch the runtime and the scene in the background, and start them once the logo has played.
 const RUNTIME = 'https://unpkg.com/@splinetool/runtime@1.12.98/build/runtime.js';
 const LOGO_MS = 2300;
-const FADE_MS = 800;       // the 3D phone fading in over the placeholder (as in golden.css)
 
 const canvas       = document.getElementById('spline-canvas');
-const splineLoader = document.getElementById('splineLoader');
 const logo         = document.querySelector('.plantry-logo');
 
 const logoLoaded = new Promise(resolve => {
@@ -58,8 +56,7 @@ Promise.all([sceneUrl, logoPlayed]).then(async ([url]) => {
     window.__splinePhoneBase = { rx: phone.rotation.x, ry: phone.rotation.y, rz: phone.rotation.z };
   }
 
-  // Keep the 3D phone hidden until its screen shows the video's first frame. The placeholder's bezel
-  // matches the 3D phone's, so fading the phone in over it reads as the video fading in on a dark screen.
+  // Keep the 3D phone hidden until its screen shows the video's first frame, so it never appears with a blank screen
   const video = caught.videos.find(v => v.src.startsWith('data:video') || v.duration > 1);
   if (video) {
     video.currentTime = 0;
@@ -68,6 +65,5 @@ Promise.all([sceneUrl, logoPlayed]).then(async ([url]) => {
   }
   await nextFrames();                                               // let Spline draw it onto the screen
   await nextFrames();
-  canvas.parentElement.classList.add('is-ready');                   // fades the canvas in (golden.css)
-  setTimeout(() => { if (splineLoader) splineLoader.classList.add('is-hidden'); }, FADE_MS);
+  canvas.parentElement.classList.add('is-ready');                   // swaps the placeholder for the 3D phone (golden.css)
 });

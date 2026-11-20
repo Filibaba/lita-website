@@ -45,7 +45,7 @@ header h2 { color: var(--ink); opacity: 0.62; }
 .hero-awards-label .awards-star-dim { opacity: 0.3; }
 
 /* Solid white laurels and a white App Store glyph (no icon tile), dark text, as on the store screenshots. */
-.award-mini { background-image: url(gfx/award-header@2x.png); }
+.award-mini { background-image: url(gfx/award-header@2x.png?v=glyph2); }
 .award-mini p { color: var(--ink); }
 
 /* ---------- Floating nav over the yellow hero ---------- */
@@ -73,9 +73,9 @@ header h2 { color: var(--ink); opacity: 0.62; }
 
 /* ---------- Awards on the page: just the App Store glyph, black on light, white on dark ---------- */
 
-.award { background-image: url(gfx/award-glyph@2x.png); }
+.award { background-image: url(gfx/award-glyph@2x.png?v=glyph2); }
 @media (prefers-color-scheme: dark) {
-  .award { background-image: url(gfx/award-glyph-dark@2x.png); }
+  .award { background-image: url(gfx/award-glyph-dark@2x.png?v=glyph2); }
 }
 
 /* ---------- QR code: black code on a white tile ---------- */

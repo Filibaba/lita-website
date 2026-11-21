@@ -69,6 +69,12 @@ header h2 { color: var(--ink); opacity: 0.62; }
   color: var(--ink);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 3px rgba(150, 90, 0, 0.2);
 }
+/* The same values in Display P3, as the icon has them: richer yellows on wide-gamut screens. */
+@supports (color: color(display-p3 1 1 1)) {
+  .floating-nav.is-past-hero .floating-nav-cta {
+    background: linear-gradient(180deg, color(display-p3 1 0.878 0) 0%, color(display-p3 0.988 0.796 0) 50%, color(display-p3 0.973 0.718 0) 100%);
+  }
+}
 .floating-nav.is-past-hero .floating-nav-cta:hover { filter: brightness(1.06); }
 
 /* ---------- Awards on the page: just the App Store glyph, black on light, white on dark ---------- */
